@@ -30,7 +30,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "sftlf": {
             "units": "%",
@@ -48,7 +49,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "sftgif": {
             "units": "%",
@@ -66,7 +68,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "mrsofc": {
             "units": "kg m-2",
@@ -84,7 +87,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "rootd": {
             "units": "m",
@@ -102,7 +106,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "sftlaf": {
             "units": "%",
@@ -120,7 +125,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "sfturf": {
             "units": "%",
@@ -138,7 +144,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "dtb": {
             "units": "m",
@@ -156,7 +163,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         },
         "areacella": {
             "units": "m2",
@@ -174,7 +182,8 @@
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
+            "ok_max_mean_abs": "",
+            "group": "fx"
         }
     }
 }
