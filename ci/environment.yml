@@ -11,5 +11,7 @@ dependencies:
   - cf_xarray
   - cmor
   - fsspec
+  - requests
+  - aiohttp
   - pip:
     - git+https://github.com/remo-rcm/pyremo.git # always use master for now
