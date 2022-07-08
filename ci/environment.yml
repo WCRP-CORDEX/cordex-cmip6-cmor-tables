@@ -1,0 +1,12 @@
+name: cmor-tests
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - xarray
+  - netCDF4
+# for testing
+  - pytest
+  - py-cordex
+  - pip:
+    - git+https://github.com/remo-rcm/pyremo.git # always use master for now
