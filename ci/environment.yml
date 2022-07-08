@@ -10,5 +10,6 @@ dependencies:
   - py-cordex
   - cf_xarray
   - cmor
+  - fsspec
   - pip:
     - git+https://github.com/remo-rcm/pyremo.git # always use master for now
