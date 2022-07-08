@@ -143,8 +143,8 @@
 		"institution_id":[
 		    "GERICS"
 		],
-		"source_id":"REMO2-0-0",
-		"source":"REMO2-0-0 (2021): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
+		"source_id":"REMO2020",
+		"source":"REMO2020 (v2.0.1): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
 	    },
             "4AOP-v1-5":{
                 "activity_participation":[

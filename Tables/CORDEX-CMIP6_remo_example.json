@@ -15,6 +15,16 @@
     "#note_run_variant":      "Text stored in attribute variant_info (recommended, not required description of run variant)",
     "run_variant":            "1st realization",
 
+    "parent_experiment_id":   "piControl",
+    "parent_activity_id":     "CMIP",
+    "parent_source_id":       "ECMWF-IFS-LR",
+    "parent_variant_label":   "r1i1p1f1",
+
+    "parent_time_units":      "days since 1850-01-01",
+    "branch_method":          "standard",
+    "branch_time_in_child":   59400.0,
+    "branch_time_in_parent":  59400.0,
+
     "driving_experiment" : "ECMWF, ECMWF-IFS-LR, historical, r1i1p1f1",
     "driving_experiment_id" : "historical",
     "driving_institution_id" : "ECMWF",
