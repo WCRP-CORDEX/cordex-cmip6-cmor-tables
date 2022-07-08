@@ -1,0 +1,71 @@
+{
+    "#note_source_type":      "explanation of what source_type is goes here",
+    "source_type":            "ARCM",
+
+    "#note_experiment_id":    "CMIP6 valid experiment_ids are found in CMIP6_CV.json",
+    "experiment_id":          "historical",
+    "activity_id":            "CORDEX",
+    "sub_experiment_id":      "none",
+
+    "realization_index":      "1",
+    "initialization_index":   "1",
+    "physics_index":          "1",
+    "forcing_index":          "1",
+
+    "#note_run_variant":      "Text stored in attribute variant_info (recommended, not required description of run variant)",
+    "run_variant":            "1st realization",
+
+    "driving_experiment" : "ECMWF, ECMWF-IFS-LR, historical, r1i1p1f1",
+    "driving_experiment_id" : "historical",
+    "driving_institution_id" : "ECMWF",
+    "driving_source_id" : "ECMWF-IFS-LR",
+    "driving_variant_label" : "r1i1p1f1",
+
+    "#note_institution_id":   "institution_id must be registered at https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new ",
+    "institution_id":         "GERICS",
+
+    "#note_source_id":        "source_id (model name) must be registered at https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new ",
+    "source_id":              "REMO2020",
+
+    "calendar":               "proleptic_gregorian",
+
+    "grid":                   "native atmosphere regular grid (3x4 latxlon)",
+    "grid_label":             "gn",
+    "nominal_resolution":     "0.11 degree",
+
+    "license":                 "CMIP6 model data produced by Lawrence Livermore PCMDI is licensed under a Creative Commons Attribution ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file) and at https:///pcmdi.llnl.gov/. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.",
+
+    "#output":                "Root directory for output (can be either a relative or full path)",
+    "outpath":                "CORDEX",
+
+    "#note_optional":         " **** The following descriptors are optional and may be set to an empty string ",
+
+    "contact ":               "gerics-cordex2@hereon.de",
+    "history":                "Output from archivcl_A1.nce/giccm_03_std_2xCO2_2256.",
+    "comment":                "",
+    "references":             "https://www.remo-rcm.de",
+
+    "#note_CV":               " **** The following will be obtained from the CV and do not need to be defined here",
+
+    "sub_experiment":         "none",
+    "institution":            "",
+    "source":                 "REMO2020 (v2.0.1)",
+
+    "#note_CMIP6":            " **** The following are set correctly for CMIP6 and should not normally need editing",
+
+    "_controlled_vocabulary_file": "CORDEX-CMIP6_CV.json",
+    "_AXIS_ENTRY_FILE":         "CORDEX-CMIP6_coordinate.json",
+    "_FORMULA_VAR_FILE":        "CORDEX-CMIP6_formula_terms.json",
+    "_cmip6_option":           "CORDEX",
+
+    "parent_mip_era":         "CMIP6",
+
+    "CORDEX_domain" : "EUR-11",
+
+    "tracking_prefix":        "hdl:21.14100",
+    "_history_template":       "%s ;rewrote data to be consistent with <activity_id> for variable <variable_id> found in table <table_id>.",
+
+    "#output_path_template":   "Template for output path directory using tables keys or global attributes, these should follow the relevant data reference syntax",
+    "output_path_template":    "<mip_era><activity_id><institution_id><source_id><driving_institution_id><driving_source_id><experiment_id><_member_id><table><variable_id><grid_label><version>",
+    "output_file_template":    "<variable_id><table><source_id><driving_source_id><experiment_id><_member_id><grid_label>"
+ }
