@@ -6,7 +6,6 @@
             "activity_id",
             "creation_date",
             "data_specs_version",
-	    "driving_experiment",
 	    "driving_experiment_id",
 	    "driving_institution_id",
 	    "driving_source_id",
@@ -1089,6 +1088,16 @@
                 ],
                 "driving_source_id":"EC-Earth3P-VHR",
                 "driving_source":"EC-Earth3P-VHR (2017): \naerosol: none\natmos: IFS cy36r4 (TL1279, linearly reduced Gaussian grid equivalent to 2560 x 1280 longitude/latitude; 91 levels; top level 0.01 hPa)\natmosChem: none\nland: HTESSEL (land surface scheme built in IFS)\nlandIce: none\nocean: NEMO3.6 (ORCA012 tripolar primarily 0.08 degrees; 4322 x 3059 longitude/latitude; 75 levels; top grid cell 0-1 m)\nocnBgchem: none\nseaIce: LIM3"
+            },
+            "ECMWF-ERA5":{
+                "driving_institution_id":[
+                    "ECMWF"
+                ],
+                "driving_source_id":"ECMWF-ERA5",
+                "driving_source":"ECMWF-ERA5 (2017): \naerosol: none\natmos: IFS (IFS CY43R1, Tco399, cubic octahedral reduced Gaussian grid equivalent to 1600 x 800 longitude/latitude; 91 levels; top level 0.01 hPa)\natmosChem: none\nland: HTESSEL (as implemented in IFS CY43R1)\nlandIce: none\nocean: NEMO3.4 (NEMO v3.4; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude; 75 levels; top grid cell 0-1 m)\nocnBgchem: none\nseaIce: LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)",
+                "driving_experiment_id":[
+                    "evaluation"
+                ]
             },
             "ECMWF-IFS-HR":{
                 "activity_participation":[
@@ -6552,6 +6561,34 @@
                 ],
                 "driving_experiment_id":[
                     "historical"
+                ]
+            },
+            "evaluation":{
+                "activity_id":[
+		    "CORDEX"
+                ],
+                "additional_allowed_model_components":[
+                    "AER",
+                    "CHEM",
+                    "BGC"
+                ],
+                "experiment":"all-forcing simulation of the recent past",
+                "experiment_id":"evaluation",
+                "parent_activity_id":[
+                    "CMIP",
+                    "PMIP"
+                ],
+                "parent_experiment_id":[
+                    "no parent"
+                ],
+                "required_model_components":[
+		    "ARCM"
+                ],
+                "sub_experiment_id":[
+                    "none"
+                ],
+                "driving_experiment_id":[
+                    "evaluation"
                 ]
             },
             "historical-cmip5":{
