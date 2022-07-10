@@ -1,10 +1,11 @@
-import pytest
-import pyremo as pr
-import cordex as cx
-import xarray as xr
-from pyremo import cmor as prcmor
 import os
 
+import cordex as cx
+import pyremo as pr
+
+# import pytest
+import xarray as xr
+from pyremo import cmor as prcmor
 
 table_dir = "./Tables"
 
@@ -27,7 +28,7 @@ def test_cmorizer_fx():
     assert "orog" in output
 
 
-#def test_cmorizer_mon():
+# def test_cmorizer_mon():
 #    ds = pr.tutorial.open_dataset("remo_EUR-11_TEMP2_mon")
 #    eur11 = cx.cordex_domain("EUR-11")
 #    ds = ds.assign_coords({"lon": eur11.lon, "lat": eur11.lat})
@@ -45,8 +46,8 @@ def test_cmorizer_fx():
 #    assert "tas" in output
 #
 #
-#@pytest.mark.parametrize("table, tdim", [("CORDEX-CMIP6_day.json", 3), ("CORDEX-CMIP6_3hr.json", 17)])
-#def test_cmorizer_subdaily(table, tdim):
+# @pytest.mark.parametrize("table, tdim", [("CORDEX-CMIP6_day.json", 3), ("CORDEX-CMIP6_3hr.json", 17)])
+# def test_cmorizer_subdaily(table, tdim):
 #    ds = pr.tutorial.open_dataset("remo_EUR-11_TEMP2_1hr")
 #    eur11 = cx.cordex_domain("EUR-11")
 #    ds = ds.assign_coords({"lon": eur11.lon, "lat": eur11.lat})
