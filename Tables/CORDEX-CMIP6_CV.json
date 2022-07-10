@@ -6526,7 +6526,6 @@
             },
             "historical":{
                 "activity_id":[
-                    "CMIP",
 		    "CORDEX"
                 ],
                 "additional_allowed_model_components":[
@@ -6541,15 +6540,16 @@
                     "PMIP"
                 ],
                 "parent_experiment_id":[
-                    "piControl",
-                    "past1000",
-                    "past2k"
+                    "no parent"
                 ],
                 "required_model_components":[
 		    "ARCM"
                 ],
                 "sub_experiment_id":[
                     "none"
+                ],
+                "driving_experiment_id":[
+                    "historical"
                 ]
             },
             "historical-cmip5":{
