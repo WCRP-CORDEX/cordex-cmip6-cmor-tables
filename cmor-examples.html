@@ -489,10 +489,6 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/pyremo/cmor/remo_cmor.py:33: UserWarning: no python cmor package available, consider installing it
-  warn(&quot;no python cmor package available, consider installing it&quot;)
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -532,49 +528,65 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-regular.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-regular.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">test_cmorizer_fx</span><span class="p">()</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">C Traceback:</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">In function: cmor_outpath_exist</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! called from: cmor_dataset_json</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! </span>
 
-<span class="nn">Input In [3],</span> in <span class="ni">test_cmorizer_fx</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">eur11</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cordex_domain</span><span class="p">(</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">eur11</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">eur11</span><span class="o">.</span><span class="n">lat</span><span class="p">})</span>
-<span class="ne">---&gt; </span><span class="mi">17</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">prcmor</span><span class="o">.</span><span class="n">cmorize_variable</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">ds</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="s2">&quot;orog&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_fx.json&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_remo_example.json&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_grids.json&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">CORDEX_domain</span><span class="o">=</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">time_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">allow_units_convert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="k">return</span> <span class="n">filename</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! Warning: You defined your output directory to be: &#39;CORDEX&#39;, but this</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! directory does not exist. CMOR will create it!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
 
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/pyremo/cmor/remo_cmor.py:500,</span> in <span class="ni">cmorize_variable</span><span class="nt">(ds, varname, cmor_table, dataset_table, grids_table, inpath, allow_units_convert, allow_resample, input_freq, CORDEX_domain, vertices, time_units, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">497</span> <span class="k">if</span> <span class="n">allow_units_convert</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">498</span>     <span class="n">ds_prep</span><span class="p">[</span><span class="n">varname</span><span class="p">]</span> <span class="o">=</span> <span class="n">_units_convert</span><span class="p">(</span><span class="n">ds_prep</span><span class="p">[</span><span class="n">varname</span><span class="p">],</span> <span class="n">cmor_table</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">500</span> <span class="n">table_ids</span> <span class="o">=</span> <span class="n">_setup</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="n">dataset_table</span><span class="p">,</span> <span class="n">cmor_table</span><span class="p">,</span> <span class="n">grids_table</span><span class="o">=</span><span class="n">grids_table</span><span class="p">,</span> <span class="n">inpath</span><span class="o">=</span><span class="n">inpath</span>
-<span class="g g-Whitespace">    </span><span class="mi">502</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">503</span> <span class="n">time_cell_method</span> <span class="o">=</span> <span class="n">_strip_time_cell_method</span><span class="p">(</span><span class="n">cfvarinfo</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">504</span> <span class="n">cmorTime</span><span class="p">,</span> <span class="n">cmorGrid</span> <span class="o">=</span> <span class="n">_define_grid</span><span class="p">(</span><span class="n">ds_prep</span><span class="p">,</span> <span class="n">table_ids</span><span class="p">,</span> <span class="n">time_cell_method</span><span class="p">)</span>
 
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/pyremo/cmor/remo_cmor.py:158,</span> in <span class="ni">_setup</span><span class="nt">(dataset_table, mip_table, grids_table, inpath)</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span> <span class="k">if</span> <span class="n">grids_table</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="n">grids_table</span> <span class="o">=</span> <span class="s2">&quot;CORDEX-CMIP6_grids.json&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">158</span> <span class="n">cmor</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="n">inpath</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">160</span>     <span class="n">set_verbosity</span><span class="o">=</span><span class="n">cmor</span><span class="o">.</span><span class="n">CMOR_NORMAL</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="n">netcdf_file_action</span><span class="o">=</span><span class="n">cmor</span><span class="o">.</span><span class="n">CMOR_REPLACE</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">exit_control</span><span class="o">=</span><span class="n">cmor</span><span class="o">.</span><span class="n">CMOR_EXIT_ON_MAJOR</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">logfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">164</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">165</span> <span class="n">cmor</span><span class="o">.</span><span class="n">dataset_json</span><span class="p">(</span><span class="n">dataset_table</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">166</span> <span class="n">grid_id</span> <span class="o">=</span> <span class="n">cmor</span><span class="o">.</span><span class="n">load_table</span><span class="p">(</span><span class="n">grids_table</span><span class="p">)</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">C Traceback:</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">In function: cmor_grid</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! </span>
 
-<span class="ne">NameError</span>: name &#39;cmor&#39; is not defined
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! Warning: it is recommended you pass the latitude bounds values when defining a grid</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+
+
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">C Traceback:</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">In function: cmor_grid</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! </span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! Warning: it is recommended you pass the longitude bounds values when defining a grid</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+
+
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">C Traceback:</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">In function: _CV_checkParentExpID</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! called from: cmor_write</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! </span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! Warning: Your input attribute &quot;parent_experiment_id&quot; defined as &quot;&quot; will be replaced with </span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! &quot;no parent&quot; as defined in your Control Vocabulary file.</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! </span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+
+
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">C Traceback:</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">In function: cmor_write_var_to_file</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! called from: cmor_create_var_attributes</span>
+<span class=" -Color -Color-Faint -Color-Faint-Blue -Color-Faint-Blue-BGWhite">! </span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">! Warning: Invalid value(s) detected for variable &#39;longitude&#39; (table: grids): 56998 values were lower than minimum valid value (0). Minimum encountered bad value (-44.594) was at (axis: index/value): rlat: 411/21.835 rlon: 0/-28.375</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!</span>
+<span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite">!!!!!!!!!!!!!!!!!!!!!!!!!</span>
 </pre></div>
 </div>
 </div>
@@ -586,10 +598,127 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;CORDEX/CMIP6/CORDEX/GERICS/REMO2020/ECMWF/ECMWF-ERA5/evaluation/r1i1p1f1/fx/orog/gn/v20220711/orog_fx_REMO2020_ECMWF-ERA5_evaluation_r1i1p1f1_gn.nc&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump -h <span class="nv">$filename</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netcdf orog_fx_REMO2020_ECMWF-ERA5_evaluation_r1i1p1f1_gn {
+dimensions:
+	rlat = 412 ;
+	rlon = 424 ;
+	bnds = 2 ;
+variables:
+	double rlat(rlat) ;
+		rlat:units = &quot;degrees&quot; ;
+		rlat:axis = &quot;Y&quot; ;
+		rlat:long_name = &quot;latitude in rotated pole grid&quot; ;
+		rlat:standard_name = &quot;grid_latitude&quot; ;
+	double rlon(rlon) ;
+		rlon:units = &quot;degrees&quot; ;
+		rlon:axis = &quot;X&quot; ;
+		rlon:long_name = &quot;longitude in rotated pole grid&quot; ;
+		rlon:standard_name = &quot;grid_longitude&quot; ;
+	int rotated_latitude_longitude ;
+		rotated_latitude_longitude:grid_mapping_name = &quot;rotated_latitude_longitude&quot; ;
+		rotated_latitude_longitude:grid_north_pole_latitude = 39.25 ;
+		rotated_latitude_longitude:grid_north_pole_longitude = -162. ;
+		rotated_latitude_longitude:north_pole_grid_longitude = 0. ;
+	double latitude(rlat, rlon) ;
+		latitude:standard_name = &quot;latitude&quot; ;
+		latitude:long_name = &quot;latitude&quot; ;
+		latitude:units = &quot;degrees_north&quot; ;
+		latitude:missing_value = 1.e+20 ;
+		latitude:_FillValue = 1.e+20 ;
+	double longitude(rlat, rlon) ;
+		longitude:standard_name = &quot;longitude&quot; ;
+		longitude:long_name = &quot;longitude&quot; ;
+		longitude:units = &quot;degrees_east&quot; ;
+		longitude:missing_value = 1.e+20 ;
+		longitude:_FillValue = 1.e+20 ;
+	float orog(rlat, rlon) ;
+		orog:standard_name = &quot;surface_altitude&quot; ;
+		orog:long_name = &quot;Surface Altitude&quot; ;
+		orog:units = &quot;m&quot; ;
+		orog:cell_methods = &quot;area: mean time: mean&quot; ;
+		orog:cell_measures = &quot;area: areacella&quot; ;
+		orog:missing_value = 1.e+20f ;
+		orog:_FillValue = 1.e+20f ;
+		orog:grid_mapping = &quot;rotated_latitude_longitude&quot; ;
+		orog:coordinates = &quot;latitude longitude&quot; ;
+
+// global attributes:
+		:CORDEX_domain = &quot;EUR-11&quot; ;
+		:Conventions = &quot;CF-1.7 CMIP-6.2&quot; ;
+		:activity_id = &quot;CORDEX&quot; ;
+		:contact = &quot;gerics-cordex2@hereon.de&quot; ;
+		:creation_date = &quot;2022-07-11T22:27:27Z&quot; ;
+		:data_specs_version = &quot;00.00.00&quot; ;
+		:driving_experiment_id = &quot;evaluation&quot; ;
+		:driving_institution_id = &quot;ECMWF&quot; ;
+		:driving_source = &quot;ECMWF-ERA5 (2017): \n&quot;,
+			&quot;aerosol: none\n&quot;,
+			&quot;atmos: IFS (IFS CY43R1, Tco399, cubic octahedral reduced Gaussian grid equivalent to 1600 x 800 longitude/latitude; 91 levels; top level 0.01 hPa)\n&quot;,
+			&quot;atmosChem: none\n&quot;,
+			&quot;land: HTESSEL (as implemented in IFS CY43R1)\n&quot;,
+			&quot;landIce: none\n&quot;,
+			&quot;ocean: NEMO3.4 (NEMO v3.4; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude; 75 levels; top grid cell 0-1 m)\n&quot;,
+			&quot;ocnBgchem: none\n&quot;,
+			&quot;seaIce: LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)&quot; ;
+		:driving_source_id = &quot;ECMWF-ERA5&quot; ;
+		:driving_variant_label = &quot;r1i1p1f1&quot; ;
+		:experiment = &quot;all-forcing simulation of the recent past&quot; ;
+		:experiment_id = &quot;evaluation&quot; ;
+		:external_variables = &quot;areacella&quot; ;
+		:forcing_index = 1 ;
+		:frequency = &quot;fx&quot; ;
+		:further_info_url = &quot;https://furtherinfo.es-doc.org/CMIP6.GERICS.REMO2020.evaluation.none.r1i1p1f1&quot; ;
+		:grid = &quot;native atmosphere regular grid (3x4 latxlon)&quot; ;
+		:grid_label = &quot;gn&quot; ;
+		:history = &quot;2022-07-11T22:27:27Z ;rewrote data to be consistent with CORDEX for variable orog found in table fx.;\n&quot;,
+			&quot;Output from archivcl_A1.nce/giccm_03_std_2xCO2_2256.&quot; ;
+		:initialization_index = 1 ;
+		:institution = &quot;Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany&quot; ;
+		:institution_id = &quot;GERICS&quot; ;
+		:mip_era = &quot;CMIP6&quot; ;
+		:nominal_resolution = &quot;0.11 degree&quot; ;
+		:parent_experiment_id = &quot;no parent&quot; ;
+		:physics_index = 1 ;
+		:product = &quot;model-output&quot; ;
+		:realization_index = 1 ;
+		:realm = &quot;atmos&quot; ;
+		:references = &quot;https://www.remo-rcm.de&quot; ;
+		:run_variant = &quot;1st realization&quot; ;
+		:source = &quot;REMO2020 (v2.0.1): \n&quot;,
+			&quot;aerosol: none\n&quot;,
+			&quot;atmos: none\n&quot;,
+			&quot;atmosChem: none\n&quot;,
+			&quot;land: none\n&quot;,
+			&quot;landIce: none\n&quot;,
+			&quot;ocean: none\n&quot;,
+			&quot;ocnBgchem: none\n&quot;,
+			&quot;seaIce: none&quot; ;
+		:source_id = &quot;REMO2020&quot; ;
+		:source_type = &quot;ARCM&quot; ;
+		:sub_experiment = &quot;none&quot; ;
+		:sub_experiment_id = &quot;none&quot; ;
+		:table_id = &quot;fx&quot; ;
+		:table_info = &quot;Creation Date:(06 July 2022) MD5:1f987880de2b33a2558af3e2d8a6cc15&quot; ;
+		:title = &quot;REMO2020 output prepared for CMIP6&quot; ;
+		:tracking_id = &quot;hdl:21.14100/879e7bb5-33f8-48e4-acc1-889c4c14e704&quot; ;
+		:variable_id = &quot;orog&quot; ;
+		:variant_label = &quot;r1i1p1f1&quot; ;
+		:license = &quot;CMIP6 model data produced by Lawrence Livermore PCMDI is licensed under a Creative Commons Attribution ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file) and at https:///pcmdi.llnl.gov/. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.&quot; ;
+		:cmor_version = &quot;3.6.1&quot; ;
+}
 </pre></div>
 </div>
 </div>
@@ -601,6 +730,399 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:                     (rlat: 412, rlon: 424)
+Coordinates:
+  * rlat                        (rlat) float64 -23.38 -23.27 ... 21.73 21.84
+  * rlon                        (rlon) float64 -28.38 -28.27 ... 18.05 18.16
+    latitude                    (rlat, rlon) float64 ...
+    longitude                   (rlat, rlon) float64 ...
+Data variables:
+    rotated_latitude_longitude  int32 -2147483647
+    orog                        (rlat, rlon) float32 ...
+Attributes: (12/45)
+    CORDEX_domain:           EUR-11
+    Conventions:             CF-1.7 CMIP-6.2
+    activity_id:             CORDEX
+    contact:                 gerics-cordex2@hereon.de
+    creation_date:           2022-07-11T22:27:27Z
+    data_specs_version:      00.00.00
+    ...                      ...
+    title:                   REMO2020 output prepared for CMIP6
+    tracking_id:             hdl:21.14100/879e7bb5-33f8-48e4-acc1-889c4c14e704
+    variable_id:             orog
+    variant_label:           r1i1p1f1
+    license:                 CMIP6 model data produced by Lawrence Livermore ...
+    cmor_version:            3.6.1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-7a48b23f-f378-4b0c-a648-480401befbff' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-7a48b23f-f378-4b0c-a648-480401befbff' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>rlat</span>: 412</li><li><span class='xr-has-index'>rlon</span>: 424</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-1dd5f2ee-0b14-4772-8333-db7ad5103a40' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1dd5f2ee-0b14-4772-8333-db7ad5103a40' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-23.38 -23.27 ... 21.73 21.84</div><input id='attrs-50fe111f-415f-4801-8ede-e65da20b959b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-50fe111f-415f-4801-8ede-e65da20b959b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-419f899d-cbbe-415c-808e-6e701fbc1586' class='xr-var-data-in' type='checkbox'><label for='data-419f899d-cbbe-415c-808e-6e701fbc1586' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_latitude</dd></dl></div><div class='xr-var-data'><pre>array([-23.375, -23.265, -23.155, ...,  21.615,  21.725,  21.835])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-28.38 -28.27 ... 18.05 18.16</div><input id='attrs-cf59604b-e5ac-4c47-b4d8-c0b59046f899' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-cf59604b-e5ac-4c47-b4d8-c0b59046f899' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-98cb5f8f-ef17-47ff-8e3d-773b5504cb26' class='xr-var-data-in' type='checkbox'><label for='data-98cb5f8f-ef17-47ff-8e3d-773b5504cb26' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_longitude</dd></dl></div><div class='xr-var-data'><pre>array([-28.375, -28.265, -28.155, ...,  17.935,  18.045,  18.155])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5ac8741e-be84-4838-b298-6f09d3629c79' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5ac8741e-be84-4838-b298-6f09d3629c79' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9295e457-3788-4727-a4d1-dad1abb36bf2' class='xr-var-data-in' type='checkbox'><label for='data-9295e457-3788-4727-a4d1-dad1abb36bf2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ce0be489-36c0-4e1b-b191-6aa0a8e5168d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ce0be489-36c0-4e1b-b191-6aa0a8e5168d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-09aadddc-850b-420d-8c85-8bdcf55fd251' class='xr-var-data-in' type='checkbox'><label for='data-09aadddc-850b-420d-8c85-8bdcf55fd251' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-be85327e-4a6a-49aa-803e-9aaad26acf1f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-be85327e-4a6a-49aa-803e-9aaad26acf1f' class='xr-section-summary' >Data variables: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>rotated_latitude_longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-837aaed0-00ce-42bb-aead-51466731a125' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-837aaed0-00ce-42bb-aead-51466731a125' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-eca48943-db19-4b6d-9c2c-f3deeb073219' class='xr-var-data-in' type='checkbox'><label for='data-eca48943-db19-4b6d-9c2c-f3deeb073219' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>grid_mapping_name :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>grid_north_pole_latitude :</span></dt><dd>39.25</dd><dt><span>grid_north_pole_longitude :</span></dt><dd>-162.0</dd><dt><span>north_pole_grid_longitude :</span></dt><dd>0.0</dd></dl></div><div class='xr-var-data'><pre>array(-2147483647, dtype=int32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>orog</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-0f7d1c3f-0527-4cf6-87b8-ae3fa2770083' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0f7d1c3f-0527-4cf6-87b8-ae3fa2770083' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cb7a2a93-be56-49ee-9763-08637d255d88' class='xr-var-data-in' type='checkbox'><label for='data-cb7a2a93-be56-49ee-9763-08637d255d88' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_altitude</dd><dt><span>long_name :</span></dt><dd>Surface Altitude</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e1d5a715-1161-4d5d-88c1-fd84f12fddb4' class='xr-section-summary-in' type='checkbox'  ><label for='section-e1d5a715-1161-4d5d-88c1-fd84f12fddb4' class='xr-section-summary' >Attributes: <span>(45)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>CORDEX_domain :</span></dt><dd>EUR-11</dd><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>CORDEX</dd><dt><span>contact :</span></dt><dd>gerics-cordex2@hereon.de</dd><dt><span>creation_date :</span></dt><dd>2022-07-11T22:27:27Z</dd><dt><span>data_specs_version :</span></dt><dd>00.00.00</dd><dt><span>driving_experiment_id :</span></dt><dd>evaluation</dd><dt><span>driving_institution_id :</span></dt><dd>ECMWF</dd><dt><span>driving_source :</span></dt><dd>ECMWF-ERA5 (2017): 
+aerosol: none
+atmos: IFS (IFS CY43R1, Tco399, cubic octahedral reduced Gaussian grid equivalent to 1600 x 800 longitude/latitude; 91 levels; top level 0.01 hPa)
+atmosChem: none
+land: HTESSEL (as implemented in IFS CY43R1)
+landIce: none
+ocean: NEMO3.4 (NEMO v3.4; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude; 75 levels; top grid cell 0-1 m)
+ocnBgchem: none
+seaIce: LIM2 (LIM v2; ORCA025 tripolar grid; 1442 x 1021 longitude/latitude)</dd><dt><span>driving_source_id :</span></dt><dd>ECMWF-ERA5</dd><dt><span>driving_variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>experiment :</span></dt><dd>all-forcing simulation of the recent past</dd><dt><span>experiment_id :</span></dt><dd>evaluation</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>forcing_index :</span></dt><dd>1</dd><dt><span>frequency :</span></dt><dd>fx</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/CMIP6.GERICS.REMO2020.evaluation.none.r1i1p1f1</dd><dt><span>grid :</span></dt><dd>native atmosphere regular grid (3x4 latxlon)</dd><dt><span>grid_label :</span></dt><dd>gn</dd><dt><span>history :</span></dt><dd>2022-07-11T22:27:27Z ;rewrote data to be consistent with CORDEX for variable orog found in table fx.;
+Output from archivcl_A1.nce/giccm_03_std_2xCO2_2256.</dd><dt><span>initialization_index :</span></dt><dd>1</dd><dt><span>institution :</span></dt><dd>Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany</dd><dt><span>institution_id :</span></dt><dd>GERICS</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>nominal_resolution :</span></dt><dd>0.11 degree</dd><dt><span>parent_experiment_id :</span></dt><dd>no parent</dd><dt><span>physics_index :</span></dt><dd>1</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>realization_index :</span></dt><dd>1</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>references :</span></dt><dd>https://www.remo-rcm.de</dd><dt><span>run_variant :</span></dt><dd>1st realization</dd><dt><span>source :</span></dt><dd>REMO2020 (v2.0.1): 
+aerosol: none
+atmos: none
+atmosChem: none
+land: none
+landIce: none
+ocean: none
+ocnBgchem: none
+seaIce: none</dd><dt><span>source_id :</span></dt><dd>REMO2020</dd><dt><span>source_type :</span></dt><dd>ARCM</dd><dt><span>sub_experiment :</span></dt><dd>none</dd><dt><span>sub_experiment_id :</span></dt><dd>none</dd><dt><span>table_id :</span></dt><dd>fx</dd><dt><span>table_info :</span></dt><dd>Creation Date:(06 July 2022) MD5:1f987880de2b33a2558af3e2d8a6cc15</dd><dt><span>title :</span></dt><dd>REMO2020 output prepared for CMIP6</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/879e7bb5-33f8-48e4-acc1-889c4c14e704</dd><dt><span>variable_id :</span></dt><dd>orog</dd><dt><span>variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>license :</span></dt><dd>CMIP6 model data produced by Lawrence Livermore PCMDI is licensed under a Creative Commons Attribution ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file) and at https:///pcmdi.llnl.gov/. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.</dd><dt><span>cmor_version :</span></dt><dd>3.6.1</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 </section>
