@@ -3,7 +3,7 @@
     "source_type":            "ARCM",
 
     "#note_experiment_id":    "CMIP6 valid experiment_ids are found in CMIP6_CV.json",
-    "experiment_id":          "historical",
+    "experiment_id":          "evaluation",
     "activity_id":            "CORDEX",
     "sub_experiment_id":      "none",
 
@@ -15,20 +15,9 @@
     "#note_run_variant":      "Text stored in attribute variant_info (recommended, not required description of run variant)",
     "run_variant":            "1st realization",
 
-    "parent_experiment_id":   "piControl",
-    "parent_activity_id":     "CMIP",
-    "parent_source_id":       "ECMWF-IFS-LR",
-    "parent_variant_label":   "r1i1p1f1",
-
-    "parent_time_units":      "days since 1850-01-01",
-    "branch_method":          "standard",
-    "branch_time_in_child":   59400.0,
-    "branch_time_in_parent":  59400.0,
-
-    "driving_experiment" : "ECMWF, ECMWF-IFS-LR, historical, r1i1p1f1",
-    "driving_experiment_id" : "historical",
+    "driving_experiment_id" : "evaluation",
     "driving_institution_id" : "ECMWF",
-    "driving_source_id" : "ECMWF-IFS-LR",
+    "driving_source_id" : "ECMWF-ERA5",
     "driving_variant_label" : "r1i1p1f1",
 
     "#note_institution_id":   "institution_id must be registered at https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new ",
@@ -68,7 +57,6 @@
     "_FORMULA_VAR_FILE":        "CORDEX-CMIP6_formula_terms.json",
     "_cmip6_option":           "CORDEX",
 
-    "parent_mip_era":         "CMIP6",
 
     "CORDEX_domain" : "EUR-11",
 
