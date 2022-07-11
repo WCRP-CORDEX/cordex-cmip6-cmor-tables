@@ -1,0 +1,3761 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Cordex domains &#8212; Cordex CMOR Examples</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Reproducible Research" href="reproducible-research.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/cordex_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Cordex CMOR Examples</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="reproducible-research.html">
+   Reproducible Research
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Cordex domains
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/WCRP-CORDEX/cordex-cmip6-cmor-tables/main?urlpath=lab/tree/examples/domains.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/issues/new?title=Issue%20on%20page%20%2Fdomains.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/domains.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-domain-information">
+   Working with domain information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eur-11-example">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     EUR-11
+    </span>
+   </code>
+   example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-defined-domain">
+   User defined domain
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-out-the-africa-domain">
+   Check out the Africa domain!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-all-cordex-core-domains">
+   Plot all cordex-core domains
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-grid-information-for-interpolation">
+   Using the grid information for interpolation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpolation-using-cdo">
+     Interpolation using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       CDO
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alternative-interpolation-methods">
+     Alternative interpolation methods
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Cordex domains</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#working-with-domain-information">
+   Working with domain information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eur-11-example">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     EUR-11
+    </span>
+   </code>
+   example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-defined-domain">
+   User defined domain
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-out-the-africa-domain">
+   Check out the Africa domain!
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-all-cordex-core-domains">
+   Plot all cordex-core domains
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-grid-information-for-interpolation">
+   Using the grid information for interpolation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpolation-using-cdo">
+     Interpolation using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       CDO
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#alternative-interpolation-methods">
+     Alternative interpolation methods
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="cordex-domains">
+<h1>Cordex domains<a class="headerlink" href="#cordex-domains" title="Permalink to this headline">#</a></h1>
+<p>The domain module should give some tools to work with preconfigured or user defined domains. Domains are defined as xarray datasets that will contain dimensions and coodinates according to CF-conventions.</p>
+<p><strong>NOTE</strong>: The domain module mostly focuses on working with rotated cordex domains and how they are defined in the <a class="reference external" href="https://is-enes-data.github.io/cordex_archive_specifications.pdf">cordex archive specifications</a>. However, there are some regional models that use different mappings instead of <code class="docutils literal notranslate"><span class="pre">rotated_pole</span></code> or <code class="docutils literal notranslate"><span class="pre">rotated_latitude_longitude</span></code> which we focus on. Any expertise working with those different mappings is highly welcome!</p>
+<section id="working-with-domain-information">
+<h2>Working with domain information<a class="headerlink" href="#working-with-domain-information" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cordex</span> <span class="k">as</span> <span class="nn">cx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The domain module contains some useful functions to work with cordex meta data, e.g., you can get some domain grid information using</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">domain_info</span><span class="p">(</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-high-res.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-high-res.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-fps.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-fps.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-core.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-core.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-regular.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-regular.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;short_name&#39;: &#39;EUR-11&#39;,
+ &#39;region&#39;: 4,
+ &#39;long_name&#39;: &#39;Europe&#39;,
+ &#39;nlon&#39;: 424,
+ &#39;nlat&#39;: 412,
+ &#39;ll_lon&#39;: -28.375,
+ &#39;ur_lon&#39;: 18.155,
+ &#39;ll_lat&#39;: -23.375,
+ &#39;ur_lat&#39;: 21.835,
+ &#39;dlon&#39;: 0.11,
+ &#39;dlat&#39;: 0.11,
+ &#39;pollon&#39;: -162.0,
+ &#39;pollat&#39;: 39.25}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The domain information is stored in a number of csv tables. The module contains a tables dictionary that sorts the tables by resolution or project, e.g.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">domains</span><span class="o">.</span><span class="n">tables</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;cordex&#39;, &#39;cordex-high-res&#39;, &#39;cordex-fps&#39;, &#39;cordex-core&#39;, &#39;cordex-regular&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>All available cordex domains are in those tables:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">domains</span><span class="o">.</span><span class="n">table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>region</th>
+      <th>long_name</th>
+      <th>nlon</th>
+      <th>nlat</th>
+      <th>ll_lon</th>
+      <th>ur_lon</th>
+      <th>ll_lat</th>
+      <th>ur_lat</th>
+      <th>dlon</th>
+      <th>dlat</th>
+      <th>pollon</th>
+      <th>pollat</th>
+    </tr>
+    <tr>
+      <th>short_name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>SAM-44</th>
+      <td>1</td>
+      <td>South America</td>
+      <td>146</td>
+      <td>167</td>
+      <td>143.92000</td>
+      <td>207.72000</td>
+      <td>-38.28000</td>
+      <td>34.76000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>-56.06</td>
+      <td>70.60</td>
+    </tr>
+    <tr>
+      <th>CAM-44</th>
+      <td>2</td>
+      <td>Central America</td>
+      <td>210</td>
+      <td>113</td>
+      <td>-52.80000</td>
+      <td>39.16000</td>
+      <td>-28.60000</td>
+      <td>20.68000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>113.98</td>
+      <td>75.74</td>
+    </tr>
+    <tr>
+      <th>NAM-44</th>
+      <td>3</td>
+      <td>North America</td>
+      <td>155</td>
+      <td>130</td>
+      <td>-33.88000</td>
+      <td>33.88000</td>
+      <td>-28.40000</td>
+      <td>28.36000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>83.00</td>
+      <td>42.50</td>
+    </tr>
+    <tr>
+      <th>EUR-44</th>
+      <td>4</td>
+      <td>Europe</td>
+      <td>106</td>
+      <td>103</td>
+      <td>-28.21000</td>
+      <td>17.99000</td>
+      <td>-23.21000</td>
+      <td>21.67000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>-162.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>AFR-44</th>
+      <td>5</td>
+      <td>Africa</td>
+      <td>194</td>
+      <td>201</td>
+      <td>-24.64000</td>
+      <td>60.28000</td>
+      <td>-45.76000</td>
+      <td>42.24000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>WAS-44</th>
+      <td>6</td>
+      <td>South Asia</td>
+      <td>193</td>
+      <td>130</td>
+      <td>-32.12000</td>
+      <td>52.36000</td>
+      <td>-21.56000</td>
+      <td>35.20000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>-123.34</td>
+      <td>79.95</td>
+    </tr>
+    <tr>
+      <th>EAS-44</th>
+      <td>7</td>
+      <td>East Asia</td>
+      <td>203</td>
+      <td>167</td>
+      <td>-40.92000</td>
+      <td>47.96000</td>
+      <td>-26.84000</td>
+      <td>46.20000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>-64.78</td>
+      <td>77.61</td>
+    </tr>
+    <tr>
+      <th>CAS-44</th>
+      <td>8</td>
+      <td>Central Asia</td>
+      <td>153</td>
+      <td>100</td>
+      <td>-34.32000</td>
+      <td>32.56000</td>
+      <td>-20.68000</td>
+      <td>22.88000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>-103.39</td>
+      <td>43.48</td>
+    </tr>
+    <tr>
+      <th>AUS-44</th>
+      <td>9</td>
+      <td>Australasia</td>
+      <td>200</td>
+      <td>129</td>
+      <td>142.16000</td>
+      <td>229.72000</td>
+      <td>-22.88000</td>
+      <td>33.44000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>141.38</td>
+      <td>60.31</td>
+    </tr>
+    <tr>
+      <th>ANT-44</th>
+      <td>10</td>
+      <td>Antarctica</td>
+      <td>125</td>
+      <td>97</td>
+      <td>152.72000</td>
+      <td>207.28000</td>
+      <td>-27.72000</td>
+      <td>14.52000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>-166.92</td>
+      <td>6.08</td>
+    </tr>
+    <tr>
+      <th>ARC-44</th>
+      <td>11</td>
+      <td>Arctic</td>
+      <td>116</td>
+      <td>133</td>
+      <td>-22.88000</td>
+      <td>27.72000</td>
+      <td>-24.20000</td>
+      <td>33.88000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>0.00</td>
+      <td>6.55</td>
+    </tr>
+    <tr>
+      <th>MED-44</th>
+      <td>12</td>
+      <td>Mediterranean</td>
+      <td>98</td>
+      <td>63</td>
+      <td>-23.22000</td>
+      <td>19.46000</td>
+      <td>-21.34000</td>
+      <td>5.94000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>198.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>MNA-44</th>
+      <td>13</td>
+      <td>Middle East and North Africa</td>
+      <td>232</td>
+      <td>118</td>
+      <td>-26.40000</td>
+      <td>75.24000</td>
+      <td>-6.60000</td>
+      <td>44.88000</td>
+      <td>0.4400</td>
+      <td>0.4400</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>MNA-22</th>
+      <td>13</td>
+      <td>Middle East and North Africa</td>
+      <td>464</td>
+      <td>236</td>
+      <td>-26.51000</td>
+      <td>75.35000</td>
+      <td>-6.71000</td>
+      <td>44.99000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>SAM-11</th>
+      <td>1</td>
+      <td>South America</td>
+      <td>584</td>
+      <td>668</td>
+      <td>143.75500</td>
+      <td>207.88500</td>
+      <td>-38.44500</td>
+      <td>34.92500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>-56.06</td>
+      <td>70.60</td>
+    </tr>
+    <tr>
+      <th>CAM-11</th>
+      <td>2</td>
+      <td>Central America</td>
+      <td>840</td>
+      <td>452</td>
+      <td>-52.96500</td>
+      <td>39.32500</td>
+      <td>-28.76500</td>
+      <td>20.84500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>113.98</td>
+      <td>75.74</td>
+    </tr>
+    <tr>
+      <th>NAM-11</th>
+      <td>3</td>
+      <td>North America</td>
+      <td>620</td>
+      <td>520</td>
+      <td>-34.04500</td>
+      <td>34.04500</td>
+      <td>-28.56500</td>
+      <td>28.52500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>83.00</td>
+      <td>42.50</td>
+    </tr>
+    <tr>
+      <th>EUR-11</th>
+      <td>4</td>
+      <td>Europe</td>
+      <td>424</td>
+      <td>412</td>
+      <td>-28.37500</td>
+      <td>18.15500</td>
+      <td>-23.37500</td>
+      <td>21.83500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>-162.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>AFR-11</th>
+      <td>5</td>
+      <td>Africa</td>
+      <td>776</td>
+      <td>804</td>
+      <td>-24.80500</td>
+      <td>60.44500</td>
+      <td>-45.92500</td>
+      <td>42.40500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>WAS-11</th>
+      <td>6</td>
+      <td>South Asia</td>
+      <td>772</td>
+      <td>520</td>
+      <td>-32.28500</td>
+      <td>52.52500</td>
+      <td>-21.72500</td>
+      <td>35.36500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>-123.34</td>
+      <td>79.95</td>
+    </tr>
+    <tr>
+      <th>EAS-11</th>
+      <td>7</td>
+      <td>East Asia</td>
+      <td>812</td>
+      <td>668</td>
+      <td>-41.08500</td>
+      <td>48.12500</td>
+      <td>-27.00500</td>
+      <td>46.36500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>-64.78</td>
+      <td>77.61</td>
+    </tr>
+    <tr>
+      <th>CAS-11</th>
+      <td>8</td>
+      <td>Central Asia</td>
+      <td>612</td>
+      <td>400</td>
+      <td>-34.48500</td>
+      <td>32.72500</td>
+      <td>-20.84500</td>
+      <td>23.04500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>-103.39</td>
+      <td>43.48</td>
+    </tr>
+    <tr>
+      <th>AUS-11</th>
+      <td>9</td>
+      <td>Australasia</td>
+      <td>800</td>
+      <td>516</td>
+      <td>141.99500</td>
+      <td>229.88500</td>
+      <td>-23.04500</td>
+      <td>33.60500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>141.38</td>
+      <td>60.31</td>
+    </tr>
+    <tr>
+      <th>ANT-11</th>
+      <td>10</td>
+      <td>Antarctica</td>
+      <td>500</td>
+      <td>388</td>
+      <td>152.55500</td>
+      <td>207.44500</td>
+      <td>-27.88500</td>
+      <td>14.68500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>-166.92</td>
+      <td>6.08</td>
+    </tr>
+    <tr>
+      <th>ARC-11</th>
+      <td>11</td>
+      <td>Arctic</td>
+      <td>464</td>
+      <td>532</td>
+      <td>-23.04500</td>
+      <td>27.88500</td>
+      <td>-24.36500</td>
+      <td>34.04500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>0.00</td>
+      <td>6.55</td>
+    </tr>
+    <tr>
+      <th>MED-11</th>
+      <td>12</td>
+      <td>Mediterranean</td>
+      <td>392</td>
+      <td>252</td>
+      <td>-23.38500</td>
+      <td>19.62500</td>
+      <td>-21.50500</td>
+      <td>6.10500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>198.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>MNA-11</th>
+      <td>13</td>
+      <td>Middle East and North Africa</td>
+      <td>928</td>
+      <td>472</td>
+      <td>-26.56500</td>
+      <td>75.40500</td>
+      <td>-6.76500</td>
+      <td>45.04500</td>
+      <td>0.1100</td>
+      <td>0.1100</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>GAR-0275</th>
+      <td>4</td>
+      <td>Greater Alpine Region</td>
+      <td>476</td>
+      <td>444</td>
+      <td>-13.51125</td>
+      <td>-0.44875</td>
+      <td>-10.93125</td>
+      <td>1.25125</td>
+      <td>0.0275</td>
+      <td>0.0275</td>
+      <td>-162.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>CEU-0275</th>
+      <td>4</td>
+      <td>Central Europe</td>
+      <td>345</td>
+      <td>385</td>
+      <td>-9.30375</td>
+      <td>NaN</td>
+      <td>-5.07375</td>
+      <td>NaN</td>
+      <td>0.0275</td>
+      <td>0.0275</td>
+      <td>-162.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>SAM-22</th>
+      <td>1</td>
+      <td>South America</td>
+      <td>292</td>
+      <td>334</td>
+      <td>143.81000</td>
+      <td>207.83000</td>
+      <td>-38.39000</td>
+      <td>34.87000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>-56.06</td>
+      <td>70.60</td>
+    </tr>
+    <tr>
+      <th>CAM-22</th>
+      <td>2</td>
+      <td>Central America</td>
+      <td>420</td>
+      <td>226</td>
+      <td>-52.91000</td>
+      <td>39.27000</td>
+      <td>-28.71000</td>
+      <td>20.79000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>113.98</td>
+      <td>75.74</td>
+    </tr>
+    <tr>
+      <th>NAM-22</th>
+      <td>3</td>
+      <td>North America</td>
+      <td>310</td>
+      <td>260</td>
+      <td>-33.99000</td>
+      <td>33.99000</td>
+      <td>-28.51000</td>
+      <td>28.47000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>83.00</td>
+      <td>42.50</td>
+    </tr>
+    <tr>
+      <th>EUR-22</th>
+      <td>4</td>
+      <td>Europe</td>
+      <td>212</td>
+      <td>206</td>
+      <td>-28.32000</td>
+      <td>18.10000</td>
+      <td>-23.32000</td>
+      <td>21.78000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>-162.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>AFR-22</th>
+      <td>5</td>
+      <td>Africa</td>
+      <td>388</td>
+      <td>402</td>
+      <td>-24.75000</td>
+      <td>60.39000</td>
+      <td>-45.87000</td>
+      <td>42.35000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>WAS-22</th>
+      <td>6</td>
+      <td>South Asia</td>
+      <td>386</td>
+      <td>260</td>
+      <td>-32.23000</td>
+      <td>52.47000</td>
+      <td>-21.67000</td>
+      <td>35.31000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>-123.34</td>
+      <td>79.95</td>
+    </tr>
+    <tr>
+      <th>EAS-22</th>
+      <td>7</td>
+      <td>East Asia</td>
+      <td>396</td>
+      <td>251</td>
+      <td>-43.23000</td>
+      <td>43.67000</td>
+      <td>-22.10000</td>
+      <td>32.90000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>296.30</td>
+      <td>61.00</td>
+    </tr>
+    <tr>
+      <th>CAS-22</th>
+      <td>8</td>
+      <td>Central Asia</td>
+      <td>306</td>
+      <td>200</td>
+      <td>-34.43000</td>
+      <td>32.67000</td>
+      <td>-20.79000</td>
+      <td>22.99000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>-103.39</td>
+      <td>43.48</td>
+    </tr>
+    <tr>
+      <th>AUS-22</th>
+      <td>9</td>
+      <td>Australasia</td>
+      <td>400</td>
+      <td>258</td>
+      <td>142.05000</td>
+      <td>229.83000</td>
+      <td>-22.99000</td>
+      <td>33.55000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>141.38</td>
+      <td>60.31</td>
+    </tr>
+    <tr>
+      <th>SEA-22</th>
+      <td>14</td>
+      <td>South East Asia</td>
+      <td>264</td>
+      <td>194</td>
+      <td>89.26000</td>
+      <td>147.12000</td>
+      <td>-15.18000</td>
+      <td>27.28000</td>
+      <td>0.2200</td>
+      <td>0.2200</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>SAM-44i</th>
+      <td>1</td>
+      <td>South America</td>
+      <td>181</td>
+      <td>155</td>
+      <td>-106.25000</td>
+      <td>-16.25000</td>
+      <td>-58.25000</td>
+      <td>18.75000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>CAM-44i</th>
+      <td>2</td>
+      <td>Central America</td>
+      <td>207</td>
+      <td>111</td>
+      <td>-124.75000</td>
+      <td>-21.75000</td>
+      <td>-19.75000</td>
+      <td>35.25000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>NAM-44i</th>
+      <td>3</td>
+      <td>North America</td>
+      <td>300</td>
+      <td>129</td>
+      <td>-171.75000</td>
+      <td>-22.25000</td>
+      <td>12.25000</td>
+      <td>76.25000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>EUR-44i</th>
+      <td>4</td>
+      <td>Europe</td>
+      <td>221</td>
+      <td>103</td>
+      <td>-44.75000</td>
+      <td>65.25000</td>
+      <td>21.75000</td>
+      <td>72.75000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>AFR-44i</th>
+      <td>5</td>
+      <td>Africa</td>
+      <td>173</td>
+      <td>179</td>
+      <td>-25.25000</td>
+      <td>60.75000</td>
+      <td>-46.25000</td>
+      <td>42.75000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>WAS-44i</th>
+      <td>6</td>
+      <td>South Asia</td>
+      <td>195</td>
+      <td>124</td>
+      <td>19.25000</td>
+      <td>116.25000</td>
+      <td>-15.75000</td>
+      <td>45.75000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>EAS-44i</th>
+      <td>7</td>
+      <td>East Asia</td>
+      <td>227</td>
+      <td>157</td>
+      <td>62.75000</td>
+      <td>175.75000</td>
+      <td>-18.75000</td>
+      <td>59.25000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>CAS-44i</th>
+      <td>8</td>
+      <td>Central Asia</td>
+      <td>260</td>
+      <td>133</td>
+      <td>10.75000</td>
+      <td>140.25000</td>
+      <td>17.75000</td>
+      <td>69.75000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>AUS-44i</th>
+      <td>9</td>
+      <td>Australasia</td>
+      <td>238</td>
+      <td>133</td>
+      <td>88.75000</td>
+      <td>207.25000</td>
+      <td>-53.25000</td>
+      <td>12.75000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ANT-44i</th>
+      <td>10</td>
+      <td>Antarctica</td>
+      <td>720</td>
+      <td>70</td>
+      <td>-179.75000</td>
+      <td>179.75000</td>
+      <td>-89.75000</td>
+      <td>-55.25000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>ARC-44i</th>
+      <td>11</td>
+      <td>Arctic</td>
+      <td>720</td>
+      <td>83</td>
+      <td>-179.75000</td>
+      <td>179.75000</td>
+      <td>48.75000</td>
+      <td>89.75000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>MED-44i</th>
+      <td>12</td>
+      <td>Mediterranean</td>
+      <td>144</td>
+      <td>65</td>
+      <td>-20.75000</td>
+      <td>51.75000</td>
+      <td>25.25000</td>
+      <td>57.25000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>MNA-44i</th>
+      <td>13</td>
+      <td>Middle East and North Africa</td>
+      <td>206</td>
+      <td>106</td>
+      <td>-26.75000</td>
+      <td>75.75000</td>
+      <td>-7.25000</td>
+      <td>45.25000</td>
+      <td>0.5000</td>
+      <td>0.5000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>MNA-22i</th>
+      <td>13</td>
+      <td>Middle East and North Africa  high res.</td>
+      <td>410</td>
+      <td>209</td>
+      <td>-26.62500</td>
+      <td>75.62500</td>
+      <td>-6.87500</td>
+      <td>45.12500</td>
+      <td>0.2500</td>
+      <td>0.2500</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>EUR-11i</th>
+      <td>4</td>
+      <td>Europe high res.</td>
+      <td>881</td>
+      <td>408</td>
+      <td>-44.81250</td>
+      <td>65.18750</td>
+      <td>21.81250</td>
+      <td>72.68750</td>
+      <td>0.1250</td>
+      <td>0.1250</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>SEA-22i</th>
+      <td>14</td>
+      <td>South East Asia</td>
+      <td>233</td>
+      <td>172</td>
+      <td>89.12500</td>
+      <td>147.12500</td>
+      <td>-15.37500</td>
+      <td>27.37500</td>
+      <td>0.2500</td>
+      <td>0.2500</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="eur-11-example">
+<h2><code class="docutils literal notranslate"><span class="pre">EUR-11</span></code> example<a class="headerlink" href="#eur-11-example" title="Permalink to this headline">#</a></h2>
+<p>The heart of the module are some functions that create a dataset from the grid information, e.g.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eur11</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cordex_domain</span><span class="p">(</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">,</span> <span class="n">dummy</span><span class="o">=</span><span class="s2">&quot;topo&quot;</span><span class="p">)</span>
+<span class="n">eur11</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:                     (rlon: 424, rlat: 412)
+Coordinates:
+  * rlon                        (rlon) float64 -28.38 -28.27 ... 18.05 18.16
+  * rlat                        (rlat) float64 -23.38 -23.27 ... 21.73 21.84
+    lon                         (rlat, rlon) float64 -10.06 -9.964 ... 64.96
+    lat                         (rlat, rlon) float64 21.99 22.03 ... 66.75 66.69
+Data variables:
+    rotated_latitude_longitude  int32 0
+    topo                        (rlat, rlon) float32 284.0 246.0 ... 509.0 509.0
+Attributes:
+    CORDEX_domain:  EUR-11</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-a4136797-ae5f-4fc8-a781-13f59079ea90' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-a4136797-ae5f-4fc8-a781-13f59079ea90' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>rlon</span>: 424</li><li><span class='xr-has-index'>rlat</span>: 412</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-fbe6ebb7-5ca2-4e62-8315-a29eeba18986' class='xr-section-summary-in' type='checkbox'  checked><label for='section-fbe6ebb7-5ca2-4e62-8315-a29eeba18986' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-28.38 -28.27 ... 18.05 18.16</div><input id='attrs-7bbf27a9-e67e-4412-a135-606c480a0bd2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7bbf27a9-e67e-4412-a135-606c480a0bd2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-81b40152-2446-4fbb-a096-c5944b8bee97' class='xr-var-data-in' type='checkbox'><label for='data-81b40152-2446-4fbb-a096-c5944b8bee97' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>X</dd><dt><span>standard_name :</span></dt><dd>grid_longitude</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([-28.375, -28.265, -28.155, ...,  17.935,  18.045,  18.155])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-23.38 -23.27 ... 21.73 21.84</div><input id='attrs-f5cbe30f-a188-4457-af9a-65711b9de11e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f5cbe30f-a188-4457-af9a-65711b9de11e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8f157c15-c6d3-4ea1-86e0-7909d928d3c6' class='xr-var-data-in' type='checkbox'><label for='data-8f157c15-c6d3-4ea1-86e0-7909d928d3c6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>Y</dd><dt><span>standard_name :</span></dt><dd>grid_latitude</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([-23.375, -23.265, -23.155, ...,  21.615,  21.725,  21.835])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-10.06 -9.964 ... 64.76 64.96</div><input id='attrs-7a3bad74-7880-40d6-b2f2-ad8a5346b38d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7a3bad74-7880-40d6-b2f2-ad8a5346b38d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-acde555a-f990-47dc-81e9-0a4f7ddfe54c' class='xr-var-data-in' type='checkbox'><label for='data-acde555a-f990-47dc-81e9-0a4f7ddfe54c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([[-10.06387966,  -9.96388628,  -9.86380363, ...,  36.19872654,
+         36.30631294,  36.41382968],
+       [-10.11099589, -10.01086154,  -9.91063756, ...,  36.23077703,
+         36.33853934,  36.44623165],
+       [-10.15817955, -10.05790422,  -9.95753886, ...,  36.26288362,
+         36.37082205,  36.47869015],
+       ...,
+       [-44.26744553, -44.1287729 , -43.98957131, ...,  64.21746364,
+         64.42305922,  64.62774455],
+       [-44.43028713, -44.29178077, -44.15274426, ...,  64.38488381,
+         64.59063409,  64.79546746],
+       [-44.59386389, -44.45552794, -44.31666067, ...,  64.55349992,
+         64.75940009,  64.96437667]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lat</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>21.99 22.03 22.07 ... 66.75 66.69</div><input id='attrs-c69064f2-72e5-49f6-8157-ba27605b1264' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c69064f2-72e5-49f6-8157-ba27605b1264' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-df107da4-1bde-40b8-ba12-b9f4feb30edf' class='xr-var-data-in' type='checkbox'><label for='data-df107da4-1bde-40b8-ba12-b9f4feb30edf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([[21.98782876, 22.02783807, 22.06771602, ..., 25.1677739 ,
+        25.14109405, 25.11426239],
+       [22.08878725, 22.1288583 , 22.16879786, ..., 25.27388366,
+        25.24715843, 25.22028117],
+       [22.18973223, 22.22986507, 22.2698663 , ..., 25.37998647,
+        25.3532158 , 25.32629289],
+       ...,
+       [60.05553554, 60.13088567, 60.20613923, ..., 66.63852915,
+        66.57692365, 66.51510791],
+       [60.12974984, 60.20521265, 60.28057952, ..., 66.72632651,
+        66.66454929, 66.60256233],
+       [60.20376337, 60.27933874, 60.35481882, ..., 66.81394504,
+        66.75199541, 66.68983654]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ec3de696-e126-4f93-97bd-c6963c6f3991' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ec3de696-e126-4f93-97bd-c6963c6f3991' class='xr-section-summary' >Data variables: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>rotated_latitude_longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>0</div><input id='attrs-890cfb9b-5d5f-4313-a904-33691a151bb5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-890cfb9b-5d5f-4313-a904-33691a151bb5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c9df5d84-8f40-4294-b244-0058b9a6862a' class='xr-var-data-in' type='checkbox'><label for='data-c9df5d84-8f40-4294-b244-0058b9a6862a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>grid_mapping_name :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>grid_north_pole_latitude :</span></dt><dd>39.25</dd><dt><span>grid_north_pole_longitude :</span></dt><dd>-162.0</dd><dt><span>north_pole_grid_longitude :</span></dt><dd>0.0</dd></dl></div><div class='xr-var-data'><pre>array(0, dtype=int32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>topo</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>284.0 246.0 246.0 ... 509.0 509.0</div><input id='attrs-5e1062f8-2660-4645-9a6b-bf4f32770251' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5e1062f8-2660-4645-9a6b-bf4f32770251' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1b3dcd38-6a30-4919-ad77-f901cb77a066' class='xr-var-data-in' type='checkbox'><label for='data-1b3dcd38-6a30-4919-ad77-f901cb77a066' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd></dl></div><div class='xr-var-data'><pre>array([[ 2.8400000e+02,  2.4600000e+02,  2.4600000e+02, ...,
+        -1.6953334e+03, -1.6953334e+03, -1.6953334e+03],
+       [ 2.8066666e+02,  2.8066666e+02,  2.4600000e+02, ...,
+        -1.6953334e+03, -1.6953334e+03, -1.6953334e+03],
+       [ 2.8066666e+02,  2.8066666e+02,  2.4600000e+02, ...,
+        -1.6953334e+03, -1.6953334e+03, -1.6953334e+03],
+       ...,
+       [-6.6666669e-01, -6.6666669e-01,  4.6666665e+00, ...,
+         5.3600000e+02,  5.3600000e+02,  5.0900000e+02],
+       [-6.6666669e-01, -6.6666669e-01, -6.6666669e-01, ...,
+         5.3600000e+02,  5.0900000e+02,  5.0900000e+02],
+       [ 2.7966666e+02, -6.6666669e-01, -6.6666669e-01, ...,
+         5.0900000e+02,  5.0900000e+02,  5.0900000e+02]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-400f4441-8d30-4ade-9ae0-4295d1dc98ac' class='xr-section-summary-in' type='checkbox'  checked><label for='section-400f4441-8d30-4ade-9ae0-4295d1dc98ac' class='xr-section-summary' >Attributes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>CORDEX_domain :</span></dt><dd>EUR-11</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">dummy='topo'</span></code> argument means, we want a dummy variable in the dataset to see how the domain looks like. For the dummy topography, we use the <code class="docutils literal notranslate"><span class="pre">cdo</span> <span class="pre">topo</span></code> operator in the background. So maybe you have to install <code class="docutils literal notranslate"><span class="pre">python-cdo</span></code>, e.g., <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">python-cdo</span></code>. Working with xarray datasets means, that we can use all the nice functions of xarray including plotting, e.g.,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eur11</span><span class="o">.</span><span class="n">topo</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;terrain&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7fbb5b803a60&gt;
+</pre></div>
+</div>
+<img alt="_images/domains_14_1.png" src="_images/domains_14_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eur11</span><span class="o">.</span><span class="n">topo</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;lat&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;terrain&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7fbb5b417790&gt;
+</pre></div>
+</div>
+<img alt="_images/domains_15_1.png" src="_images/domains_15_1.png" />
+</div>
+</div>
+<p>Let’s define a slightly more sophisticated plotting function that uses cartopy for the right <a class="reference external" href="https://scitools.org.uk/cartopy/docs/latest/tutorials/understanding_transform.html">projection</a> with a rotated pole:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">da</span><span class="p">,</span> <span class="n">pole</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">borders</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;plot a domain using the right projection with cartopy&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+    <span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cf</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+    <span class="n">transform</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">RotatedPole</span><span class="p">(</span><span class="n">pole_latitude</span><span class="o">=</span><span class="n">pole</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pole_longitude</span><span class="o">=</span><span class="n">pole</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="c1"># ax = plt.axes(projection=projection)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">transform</span><span class="p">)</span>
+    <span class="c1"># ax.set_extent([ds_sub.rlon.min(), ds_sub.rlon.max(), ds_sub.rlat.min(), ds_sub.rlat.max()], crs=transform)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span>
+        <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span>
+        <span class="n">xlocs</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="n">ylocs</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="n">da</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;terrain&quot;</span><span class="p">,</span>
+        <span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">,</span>
+        <span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span>
+        <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;rlon&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;rlat&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s2">&quot;50m&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">borders</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pole</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">eur11</span><span class="o">.</span><span class="n">rotated_latitude_longitude</span><span class="o">.</span><span class="n">grid_north_pole_longitude</span><span class="p">,</span>
+    <span class="n">eur11</span><span class="o">.</span><span class="n">rotated_latitude_longitude</span><span class="o">.</span><span class="n">grid_north_pole_latitude</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">pole</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-162.0, 39.25)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">eur11</span><span class="o">.</span><span class="n">topo</span><span class="p">,</span> <span class="n">pole</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/cordex-tutorials/lib/python3.8/site-packages/cartopy/io/__init__.py:241: DownloadWarning: Downloading: https://naturalearth.s3.amazonaws.com/50m_physical/ne_50m_coastline.zip
+  warnings.warn(f&#39;Downloading: {url}&#39;, DownloadWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/cordex-tutorials/lib/python3.8/site-packages/cartopy/io/__init__.py:241: DownloadWarning: Downloading: https://naturalearth.s3.amazonaws.com/110m_cultural/ne_110m_admin_0_boundary_lines_land.zip
+  warnings.warn(f&#39;Downloading: {url}&#39;, DownloadWarning)
+</pre></div>
+</div>
+<img alt="_images/domains_19_2.png" src="_images/domains_19_2.png" />
+</div>
+</div>
+</section>
+<section id="user-defined-domain">
+<h2>User defined domain<a class="headerlink" href="#user-defined-domain" title="Permalink to this headline">#</a></h2>
+<p>The domains are actually created from csv tables. To checkout the tables you can have a look at <code class="docutils literal notranslate"><span class="pre">dm.TABLES</span></code>. This is a dictionary of dataframes created during the import of the model from a number of csv tables that define standard cordex domains. E.g., available tables are:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cx</span><span class="o">.</span><span class="n">domains</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="s2">&quot;cordex-high-res&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>region</th>
+      <th>long_name</th>
+      <th>nlon</th>
+      <th>nlat</th>
+      <th>ll_lon</th>
+      <th>ur_lon</th>
+      <th>ll_lat</th>
+      <th>ur_lat</th>
+      <th>dlon</th>
+      <th>dlat</th>
+      <th>pollon</th>
+      <th>pollat</th>
+    </tr>
+    <tr>
+      <th>short_name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>SAM-11</th>
+      <td>1</td>
+      <td>South America</td>
+      <td>584</td>
+      <td>668</td>
+      <td>143.755</td>
+      <td>207.885</td>
+      <td>-38.445</td>
+      <td>34.925</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>-56.06</td>
+      <td>70.60</td>
+    </tr>
+    <tr>
+      <th>CAM-11</th>
+      <td>2</td>
+      <td>Central America</td>
+      <td>840</td>
+      <td>452</td>
+      <td>-52.965</td>
+      <td>39.325</td>
+      <td>-28.765</td>
+      <td>20.845</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>113.98</td>
+      <td>75.74</td>
+    </tr>
+    <tr>
+      <th>NAM-11</th>
+      <td>3</td>
+      <td>North America</td>
+      <td>620</td>
+      <td>520</td>
+      <td>-34.045</td>
+      <td>34.045</td>
+      <td>-28.565</td>
+      <td>28.525</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>83.00</td>
+      <td>42.50</td>
+    </tr>
+    <tr>
+      <th>EUR-11</th>
+      <td>4</td>
+      <td>Europe</td>
+      <td>424</td>
+      <td>412</td>
+      <td>-28.375</td>
+      <td>18.155</td>
+      <td>-23.375</td>
+      <td>21.835</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>-162.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>AFR-11</th>
+      <td>5</td>
+      <td>Africa</td>
+      <td>776</td>
+      <td>804</td>
+      <td>-24.805</td>
+      <td>60.445</td>
+      <td>-45.925</td>
+      <td>42.405</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+    <tr>
+      <th>WAS-11</th>
+      <td>6</td>
+      <td>South Asia</td>
+      <td>772</td>
+      <td>520</td>
+      <td>-32.285</td>
+      <td>52.525</td>
+      <td>-21.725</td>
+      <td>35.365</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>-123.34</td>
+      <td>79.95</td>
+    </tr>
+    <tr>
+      <th>EAS-11</th>
+      <td>7</td>
+      <td>East Asia</td>
+      <td>812</td>
+      <td>668</td>
+      <td>-41.085</td>
+      <td>48.125</td>
+      <td>-27.005</td>
+      <td>46.365</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>-64.78</td>
+      <td>77.61</td>
+    </tr>
+    <tr>
+      <th>CAS-11</th>
+      <td>8</td>
+      <td>Central Asia</td>
+      <td>612</td>
+      <td>400</td>
+      <td>-34.485</td>
+      <td>32.725</td>
+      <td>-20.845</td>
+      <td>23.045</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>-103.39</td>
+      <td>43.48</td>
+    </tr>
+    <tr>
+      <th>AUS-11</th>
+      <td>9</td>
+      <td>Australasia</td>
+      <td>800</td>
+      <td>516</td>
+      <td>141.995</td>
+      <td>229.885</td>
+      <td>-23.045</td>
+      <td>33.605</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>141.38</td>
+      <td>60.31</td>
+    </tr>
+    <tr>
+      <th>ANT-11</th>
+      <td>10</td>
+      <td>Antarctica</td>
+      <td>500</td>
+      <td>388</td>
+      <td>152.555</td>
+      <td>207.445</td>
+      <td>-27.885</td>
+      <td>14.685</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>-166.92</td>
+      <td>6.08</td>
+    </tr>
+    <tr>
+      <th>ARC-11</th>
+      <td>11</td>
+      <td>Arctic</td>
+      <td>464</td>
+      <td>532</td>
+      <td>-23.045</td>
+      <td>27.885</td>
+      <td>-24.365</td>
+      <td>34.045</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>0.00</td>
+      <td>6.55</td>
+    </tr>
+    <tr>
+      <th>MED-11</th>
+      <td>12</td>
+      <td>Mediterranean</td>
+      <td>392</td>
+      <td>252</td>
+      <td>-23.385</td>
+      <td>19.625</td>
+      <td>-21.505</td>
+      <td>6.105</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>198.00</td>
+      <td>39.25</td>
+    </tr>
+    <tr>
+      <th>MNA-11</th>
+      <td>13</td>
+      <td>Middle East and North Africa</td>
+      <td>928</td>
+      <td>472</td>
+      <td>-26.565</td>
+      <td>75.405</td>
+      <td>-6.765</td>
+      <td>45.045</td>
+      <td>0.11</td>
+      <td>0.11</td>
+      <td>180.00</td>
+      <td>90.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The domains are created using the <code class="docutils literal notranslate"><span class="pre">create_dataset</span></code> function, e.g.:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">cx</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function create_dataset in module cordex.core.domain:
+
+create_dataset(nlon, nlat, dlon, dlat, ll_lon, ll_lat, pollon=None, pollat=None, name=None, dummy=False, add_vertices=False, attrs=None, mapping_name=None, bounds=None, **kwargs)
+    Create domain dataset from grid information.
+    
+    Parameters
+    ----------
+    nlon : int
+        longitudal number of grid boxes
+    nlat : int
+        latitudal number of grid boxes
+    dlon : float
+        longitudal resolution (degrees)
+    dlat : float
+        latitudal resolution (degrees)
+    ll_lon : float
+        lower left longitude (degrees)
+    ll_lat : float
+        lower left latitude (degrees)
+    pollon : float
+        pol longitude (degrees)
+    pollat : float
+        pol latitude (degrees)
+    dummy : str or logical
+        Name of dummy field, if dummy=topo, the cdo topo operator will be
+        used to create some dummy topography data. dummy data is useful for
+        looking at the domain with ncview.
+    add_vertices : bool
+        Add grid boundaries in the global coordinates (lon_vertices and lat_vertices).
+    attrs: str or dict
+        Global attributes that should be added to the dataset. If `attrs=&#39;CORDEX&#39;`
+        a set of standard CF global attributes.
+    mapping_name: str
+        Variable name of the grid mapping, if mapping_name is `None`, the CF standard
+        variable name is used.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s create the EUR-11 domain manually from the numbers in the table:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eur11_user</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span>
+    <span class="n">nlon</span><span class="o">=</span><span class="mi">424</span><span class="p">,</span>
+    <span class="n">nlat</span><span class="o">=</span><span class="mi">412</span><span class="p">,</span>
+    <span class="n">dlon</span><span class="o">=</span><span class="mf">0.11</span><span class="p">,</span>
+    <span class="n">dlat</span><span class="o">=</span><span class="mf">0.11</span><span class="p">,</span>
+    <span class="n">ll_lon</span><span class="o">=-</span><span class="mf">28.375</span><span class="p">,</span>
+    <span class="n">ll_lat</span><span class="o">=-</span><span class="mf">23.375</span><span class="p">,</span>
+    <span class="n">pollon</span><span class="o">=-</span><span class="mf">162.00</span><span class="p">,</span>
+    <span class="n">pollat</span><span class="o">=</span><span class="mf">39.25</span><span class="p">,</span>
+    <span class="n">dummy</span><span class="o">=</span><span class="s2">&quot;topo&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can check that this gives the same result as our preconfigured domain.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eur11_user</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">eur11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can now use the <code class="docutils literal notranslate"><span class="pre">create_dataset</span></code> function to create any domain as an xarray dataset.</p>
+</section>
+<section id="check-out-the-africa-domain">
+<h2>Check out the Africa domain!<a class="headerlink" href="#check-out-the-africa-domain" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">afr11</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cordex_domain</span><span class="p">(</span><span class="s2">&quot;AFR-11&quot;</span><span class="p">,</span> <span class="n">dummy</span><span class="o">=</span><span class="s2">&quot;topo&quot;</span><span class="p">)</span>
+<span class="n">afr11</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:                     (rlon: 776, rlat: 804)
+Coordinates:
+  * rlon                        (rlon) float64 -24.8 -24.7 ... 60.34 60.45
+  * rlat                        (rlat) float64 -45.92 -45.81 ... 42.3 42.41
+    lon                         (rlat, rlon) float64 -24.81 -24.7 ... 60.44
+    lat                         (rlat, rlon) float64 -45.93 -45.93 ... 42.4 42.4
+Data variables:
+    rotated_latitude_longitude  int32 0
+    topo                        (rlat, rlon) float32 -4.429e+03 ... 161.0
+Attributes:
+    CORDEX_domain:  AFR-11</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-3871aadc-1ffc-4ddb-bd30-e42c3039ab9a' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-3871aadc-1ffc-4ddb-bd30-e42c3039ab9a' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>rlon</span>: 776</li><li><span class='xr-has-index'>rlat</span>: 804</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-e57df5dd-2637-451c-b4f7-c32a2db4e4b9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e57df5dd-2637-451c-b4f7-c32a2db4e4b9' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-24.8 -24.7 -24.59 ... 60.34 60.45</div><input id='attrs-d7ebaf39-f09d-49c3-890b-03f93891ce45' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d7ebaf39-f09d-49c3-890b-03f93891ce45' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-01b5dea6-08ea-4e6f-b0e6-2d45bcca10e8' class='xr-var-data-in' type='checkbox'><label for='data-01b5dea6-08ea-4e6f-b0e6-2d45bcca10e8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>X</dd><dt><span>standard_name :</span></dt><dd>grid_longitude</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([-24.805, -24.695, -24.585, ...,  60.225,  60.335,  60.445])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-45.92 -45.81 -45.7 ... 42.3 42.41</div><input id='attrs-f5d44e98-f689-42b8-bfa7-2b2cda1ea5d1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f5d44e98-f689-42b8-bfa7-2b2cda1ea5d1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b2c7342b-6526-40f6-a5c6-67bf4bed8a52' class='xr-var-data-in' type='checkbox'><label for='data-b2c7342b-6526-40f6-a5c6-67bf4bed8a52' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>Y</dd><dt><span>standard_name :</span></dt><dd>grid_latitude</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>units :</span></dt><dd>degrees</dd></dl></div><div class='xr-var-data'><pre>array([-45.925, -45.815, -45.705, ...,  42.185,  42.295,  42.405])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-24.81 -24.7 -24.59 ... 60.33 60.44</div><input id='attrs-af277b25-5fea-450a-ab17-eb006cbfb2ef' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-af277b25-5fea-450a-ab17-eb006cbfb2ef' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-42ff7b4a-4441-4797-a868-0f66d9027812' class='xr-var-data-in' type='checkbox'><label for='data-42ff7b4a-4441-4797-a868-0f66d9027812' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>array([[-24.805, -24.695, -24.585, ...,  60.225,  60.335,  60.445],
+       [-24.805, -24.695, -24.585, ...,  60.225,  60.335,  60.445],
+       [-24.805, -24.695, -24.585, ...,  60.225,  60.335,  60.445],
+       ...,
+       [-24.805, -24.695, -24.585, ...,  60.225,  60.335,  60.445],
+       [-24.805, -24.695, -24.585, ...,  60.225,  60.335,  60.445],
+       [-24.805, -24.695, -24.585, ...,  60.225,  60.335,  60.445]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lat</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-45.93 -45.93 -45.93 ... 42.4 42.4</div><input id='attrs-adb57c44-c221-40ef-9cf0-716282fe3fd9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-adb57c44-c221-40ef-9cf0-716282fe3fd9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a8a9fe63-c0c9-4d79-9b44-344315b22951' class='xr-var-data-in' type='checkbox'><label for='data-a8a9fe63-c0c9-4d79-9b44-344315b22951' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>array([[-45.925, -45.925, -45.925, ..., -45.925, -45.925, -45.925],
+       [-45.815, -45.815, -45.815, ..., -45.815, -45.815, -45.815],
+       [-45.705, -45.705, -45.705, ..., -45.705, -45.705, -45.705],
+       ...,
+       [ 42.185,  42.185,  42.185, ...,  42.185,  42.185,  42.185],
+       [ 42.295,  42.295,  42.295, ...,  42.295,  42.295,  42.295],
+       [ 42.405,  42.405,  42.405, ...,  42.405,  42.405,  42.405]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d367dae4-c57f-4bea-8396-bc90b502df87' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d367dae4-c57f-4bea-8396-bc90b502df87' class='xr-section-summary' >Data variables: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>rotated_latitude_longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>0</div><input id='attrs-dfd4df98-7df9-4f4c-b307-38f5a78d19f1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-dfd4df98-7df9-4f4c-b307-38f5a78d19f1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ae6887a9-fbfd-41d9-a8ed-a214a841afc0' class='xr-var-data-in' type='checkbox'><label for='data-ae6887a9-fbfd-41d9-a8ed-a214a841afc0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>grid_mapping_name :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>grid_north_pole_latitude :</span></dt><dd>90.0</dd><dt><span>grid_north_pole_longitude :</span></dt><dd>180.0</dd><dt><span>north_pole_grid_longitude :</span></dt><dd>0.0</dd></dl></div><div class='xr-var-data'><pre>array(0, dtype=int32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>topo</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-4.429e+03 -4.429e+03 ... 161.0</div><input id='attrs-0744e390-309d-448f-9ea0-3beec1105db8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0744e390-309d-448f-9ea0-3beec1105db8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0c1873eb-477c-45b4-961d-11acf77f2e8c' class='xr-var-data-in' type='checkbox'><label for='data-0c1873eb-477c-45b4-961d-11acf77f2e8c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd></dl></div><div class='xr-var-data'><pre>array([[-4429.    , -4429.    , -4429.    , ..., -4703.6665, -4703.6665,
+        -4703.6665],
+       [-4429.    , -4429.    , -4429.    , ..., -4703.6665, -4703.6665,
+        -4703.6665],
+       [-4429.    , -4429.    , -4429.    , ..., -4703.6665, -4703.6665,
+        -4703.6665],
+       ...,
+       [-3270.    , -3270.    , -3270.    , ...,   161.    ,   161.    ,
+          161.    ],
+       [-3270.    , -3270.    , -3270.    , ...,   161.    ,   161.    ,
+          161.    ],
+       [-3270.    , -3270.    , -3270.    , ...,   161.    ,   161.    ,
+          161.    ]], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2305a7ab-eb0c-4dce-bc97-d0b4d691546a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2305a7ab-eb0c-4dce-bc97-d0b4d691546a' class='xr-section-summary' >Attributes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>CORDEX_domain :</span></dt><dd>AFR-11</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pole</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">afr11</span><span class="o">.</span><span class="n">rotated_latitude_longitude</span><span class="o">.</span><span class="n">grid_north_pole_longitude</span><span class="p">,</span>
+    <span class="n">afr11</span><span class="o">.</span><span class="n">rotated_latitude_longitude</span><span class="o">.</span><span class="n">grid_north_pole_latitude</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">pole</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(180.0, 90.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">afr11</span><span class="o">.</span><span class="n">topo</span><span class="p">,</span> <span class="n">pole</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/domains_33_0.png" src="_images/domains_33_0.png" />
+</div>
+</div>
+</section>
+<section id="plot-all-cordex-core-domains">
+<h2>Plot all cordex-core domains<a class="headerlink" href="#plot-all-cordex-core-domains" title="Permalink to this headline">#</a></h2>
+<p>We need a slightly modified plotting routine for this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plots</span><span class="p">(</span><span class="n">dsets</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">borders</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;plot a domain using the right projection with cartopy&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+    <span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cf</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.patheffects</span> <span class="k">as</span> <span class="nn">pe</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">projection</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()</span>
+    <span class="c1"># transform = ccrs.RotatedPole(pole_latitude=pole[1], pole_longitude=pole[0])</span>
+    <span class="c1"># ax = plt.axes(projection=projection)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">projection</span><span class="p">)</span>
+    <span class="c1"># ax.set_extent([ds_sub.rlon.min(), ds_sub.rlon.max(), ds_sub.rlat.min(), ds_sub.rlat.max()], crs=transform)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span>
+        <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span>
+        <span class="n">xlocs</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span>
+        <span class="n">ylocs</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="c1"># path_effects = [pe.Stroke(linewidth=50, foreground=&#39;g&#39;), pe.Normal()]</span>
+    <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">dsets</span><span class="p">:</span>
+        <span class="n">pole</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">ds</span><span class="o">.</span><span class="n">rotated_latitude_longitude</span><span class="o">.</span><span class="n">grid_north_pole_longitude</span><span class="p">,</span>
+            <span class="n">ds</span><span class="o">.</span><span class="n">rotated_latitude_longitude</span><span class="o">.</span><span class="n">grid_north_pole_latitude</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">transform</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">RotatedPole</span><span class="p">(</span><span class="n">pole_latitude</span><span class="o">=</span><span class="n">pole</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pole_longitude</span><span class="o">=</span><span class="n">pole</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">topo</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;terrain&quot;</span><span class="p">,</span>
+            <span class="n">transform</span><span class="o">=</span><span class="n">transform</span><span class="p">,</span>
+            <span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span>
+            <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="s2">&quot;rlon&quot;</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="s2">&quot;rlat&quot;</span><span class="p">,</span>
+            <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s2">&quot;50m&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">borders</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cf</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">title</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, let’s plot all cordex core domains into one overview:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plots</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">cx</span><span class="o">.</span><span class="n">cordex_domain</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">dummy</span><span class="o">=</span><span class="s2">&quot;topo&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">cx</span><span class="o">.</span><span class="n">domains</span><span class="o">.</span><span class="n">tables</span><span class="p">[</span><span class="s2">&quot;cordex-core&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+    <span class="p">],</span>
+    <span class="n">borders</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/domains_38_0.png" src="_images/domains_38_0.png" />
+</div>
+</div>
+</section>
+<section id="using-the-grid-information-for-interpolation">
+<h2>Using the grid information for interpolation<a class="headerlink" href="#using-the-grid-information-for-interpolation" title="Permalink to this headline">#</a></h2>
+<p>The gridded Cordex datasets are particular usefule for regridding either with <code class="docutils literal notranslate"><span class="pre">CDO</span></code> or other interpolation packages.</p>
+<p>We will use some CMIP6 model data from the ESGF to show how we can do the regridding:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="c1"># ds = xr.open_dataset(&quot;https://esgf3.dkrz.de/thredds/dodsC/cmip6/CMIP/MPI-M/MPI-ESM1-2-HR/historical/r1i1p1f1/Amon/tas/gn/v20190710/tas_Amon_MPI-ESM1-2-HR_historical_r1i1p1f1_gn_199501-199912.nc&quot;)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span>
+    <span class="s2">&quot;http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc&quot;</span>
+<span class="p">)</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:    (time: 1200, bnds: 2, lat: 144, lon: 192)
+Coordinates:
+  * time       (time) object 1850-01-16 00:00:00 ... 1949-12-16 00:00:00
+  * lat        (lat) float64 -89.38 -88.12 -86.88 -85.62 ... 86.88 88.12 89.38
+  * lon        (lon) float64 0.9375 2.812 4.688 6.562 ... 355.3 357.2 359.1
+    height     float64 1.5
+Dimensions without coordinates: bnds
+Data variables:
+    time_bnds  (time, bnds) object 1850-01-01 00:00:00 ... 1950-01-01 00:00:00
+    lat_bnds   (lat, bnds) float64 -90.0 -88.75 -88.75 ... 88.75 88.75 90.0
+    lon_bnds   (lon, bnds) float64 0.0 1.875 1.875 3.75 ... 358.1 358.1 360.0
+    tas        (time, lat, lon) float32 ...
+Attributes: (12/47)
+    Conventions:                     CF-1.7 CMIP-6.2
+    activity_id:                     CMIP
+    branch_method:                   standard
+    branch_time_in_child:            0.0
+    branch_time_in_parent:           144000.0
+    creation_date:                   2019-04-05T16:02:56Z
+    ...                              ...
+    variable_id:                     tas
+    variant_label:                   r1i1p1f2
+    license:                         CMIP6 model data produced by the Met Off...
+    cmor_version:                    3.4.0
+    tracking_id:                     hdl:21.14100/255d149c-12fc-41f1-878d-034...
+    DODS_EXTRA.Unlimited_Dimension:  time</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-e13d7933-d627-4ec9-956c-9e21f177e3f7' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-e13d7933-d627-4ec9-956c-9e21f177e3f7' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 1200</li><li><span>bnds</span>: 2</li><li><span class='xr-has-index'>lat</span>: 144</li><li><span class='xr-has-index'>lon</span>: 192</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-f126af38-6748-44bd-8494-599dd34cd18c' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f126af38-6748-44bd-8494-599dd34cd18c' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>1850-01-16 00:00:00 ... 1949-12-...</div><input id='attrs-43e28910-309f-4a52-82db-67deb88540c8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-43e28910-309f-4a52-82db-67deb88540c8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9e324c14-dbcf-47c3-b437-c5e8d892b695' class='xr-var-data-in' type='checkbox'><label for='data-9e324c14-dbcf-47c3-b437-c5e8d892b695' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>_ChunkSizes :</span></dt><dd>524288</dd></dl></div><div class='xr-var-data'><pre>array([cftime.Datetime360Day(1850, 1, 16, 0, 0, 0, 0, has_year_zero=True),
+       cftime.Datetime360Day(1850, 2, 16, 0, 0, 0, 0, has_year_zero=True),
+       cftime.Datetime360Day(1850, 3, 16, 0, 0, 0, 0, has_year_zero=True), ...,
+       cftime.Datetime360Day(1949, 10, 16, 0, 0, 0, 0, has_year_zero=True),
+       cftime.Datetime360Day(1949, 11, 16, 0, 0, 0, 0, has_year_zero=True),
+       cftime.Datetime360Day(1949, 12, 16, 0, 0, 0, 0, has_year_zero=True)],
+      dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-89.38 -88.12 ... 88.12 89.38</div><input id='attrs-f09a1a40-668a-411a-858b-94dd8cde8dd2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f09a1a40-668a-411a-858b-94dd8cde8dd2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0106eb79-e332-410e-a9cd-d4a567982fbe' class='xr-var-data-in' type='checkbox'><label for='data-0106eb79-e332-410e-a9cd-d4a567982fbe' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>lat_bnds</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd></dl></div><div class='xr-var-data'><pre>array([-89.375, -88.125, -86.875, -85.625, -84.375, -83.125, -81.875, -80.625,
+       -79.375, -78.125, -76.875, -75.625, -74.375, -73.125, -71.875, -70.625,
+       -69.375, -68.125, -66.875, -65.625, -64.375, -63.125, -61.875, -60.625,
+       -59.375, -58.125, -56.875, -55.625, -54.375, -53.125, -51.875, -50.625,
+       -49.375, -48.125, -46.875, -45.625, -44.375, -43.125, -41.875, -40.625,
+       -39.375, -38.125, -36.875, -35.625, -34.375, -33.125, -31.875, -30.625,
+       -29.375, -28.125, -26.875, -25.625, -24.375, -23.125, -21.875, -20.625,
+       -19.375, -18.125, -16.875, -15.625, -14.375, -13.125, -11.875, -10.625,
+        -9.375,  -8.125,  -6.875,  -5.625,  -4.375,  -3.125,  -1.875,  -0.625,
+         0.625,   1.875,   3.125,   4.375,   5.625,   6.875,   8.125,   9.375,
+        10.625,  11.875,  13.125,  14.375,  15.625,  16.875,  18.125,  19.375,
+        20.625,  21.875,  23.125,  24.375,  25.625,  26.875,  28.125,  29.375,
+        30.625,  31.875,  33.125,  34.375,  35.625,  36.875,  38.125,  39.375,
+        40.625,  41.875,  43.125,  44.375,  45.625,  46.875,  48.125,  49.375,
+        50.625,  51.875,  53.125,  54.375,  55.625,  56.875,  58.125,  59.375,
+        60.625,  61.875,  63.125,  64.375,  65.625,  66.875,  68.125,  69.375,
+        70.625,  71.875,  73.125,  74.375,  75.625,  76.875,  78.125,  79.375,
+        80.625,  81.875,  83.125,  84.375,  85.625,  86.875,  88.125,  89.375])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>0.9375 2.812 4.688 ... 357.2 359.1</div><input id='attrs-b2e05798-e75f-479c-9b2a-8dee7691d254' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b2e05798-e75f-479c-9b2a-8dee7691d254' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-74cb53e7-394e-4370-a6e7-765ca620410e' class='xr-var-data-in' type='checkbox'><label for='data-74cb53e7-394e-4370-a6e7-765ca620410e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>lon_bnds</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd></dl></div><div class='xr-var-data'><pre>array([  0.9375,   2.8125,   4.6875,   6.5625,   8.4375,  10.3125,  12.1875,
+        14.0625,  15.9375,  17.8125,  19.6875,  21.5625,  23.4375,  25.3125,
+        27.1875,  29.0625,  30.9375,  32.8125,  34.6875,  36.5625,  38.4375,
+        40.3125,  42.1875,  44.0625,  45.9375,  47.8125,  49.6875,  51.5625,
+        53.4375,  55.3125,  57.1875,  59.0625,  60.9375,  62.8125,  64.6875,
+        66.5625,  68.4375,  70.3125,  72.1875,  74.0625,  75.9375,  77.8125,
+        79.6875,  81.5625,  83.4375,  85.3125,  87.1875,  89.0625,  90.9375,
+        92.8125,  94.6875,  96.5625,  98.4375, 100.3125, 102.1875, 104.0625,
+       105.9375, 107.8125, 109.6875, 111.5625, 113.4375, 115.3125, 117.1875,
+       119.0625, 120.9375, 122.8125, 124.6875, 126.5625, 128.4375, 130.3125,
+       132.1875, 134.0625, 135.9375, 137.8125, 139.6875, 141.5625, 143.4375,
+       145.3125, 147.1875, 149.0625, 150.9375, 152.8125, 154.6875, 156.5625,
+       158.4375, 160.3125, 162.1875, 164.0625, 165.9375, 167.8125, 169.6875,
+       171.5625, 173.4375, 175.3125, 177.1875, 179.0625, 180.9375, 182.8125,
+       184.6875, 186.5625, 188.4375, 190.3125, 192.1875, 194.0625, 195.9375,
+       197.8125, 199.6875, 201.5625, 203.4375, 205.3125, 207.1875, 209.0625,
+       210.9375, 212.8125, 214.6875, 216.5625, 218.4375, 220.3125, 222.1875,
+       224.0625, 225.9375, 227.8125, 229.6875, 231.5625, 233.4375, 235.3125,
+       237.1875, 239.0625, 240.9375, 242.8125, 244.6875, 246.5625, 248.4375,
+       250.3125, 252.1875, 254.0625, 255.9375, 257.8125, 259.6875, 261.5625,
+       263.4375, 265.3125, 267.1875, 269.0625, 270.9375, 272.8125, 274.6875,
+       276.5625, 278.4375, 280.3125, 282.1875, 284.0625, 285.9375, 287.8125,
+       289.6875, 291.5625, 293.4375, 295.3125, 297.1875, 299.0625, 300.9375,
+       302.8125, 304.6875, 306.5625, 308.4375, 310.3125, 312.1875, 314.0625,
+       315.9375, 317.8125, 319.6875, 321.5625, 323.4375, 325.3125, 327.1875,
+       329.0625, 330.9375, 332.8125, 334.6875, 336.5625, 338.4375, 340.3125,
+       342.1875, 344.0625, 345.9375, 347.8125, 349.6875, 351.5625, 353.4375,
+       355.3125, 357.1875, 359.0625])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-97a94ec3-8047-486d-b39a-09bc47baaaaf' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-97a94ec3-8047-486d-b39a-09bc47baaaaf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a79895cb-8617-4277-aece-d41608a4b893' class='xr-var-data-in' type='checkbox'><label for='data-a79895cb-8617-4277-aece-d41608a4b893' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>axis :</span></dt><dd>Z</dd><dt><span>positive :</span></dt><dd>up</dd><dt><span>long_name :</span></dt><dd>height</dd><dt><span>standard_name :</span></dt><dd>height</dd></dl></div><div class='xr-var-data'><pre>array(1.5)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-1c8f447c-a3fb-472d-aa37-5f4dc34c56fe' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1c8f447c-a3fb-472d-aa37-5f4dc34c56fe' class='xr-section-summary' >Data variables: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, bnds)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-09ee372a-a74b-490f-b14a-8e7cc8edf490' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-09ee372a-a74b-490f-b14a-8e7cc8edf490' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dc6f730e-a452-4b86-9901-b4fd6e829c93' class='xr-var-data-in' type='checkbox'><label for='data-dc6f730e-a452-4b86-9901-b4fd6e829c93' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>_ChunkSizes :</span></dt><dd>[1 2]</dd></dl></div><div class='xr-var-data'><pre>array([[cftime.Datetime360Day(1850, 1, 1, 0, 0, 0, 0, has_year_zero=True),
+        cftime.Datetime360Day(1850, 2, 1, 0, 0, 0, 0, has_year_zero=True)],
+       [cftime.Datetime360Day(1850, 2, 1, 0, 0, 0, 0, has_year_zero=True),
+        cftime.Datetime360Day(1850, 3, 1, 0, 0, 0, 0, has_year_zero=True)],
+       [cftime.Datetime360Day(1850, 3, 1, 0, 0, 0, 0, has_year_zero=True),
+        cftime.Datetime360Day(1850, 4, 1, 0, 0, 0, 0, has_year_zero=True)],
+       ...,
+       [cftime.Datetime360Day(1949, 10, 1, 0, 0, 0, 0, has_year_zero=True),
+        cftime.Datetime360Day(1949, 11, 1, 0, 0, 0, 0, has_year_zero=True)],
+       [cftime.Datetime360Day(1949, 11, 1, 0, 0, 0, 0, has_year_zero=True),
+        cftime.Datetime360Day(1949, 12, 1, 0, 0, 0, 0, has_year_zero=True)],
+       [cftime.Datetime360Day(1949, 12, 1, 0, 0, 0, 0, has_year_zero=True),
+        cftime.Datetime360Day(1950, 1, 1, 0, 0, 0, 0, has_year_zero=True)]],
+      dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lat_bnds</span></div><div class='xr-var-dims'>(lat, bnds)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f683fbca-5e64-4b0f-a414-cea66afff7dc' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f683fbca-5e64-4b0f-a414-cea66afff7dc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2f2cb679-bf1d-4ac2-bdb0-4cd903787315' class='xr-var-data-in' type='checkbox'><label for='data-2f2cb679-bf1d-4ac2-bdb0-4cd903787315' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>_ChunkSizes :</span></dt><dd>[144   2]</dd></dl></div><div class='xr-var-data'><pre>array([[-90.  , -88.75],
+       [-88.75, -87.5 ],
+       [-87.5 , -86.25],
+       ...,
+       [ 86.25,  87.5 ],
+       [ 87.5 ,  88.75],
+       [ 88.75,  90.  ]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon_bnds</span></div><div class='xr-var-dims'>(lon, bnds)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-58f45721-8338-4944-9387-7ec504f15456' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-58f45721-8338-4944-9387-7ec504f15456' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c09d0787-0684-429f-a05d-5fb0de82ca06' class='xr-var-data-in' type='checkbox'><label for='data-c09d0787-0684-429f-a05d-5fb0de82ca06' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>_ChunkSizes :</span></dt><dd>[192   2]</dd></dl></div><div class='xr-var-data'><pre>array([[  0.   ,   1.875],
+       [  1.875,   3.75 ],
+       [  3.75 ,   5.625],
+       ...,
+       [354.375, 356.25 ],
+       [356.25 , 358.125],
+       [358.125, 360.   ]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c237bf2a-0953-41f3-a438-c72904204650' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c237bf2a-0953-41f3-a438-c72904204650' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-da016651-8163-42e2-bcd6-93f7e122f1f6' class='xr-var-data-in' type='checkbox'><label for='data-da016651-8163-42e2-bcd6-93f7e122f1f6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>comment :</span></dt><dd>near-surface (usually, 2 meter) air temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>original_name :</span></dt><dd>mo: (stash: m01s03i236, lbproc: 128)</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>history :</span></dt><dd>2019-04-05T16:02:56Z altered by CMOR: Treated scalar dimension: &#x27;height&#x27;. 2019-04-05T16:02:56Z altered by CMOR: replaced missing value flag (-1.07374e+09) with standard missing value (1e+20).</dd><dt><span>_ChunkSizes :</span></dt><dd>[  1 144 192]</dd></dl></div><div class='xr-var-data'><pre>[33177600 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-425e9752-1cab-4f55-9ab3-d6ce311c3903' class='xr-section-summary-in' type='checkbox'  ><label for='section-425e9752-1cab-4f55-9ab3-d6ce311c3903' class='xr-section-summary' >Attributes: <span>(47)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>CMIP</dd><dt><span>branch_method :</span></dt><dd>standard</dd><dt><span>branch_time_in_child :</span></dt><dd>0.0</dd><dt><span>branch_time_in_parent :</span></dt><dd>144000.0</dd><dt><span>creation_date :</span></dt><dd>2019-04-05T16:02:56Z</dd><dt><span>cv_version :</span></dt><dd>6.2.20.1</dd><dt><span>data_specs_version :</span></dt><dd>01.00.29</dd><dt><span>experiment :</span></dt><dd>all-forcing simulation of the recent past</dd><dt><span>experiment_id :</span></dt><dd>historical</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>forcing_index :</span></dt><dd>2</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/CMIP6.MOHC.UKESM1-0-LL.historical.none.r1i1p1f2</dd><dt><span>grid :</span></dt><dd>Native N96 grid; 192 x 144 longitude/latitude</dd><dt><span>grid_label :</span></dt><dd>gn</dd><dt><span>history :</span></dt><dd>2019-04-05T15:50:03Z ; CMOR rewrote data to be consistent with CMIP6, CF-1.7 CMIP-6.2 and CF standards.;
+2019-04-05T15:49:43Z MIP Convert v1.0.2, Python v2.7.12, Iris v1.13.0, Numpy v1.13.3, netcdftime v1.4.1.</dd><dt><span>initialization_index :</span></dt><dd>1</dd><dt><span>institution :</span></dt><dd>Met Office Hadley Centre, Fitzroy Road, Exeter, Devon, EX1 3PB, UK</dd><dt><span>institution_id :</span></dt><dd>MOHC</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>mo_runid :</span></dt><dd>u-bc179</dd><dt><span>nominal_resolution :</span></dt><dd>250 km</dd><dt><span>parent_activity_id :</span></dt><dd>CMIP</dd><dt><span>parent_experiment_id :</span></dt><dd>piControl</dd><dt><span>parent_mip_era :</span></dt><dd>CMIP6</dd><dt><span>parent_source_id :</span></dt><dd>UKESM1-0-LL</dd><dt><span>parent_time_units :</span></dt><dd>days since 1850-01-01-00-00-00</dd><dt><span>parent_variant_label :</span></dt><dd>r1i1p1f2</dd><dt><span>physics_index :</span></dt><dd>1</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>realization_index :</span></dt><dd>1</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>source :</span></dt><dd>UKESM1.0-LL (2018): 
+aerosol: UKCA-GLOMAP-mode
+atmos: MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km)
+atmosChem: UKCA-StratTrop
+land: JULES-ES-1.0
+landIce: none
+ocean: NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)
+ocnBgchem: MEDUSA2
+seaIce: CICE-HadGEM3-GSI8 (eORCA1 tripolar primarily 1 deg; 360 x 330 longitude/latitude)</dd><dt><span>source_id :</span></dt><dd>UKESM1-0-LL</dd><dt><span>source_type :</span></dt><dd>AOGCM AER BGC CHEM</dd><dt><span>sub_experiment :</span></dt><dd>none</dd><dt><span>sub_experiment_id :</span></dt><dd>none</dd><dt><span>table_id :</span></dt><dd>Amon</dd><dt><span>table_info :</span></dt><dd>Creation Date:(13 December 2018) MD5:2b12b5db6db112aa8b8b0d6c1645b121</dd><dt><span>title :</span></dt><dd>UKESM1-0-LL output prepared for CMIP6</dd><dt><span>variable_id :</span></dt><dd>tas</dd><dt><span>variant_label :</span></dt><dd>r1i1p1f2</dd><dt><span>license :</span></dt><dd>CMIP6 model data produced by the Met Office Hadley Centre is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file) and at https://ukesm.ac.uk/cmip6. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.</dd><dt><span>cmor_version :</span></dt><dd>3.4.0</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/255d149c-12fc-41f1-878d-0344c8b797f4</dd><dt><span>DODS_EXTRA.Unlimited_Dimension :</span></dt><dd>time</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<section id="interpolation-using-cdo">
+<h3>Interpolation using <code class="docutils literal notranslate"><span class="pre">CDO</span></code><a class="headerlink" href="#interpolation-using-cdo" title="Permalink to this headline">#</a></h3>
+<p>We will use <code class="docutils literal notranslate"><span class="pre">CDO</span></code>’s python bindings to control the cdo operators. Please note, that the python bindings in the background actually execute the cdo commands on the command line. <code class="docutils literal notranslate"><span class="pre">CDO</span></code> does have a huge IO overhead since it will always write a file between each operator step and will always need data from a file on the filesystem as input. If you give an xarray dataset as input (see below), the python binding will actually trigger a <code class="docutils literal notranslate"><span class="pre">to_netcdf</span></code> call to write the input as a temporary file to disk. You should be aware of this if you use huge xarray datasets as input.</p>
+<p>We will first write the EUR-11 grid into a file on the disk so that we can use it as input to <code class="docutils literal notranslate"><span class="pre">CDO</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cdo</span> <span class="kn">import</span> <span class="n">Cdo</span>
+
+<span class="n">eur11</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s2">&quot;EUR-11_grid.nc&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we will remap the first timestep of the CMIP6 modeldata to the EUR-11 grid:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remap_cdo</span> <span class="o">=</span> <span class="n">Cdo</span><span class="p">()</span><span class="o">.</span><span class="n">remapbil</span><span class="p">(</span><span class="s2">&quot;EUR-11_grid.nc&quot;</span><span class="p">,</span> <span class="nb">input</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">returnXArray</span><span class="o">=</span><span class="s2">&quot;tas&quot;</span><span class="p">)</span>
+<span class="n">remap_cdo</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;tas&#x27; (rlat: 412, rlon: 424)&gt;
+[174688 values with dtype=float32]
+Coordinates:
+    lon      (rlat, rlon) float64 ...
+    lat      (rlat, rlon) float64 ...
+  * rlon     (rlon) float64 -28.38 -28.27 -28.16 -28.05 ... 17.93 18.05 18.16
+  * rlat     (rlat) float64 -23.38 -23.27 -23.16 -23.05 ... 21.61 21.73 21.84
+    height   float64 1.5
+Attributes:
+    standard_name:  air_temperature
+    long_name:      Near-Surface Air Temperature
+    units:          K
+    grid_mapping:   rotated_latitude_longitude
+    comment:        near-surface (usually, 2 meter) air temperature
+    original_name:  mo: (stash: m01s03i236, lbproc: 128)
+    cell_methods:   area: time: mean
+    cell_measures:  area: areacella
+    history:        2019-04-05T16:02:56Z altered by CMOR: Treated scalar dime...
+    _ChunkSizes:    [  1 144 192]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'tas'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>rlat</span>: 412</li><li><span class='xr-has-index'>rlon</span>: 424</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-275e8d45-4f74-4ce6-885f-28ceb4fd3617' class='xr-array-in' type='checkbox' checked><label for='section-275e8d45-4f74-4ce6-885f-28ceb4fd3617' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[174688 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-c2498b54-d7a0-4da0-8a41-ae488116b5ee' class='xr-section-summary-in' type='checkbox'  checked><label for='section-c2498b54-d7a0-4da0-8a41-ae488116b5ee' class='xr-section-summary' >Coordinates: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>lon</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-50c68ae8-69de-42a2-9f5d-2dca2b350c37' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-50c68ae8-69de-42a2-9f5d-2dca2b350c37' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f4ab2157-d608-488f-9b05-1287a967f49c' class='xr-var-data-in' type='checkbox'><label for='data-f4ab2157-d608-488f-9b05-1287a967f49c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lat</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-622f3200-ec49-4d64-a750-b171e4f3ca0d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-622f3200-ec49-4d64-a750-b171e4f3ca0d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0e133a9f-5980-4493-abc6-7699a75efb6d' class='xr-var-data-in' type='checkbox'><label for='data-0e133a9f-5980-4493-abc6-7699a75efb6d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-28.38 -28.27 ... 18.05 18.16</div><input id='attrs-0513f394-cabe-4833-ab20-252b12b9518f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0513f394-cabe-4833-ab20-252b12b9518f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2bb9401a-3bca-4d9c-9ed0-c224e446a3fd' class='xr-var-data-in' type='checkbox'><label for='data-2bb9401a-3bca-4d9c-9ed0-c224e446a3fd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>projection_x_coordinate</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([-28.375, -28.265, -28.155, ...,  17.935,  18.045,  18.155])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-23.38 -23.27 ... 21.73 21.84</div><input id='attrs-dd45fe58-e91d-4b03-9339-5b65febecce6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-dd45fe58-e91d-4b03-9339-5b65febecce6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7f54f966-bc83-475c-971a-0b3627ec8891' class='xr-var-data-in' type='checkbox'><label for='data-7f54f966-bc83-475c-971a-0b3627ec8891' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>projection_y_coordinate</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-23.375, -23.265, -23.155, ...,  21.615,  21.725,  21.835])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e373c0a0-f38c-4ed9-b8d3-a856add4e9a6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e373c0a0-f38c-4ed9-b8d3-a856add4e9a6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a19ae723-29b2-4f01-9a99-f5040d7e9995' class='xr-var-data-in' type='checkbox'><label for='data-a19ae723-29b2-4f01-9a99-f5040d7e9995' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>height</dd><dt><span>long_name :</span></dt><dd>height</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>positive :</span></dt><dd>up</dd><dt><span>axis :</span></dt><dd>Z</dd></dl></div><div class='xr-var-data'><pre>array(1.5)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ba82f3ca-5803-473d-98bf-486ea4c7bbea' class='xr-section-summary-in' type='checkbox'  ><label for='section-ba82f3ca-5803-473d-98bf-486ea4c7bbea' class='xr-section-summary' >Attributes: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>comment :</span></dt><dd>near-surface (usually, 2 meter) air temperature</dd><dt><span>original_name :</span></dt><dd>mo: (stash: m01s03i236, lbproc: 128)</dd><dt><span>cell_methods :</span></dt><dd>area: time: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>history :</span></dt><dd>2019-04-05T16:02:56Z altered by CMOR: Treated scalar dimension: &#x27;height&#x27;. 2019-04-05T16:02:56Z altered by CMOR: replaced missing value flag (-1.07374e+09) with standard missing value (1e+20).</dd><dt><span>_ChunkSizes :</span></dt><dd>[  1 144 192]</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">remap_cdo</span> <span class="o">-</span> <span class="mf">273.5</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7fbb44c55d00&gt;
+</pre></div>
+</div>
+<img alt="_images/domains_49_1.png" src="_images/domains_49_1.png" />
+</div>
+</div>
+</section>
+<section id="alternative-interpolation-methods">
+<h3>Alternative interpolation methods<a class="headerlink" href="#alternative-interpolation-methods" title="Permalink to this headline">#</a></h3>
+<p>A nice alternative is <a class="reference external" href="https://pangeo-xesmf.readthedocs.io">xesmf</a> since it is based on xarray and will also very nicely work with dask.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xesmf</span> <span class="k">as</span> <span class="nn">xe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regridder</span> <span class="o">=</span> <span class="n">xe</span><span class="o">.</span><span class="n">Regridder</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">eur11</span><span class="p">,</span> <span class="s2">&quot;bilinear&quot;</span><span class="p">,</span> <span class="n">periodic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">regridder</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>xESMF Regridder 
+Regridding algorithm:       bilinear 
+Weight filename:            bilinear_144x192_412x424_peri.nc 
+Reuse pre-computed weights? False 
+Input grid shape:           (144, 192) 
+Output grid shape:          (412, 424) 
+Periodic in longitude?      True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remap_xe</span> <span class="o">=</span> <span class="n">regridder</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">tas</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">remap_xe</span> <span class="o">-</span> <span class="mf">273.5</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7fbb417584f0&gt;
+</pre></div>
+</div>
+<img alt="_images/domains_55_1.png" src="_images/domains_55_1.png" />
+</div>
+</div>
+<p>We can easily compare both approaches</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">remap_cdo</span> <span class="o">-</span> <span class="n">remap_xe</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;lat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7fbb41901ca0&gt;
+</pre></div>
+</div>
+<img alt="_images/domains_57_1.png" src="_images/domains_57_1.png" />
+</div>
+</div>
+<p>The nice thing about <code class="docutils literal notranslate"><span class="pre">xesmf</span></code> is that it works together with xarray and will keep all meta information. Another consequence is that <code class="docutils literal notranslate"><span class="pre">xesmf</span></code> <a class="reference external" href="https://pangeo-xesmf.readthedocs.io/en/latest/notebooks/Dask.html">works well with dask</a> and it’s vectorization. That means, if we have a long time axis along we want to regrid, this can easily be parallelized using, e.g., <code class="docutils literal notranslate"><span class="pre">dask.distributed</span></code> and will also work nicely with large datasets that don’t fit into memory. The <code class="docutils literal notranslate"><span class="pre">xesmf</span></code> regridder can also store and reuse regridding weights for faster interpolation.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="reproducible-research.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Reproducible Research</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Markdown Files</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Lars Buntemeyer<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
