@@ -1,4 +1,4 @@
-name: cordex-tutorials
+name: cordex-examples
 channels:
   - conda-forge
   - nodefaults
