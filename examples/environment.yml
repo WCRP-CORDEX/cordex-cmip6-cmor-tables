@@ -20,5 +20,9 @@ dependencies:
   - ghp-import
   - py-cordex
   - pyremo>=0.3.4
+  - fsspec
+  - requests
+  - aiohttp
+
     #  - pip:
     #    - git+https://github.com/euro-cordex/py-cordex.git  # latest py-cordex version
