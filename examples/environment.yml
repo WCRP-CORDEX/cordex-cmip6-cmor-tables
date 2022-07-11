@@ -1,0 +1,22 @@
+name: cordex-tutorials
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - cartopy
+  - matplotlib-base
+  - numpy
+  - pooch
+  - regionmask
+  - setuptools
+  - xarray
+  - cftime
+  - netCDF4
+  - xesmf
+  - cdo
+  - python-cdo
+  - jupyter-book
+  - intake-esm
+  - ghp-import
+  - pip:
+    - git+https://github.com/euro-cordex/py-cordex.git  # latest py-cordex version
