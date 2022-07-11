@@ -19,6 +19,6 @@ dependencies:
   - intake-esm
   - ghp-import
   - py-cordex
-  - pyremo>=0.3.3
+  - pyremo>=0.3.4
     #  - pip:
     #    - git+https://github.com/euro-cordex/py-cordex.git  # latest py-cordex version
