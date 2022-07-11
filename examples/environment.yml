@@ -18,5 +18,7 @@ dependencies:
   - jupyter-book
   - intake-esm
   - ghp-import
-  - pip:
-    - git+https://github.com/euro-cordex/py-cordex.git  # latest py-cordex version
+  - py-cordex
+  - pyremo>=0.3.3
+    #  - pip:
+    #    - git+https://github.com/euro-cordex/py-cordex.git  # latest py-cordex version

@@ -1,16 +1,7 @@
 # Welcome
 
-This is a small sample book to give you a feel for how book content is
-structured.
+This is a small collection of examples of how cmorized CORDEX-CMIP6 datasets could look like.
 
 :::{note}
-Here is a note!
+Current archive specifications for CORDEX-CMIP6 are not available yet.
 :::
-
-And here is a code block:
-
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.

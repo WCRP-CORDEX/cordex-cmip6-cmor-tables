@@ -5,10 +5,10 @@
 
 #######################################################################################
 # Book settings
-title                       : Cordex CMOR Examples  # The title of the book. Will be placed in the left navbar.
+title                       : CMOR Examples  # The title of the book. Will be placed in the left navbar.
 author                      : Lars Buntemeyer  # The author of the book
 copyright                   : "2022"  # Copyright year to be placed in the footer
-logo                        : cordex_logo.png  # A path to the book logo
+logo                        : WCRP-CORDEX-logo.png  # A path to the book logo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

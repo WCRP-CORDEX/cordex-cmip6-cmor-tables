@@ -4,7 +4,5 @@
 format: jb-book
 root: intro
 chapters:
-- file: reproducible-research
+- file: cmor-examples
 - file: domains
-- file: markdown
-- file: notebooks
