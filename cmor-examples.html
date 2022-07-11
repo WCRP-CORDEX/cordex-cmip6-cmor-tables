@@ -502,129 +502,79 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;code-list.csv&#39; from &#39;https://raw.githubusercontent.com/remo-rcm/tables/master/code-list/code-list.csv&#39; to &#39;/home/runner/.pyremo&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;flake.csv&#39; from &#39;https://raw.githubusercontent.com/remo-rcm/tables/master/code-list/flake.csv&#39; to &#39;/home/runner/.pyremo&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-domains.csv&#39; from &#39;https://raw.githubusercontent.com/remo-rcm/tables/master/domains/cordex-domains.csv&#39; to &#39;/home/runner/.pyremo&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;aux-domains.csv&#39; from &#39;https://raw.githubusercontent.com/remo-rcm/tables/master/domains/aux-domains.csv&#39; to &#39;/home/runner/.pyremo&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-fps.csv&#39; from &#39;https://raw.githubusercontent.com/remo-rcm/tables/master/domains/cordex-fps.csv&#39; to &#39;/home/runner/.pyremo&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-high-res.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-high-res.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-fps.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-fps.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-core.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-core.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading file &#39;cordex-regular.csv&#39; from &#39;https://raw.githubusercontent.com/euro-cordex/tables/main/domains/cordex-regular.csv&#39; to &#39;/home/runner/.py-cordex&#39;.
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/fsspec/registry.py:228,</span> in <span class="ni">get_filesystem_class</span><span class="nt">(protocol)</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">228</span>     <span class="n">register_implementation</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="n">_import_class</span><span class="p">(</span><span class="n">bit</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]))</span>
-<span class="g g-Whitespace">    </span><span class="mi">229</span> <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/fsspec/registry.py:251,</span> in <span class="ni">_import_class</span><span class="nt">(cls, minv)</span>
-<span class="g g-Whitespace">    </span><span class="mi">250</span> <span class="n">mod</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">251</span> <span class="n">mod</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">mod</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span> <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/importlib/__init__.py:127,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">--&gt; </span><span class="mi">127</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1014,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:991,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:975,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:671,</span> in <span class="ni">_load_unlocked</span><span class="nt">(spec)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap_external&gt;:843,</span> in <span class="ni">exec_module</span><span class="nt">(self, module)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:219,</span> in <span class="ni">_call_with_frames_removed</span><span class="nt">(f, *args, **kwds)</span>
-
-<span class="n">File</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cordex</span><span class="o">-</span><span class="n">examples</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">fsspec</span><span class="o">/</span><span class="n">implementations</span><span class="o">/</span><span class="n">http</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">aiohttp</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;aiohttp&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
 <span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">test_cmorizer_fx</span><span class="p">()</span>
 
 <span class="nn">Input In [3],</span> in <span class="ni">test_cmorizer_fx</span><span class="nt">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">def</span> <span class="nf">test_cmorizer_fx</span><span class="p">():</span>
-<span class="ne">---&gt; </span><span class="mi">14</span>     <span class="n">ds</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">surflib</span><span class="p">(</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">eur11</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cordex_domain</span><span class="p">(</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">eur11</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">eur11</span><span class="o">.</span><span class="n">lat</span><span class="p">})</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">eur11</span> <span class="o">=</span> <span class="n">cx</span><span class="o">.</span><span class="n">cordex_domain</span><span class="p">(</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">({</span><span class="s2">&quot;lon&quot;</span><span class="p">:</span> <span class="n">eur11</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">eur11</span><span class="o">.</span><span class="n">lat</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">17</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">prcmor</span><span class="o">.</span><span class="n">cmorize_variable</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">ds</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="s2">&quot;orog&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_fx.json&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_remo_example.json&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_grids.json&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">CORDEX_domain</span><span class="o">=</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">time_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">allow_units_convert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="k">return</span> <span class="n">filename</span>
 
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/pyremo/core/data.py:56,</span> in <span class="ni">surflib</span><span class="nt">(domain, crop, update_meta)</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="n">url</span> <span class="o">=</span> <span class="n">bodlib_tpl</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">56</span> <span class="k">with</span> <span class="n">fsspec</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="c1"># ds = open_remo_dataset(f, update_meta=True).squeeze(drop=True)</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">59</span> <span class="k">if</span> <span class="n">update_meta</span><span class="p">:</span>
+<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/pyremo/cmor/remo_cmor.py:500,</span> in <span class="ni">cmorize_variable</span><span class="nt">(ds, varname, cmor_table, dataset_table, grids_table, inpath, allow_units_convert, allow_resample, input_freq, CORDEX_domain, vertices, time_units, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span> <span class="k">if</span> <span class="n">allow_units_convert</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>     <span class="n">ds_prep</span><span class="p">[</span><span class="n">varname</span><span class="p">]</span> <span class="o">=</span> <span class="n">_units_convert</span><span class="p">(</span><span class="n">ds_prep</span><span class="p">[</span><span class="n">varname</span><span class="p">],</span> <span class="n">cmor_table</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">500</span> <span class="n">table_ids</span> <span class="o">=</span> <span class="n">_setup</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="n">dataset_table</span><span class="p">,</span> <span class="n">cmor_table</span><span class="p">,</span> <span class="n">grids_table</span><span class="o">=</span><span class="n">grids_table</span><span class="p">,</span> <span class="n">inpath</span><span class="o">=</span><span class="n">inpath</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span> <span class="n">time_cell_method</span> <span class="o">=</span> <span class="n">_strip_time_cell_method</span><span class="p">(</span><span class="n">cfvarinfo</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span> <span class="n">cmorTime</span><span class="p">,</span> <span class="n">cmorGrid</span> <span class="o">=</span> <span class="n">_define_grid</span><span class="p">(</span><span class="n">ds_prep</span><span class="p">,</span> <span class="n">table_ids</span><span class="p">,</span> <span class="n">time_cell_method</span><span class="p">)</span>
 
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/fsspec/core.py:467,</span> in <span class="ni">open</span><span class="nt">(urlpath, mode, compression, encoding, errors, protocol, newline, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">417</span> <span class="k">def</span> <span class="nf">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">418</span>     <span class="n">urlpath</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">419</span>     <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rb&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">425</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">426</span> <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">427</span>     <span class="sd">&quot;&quot;&quot;Given a path or paths, return one ``OpenFile`` object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">428</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">429</span><span class="sd">     Parameters</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">465</span><span class="sd">     ``OpenFile`` object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">467</span>     <span class="k">return</span> <span class="n">open_files</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">468</span>         <span class="n">urlpath</span><span class="o">=</span><span class="p">[</span><span class="n">urlpath</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span>         <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">471</span>         <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">472</span>         <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">473</span>         <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">474</span>         <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">475</span>         <span class="n">expand</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">476</span>         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">477</span>     <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/pyremo/cmor/remo_cmor.py:158,</span> in <span class="ni">_setup</span><span class="nt">(dataset_table, mip_table, grids_table, inpath)</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span> <span class="k">if</span> <span class="n">grids_table</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span>     <span class="n">grids_table</span> <span class="o">=</span> <span class="s2">&quot;CORDEX-CMIP6_grids.json&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">158</span> <span class="n">cmor</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">159</span>     <span class="n">inpath</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">160</span>     <span class="n">set_verbosity</span><span class="o">=</span><span class="n">cmor</span><span class="o">.</span><span class="n">CMOR_NORMAL</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="n">netcdf_file_action</span><span class="o">=</span><span class="n">cmor</span><span class="o">.</span><span class="n">CMOR_REPLACE</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span>     <span class="n">exit_control</span><span class="o">=</span><span class="n">cmor</span><span class="o">.</span><span class="n">CMOR_EXIT_ON_MAJOR</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">163</span>     <span class="n">logfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span> <span class="n">cmor</span><span class="o">.</span><span class="n">dataset_json</span><span class="p">(</span><span class="n">dataset_table</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span> <span class="n">grid_id</span> <span class="o">=</span> <span class="n">cmor</span><span class="o">.</span><span class="n">load_table</span><span class="p">(</span><span class="n">grids_table</span><span class="p">)</span>
 
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/fsspec/core.py:299,</span> in <span class="ni">open_files</span><span class="nt">(urlpath, mode, compression, encoding, errors, name_function, num, protocol, newline, auto_mkdir, expand, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span> <span class="k">def</span> <span class="nf">open_files</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span>     <span class="n">urlpath</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span>     <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rb&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span> <span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>     <span class="sd">&quot;&quot;&quot;Given a path or paths, return a list of ``OpenFile`` objects.</span>
-<span class="g g-Whitespace">    </span><span class="mi">245</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">246</span><span class="sd">     For writing, a str path must contain the &quot;*&quot; character, which will be filled</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">    </span><span class="mi">297</span><span class="sd">     be used as a single context</span>
-<span class="g g-Whitespace">    </span><span class="mi">298</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">299</span>     <span class="n">fs</span><span class="p">,</span> <span class="n">fs_token</span><span class="p">,</span> <span class="n">paths</span> <span class="o">=</span> <span class="n">get_fs_token_paths</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span>         <span class="n">urlpath</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">301</span>         <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">302</span>         <span class="n">num</span><span class="o">=</span><span class="n">num</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span>         <span class="n">name_function</span><span class="o">=</span><span class="n">name_function</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span>         <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>         <span class="n">expand</span><span class="o">=</span><span class="n">expand</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="k">if</span> <span class="s2">&quot;r&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span> <span class="ow">and</span> <span class="n">auto_mkdir</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">parents</span> <span class="o">=</span> <span class="p">{</span><span class="n">fs</span><span class="o">.</span><span class="n">_parent</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">}</span>
-
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/fsspec/core.py:647,</span> in <span class="ni">get_fs_token_paths</span><span class="nt">(urlpath, mode, num, name_function, storage_options, protocol, expand)</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="n">protocol</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">protocols</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span>             <span class="s2">&quot;When specifying a list of paths, all paths must &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span>             <span class="s2">&quot;share the same protocol&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">647</span> <span class="bp">cls</span> <span class="o">=</span> <span class="n">get_filesystem_class</span><span class="p">(</span><span class="n">protocol</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span> <span class="n">optionss</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">_get_kwargs_from_urls</span><span class="p">,</span> <span class="n">urlpath</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span> <span class="n">paths</span> <span class="o">=</span> <span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">_strip_protocol</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">urlpath</span><span class="p">]</span>
-
-<span class="nn">File /usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/fsspec/registry.py:230,</span> in <span class="ni">get_filesystem_class</span><span class="nt">(protocol)</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span>         <span class="n">register_implementation</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="n">_import_class</span><span class="p">(</span><span class="n">bit</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]))</span>
-<span class="g g-Whitespace">    </span><span class="mi">229</span>     <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">230</span>         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">bit</span><span class="p">[</span><span class="s2">&quot;err&quot;</span><span class="p">])</span> <span class="kn">from</span> <span class="nn">e</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span> <span class="bp">cls</span> <span class="o">=</span> <span class="n">registry</span><span class="p">[</span><span class="n">protocol</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">232</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s2">&quot;protocol&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;abstract&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
-
-<span class="ne">ImportError</span>: HTTPFileSystem requires &quot;requests&quot; and &quot;aiohttp&quot; to be installed
+<span class="ne">NameError</span>: name &#39;cmor&#39; is not defined
 </pre></div>
 </div>
 </div>
