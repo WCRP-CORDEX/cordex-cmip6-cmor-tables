@@ -1,0 +1,29 @@
+name: cordex-examples
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - cmor
+  - cartopy
+  - matplotlib-base
+  - numpy
+  - pooch
+  - regionmask
+  - setuptools
+  - xarray
+  - cftime
+  - netCDF4
+  - xesmf
+  - cdo
+  - python-cdo
+  - jupyter-book
+  - intake-esm
+  - ghp-import
+  - py-cordex
+  - pyremo>=0.3.4
+  - fsspec
+  - requests
+  - aiohttp
+
+    #  - pip:
+    #    - git+https://github.com/euro-cordex/py-cordex.git  # latest py-cordex version
