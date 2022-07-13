@@ -13,5 +13,5 @@ dependencies:
   - fsspec
   - requests
   - aiohttp
-  - cf-checker
+  - cfchecker
   - pyremo
