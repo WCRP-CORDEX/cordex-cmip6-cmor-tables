@@ -58,7 +58,7 @@ def fx_file():
     return filename
 
 
-def test_fx(fx_file):
+def test_prepare(fx_file):
     new_tables = copy_tables(table_dir)
     fx_file = copy_filename_to_cmip6(fx_file)
     print(fx_file)
@@ -69,7 +69,12 @@ def test_fx(fx_file):
     print("The exit code was: %d" % test.returncode)
     assert test.returncode == 0
 
-    # return os.system(f"PrePARE --table-path ./Tables {fx_file}")
+
+def test_cfchecker(fx_file):
+    command = ["cfchecks", "-v", "CF-1.7", fx_file]
+    test = subprocess.run(command)
+    print("The exit code was: %d" % test.returncode)
+    assert test.returncode == 0
 
 
 # def test_cmorizer_mon():
