@@ -4,7 +4,7 @@ import cordex as cx
 import xarray as xr
 from cordex import cmor as cmor
 
-table_dir = "../Tables"
+table_dir = "./Tables"
 
 
 def test_cmorizer_fx():
