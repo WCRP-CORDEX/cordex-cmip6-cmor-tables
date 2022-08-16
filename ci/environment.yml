@@ -14,4 +14,4 @@ dependencies:
   - requests
   - aiohttp
   - pip:
-    - git+https://github.com/remo-rcm/pyremo.git # always use master for now
+    - git+https://github.com/euro-cordex/py-cordex.git # always use master for now

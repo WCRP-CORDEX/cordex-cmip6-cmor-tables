@@ -1,22 +1,18 @@
 import os
 
-import cordex as cx
-import pyremo as pr
-
-# import pytest
 import xarray as xr
-from pyremo import cmor as prcmor
+from cordex import cmor as cmor
+import cordex as cx
 
-table_dir = "./Tables"
+table_dir = "../Tables"
 
 
 def test_cmorizer_fx():
-    ds = pr.data.surflib("EUR-11")
-    eur11 = cx.cordex_domain("EUR-11")
-    ds = ds.assign_coords({"lon": eur11.lon, "lat": eur11.lat})
-    filename = prcmor.cmorize_variable(
+    ds = cx.cordex_domain("EUR-11", dummy="topo")
+    filename = cmor.cmorize_variable(
         ds,
         "orog",
+        mapping_table={"orog": {"varname":"topo"}},
         cmor_table=os.path.join(table_dir, "CORDEX-CMIP6_fx.json"),
         dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
         grids_table=os.path.join(table_dir, "CORDEX-CMIP6_grids.json"),
