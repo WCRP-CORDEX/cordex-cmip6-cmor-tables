@@ -9,7 +9,6 @@ from pyremo import cmor as prcmor
 
 table_dir = "./Tables"
 
-
 def copy_tables(table_dir):
     """copy CORDEX-CMIP6 table names to CMIP6 tables names
 
