@@ -5,7 +5,6 @@ channels:
 dependencies:
   - xarray
   - netCDF4
-# for testing
   - pytest
   - py-cordex
   - cf_xarray
@@ -13,5 +12,7 @@ dependencies:
   - fsspec
   - requests
   - aiohttp
+  - cdo
+  - python-cdo
   - pip:
     - git+https://github.com/euro-cordex/py-cordex.git # always use master for now
