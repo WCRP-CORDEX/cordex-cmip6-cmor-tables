@@ -1,8 +1,8 @@
 import os
 
+import cordex as cx
 import xarray as xr
 from cordex import cmor as cmor
-import cordex as cx
 
 table_dir = "../Tables"
 
@@ -12,7 +12,7 @@ def test_cmorizer_fx():
     filename = cmor.cmorize_variable(
         ds,
         "orog",
-        mapping_table={"orog": {"varname":"topo"}},
+        mapping_table={"orog": {"varname": "topo"}},
         cmor_table=os.path.join(table_dir, "CORDEX-CMIP6_fx.json"),
         dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
         grids_table=os.path.join(table_dir, "CORDEX-CMIP6_grids.json"),
