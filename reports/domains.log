@@ -17,197 +17,138 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-plots(
-    [
-        cx.cordex_domain(name, dummy="topo")
-        for name in cx.domains.tables["cordex-core"].index
-    ],
-    borders=False,
+import xarray as xr
+
+# ds = xr.open_dataset("https://esgf3.dkrz.de/thredds/dodsC/cmip6/CMIP/MPI-M/MPI-ESM1-2-HR/historical/r1i1p1f1/Amon/tas/gn/v20190710/tas_Amon_MPI-ESM1-2-HR_historical_r1i1p1f1_gn_199501-199912.nc")
+ds = xr.open_dataset(
+    "http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc"
 )
+ds
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/IPython/core/formatters.py:339[0m, in [0;36mBaseFormatter.__call__[0;34m(self, obj)[0m
-[1;32m    337[0m     [38;5;28;01mpass[39;00m
-[1;32m    338[0m [38;5;28;01melse[39;00m:
-[0;32m--> 339[0m     [38;5;28;01mreturn[39;00m [43mprinter[49m[43m([49m[43mobj[49m[43m)[49m
-[1;32m    340[0m [38;5;66;03m# Finally look for special method names[39;00m
-[1;32m    341[0m method [38;5;241m=[39m get_real_method(obj, [38;5;28mself[39m[38;5;241m.[39mprint_method)
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/file_manager.py:201[0m, in [0;36mCachingFileManager._acquire_with_cache_info[0;34m(self, needs_lock)[0m
+[1;32m    200[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 201[0m     file [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_cache[49m[43m[[49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_key[49m[43m][49m
+[1;32m    202[0m [38;5;28;01mexcept[39;00m [38;5;167;01mKeyError[39;00m:
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/IPython/core/pylabtools.py:151[0m, in [0;36mprint_figure[0;34m(fig, fmt, bbox_inches, base64, **kwargs)[0m
-[1;32m    148[0m     [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mbackend_bases[39;00m [38;5;28;01mimport[39;00m FigureCanvasBase
-[1;32m    149[0m     FigureCanvasBase(fig)
-[0;32m--> 151[0m [43mfig[49m[38;5;241;43m.[39;49m[43mcanvas[49m[38;5;241;43m.[39;49m[43mprint_figure[49m[43m([49m[43mbytes_io[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkw[49m[43m)[49m
-[1;32m    152[0m data [38;5;241m=[39m bytes_io[38;5;241m.[39mgetvalue()
-[1;32m    153[0m [38;5;28;01mif[39;00m fmt [38;5;241m==[39m [38;5;124m'[39m[38;5;124msvg[39m[38;5;124m'[39m:
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/lru_cache.py:55[0m, in [0;36mLRUCache.__getitem__[0;34m(self, key)[0m
+[1;32m     54[0m [38;5;28;01mwith[39;00m [38;5;28mself[39m[38;5;241m.[39m_lock:
+[0;32m---> 55[0m     value [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_cache[49m[43m[[49m[43mkey[49m[43m][49m
+[1;32m     56[0m     [38;5;28mself[39m[38;5;241m.[39m_cache[38;5;241m.[39mmove_to_end(key)
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/backend_bases.py:2295[0m, in [0;36mFigureCanvasBase.print_figure[0;34m(self, filename, dpi, facecolor, edgecolor, orientation, format, bbox_inches, pad_inches, bbox_extra_artists, backend, **kwargs)[0m
-[1;32m   2289[0m     renderer [38;5;241m=[39m _get_renderer(
-[1;32m   2290[0m         [38;5;28mself[39m[38;5;241m.[39mfigure,
-[1;32m   2291[0m         functools[38;5;241m.[39mpartial(
-[1;32m   2292[0m             print_method, orientation[38;5;241m=[39morientation)
-[1;32m   2293[0m     )
-[1;32m   2294[0m     [38;5;28;01mwith[39;00m [38;5;28mgetattr[39m(renderer, [38;5;124m"[39m[38;5;124m_draw_disabled[39m[38;5;124m"[39m, nullcontext)():
-[0;32m-> 2295[0m         [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mfigure[49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[43mrenderer[49m[43m)[49m
-[1;32m   2297[0m [38;5;28;01mif[39;00m bbox_inches:
-[1;32m   2298[0m     [38;5;28;01mif[39;00m bbox_inches [38;5;241m==[39m [38;5;124m"[39m[38;5;124mtight[39m[38;5;124m"[39m:
+[0;31mKeyError[0m: [<class 'netCDF4._netCDF4.Dataset'>, ('http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/artist.py:74[0m, in [0;36m_finalize_rasterization.<locals>.draw_wrapper[0;34m(artist, renderer, *args, **kwargs)[0m
-[1;32m     72[0m [38;5;129m@wraps[39m(draw)
-[1;32m     73[0m [38;5;28;01mdef[39;00m [38;5;21mdraw_wrapper[39m(artist, renderer, [38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
-[0;32m---> 74[0m     result [38;5;241m=[39m [43mdraw[49m[43m([49m[43martist[49m[43m,[49m[43m [49m[43mrenderer[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
-[1;32m     75[0m     [38;5;28;01mif[39;00m renderer[38;5;241m.[39m_rasterizing:
-[1;32m     76[0m         renderer[38;5;241m.[39mstop_rasterizing()
+During handling of the above exception, another exception occurred:
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/artist.py:51[0m, in [0;36mallow_rasterization.<locals>.draw_wrapper[0;34m(artist, renderer)[0m
-[1;32m     48[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[1;32m     49[0m         renderer[38;5;241m.[39mstart_filter()
-[0;32m---> 51[0m     [38;5;28;01mreturn[39;00m [43mdraw[49m[43m([49m[43martist[49m[43m,[49m[43m [49m[43mrenderer[49m[43m)[49m
-[1;32m     52[0m [38;5;28;01mfinally[39;00m:
-[1;32m     53[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[0;31mOSError[0m                                   Traceback (most recent call last)
+Cell [0;32mIn [19], line 4[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mxarray[39;00m [38;5;28;01mas[39;00m [38;5;21;01mxr[39;00m
+[1;32m      3[0m [38;5;66;03m# ds = xr.open_dataset("https://esgf3.dkrz.de/thredds/dodsC/cmip6/CMIP/MPI-M/MPI-ESM1-2-HR/historical/r1i1p1f1/Amon/tas/gn/v20190710/tas_Amon_MPI-ESM1-2-HR_historical_r1i1p1f1_gn_199501-199912.nc")[39;00m
+[0;32m----> 4[0m ds [38;5;241m=[39m xr[38;5;241m.[39mopen_dataset(
+[1;32m      5[0m     [38;5;124m"[39m[38;5;124mhttp://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc[39m[38;5;124m"[39m
+[1;32m      6[0m )
+[1;32m      7[0m ds
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/figure.py:2845[0m, in [0;36mFigure.draw[0;34m(self, renderer)[0m
-[1;32m   2842[0m         [38;5;66;03m# ValueError can occur when resizing a window.[39;00m
-[1;32m   2844[0m [38;5;28mself[39m[38;5;241m.[39mpatch[38;5;241m.[39mdraw(renderer)
-[0;32m-> 2845[0m [43mmimage[49m[38;5;241;43m.[39;49m[43m_draw_list_compositing_images[49m[43m([49m
-[1;32m   2846[0m [43m    [49m[43mrenderer[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43martists[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43msuppressComposite[49m[43m)[49m
-[1;32m   2848[0m [38;5;28;01mfor[39;00m sfig [38;5;129;01min[39;00m [38;5;28mself[39m[38;5;241m.[39msubfigs:
-[1;32m   2849[0m     sfig[38;5;241m.[39mdraw(renderer)
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/api.py:531[0m, in [0;36mopen_dataset[0;34m(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, backend_kwargs, **kwargs)[0m
+[1;32m    519[0m decoders [38;5;241m=[39m _resolve_decoders_kwargs(
+[1;32m    520[0m     decode_cf,
+[1;32m    521[0m     open_backend_dataset_parameters[38;5;241m=[39mbackend[38;5;241m.[39mopen_dataset_parameters,
+[0;32m   (...)[0m
+[1;32m    527[0m     decode_coords[38;5;241m=[39mdecode_coords,
+[1;32m    528[0m )
+[1;32m    530[0m overwrite_encoded_chunks [38;5;241m=[39m kwargs[38;5;241m.[39mpop([38;5;124m"[39m[38;5;124moverwrite_encoded_chunks[39m[38;5;124m"[39m, [38;5;28;01mNone[39;00m)
+[0;32m--> 531[0m backend_ds [38;5;241m=[39m [43mbackend[49m[38;5;241;43m.[39;49m[43mopen_dataset[49m[43m([49m
+[1;32m    532[0m [43m    [49m[43mfilename_or_obj[49m[43m,[49m
+[1;32m    533[0m [43m    [49m[43mdrop_variables[49m[38;5;241;43m=[39;49m[43mdrop_variables[49m[43m,[49m
+[1;32m    534[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mdecoders[49m[43m,[49m
+[1;32m    535[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
+[1;32m    536[0m [43m[49m[43m)[49m
+[1;32m    537[0m ds [38;5;241m=[39m _dataset_from_backend_dataset(
+[1;32m    538[0m     backend_ds,
+[1;32m    539[0m     filename_or_obj,
+[0;32m   (...)[0m
+[1;32m    547[0m     [38;5;241m*[39m[38;5;241m*[39mkwargs,
+[1;32m    548[0m )
+[1;32m    549[0m [38;5;28;01mreturn[39;00m ds
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/image.py:132[0m, in [0;36m_draw_list_compositing_images[0;34m(renderer, parent, artists, suppress_composite)[0m
-[1;32m    130[0m [38;5;28;01mif[39;00m not_composite [38;5;129;01mor[39;00m [38;5;129;01mnot[39;00m has_images:
-[1;32m    131[0m     [38;5;28;01mfor[39;00m a [38;5;129;01min[39;00m artists:
-[0;32m--> 132[0m         [43ma[49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[43mrenderer[49m[43m)[49m
-[1;32m    133[0m [38;5;28;01melse[39;00m:
-[1;32m    134[0m     [38;5;66;03m# Composite any adjacent images together[39;00m
-[1;32m    135[0m     image_group [38;5;241m=[39m []
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/netCDF4_.py:555[0m, in [0;36mNetCDF4BackendEntrypoint.open_dataset[0;34m(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)[0m
+[1;32m    534[0m [38;5;28;01mdef[39;00m [38;5;21mopen_dataset[39m(
+[1;32m    535[0m     [38;5;28mself[39m,
+[1;32m    536[0m     filename_or_obj,
+[0;32m   (...)[0m
+[1;32m    551[0m     autoclose[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[1;32m    552[0m ):
+[1;32m    554[0m     filename_or_obj [38;5;241m=[39m _normalize_path(filename_or_obj)
+[0;32m--> 555[0m     store [38;5;241m=[39m [43mNetCDF4DataStore[49m[38;5;241;43m.[39;49m[43mopen[49m[43m([49m
+[1;32m    556[0m [43m        [49m[43mfilename_or_obj[49m[43m,[49m
+[1;32m    557[0m [43m        [49m[43mmode[49m[38;5;241;43m=[39;49m[43mmode[49m[43m,[49m
+[1;32m    558[0m [43m        [49m[38;5;28;43mformat[39;49m[38;5;241;43m=[39;49m[38;5;28;43mformat[39;49m[43m,[49m
+[1;32m    559[0m [43m        [49m[43mgroup[49m[38;5;241;43m=[39;49m[43mgroup[49m[43m,[49m
+[1;32m    560[0m [43m        [49m[43mclobber[49m[38;5;241;43m=[39;49m[43mclobber[49m[43m,[49m
+[1;32m    561[0m [43m        [49m[43mdiskless[49m[38;5;241;43m=[39;49m[43mdiskless[49m[43m,[49m
+[1;32m    562[0m [43m        [49m[43mpersist[49m[38;5;241;43m=[39;49m[43mpersist[49m[43m,[49m
+[1;32m    563[0m [43m        [49m[43mlock[49m[38;5;241;43m=[39;49m[43mlock[49m[43m,[49m
+[1;32m    564[0m [43m        [49m[43mautoclose[49m[38;5;241;43m=[39;49m[43mautoclose[49m[43m,[49m
+[1;32m    565[0m [43m    [49m[43m)[49m
+[1;32m    567[0m     store_entrypoint [38;5;241m=[39m StoreBackendEntrypoint()
+[1;32m    568[0m     [38;5;28;01mwith[39;00m close_on_error(store):
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/artist.py:51[0m, in [0;36mallow_rasterization.<locals>.draw_wrapper[0;34m(artist, renderer)[0m
-[1;32m     48[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[1;32m     49[0m         renderer[38;5;241m.[39mstart_filter()
-[0;32m---> 51[0m     [38;5;28;01mreturn[39;00m [43mdraw[49m[43m([49m[43martist[49m[43m,[49m[43m [49m[43mrenderer[49m[43m)[49m
-[1;32m     52[0m [38;5;28;01mfinally[39;00m:
-[1;32m     53[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/netCDF4_.py:384[0m, in [0;36mNetCDF4DataStore.open[0;34m(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)[0m
+[1;32m    378[0m kwargs [38;5;241m=[39m [38;5;28mdict[39m(
+[1;32m    379[0m     clobber[38;5;241m=[39mclobber, diskless[38;5;241m=[39mdiskless, persist[38;5;241m=[39mpersist, [38;5;28mformat[39m[38;5;241m=[39m[38;5;28mformat[39m
+[1;32m    380[0m )
+[1;32m    381[0m manager [38;5;241m=[39m CachingFileManager(
+[1;32m    382[0m     netCDF4[38;5;241m.[39mDataset, filename, mode[38;5;241m=[39mmode, kwargs[38;5;241m=[39mkwargs
+[1;32m    383[0m )
+[0;32m--> 384[0m [38;5;28;01mreturn[39;00m [38;5;28;43mcls[39;49m[43m([49m[43mmanager[49m[43m,[49m[43m [49m[43mgroup[49m[38;5;241;43m=[39;49m[43mgroup[49m[43m,[49m[43m [49m[43mmode[49m[38;5;241;43m=[39;49m[43mmode[49m[43m,[49m[43m [49m[43mlock[49m[38;5;241;43m=[39;49m[43mlock[49m[43m,[49m[43m [49m[43mautoclose[49m[38;5;241;43m=[39;49m[43mautoclose[49m[43m)[49m
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/cartopy/mpl/geoaxes.py:558[0m, in [0;36mGeoAxes.draw[0;34m(self, renderer, **kwargs)[0m
-[1;32m    553[0m         [38;5;28mself[39m[38;5;241m.[39mimshow(img, extent[38;5;241m=[39mextent, origin[38;5;241m=[39morigin,
-[1;32m    554[0m                     transform[38;5;241m=[39mfactory[38;5;241m.[39mcrs, [38;5;241m*[39mfactory_args[[38;5;241m1[39m:],
-[1;32m    555[0m                     [38;5;241m*[39m[38;5;241m*[39mfactory_kwargs)
-[1;32m    556[0m [38;5;28mself[39m[38;5;241m.[39m_done_img_factory [38;5;241m=[39m [38;5;28;01mTrue[39;00m
-[0;32m--> 558[0m [38;5;28;01mreturn[39;00m [43mmatplotlib[49m[38;5;241;43m.[39;49m[43maxes[49m[38;5;241;43m.[39;49m[43mAxes[49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43mrenderer[49m[38;5;241;43m=[39;49m[43mrenderer[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/netCDF4_.py:332[0m, in [0;36mNetCDF4DataStore.__init__[0;34m(self, manager, group, mode, lock, autoclose)[0m
+[1;32m    330[0m [38;5;28mself[39m[38;5;241m.[39m_group [38;5;241m=[39m group
+[1;32m    331[0m [38;5;28mself[39m[38;5;241m.[39m_mode [38;5;241m=[39m mode
+[0;32m--> 332[0m [38;5;28mself[39m[38;5;241m.[39mformat [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mds[49m[38;5;241m.[39mdata_model
+[1;32m    333[0m [38;5;28mself[39m[38;5;241m.[39m_filename [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mds[38;5;241m.[39mfilepath()
+[1;32m    334[0m [38;5;28mself[39m[38;5;241m.[39mis_remote [38;5;241m=[39m is_remote_uri([38;5;28mself[39m[38;5;241m.[39m_filename)
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/artist.py:51[0m, in [0;36mallow_rasterization.<locals>.draw_wrapper[0;34m(artist, renderer)[0m
-[1;32m     48[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[1;32m     49[0m         renderer[38;5;241m.[39mstart_filter()
-[0;32m---> 51[0m     [38;5;28;01mreturn[39;00m [43mdraw[49m[43m([49m[43martist[49m[43m,[49m[43m [49m[43mrenderer[49m[43m)[49m
-[1;32m     52[0m [38;5;28;01mfinally[39;00m:
-[1;32m     53[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/netCDF4_.py:393[0m, in [0;36mNetCDF4DataStore.ds[0;34m(self)[0m
+[1;32m    391[0m [38;5;129m@property[39m
+[1;32m    392[0m [38;5;28;01mdef[39;00m [38;5;21mds[39m([38;5;28mself[39m):
+[0;32m--> 393[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_acquire[49m[43m([49m[43m)[49m
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/axes/_base.py:3091[0m, in [0;36m_AxesBase.draw[0;34m(self, renderer)[0m
-[1;32m   3088[0m         a[38;5;241m.[39mdraw(renderer)
-[1;32m   3089[0m     renderer[38;5;241m.[39mstop_rasterizing()
-[0;32m-> 3091[0m [43mmimage[49m[38;5;241;43m.[39;49m[43m_draw_list_compositing_images[49m[43m([49m
-[1;32m   3092[0m [43m    [49m[43mrenderer[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43martists[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mfigure[49m[38;5;241;43m.[39;49m[43msuppressComposite[49m[43m)[49m
-[1;32m   3094[0m renderer[38;5;241m.[39mclose_group([38;5;124m'[39m[38;5;124maxes[39m[38;5;124m'[39m)
-[1;32m   3095[0m [38;5;28mself[39m[38;5;241m.[39mstale [38;5;241m=[39m [38;5;28;01mFalse[39;00m
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/netCDF4_.py:387[0m, in [0;36mNetCDF4DataStore._acquire[0;34m(self, needs_lock)[0m
+[1;32m    386[0m [38;5;28;01mdef[39;00m [38;5;21m_acquire[39m([38;5;28mself[39m, needs_lock[38;5;241m=[39m[38;5;28;01mTrue[39;00m):
+[0;32m--> 387[0m     [38;5;28;01mwith[39;00m [38;5;28mself[39m[38;5;241m.[39m_manager[38;5;241m.[39macquire_context(needs_lock) [38;5;28;01mas[39;00m root:
+[1;32m    388[0m         ds [38;5;241m=[39m _nc4_require_group(root, [38;5;28mself[39m[38;5;241m.[39m_group, [38;5;28mself[39m[38;5;241m.[39m_mode)
+[1;32m    389[0m     [38;5;28;01mreturn[39;00m ds
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/image.py:132[0m, in [0;36m_draw_list_compositing_images[0;34m(renderer, parent, artists, suppress_composite)[0m
-[1;32m    130[0m [38;5;28;01mif[39;00m not_composite [38;5;129;01mor[39;00m [38;5;129;01mnot[39;00m has_images:
-[1;32m    131[0m     [38;5;28;01mfor[39;00m a [38;5;129;01min[39;00m artists:
-[0;32m--> 132[0m         [43ma[49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[43mrenderer[49m[43m)[49m
-[1;32m    133[0m [38;5;28;01melse[39;00m:
-[1;32m    134[0m     [38;5;66;03m# Composite any adjacent images together[39;00m
-[1;32m    135[0m     image_group [38;5;241m=[39m []
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/contextlib.py:113[0m, in [0;36m_GeneratorContextManager.__enter__[0;34m(self)[0m
+[1;32m    111[0m [38;5;28;01mdel[39;00m [38;5;28mself[39m[38;5;241m.[39margs, [38;5;28mself[39m[38;5;241m.[39mkwds, [38;5;28mself[39m[38;5;241m.[39mfunc
+[1;32m    112[0m [38;5;28;01mtry[39;00m:
+[0;32m--> 113[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mnext[39;49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mgen[49m[43m)[49m
+[1;32m    114[0m [38;5;28;01mexcept[39;00m [38;5;167;01mStopIteration[39;00m:
+[1;32m    115[0m     [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([38;5;124m"[39m[38;5;124mgenerator didn[39m[38;5;124m'[39m[38;5;124mt yield[39m[38;5;124m"[39m) [38;5;28;01mfrom[39;00m [38;5;28mNone[39m
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/artist.py:51[0m, in [0;36mallow_rasterization.<locals>.draw_wrapper[0;34m(artist, renderer)[0m
-[1;32m     48[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[1;32m     49[0m         renderer[38;5;241m.[39mstart_filter()
-[0;32m---> 51[0m     [38;5;28;01mreturn[39;00m [43mdraw[49m[43m([49m[43martist[49m[43m,[49m[43m [49m[43mrenderer[49m[43m)[49m
-[1;32m     52[0m [38;5;28;01mfinally[39;00m:
-[1;32m     53[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/file_manager.py:189[0m, in [0;36mCachingFileManager.acquire_context[0;34m(self, needs_lock)[0m
+[1;32m    186[0m [38;5;129m@contextlib[39m[38;5;241m.[39mcontextmanager
+[1;32m    187[0m [38;5;28;01mdef[39;00m [38;5;21macquire_context[39m([38;5;28mself[39m, needs_lock[38;5;241m=[39m[38;5;28;01mTrue[39;00m):
+[1;32m    188[0m     [38;5;124;03m"""Context manager for acquiring a file."""[39;00m
+[0;32m--> 189[0m     file, cached [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_acquire_with_cache_info[49m[43m([49m[43mneeds_lock[49m[43m)[49m
+[1;32m    190[0m     [38;5;28;01mtry[39;00m:
+[1;32m    191[0m         [38;5;28;01myield[39;00m file
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/collections.py:990[0m, in [0;36m_CollectionWithSizes.draw[0;34m(self, renderer)[0m
-[1;32m    987[0m [38;5;129m@artist[39m[38;5;241m.[39mallow_rasterization
-[1;32m    988[0m [38;5;28;01mdef[39;00m [38;5;21mdraw[39m([38;5;28mself[39m, renderer):
-[1;32m    989[0m     [38;5;28mself[39m[38;5;241m.[39mset_sizes([38;5;28mself[39m[38;5;241m.[39m_sizes, [38;5;28mself[39m[38;5;241m.[39mfigure[38;5;241m.[39mdpi)
-[0;32m--> 990[0m     [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[43mdraw[49m[43m([49m[43mrenderer[49m[43m)[49m
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/file_manager.py:207[0m, in [0;36mCachingFileManager._acquire_with_cache_info[0;34m(self, needs_lock)[0m
+[1;32m    205[0m     kwargs [38;5;241m=[39m kwargs[38;5;241m.[39mcopy()
+[1;32m    206[0m     kwargs[[38;5;124m"[39m[38;5;124mmode[39m[38;5;124m"[39m] [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_mode
+[0;32m--> 207[0m file [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_opener[49m[43m([49m[38;5;241;43m*[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_args[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m    208[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39m_mode [38;5;241m==[39m [38;5;124m"[39m[38;5;124mw[39m[38;5;124m"[39m:
+[1;32m    209[0m     [38;5;66;03m# ensure file doesn't get overridden when opened again[39;00m
+[1;32m    210[0m     [38;5;28mself[39m[38;5;241m.[39m_mode [38;5;241m=[39m [38;5;124m"[39m[38;5;124ma[39m[38;5;124m"[39m
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/artist.py:51[0m, in [0;36mallow_rasterization.<locals>.draw_wrapper[0;34m(artist, renderer)[0m
-[1;32m     48[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[1;32m     49[0m         renderer[38;5;241m.[39mstart_filter()
-[0;32m---> 51[0m     [38;5;28;01mreturn[39;00m [43mdraw[49m[43m([49m[43martist[49m[43m,[49m[43m [49m[43mrenderer[49m[43m)[49m
-[1;32m     52[0m [38;5;28;01mfinally[39;00m:
-[1;32m     53[0m     [38;5;28;01mif[39;00m artist[38;5;241m.[39mget_agg_filter() [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+File [0;32msrc/netCDF4/_netCDF4.pyx:2353[0m, in [0;36mnetCDF4._netCDF4.Dataset.__init__[0;34m()[0m
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/collections.py:366[0m, in [0;36mCollection.draw[0;34m(self, renderer)[0m
-[1;32m    362[0m renderer[38;5;241m.[39mopen_group([38;5;28mself[39m[38;5;241m.[39m[38;5;18m__class__[39m[38;5;241m.[39m[38;5;18m__name__[39m, [38;5;28mself[39m[38;5;241m.[39mget_gid())
-[1;32m    364[0m [38;5;28mself[39m[38;5;241m.[39mupdate_scalarmappable()
-[0;32m--> 366[0m transform, transOffset, offsets, paths [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_prepare_points[49m[43m([49m[43m)[49m
-[1;32m    368[0m gc [38;5;241m=[39m renderer[38;5;241m.[39mnew_gc()
-[1;32m    369[0m [38;5;28mself[39m[38;5;241m.[39m_set_gc_clip(gc)
+File [0;32msrc/netCDF4/_netCDF4.pyx:1963[0m, in [0;36mnetCDF4._netCDF4._ensure_nc_success[0;34m()[0m
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/collections.py:343[0m, in [0;36mCollection._prepare_points[0;34m(self)[0m
-[1;32m    340[0m     offsets [38;5;241m=[39m np[38;5;241m.[39mcolumn_stack([xs, ys])
-[1;32m    342[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m transform[38;5;241m.[39mis_affine:
-[0;32m--> 343[0m     paths [38;5;241m=[39m [transform[38;5;241m.[39mtransform_path_non_affine(path)
-[1;32m    344[0m              [38;5;28;01mfor[39;00m path [38;5;129;01min[39;00m paths]
-[1;32m    345[0m     transform [38;5;241m=[39m transform[38;5;241m.[39mget_affine()
-[1;32m    346[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m transOffset[38;5;241m.[39mis_affine:
-
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/collections.py:343[0m, in [0;36m<listcomp>[0;34m(.0)[0m
-[1;32m    340[0m     offsets [38;5;241m=[39m np[38;5;241m.[39mcolumn_stack([xs, ys])
-[1;32m    342[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m transform[38;5;241m.[39mis_affine:
-[0;32m--> 343[0m     paths [38;5;241m=[39m [[43mtransform[49m[38;5;241;43m.[39;49m[43mtransform_path_non_affine[49m[43m([49m[43mpath[49m[43m)[49m
-[1;32m    344[0m              [38;5;28;01mfor[39;00m path [38;5;129;01min[39;00m paths]
-[1;32m    345[0m     transform [38;5;241m=[39m transform[38;5;241m.[39mget_affine()
-[1;32m    346[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m transOffset[38;5;241m.[39mis_affine:
-
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/matplotlib/transforms.py:2436[0m, in [0;36mCompositeGenericTransform.transform_path_non_affine[0;34m(self, path)[0m
-[1;32m   2434[0m     [38;5;28;01mreturn[39;00m path
-[1;32m   2435[0m [38;5;28;01melif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_a[38;5;241m.[39mis_affine [38;5;129;01mand[39;00m [38;5;28mself[39m[38;5;241m.[39m_b[38;5;241m.[39mis_affine:
-[0;32m-> 2436[0m     [38;5;28;01mreturn[39;00m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_a[49m[38;5;241;43m.[39;49m[43mtransform_path_non_affine[49m[43m([49m[43mpath[49m[43m)[49m
-[1;32m   2437[0m [38;5;28;01melse[39;00m:
-[1;32m   2438[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_b[38;5;241m.[39mtransform_path_non_affine(
-[1;32m   2439[0m                             [38;5;28mself[39m[38;5;241m.[39m_a[38;5;241m.[39mtransform_path(path))
-
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/cartopy/mpl/geoaxes.py:190[0m, in [0;36mInterProjectionTransform.transform_path_non_affine[0;34m(self, src_path)[0m
-[1;32m    186[0m geoms [38;5;241m=[39m cpatch[38;5;241m.[39mpath_to_geos(src_path,
-[1;32m    187[0m                             [38;5;28mgetattr[39m([38;5;28mself[39m, [38;5;124m'[39m[38;5;124mforce_path_ccw[39m[38;5;124m'[39m, [38;5;28;01mFalse[39;00m))
-[1;32m    189[0m [38;5;28;01mfor[39;00m geom [38;5;129;01min[39;00m geoms:
-[0;32m--> 190[0m     proj_geom [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtarget_projection[49m[38;5;241;43m.[39;49m[43mproject_geometry[49m[43m([49m
-[1;32m    191[0m [43m        [49m[43mgeom[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43msource_projection[49m[43m)[49m
-[1;32m    192[0m     transformed_geoms[38;5;241m.[39mappend(proj_geom)
-[1;32m    194[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m transformed_geoms:
-
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/cartopy/crs.py:805[0m, in [0;36mProjection.project_geometry[0;34m(self, geometry, src_crs)[0m
-[1;32m    803[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m method_name:
-[1;32m    804[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([38;5;124mf[39m[38;5;124m'[39m[38;5;124mUnsupported geometry type [39m[38;5;132;01m{[39;00mgeom_type[38;5;132;01m!r}[39;00m[38;5;124m'[39m)
-[0;32m--> 805[0m [38;5;28;01mreturn[39;00m [38;5;28;43mgetattr[39;49m[43m([49m[38;5;28;43mself[39;49m[43m,[49m[43m [49m[43mmethod_name[49m[43m)[49m[43m([49m[43mgeometry[49m[43m,[49m[43m [49m[43msrc_crs[49m[43m)[49m
-
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/cartopy/crs.py:948[0m, in [0;36mProjection._project_polygon[0;34m(self, polygon, src_crs)[0m
-[1;32m    946[0m multi_lines [38;5;241m=[39m []
-[1;32m    947[0m [38;5;28;01mfor[39;00m src_ring [38;5;129;01min[39;00m [polygon[38;5;241m.[39mexterior] [38;5;241m+[39m [38;5;28mlist[39m(polygon[38;5;241m.[39minteriors):
-[0;32m--> 948[0m     p_rings, p_mline [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_project_linear_ring[49m[43m([49m[43msrc_ring[49m[43m,[49m[43m [49m[43msrc_crs[49m[43m)[49m
-[1;32m    949[0m     [38;5;28;01mif[39;00m p_rings:
-[1;32m    950[0m         rings[38;5;241m.[39mextend(p_rings)
-
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/cartopy/crs.py:824[0m, in [0;36mProjection._project_linear_ring[0;34m(self, linear_ring, src_crs)[0m
-[1;32m    819[0m debug [38;5;241m=[39m [38;5;28;01mFalse[39;00m
-[1;32m    820[0m [38;5;66;03m# 1) Resolve the initial lines into projected segments[39;00m
-[1;32m    821[0m [38;5;66;03m# 1abc[39;00m
-[1;32m    822[0m [38;5;66;03m# def23ghi[39;00m
-[1;32m    823[0m [38;5;66;03m# jkl41[39;00m
-[0;32m--> 824[0m multi_line_string [38;5;241m=[39m [43mcartopy[49m[38;5;241;43m.[39;49m[43mtrace[49m[38;5;241;43m.[39;49m[43mproject_linear[49m[43m([49m[43mlinear_ring[49m[43m,[49m
-[1;32m    825[0m [43m                                                 [49m[43msrc_crs[49m[43m,[49m[43m [49m[38;5;28;43mself[39;49m[43m)[49m
-[1;32m    827[0m [38;5;66;03m# Threshold for whether a point is close enough to be the same[39;00m
-[1;32m    828[0m [38;5;66;03m# point as another.[39;00m
-[1;32m    829[0m threshold [38;5;241m=[39m [38;5;28mmax[39m(np[38;5;241m.[39mabs([38;5;28mself[39m[38;5;241m.[39mx_limits [38;5;241m+[39m [38;5;28mself[39m[38;5;241m.[39my_limits)) [38;5;241m*[39m [38;5;241m1e-5[39m
-
-File [0;32mlib/cartopy/trace.pyx:628[0m, in [0;36mcartopy.trace.project_linear[0;34m()[0m
-
-File [0;32mlib/cartopy/trace.pyx:100[0m, in [0;36mcartopy.trace.geos_from_shapely[0;34m()[0m
-
-[0;31mTypeError[0m: an integer is required
-TypeError: an integer is required
+[0;31mOSError[0m: [Errno -70] NetCDF: DAP server error: b'http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc'
+OSError: [Errno -70] NetCDF: DAP server error: b'http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc'
 
