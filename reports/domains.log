@@ -145,9 +145,9 @@ File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-package
 [1;32m    209[0m     [38;5;66;03m# ensure file doesn't get overridden when opened again[39;00m
 [1;32m    210[0m     [38;5;28mself[39m[38;5;241m.[39m_mode [38;5;241m=[39m [38;5;124m"[39m[38;5;124ma[39m[38;5;124m"[39m
 
-File [0;32msrc/netCDF4/_netCDF4.pyx:2353[0m, in [0;36mnetCDF4._netCDF4.Dataset.__init__[0;34m()[0m
+File [0;32msrc/netCDF4/_netCDF4.pyx:2463[0m, in [0;36mnetCDF4._netCDF4.Dataset.__init__[0;34m()[0m
 
-File [0;32msrc/netCDF4/_netCDF4.pyx:1963[0m, in [0;36mnetCDF4._netCDF4._ensure_nc_success[0;34m()[0m
+File [0;32msrc/netCDF4/_netCDF4.pyx:2026[0m, in [0;36mnetCDF4._netCDF4._ensure_nc_success[0;34m()[0m
 
 [0;31mOSError[0m: [Errno -70] NetCDF: DAP server error: b'http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc'
 OSError: [Errno -70] NetCDF: DAP server error: b'http://esgf-data3.ceda.ac.uk/thredds/dodsC/esg_cmip6/CMIP6/CMIP/MOHC/UKESM1-0-LL/historical/r1i1p1f2/Amon/tas/gn/v20190406/tas_Amon_UKESM1-0-LL_historical_r1i1p1f2_gn_185001-194912.nc'
