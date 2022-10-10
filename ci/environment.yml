@@ -12,6 +12,7 @@ dependencies:
   - fsspec
   - requests
   - aiohttp
+  - cfchecker
   - cdo
   - python-cdo
   - pip:

@@ -1,15 +1,46 @@
 import os
+import shutil
+import subprocess
 
 import cordex as cx
-import xarray as xr
-from cordex import cmor as cmor
+import pytest
+from cordex import cmor as cxcmor
 
 table_dir = "./Tables"
 
 
-def test_cmorizer_fx():
+def copy_tables(table_dir):
+    """copy CORDEX-CMIP6 table names to CMIP6 tables names
+    This is because PrePARE does not allow us to give tables names.
+    """
+    import glob
+
+    tables = glob.glob(os.path.join(table_dir, "*"))
+    new_tables = []
+    for src in tables:
+        dst_path = os.path.dirname(src)
+        base = os.path.basename(src)
+        dst = os.path.join(dst_path, "CMIP6_" + "_".join(base.split("_")[1:]))
+        # os.symlink(src, dst)
+        shutil.copyfile(src, dst)
+        new_tables.append(dst)
+    return new_tables
+
+
+def copy_filename_to_cmip6(filename):
+    base = os.path.basename(filename)
+    path = os.path.dirname(filename)
+    elements = base.split("_")
+    del elements[3]
+    cmip6_filename = os.path.join(path, "_".join(elements))
+    shutil.copyfile(filename, cmip6_filename)
+    return cmip6_filename
+
+
+@pytest.fixture
+def fx_file():
     ds = cx.cordex_domain("EUR-11", dummy="topo")
-    filename = cmor.cmorize_variable(
+    filename = cxcmor.cmorize_variable(
         ds,
         "orog",
         mapping_table={"orog": {"varname": "topo"}},
@@ -20,8 +51,25 @@ def test_cmorizer_fx():
         time_units=None,
         allow_units_convert=True,
     )
-    output = xr.open_dataset(filename)
-    assert "orog" in output
+    return filename
+
+
+def test_prepare(fx_file):
+    new_tables = copy_tables(table_dir)
+    fx_file = copy_filename_to_cmip6(fx_file)
+    command = ["PrePARE", "--table-path", table_dir, fx_file]
+    test = subprocess.run(command)
+    print("The exit code was: %d" % test.returncode)
+    for f in new_tables:
+        os.remove(f)
+    assert test.returncode == 0
+
+
+def test_cfchecker(fx_file):
+    command = ["cfchecks", "-v", "CF-1.7", fx_file]
+    test = subprocess.run(command)
+    print("The exit code was: %d" % test.returncode)
+    assert test.returncode == 0
 
 
 # def test_cmorizer_mon():
