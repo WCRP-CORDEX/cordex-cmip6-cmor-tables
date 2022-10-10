@@ -12,9 +12,7 @@ table_dir = "./Tables"
 
 def copy_tables(table_dir):
     """copy CORDEX-CMIP6 table names to CMIP6 tables names
-
     This is because PrePARE does not allow us to give tables names.
-
     """
     import glob
 

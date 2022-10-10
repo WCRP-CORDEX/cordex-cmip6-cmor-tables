@@ -5,7 +5,6 @@
     "#note_experiment_id":    "CMIP6 valid experiment_ids are found in CMIP6_CV.json",
     "experiment_id":          "evaluation",
     "activity_id":            "CORDEX",
-    "sub_experiment_id":      "none",
 
     "realization_index":      "1",
     "initialization_index":   "1",
@@ -40,13 +39,13 @@
     "#note_optional":         " **** The following descriptors are optional and may be set to an empty string ",
 
     "contact ":               "gerics-cordex2@hereon.de",
+    "further_info_url":       "https://furtherinfo.es-doc.org/.*",
     "history":                "Output from archivcl_A1.nce/giccm_03_std_2xCO2_2256.",
     "comment":                "",
     "references":             "https://www.remo-rcm.de",
 
     "#note_CV":               " **** The following will be obtained from the CV and do not need to be defined here",
 
-    "sub_experiment":         "none",
     "institution":            "",
     "source":                 "REMO2020 (v2.0.1)",
 
@@ -55,7 +54,6 @@
     "_controlled_vocabulary_file": "CORDEX-CMIP6_CV.json",
     "_AXIS_ENTRY_FILE":         "CORDEX-CMIP6_coordinate.json",
     "_FORMULA_VAR_FILE":        "CORDEX-CMIP6_formula_terms.json",
-    "_cmip6_option":           "CORDEX",
 
 
     "CORDEX_domain" : "EUR-11",
