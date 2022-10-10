@@ -8,7 +8,7 @@ dependencies:
   - pytest
   - py-cordex
   - cf_xarray
-  - cmor
+  - cmor>=3.7.0
   - fsspec
   - requests
   - aiohttp

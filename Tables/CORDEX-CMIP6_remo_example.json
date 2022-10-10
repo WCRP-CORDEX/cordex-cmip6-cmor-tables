@@ -2,7 +2,7 @@
     "#note_source_type":      "explanation of what source_type is goes here",
     "source_type":            "ARCM",
 
-    "#note_experiment_id":    "CMIP6 valid experiment_ids are found in CMIP6_CV.json",
+    "#note_experiment_id":    "CMIP6 valid experiment_ids are found in CORDEX-CMIP6_CV.json",
     "experiment_id":          "evaluation",
     "activity_id":            "CORDEX",
 
@@ -47,7 +47,6 @@
     "#note_CV":               " **** The following will be obtained from the CV and do not need to be defined here",
 
     "institution":            "",
-    "source":                 "REMO2020 (v2.0.1)",
 
     "#note_CMIP6":            " **** The following are set correctly for CMIP6 and should not normally need editing",
 
