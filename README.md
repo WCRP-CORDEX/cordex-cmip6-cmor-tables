@@ -5,6 +5,7 @@
 [![cmor-test](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/actions/workflows/test-cmor.yaml/badge.svg)](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/actions/workflows/test-cmor.yaml)
 [![deploy examples](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/actions/workflows/deploy-examples.yaml/badge.svg)](https://wcrp-cordex.github.io/cordex-cmip6-cmor-tables/cmor-examples.html)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/WCRP-CORDEX/cordex-cmip6-cmor-tables/main.svg)](https://results.pre-commit.ci/latest/github/WCRP-CORDEX/cordex-cmip6-cmor-tables/main)
+[![PrePARE](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/actions/workflows/PrePARE.yaml/badge.svg)](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/actions/workflows/PrePARE.yaml)
 
 
 JSON Tables for CMOR3 to create CORDEX-CMIP6 datasets.
