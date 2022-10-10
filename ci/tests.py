@@ -57,12 +57,11 @@ def fx_file():
 def test_prepare(fx_file):
     new_tables = copy_tables(table_dir)
     fx_file = copy_filename_to_cmip6(fx_file)
-    print(fx_file)
     command = ["PrePARE", "--table-path", table_dir, fx_file]
     test = subprocess.run(command)
+    print("The exit code was: %d" % test.returncode)
     for f in new_tables:
         os.remove(f)
-    print("The exit code was: %d" % test.returncode)
     assert test.returncode == 0
 
 
