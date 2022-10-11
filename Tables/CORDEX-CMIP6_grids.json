@@ -130,8 +130,8 @@
             "long_name": "longitude",
             "dimensions": "longitude latitude",
             "out_name": "longitude",
-            "valid_min": "0.0",
-            "valid_max": "360.0",
+            "valid_min": "-180.0",
+            "valid_max": "180.0",
             "type": "double"
         },
         "vertices_latitude": {
@@ -150,8 +150,8 @@
             "long_name": "",
             "dimensions": "vertices longitude latitude",
             "out_name": "vertices_longitude",
-            "valid_min": "0.0",
-            "valid_max": "360.0",
+            "valid_min": "-180.0",
+            "valid_max": "180.0",
             "type": "double"
         }
     }
