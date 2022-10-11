@@ -1,10 +1,13 @@
 import os
 import shutil
-import subprocess
 
 import cordex as cx
 import pytest
+from cfchecker.cfchecks import CFChecker
 from cordex import cmor as cxcmor
+
+# import subprocess
+
 
 table_dir = "./Tables"
 
@@ -54,23 +57,30 @@ def fx_file():
     return filename
 
 
-def test_prepare(fx_file):
-    new_tables = copy_tables(table_dir)
-    fx_file = copy_filename_to_cmip6(fx_file)
-    print(fx_file)
-    command = ["PrePARE", "--table-path", table_dir, fx_file]
-    test = subprocess.run(command)
-    print("The exit code was: %d" % test.returncode)
-    for f in new_tables:
-        os.remove(f)
-    assert test.returncode == 0
+# prepare checker only works for CMIP6 global datasets
+# def test_prepare(fx_file):
+#    new_tables = copy_tables(table_dir)
+#    fx_file = copy_filename_to_cmip6(fx_file)
+#    print(fx_file)
+#    command = ["PrePARE", "--table-path", table_dir, fx_file]
+#    test = subprocess.run(command)
+#    print("The exit code was: %d" % test.returncode)
+#    for f in new_tables:
+#        os.remove(f)
+#    assert test.returncode == 0
+
+
+# def test_cfchecker(fx_file):
+#    command = ["cfchecks", "-v", "CF-1.7", fx_file]
+#    test = subprocess.run(command)
+#    print("The exit code was: %d" % test.returncode)
+#    assert test.returncode == 0
 
 
 def test_cfchecker(fx_file):
-    command = ["cfchecks", "-v", "CF-1.7", fx_file]
-    test = subprocess.run(command)
-    print("The exit code was: %d" % test.returncode)
-    assert test.returncode == 0
+    checker = CFChecker()
+    res = checker.checker(fx_file)
+    assert not res["global"]["ERROR"]
 
 
 # def test_cmorizer_mon():
