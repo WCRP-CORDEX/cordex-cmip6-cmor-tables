@@ -11,6 +11,7 @@ dependencies:
   - regionmask
   - setuptools
   - xarray
+  - cf_xarray
   - cftime
   - netCDF4
   - xesmf
