@@ -67,19 +67,15 @@
         },
         "frequency":{
             "1hr":"sampled hourly",
-            "1hrCM":"monthly-mean diurnal cycle resolving each day into 1-hour means",
             "1hrPt":"sampled hourly, at specified time point within an hour",
             "3hr":"3 hourly mean samples",
             "3hrPt":"sampled 3 hourly, at specified time point within the time period",
             "6hr":"6 hourly mean samples",
             "6hrPt":"sampled 6 hourly, at specified time point within the time period",
             "day":"daily mean samples",
-            "dec":"decadal mean samples",
             "fx":"fixed (time invariant) field",
             "mon":"monthly mean samples",
-            "monC":"monthly climatology computed from monthly mean samples",
             "monPt":"sampled monthly, at specified time point within the time period",
-            "subhrPt":"sampled sub-hourly, at specified time point within an hour",
             "yr":"annual mean samples",
             "yrPt":"sampled yearly, at specified time point within the time period"
         },
@@ -194,7 +190,10 @@
             "fx"
         ],
         "license":[
-            "^CMIP6 model data produced by .* is licensed under a Creative Commons Attribution.*ShareAlike 4.0 International License .https://creativecommons.org/licenses.* *Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment\\. *Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file).*\\. *The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose\\. *All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law\\.$"
+            "^CMIP6 model data produced by <Your Institution; see CMIP6_institution_id\\.json> is licensed under a Creative Commons Attribution 4\\.0 International License (https://creativecommons\\.org/licenses/by/4\\.0/)\\. *Consult https://pcmdi\\.llnl\\.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment\\. *Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file).*\\. *The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose\\. *All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law\\.$",
+            "^CMIP6 model data produced by <Your Institution; see CMIP6_institution_id\\.json> is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4\\.0 International License (https://creativecommons\\.org/licenses/by-nc-sa/4\\.0/)\\. *Consult https://pcmdi\\.llnl\\.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment\\. *Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file).*\\. *The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose\\. *All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law\\.$",
+            "^CMIP6 model data produced by <Your Institution; see CMIP6_institution_id\\.json> is licensed under a Creative Commons Attribution-ShareAlike 4\\.0 International License (https://creativecommons\\.org/licenses/by-sa/4\\.0/)\\. *Consult https://pcmdi\\.llnl\\.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment\\. *Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file).*\\. *The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose\\. *All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law\\.$",
+            "^CMIP6 model data produced by <Your Institution; see CMIP6_institution_id\\.json> is licensed under a Creative Commons CC0 1\\.0 Universal Public Domain Dedication License (https://creativecommons\\.org/publicdomain/zero/1\\.0/)\\. *Consult https://pcmdi\\.llnl\\.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment\\. *Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file).*\\. *The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose\\. *All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law\\.$"
         ],
         "version_metadata":{
             "CV_collection_modified":"Wed Oct 12 12:16:47 2022 -0700",
