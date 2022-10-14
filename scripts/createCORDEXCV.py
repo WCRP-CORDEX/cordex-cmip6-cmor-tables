@@ -73,24 +73,24 @@ class readWCRP:
         #
         root = myjson["license"]
         base_template = root["license"]
-        license_templates = []
-        for key, value in root["license_options"].items():
-            tmp = base_template.replace(". ", ". *")
-            tmp = tmp.replace(
-                "<Creative Commons; select and insert a license_id; see below>",
-                value["license_id"],
-            )
-            tmp = tmp.replace(
-                "<insert the matching license_url; see below>", value["license_url"]
-            )
-            tmp = tmp.replace(".", "\\.")
-            tmp = tmp.replace(
-                "<Your Institution; see CORDEX_institution_id\\.json>", ".*"
-            )
-            tmp = tmp.replace("[ and at <some URL maintained by modeling group>]", ".*")
-            license_template = "^{}$".format(tmp)
-            license_templates.append(license_template)
-        myjson["license"] = license_templates
+        # license_templates = []
+        # for key, value in root["license_options"].items():
+        #    tmp = base_template.replace(". ", ". *")
+        #    tmp = tmp.replace(
+        #        "<Creative Commons; select and insert a license_id; see below>",
+        #        value["license_id"],
+        #    )
+        #    tmp = tmp.replace(
+        #        "<insert the matching license_url; see below>", value["license_url"]
+        #    )
+        #    tmp = tmp.replace(".", "\\.")
+        #    tmp = tmp.replace(
+        #        "<Your Institution; see CORDEX_institution_id\\.json>", ".*"
+        #    )
+        #    tmp = tmp.replace("[ and at <some URL maintained by modeling group>]", ".*")
+        #    license_template = "^{}$".format(tmp)
+        #    license_templates.append(license_template)
+        myjson["license"] = base_template  # license_templates
 
     def readGit(self):
         Dico = OrderedDict()
