@@ -36,7 +36,7 @@ class readWCRP:
     def createSource(self, myjson):
         root = myjson["source_id"]
         for key in root.keys():
-            print(root[key])
+            print(root[key].keys())
             root[key]["source"] = (
                 root[key]["label"] + " (" + root[key]["release_year"] + "): " + chr(10)
             )
