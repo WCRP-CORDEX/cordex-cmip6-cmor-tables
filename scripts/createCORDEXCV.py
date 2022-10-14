@@ -19,7 +19,7 @@ filelist = [
     "CORDEX_license.json",
     "CORDEX_DRS.json",
     "mip_era.json",
-    "CORDEX_driving_experiment_id.json",
+    #    "CORDEX_driving_experiment_id.json",
     "CORDEX_experiment_id.json",
 ]
 # Github repository with CORDEX related Control Vocabulary files
@@ -60,11 +60,12 @@ class readWCRP:
         #
         root = myjson["experiment_id"]
         for key in root.keys():
-            del root[key]["tier"]
-            del root[key]["start_year"]
-            del root[key]["end_year"]
-            del root[key]["description"]
-            del root[key]["min_number_yrs_per_sim"]
+            print(key)
+            # del root[key]["tier"]
+            # del root[key]["start_year"]
+            # del root[key]["end_year"]
+            # del root[key]["description"]
+            # del root[key]["min_number_yrs_per_sim"]
 
     def createLicense(self, myjson):
         #
