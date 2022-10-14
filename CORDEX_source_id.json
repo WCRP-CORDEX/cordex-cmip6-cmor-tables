@@ -10,6 +10,16 @@
             "institution_id": [
                 "GERICS"
             ],
+            "label":"REMO2020",
+            "label_extended":"Australian Community Climate and Earth System Simulator Earth System Model Version 1.5",
+            "license_info":{
+                "exceptions_contact":"@csiro.au <- access_csiro",
+                "history":"2019-11-12: initially published under CC BY-SA 4.0; 2022-06-10: relaxed to CC BY 4.0",
+                "id":"CC BY 4.0",
+                "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
+                "source_specific_info":"",
+                "url":"https://creativecommons.org/licenses/by/4.0/"
+            },
             "source_id": "REMO2020",
             "source": "REMO2020 (v2.0.1): \naerosol: none\natmos: none\natmosChem: none\nland: none\nlandIce: none\nocean: none\nocnBgchem: none\nseaIce: none"
         }
