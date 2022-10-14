@@ -36,7 +36,6 @@ class readWCRP:
     def createSource(self, myjson):
         root = myjson["source_id"]
         for key in root.keys():
-            print(root[key].keys())
             root[key]["source"] = (
                 root[key]["label"] + " (" + root[key]["release_year"] + "): " + chr(10)
             )
@@ -115,11 +114,11 @@ class readWCRP:
 
 
 def run():
-    f = open("CORDEX-CMIP6_CV.json", "w")
+    f = open("CORDEX_CV.json", "w")
     gather = readWCRP()
     CV = gather.readGit()
     regexp = OrderedDict()
-    regexp["mip_era"] = ["CORDEX"]
+    regexp["mip_era"] = ["CMIP6"]
     regexp["product"] = ["model-output"]
     regexp["tracking_id"] = ["hdl:21.14100/.*"]
     regexp["further_info_url"] = ["https://furtherinfo.es-doc.org/.*"]
