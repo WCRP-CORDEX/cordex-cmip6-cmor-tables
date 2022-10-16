@@ -51,27 +51,27 @@ Cell [0;32mIn [19], line 4[0m
 [1;32m      6[0m [43m)[49m
 [1;32m      7[0m ds
 
-File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/api.py:531[0m, in [0;36mopen_dataset[0;34m(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, backend_kwargs, **kwargs)[0m
-[1;32m    519[0m decoders [38;5;241m=[39m _resolve_decoders_kwargs(
-[1;32m    520[0m     decode_cf,
-[1;32m    521[0m     open_backend_dataset_parameters[38;5;241m=[39mbackend[38;5;241m.[39mopen_dataset_parameters,
+File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/api.py:539[0m, in [0;36mopen_dataset[0;34m(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, backend_kwargs, **kwargs)[0m
+[1;32m    527[0m decoders [38;5;241m=[39m _resolve_decoders_kwargs(
+[1;32m    528[0m     decode_cf,
+[1;32m    529[0m     open_backend_dataset_parameters[38;5;241m=[39mbackend[38;5;241m.[39mopen_dataset_parameters,
 [0;32m   (...)[0m
-[1;32m    527[0m     decode_coords[38;5;241m=[39mdecode_coords,
-[1;32m    528[0m )
-[1;32m    530[0m overwrite_encoded_chunks [38;5;241m=[39m kwargs[38;5;241m.[39mpop([38;5;124m"[39m[38;5;124moverwrite_encoded_chunks[39m[38;5;124m"[39m, [38;5;28;01mNone[39;00m)
-[0;32m--> 531[0m backend_ds [38;5;241m=[39m [43mbackend[49m[38;5;241;43m.[39;49m[43mopen_dataset[49m[43m([49m
-[1;32m    532[0m [43m    [49m[43mfilename_or_obj[49m[43m,[49m
-[1;32m    533[0m [43m    [49m[43mdrop_variables[49m[38;5;241;43m=[39;49m[43mdrop_variables[49m[43m,[49m
-[1;32m    534[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mdecoders[49m[43m,[49m
-[1;32m    535[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
-[1;32m    536[0m [43m[49m[43m)[49m
-[1;32m    537[0m ds [38;5;241m=[39m _dataset_from_backend_dataset(
-[1;32m    538[0m     backend_ds,
-[1;32m    539[0m     filename_or_obj,
+[1;32m    535[0m     decode_coords[38;5;241m=[39mdecode_coords,
+[1;32m    536[0m )
+[1;32m    538[0m overwrite_encoded_chunks [38;5;241m=[39m kwargs[38;5;241m.[39mpop([38;5;124m"[39m[38;5;124moverwrite_encoded_chunks[39m[38;5;124m"[39m, [38;5;28;01mNone[39;00m)
+[0;32m--> 539[0m backend_ds [38;5;241m=[39m [43mbackend[49m[38;5;241;43m.[39;49m[43mopen_dataset[49m[43m([49m
+[1;32m    540[0m [43m    [49m[43mfilename_or_obj[49m[43m,[49m
+[1;32m    541[0m [43m    [49m[43mdrop_variables[49m[38;5;241;43m=[39;49m[43mdrop_variables[49m[43m,[49m
+[1;32m    542[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mdecoders[49m[43m,[49m
+[1;32m    543[0m [43m    [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m,[49m
+[1;32m    544[0m [43m[49m[43m)[49m
+[1;32m    545[0m ds [38;5;241m=[39m _dataset_from_backend_dataset(
+[1;32m    546[0m     backend_ds,
+[1;32m    547[0m     filename_or_obj,
 [0;32m   (...)[0m
-[1;32m    547[0m     [38;5;241m*[39m[38;5;241m*[39mkwargs,
-[1;32m    548[0m )
-[1;32m    549[0m [38;5;28;01mreturn[39;00m ds
+[1;32m    555[0m     [38;5;241m*[39m[38;5;241m*[39mkwargs,
+[1;32m    556[0m )
+[1;32m    557[0m [38;5;28;01mreturn[39;00m ds
 
 File [0;32m/usr/share/miniconda/envs/cordex-examples/lib/python3.8/site-packages/xarray/backends/netCDF4_.py:555[0m, in [0;36mNetCDF4BackendEntrypoint.open_dataset[0;34m(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)[0m
 [1;32m    534[0m [38;5;28;01mdef[39;00m [38;5;21mopen_dataset[39m(
