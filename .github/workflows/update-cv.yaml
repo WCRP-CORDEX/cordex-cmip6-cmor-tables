@@ -34,8 +34,8 @@ jobs:
       #env:
       # WANDB_CONSOLE: "off"
       run: |
-        python scripts/createCMIP6CV.py
-        mv CMIP6_CV.json  Tables
+        python scripts/createCORDEXCV.py
+        mv CORDEX_CV.json  Tables
   #  - name: pushes results to table repository
   #    env:
        # API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
