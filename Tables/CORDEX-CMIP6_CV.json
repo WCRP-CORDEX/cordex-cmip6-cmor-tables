@@ -3,6 +3,7 @@
         "required_global_attributes":[
             "Conventions",
             "CORDEX_domain",
+            "domain_name",
             "activity_id",
             "creation_date",
             "data_specs_version",
@@ -36,12 +37,16 @@
         "activity_id":{
             "CORDEX":"Coordinated Regional Climate Downscaling Experiment"
         },
+	"CORDEX_domain":{
+	        "EUR-11": {
+		    "domain_name": "Europe"
+	        }
+	},
         "institution_id":{
             "GERICS":"Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany"
         },
         "source_id":{
             "REMO2020":{
-		"license":"AMIP boundary condition data produced by PCMDI is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing input4MIPs output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file). The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law",
                 "activity_participation":[
                     "CORDEX"
                 ],
@@ -51,14 +56,7 @@
                 "institution_id":[
                     "GERICS"
                 ],
-                "license_info":{
-                    "exceptions_contact":"@csiro.au <- access_csiro",
-                    "history":"2019-11-12: initially published under CC BY-SA 4.0; 2022-06-10: relaxed to CC BY 4.0",
-                    "id":"CC BY 4.0",
-                    "license":"Creative Commons Attribution 4.0 International (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/)",
-                    "source_specific_info":"",
-                    "url":"https://creativecommons.org/licenses/by/4.0/"
-                },
+                "license":"REMO2020 data produced by GERICS is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing input4MIPs output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file). The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.",
                 "source_id":"REMO2020",
                 "source":"REMO2020 (2022): \naerosol: CLASSIC (v1.0)\natmos: HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)\natmosChem: none\nland: CABLE2.4\nlandIce: none\nocean: ACCESS-OM2 (MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)\nocnBgchem: WOMBAT (same grid as ocean)\nseaIce: CICE4.1 (same grid as ocean)"
             }
@@ -146,51 +144,21 @@
             "seaIce":"Sea Ice"
         },
         "table_id":[
+            "1hr",
             "3hr",
-            "6hrLev",
-            "6hrPlev",
-            "6hrPlevPt",
-            "AERday",
-            "AERhr",
-            "AERmon",
-            "AERmonZ",
-            "Amon",
-            "CF3hr",
-            "CFday",
-            "CFmon",
-            "CFsubhr",
-            "E1hr",
-            "E1hrClimMon",
-            "E3hr",
-            "E3hrPt",
-            "E6hrZ",
-            "Eday",
-            "EdayZ",
-            "Efx",
-            "Emon",
-            "EmonZ",
-            "Esubhr",
-            "Eyr",
-            "IfxAnt",
-            "IfxGre",
-            "ImonAnt",
-            "ImonGre",
-            "IyrAnt",
-            "IyrGre",
-            "LImon",
-            "Lmon",
-            "Oclim",
-            "Oday",
-            "Odec",
-            "Ofx",
-            "Omon",
-            "Oyr",
-            "SIday",
-            "SImon",
+            "6hr",
             "day",
+            "mon",
             "fx"
         ],
-	"license":"<Your_Data_Identifier> data produced by <Your_Centre_Name> is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing input4MIPs output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file). The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.",
+        "DRS":{
+            "directory_path_example":"CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/",
+            "directory_path_sub_experiment_example":"CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/",
+            "directory_path_template":"<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>",
+            "filename_example":"tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc",
+            "filename_sub_experiment_example":"tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc",
+            "filename_template":"<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
+        },
         "version_metadata":{
             "CV_collection_modified":"Wed Oct 12 12:16:47 2022 -0700",
             "CV_collection_version":"6.2.58.48",
@@ -200,14 +168,6 @@
             "institution_id":"PCMDI",
             "previous_commit":"13b36d83cb9ec4b807e0e7db98d628d33b07d784",
             "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
-        },
-        "DRS":{
-            "directory_path_example":"CMIP6/CMIP/MOHC/HadGEM3-GC31-MM/historical/r1i1p1f3/Amon/tas/gn/v20191207/",
-            "directory_path_sub_experiment_example":"CMIP6/DCPP/MOHC/HadGEM3-GC31-MM/dcppA-hindcast/s1960-r1i1p1f2/Amon/tas/gn/v20200417/",
-            "directory_path_template":"<mip_era>/<activity_id>/<institution_id>/<source_id>/<experiment_id>/<member_id>/<table_id>/<variable_id>/<grid_label>/<version>",
-            "filename_example":"tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc",
-            "filename_sub_experiment_example":"tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc",
-            "filename_template":"<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
         },
         "mip_era":[
             "CMIP6"

@@ -14,11 +14,11 @@
             "license":"REMO2020 data produced by GERICS is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing input4MIPs output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file). The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.",
             "model_component":{
                 "aerosol":{
-                    "description":"CLASSIC (v1.0)",
+                    "description":"none",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmos":{
-                    "description":"HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)",
+                    "description":"dynamic",
                     "native_nominal_resolution":"250 km"
                 },
                 "atmosChem":{
@@ -26,24 +26,24 @@
                     "native_nominal_resolution":"none"
                 },
                 "land":{
-                    "description":"CABLE2.4",
-                    "native_nominal_resolution":"250 km"
+                    "description":"none",
+                    "native_nominal_resolution":"none"
                 },
                 "landIce":{
                     "description":"none",
                     "native_nominal_resolution":"none"
                 },
                 "ocean":{
-                    "description":"ACCESS-OM2 (MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)",
-                    "native_nominal_resolution":"100 km"
+                    "description":"prescribed",
+                    "native_nominal_resolution":"none"
                 },
                 "ocnBgchem":{
-                    "description":"WOMBAT (same grid as ocean)",
-                    "native_nominal_resolution":"100 km"
+                    "description":"none",
+                    "native_nominal_resolution":"none"
                 },
                 "seaIce":{
-                    "description":"CICE4.1 (same grid as ocean)",
-                    "native_nominal_resolution":"100 km"
+                    "description":"none",
+                    "native_nominal_resolution":"none"
                 }
             },
             "release_year":"2022",

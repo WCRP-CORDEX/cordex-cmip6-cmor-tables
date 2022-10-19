@@ -8,6 +8,7 @@ from collections import OrderedDict
 filelist = [
     "CORDEX_required_global_attributes.json",
     "CORDEX_activity_id.json",
+    "CORDEX_domain.json",
     "CORDEX_institution_id.json",
     "CORDEX_source_id.json",
     "CORDEX_source_type.json",
@@ -16,10 +17,10 @@ filelist = [
     "CORDEX_nominal_resolution.json",
     "CORDEX_realm.json",
     "CORDEX_table_id.json",
-    "CORDEX_license.json",
+    #    "CORDEX_license.json",
     "CORDEX_DRS.json",
     "mip_era.json",
-    #    "CORDEX_driving_experiment_id.json",
+    "CORDEX_driving_experiment_id.json",
     "CORDEX_experiment_id.json",
 ]
 # Github repository with CORDEX related Control Vocabulary files
@@ -51,7 +52,7 @@ class readWCRP:
             root[key]["source"] = root[key]["source"].rstrip()
             del root[key]["label"]
             del root[key]["release_year"]
-            del root[key]["label_extended"]
+            # del root[key]["label_extended"]
             del root[key]["model_component"]
 
     def createExperimentID(self, myjson):
