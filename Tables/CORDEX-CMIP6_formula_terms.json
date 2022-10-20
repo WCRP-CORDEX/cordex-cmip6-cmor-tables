@@ -96,14 +96,6 @@
             "standard_name": "",
             "type": "real"
         },
-        "eta2": {
-            "long_name": "Sea Surface Height",
-            "units": "m",
-            "dimensions": "longitude latitude time2",
-            "out_name": "eta",
-            "standard_name": "",
-            "type": "real"
-        },
         "k_c": {
             "long_name": "vertical coordinate formula term: k_c",
             "units": "",
@@ -156,14 +148,6 @@
             "long_name": "Surface Air Pressure",
             "units": "Pa",
             "dimensions": "longitude latitude time1",
-            "out_name": "ps",
-            "standard_name": "air_pressure",
-            "type": "real"
-        },
-        "ps2": {
-            "long_name": "Surface Air Pressure",
-            "units": "Pa",
-            "dimensions": "longitude latitude time2",
             "out_name": "ps",
             "standard_name": "air_pressure",
             "type": "real"
