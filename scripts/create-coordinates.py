@@ -81,6 +81,38 @@ longitude = {
     "generic_level_name": "",
 }
 
+latitude = {
+    "standard_name": "latitude",
+    "units": "degrees_north",
+    "axis": "Y",
+    "long_name": "Latitude",
+    "climatology": "",
+    "formula": "",
+    "must_have_bounds": "yes",
+    "out_name": "lat",
+    "positive": "",
+    "requested": "",
+    "requested_bounds": "",
+    "stored_direction": "increasing",
+    "tolerance": "",
+    "type": "double",
+    "valid_max": "90.0",
+    "valid_min": "-90.0",
+    "value": "",
+    "z_bounds_factors": "",
+    "z_factors": "",
+    "bounds_values": "",
+    "generic_level_name": "",
+}
+
+
+dim_table = {
+    "longitude": longitude,
+    "latitude": latitude,
+    "height": height,
+    "pressure": pressure,
+}
+
 
 def dims_from_table(table):
     with open(table) as f:
