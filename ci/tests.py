@@ -40,7 +40,6 @@ def copy_filename_to_cmip6(filename):
     return cmip6_filename
 
 
-@pytest.fixture
 def fx_file():
     ds = cx.cordex_domain("EUR-11", dummy="topo")
     filename = cxcmor.cmorize_variable(
@@ -48,6 +47,22 @@ def fx_file():
         "orog",
         mapping_table={"orog": {"varname": "topo"}},
         cmor_table=os.path.join(table_dir, "CORDEX-CMIP6_fx.json"),
+        dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
+        grids_table=os.path.join(table_dir, "CORDEX-CMIP6_grids.json"),
+        CORDEX_domain="EUR-11",
+        time_units=None,
+        allow_units_convert=True,
+    )
+    return filename
+
+
+def mon_file():
+    ds = cx.tutorial.open_dataset("remo_EUR-11_TEMP2_mon")
+    filename = cxcmor.cmorize_variable(
+        ds,
+        "tas",
+        mapping_table={"tas": {"varname": "TEMP2"}},
+        cmor_table=os.path.join(table_dir, "CORDEX-CMIP6_mon.json"),
         dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
         grids_table=os.path.join(table_dir, "CORDEX-CMIP6_grids.json"),
         CORDEX_domain="EUR-11",
@@ -77,9 +92,11 @@ def fx_file():
 #    assert test.returncode == 0
 
 
-def test_cfchecker(fx_file):
+@pytest.mark.parametrize("file", [fx_file(), mon_file()])
+def test_cfchecker(file):
+    print("checking file", file)
     checker = CFChecker()
-    res = checker.checker(fx_file)
+    res = checker.checker(file)
     assert not res["global"]["ERROR"]
 
 
