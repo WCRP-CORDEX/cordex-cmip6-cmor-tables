@@ -1,14 +1,15 @@
 name: cordex-examples
 dependencies:
-  - cmor>=3.7.0
-  - cartopy>=0.20
+  - python=3.9
+  - cmor=3.7.0
+  - cartopy=0.20
   - matplotlib-base
   - numpy
   - pooch
   - regionmask
   - setuptools
-  - xarray
-  - cf_xarray
+  - xarray=2022.10.0
+  - cf_xarray=0.7.4
   - cftime
   - netCDF4
   - xesmf
