@@ -5,8 +5,8 @@ dependencies:
   - python=3.9
   - cdo=2.0.5
   - cartopy=0.20
+  - cmor=3.7.0
   - pip:
-    - cmor==3.7.0
     - matplotlib-base==3.6.1
     - numpy==1.23.4
     - pooch
