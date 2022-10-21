@@ -19,7 +19,7 @@ dependencies:
     - xesmf
     - cfchecker==4.1.0
     - compliance-checker
-    - python-cdo
+    - cdo==1.5.7
     - intake-esm
     - ghp-import
     - fsspec==2022.10.0
