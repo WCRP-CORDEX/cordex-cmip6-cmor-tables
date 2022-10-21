@@ -17,7 +17,6 @@ dependencies:
   - compliance-checker
   - cdo
   - python-cdo
-  - jupyter-book
   - intake-esm
   - ghp-import
   - fsspec
