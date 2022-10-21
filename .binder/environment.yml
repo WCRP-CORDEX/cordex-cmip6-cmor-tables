@@ -3,16 +3,26 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - cmor
+  - cmor>=3.7.0
   - cartopy
   - matplotlib-base
   - numpy
   - pooch
+  - regionmask
+  - setuptools
   - xarray
+  - cf_xarray
   - cftime
   - netCDF4
+  - xesmf
+  - cfchecker
+  - compliance-checker
   - cdo
   - python-cdo
+  - jupyter-book
+  - intake-esm
+  - ghp-import
+  - fsspec
   - requests
   - aiohttp
   - pip:
