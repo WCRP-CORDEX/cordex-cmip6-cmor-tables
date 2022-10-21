@@ -4,7 +4,7 @@ channels:
   - nodefaults
 dependencies:
   - cmor>=3.7.0
-  - cartopy
+  - cartopy>=0.20
   - matplotlib-base
   - numpy
   - pooch
