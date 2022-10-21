@@ -5,6 +5,7 @@ channels:
 dependencies:
   - cmor>=3.7.0
   - cartopy>=0.20
+  - geos
   - matplotlib-base
   - numpy
   - pooch
