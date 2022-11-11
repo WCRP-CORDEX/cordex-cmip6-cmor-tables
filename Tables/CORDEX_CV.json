@@ -52,7 +52,8 @@
             }
         },
         "CORDEX_domain":[
-            "Europe"
+            "Europe",
+            "Africa"
         ],
         "institution_id":{
             "GERICS":"Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany"
