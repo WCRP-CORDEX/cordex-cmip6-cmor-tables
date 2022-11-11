@@ -48,12 +48,12 @@
 
     "#note_CMIP6":            " **** The following are set correctly for CMIP6 and should not normally need editing",
 
-    "_controlled_vocabulary_file": "CORDEX-CMIP6_CV.json",
-    "_AXIS_ENTRY_FILE":         "CORDEX-CMIP6_coordinate.json",
-    "_FORMULA_VAR_FILE":        "CORDEX-CMIP6_formula_terms.json",
+    "_controlled_vocabulary_file": "CORDEX_CV.json",
+    "_AXIS_ENTRY_FILE":         "CORDEX_coordinate.json",
+    "_FORMULA_VAR_FILE":        "CORDEX_formula_terms.json",
 
 
-    "CORDEX_domain" : "EUR-11",
+    "CORDEX_domain_id" : "EUR-11",
 
     "tracking_prefix":        "hdl:21.14100",
     "_history_template":       "%s ;rewrote data to be consistent with <activity_id> for variable <variable_id> found in table <table_id>.",
