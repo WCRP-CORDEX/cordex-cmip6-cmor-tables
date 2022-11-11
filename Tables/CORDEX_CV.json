@@ -2,7 +2,7 @@
     "CV":{
         "required_global_attributes":[
             "Conventions",
-            "CORDEX_domain",
+            "CORDEX_domain_id",
             "activity_id",
             "creation_date",
             "data_specs_version",
@@ -36,7 +36,7 @@
         "activity_id":{
             "CORDEX":"Coordinated Regional Climate Downscaling Experiment"
         },
-        "CORDEX_domain":{
+        "CORDEX_domain_id":{
             "EUR-11":"Europe",
             "EUR-22":"Europe",
             "EUR-44":"Europe"
