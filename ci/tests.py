@@ -11,6 +11,7 @@ from cordex import cmor as cxcmor
 
 table_dir = "./Tables"
 
+cxcmor.set_options(table_prefix="CORDEX")
 
 def copy_tables(table_dir):
     """copy CORDEX-CMIP6 table names to CMIP6 tables names
@@ -46,9 +47,9 @@ def fx_file():
         ds,
         "orog",
         mapping_table={"orog": {"varname": "topo"}},
-        cmor_table=os.path.join(table_dir, "CORDEX-CMIP6_fx.json"),
-        dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
-        grids_table=os.path.join(table_dir, "CORDEX-CMIP6_grids.json"),
+        cmor_table=os.path.join(table_dir, "CORDEX_fx.json"),
+        dataset_table=os.path.join(table_dir, "CORDEX_remo_example.json"),
+        grids_table=os.path.join(table_dir, "CORDEX_grids.json"),
         CORDEX_domain="EUR-11",
         time_units=None,
         allow_units_convert=True,
@@ -62,34 +63,14 @@ def mon_file():
         ds,
         "tas",
         mapping_table={"tas": {"varname": "TEMP2"}},
-        cmor_table=os.path.join(table_dir, "CORDEX-CMIP6_mon.json"),
-        dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
-        grids_table=os.path.join(table_dir, "CORDEX-CMIP6_grids.json"),
+        cmor_table=os.path.join(table_dir, "CORDEX_mon.json"),
+        dataset_table=os.path.join(table_dir, "CORDEX_remo_example.json"),
+        grids_table=os.path.join(table_dir, "CORDEX_grids.json"),
         CORDEX_domain="EUR-11",
         time_units=None,
         allow_units_convert=True,
     )
     return filename
-
-
-# prepare checker only works for CMIP6 global datasets
-# def test_prepare(fx_file):
-#    new_tables = copy_tables(table_dir)
-#    fx_file = copy_filename_to_cmip6(fx_file)
-#    print(fx_file)
-#    command = ["PrePARE", "--table-path", table_dir, fx_file]
-#    test = subprocess.run(command)
-#    print("The exit code was: %d" % test.returncode)
-#    for f in new_tables:
-#        os.remove(f)
-#    assert test.returncode == 0
-
-
-# def test_cfchecker(fx_file):
-#    command = ["cfchecks", "-v", "CF-1.7", fx_file]
-#    test = subprocess.run(command)
-#    print("The exit code was: %d" % test.returncode)
-#    assert test.returncode == 0
 
 
 @pytest.mark.parametrize("file", [fx_file(), mon_file()])
@@ -98,41 +79,3 @@ def test_cfchecker(file):
     checker = CFChecker()
     res = checker.checker(file)
     assert not res["global"]["ERROR"]
-
-
-# def test_cmorizer_mon():
-#    ds = pr.tutorial.open_dataset("remo_EUR-11_TEMP2_mon")
-#    eur11 = cx.cordex_domain("EUR-11")
-#    ds = ds.assign_coords({"lon": eur11.lon, "lat": eur11.lat})
-#    filename = prcmor.cmorize_variable(
-#        ds,
-#        "tas",
-#        cmor_table=os.path.join(table_dir, "CORDEX-CMIP6_mon.json"),
-#        dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
-#        CORDEX_domain="EUR-11",
-#        time_units=None,
-#        allow_units_convert=True,
-#    )
-#    output = xr.open_dataset(filename)
-#    assert output.dims["time"] == 12
-#    assert "tas" in output
-#
-#
-# @pytest.mark.parametrize("table, tdim", [("CORDEX-CMIP6_day.json", 3), ("CORDEX-CMIP6_3hr.json", 17)])
-# def test_cmorizer_subdaily(table, tdim):
-#    ds = pr.tutorial.open_dataset("remo_EUR-11_TEMP2_1hr")
-#    eur11 = cx.cordex_domain("EUR-11")
-#    ds = ds.assign_coords({"lon": eur11.lon, "lat": eur11.lat})
-#    filename = prcmor.cmorize_variable(
-#        ds,
-#        "tas",
-#        cmor_table=os.path.join(table_dir, table),
-#        dataset_table=os.path.join(table_dir, "CORDEX-CMIP6_remo_example.json"),
-#        CORDEX_domain="EUR-11",
-#        time_units=None,
-#        allow_units_convert=True,
-#        allow_resample=True,
-#    )
-#    output = xr.open_dataset(filename)
-#    assert "tas" in output
-#    assert output.dims["time"] == tdim
