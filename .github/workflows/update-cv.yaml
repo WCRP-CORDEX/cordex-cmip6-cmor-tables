@@ -3,16 +3,9 @@ name: update controlled vocabulary
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
-  schedule:
-  - cron: "0 0 * * *"
+  push:
+    paths:
+      - 'CORDEX_*.json'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -25,7 +18,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -36,6 +29,13 @@ jobs:
       run: |
         python scripts/createCORDEXCV.py
         mv CORDEX_CV.json  Tables
+    - name: Commit CORDEX_CV.json
+      run: |
+        git config --global user.name "github-actions[bot]"
+        #git config --global user.email 'your-username@users.noreply.github.com'
+        git commit Tables/CORDEX_CV.json -m "Automated report"
+        git push
+
   #  - name: pushes results to table repository
   #    env:
        # API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
