@@ -34,7 +34,7 @@ jobs:
     - name: Commit CORDEX_CV.json
       run: |
         git config --global user.name "github-actions[bot]"
-        pre-commit run check-json
+        pre-commit run check-json --all-files
         #git config --global user.email 'your-username@users.noreply.github.com'
         git commit Tables/CORDEX_CV.json -m "automated CV update"
         git push
