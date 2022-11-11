@@ -3,7 +3,6 @@
         "required_global_attributes":[
             "Conventions",
             "CORDEX_domain",
-            "domain_name",
             "activity_id",
             "creation_date",
             "data_specs_version",
@@ -37,20 +36,11 @@
         "activity_id":{
             "CORDEX":"Coordinated Regional Climate Downscaling Experiment"
         },
-	"CORDEX_domain":{
-	        "EUR-11": {
-                    "CORDEX_domain": "EUR-11",
-		    "domain_name": "Europe"
-	        },
-	        "AFR-11": {
-                    "CORDEX_domain": "AFR-11",
-		    "domain_name": "Africa"
-	        }
-	},
-        "domain_name": [
-          "Europe",
-          "Africa"
-        ],
+        "CORDEX_domain":{
+            "EUR-11":"Europe",
+            "EUR-22":"Europe",
+            "EUR-44":"Europe"
+        },
         "institution_id":{
             "GERICS":"Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany"
         },
@@ -67,7 +57,7 @@
                 ],
                 "license":"REMO2020 data produced by GERICS is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing input4MIPs output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found via the further_info_url (recorded as a global attribute in this file). The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law.",
                 "source_id":"REMO2020",
-                "source":"REMO2020 (2022): \naerosol: CLASSIC (v1.0)\natmos: HadGAM2 (r1.1, N96; 192 x 145 longitude/latitude; 38 levels; top level 39255 m)\natmosChem: none\nland: CABLE2.4\nlandIce: none\nocean: ACCESS-OM2 (MOM5, tripolar primarily 1deg; 360 x 300 longitude/latitude; 50 levels; top grid cell 0-10 m)\nocnBgchem: WOMBAT (same grid as ocean)\nseaIce: CICE4.1 (same grid as ocean)"
+                "source":"REMO2020 (2022): \naerosol: none\natmos: dynamic\natmosChem: none\nland: none\nlandIce: none\nocean: prescribed\nocnBgchem: none\nseaIce: none"
             }
         },
         "source_type":{
@@ -167,16 +157,6 @@
             "filename_example":"tas_Amon_HadGEM3-GC31-MM_historical_r1i1p1f3_gn_185001-186912.nc",
             "filename_sub_experiment_example":"tas_Amon_HadGEM3-GC31-MM_dcppA-hindcast_s1960-r1i1p1f2_gn_196011-196012.nc",
             "filename_template":"<variable_id>_<table_id>_<source_id>_<experiment_id >_<member_id>_<grid_label>[_<time_range>].nc"
-        },
-        "version_metadata":{
-            "CV_collection_modified":"Wed Oct 12 12:16:47 2022 -0700",
-            "CV_collection_version":"6.2.58.48",
-            "DRS_CV_modified":"Tue Jun  7 14:29:45 2022 -0700",
-            "DRS_CV_note":"Add CMIP6 Data Reference Syntax (DRS) templates",
-            "author":"Paul J. Durack <durack1@llnl.gov>",
-            "institution_id":"PCMDI",
-            "previous_commit":"13b36d83cb9ec4b807e0e7db98d628d33b07d784",
-            "specs_doc":"v6.2.7 (10th September 2018; https://goo.gl/v1drZl)"
         },
         "mip_era":[
             "CMIP6"
