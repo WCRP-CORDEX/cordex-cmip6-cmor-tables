@@ -26,6 +26,7 @@
         "realization_index",
         "realm",
         "source",
+        "source_configuration_id",
         "source_id",
         "source_type",
         "table_id",
