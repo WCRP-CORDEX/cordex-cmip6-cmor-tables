@@ -38,8 +38,3 @@ jobs:
         #git config --global user.email 'your-username@users.noreply.github.com'
         git commit Tables/CORDEX_CV.json -m "automated CV update"
         git push
-
-  #  - name: pushes results to table repository
-  #    env:
-       # API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-  #    run: bash update-tables.sh
