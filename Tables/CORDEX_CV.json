@@ -3,6 +3,7 @@
         "required_global_attributes":[
             "Conventions",
             "CORDEX_domain_id",
+            "CORDEX_domain",
             "activity_id",
             "creation_date",
             "data_specs_version",
@@ -37,10 +38,22 @@
             "CORDEX":"Coordinated Regional Climate Downscaling Experiment"
         },
         "CORDEX_domain_id":{
-            "EUR-11":"Europe",
-            "EUR-22":"Europe",
-            "EUR-44":"Europe"
+            "EUR-11": {
+              "CORDEX_domain_id": "EUR-11",
+              "CORDEX_domain": "Europe"
+            },
+            "EUR-22": {
+              "CORDEX_domain_id": "EUR-22",
+              "CORDEX_domain": "Europe"
+            },
+            "EUR-44": {
+              "CORDEX_domain_id": "EUR-44",
+              "CORDEX_domain": "Europe"
+            }
         },
+        "CORDEX_domain": [
+            "Europe"
+        ],
         "institution_id":{
             "GERICS":"Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany"
         },

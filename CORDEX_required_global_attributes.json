@@ -2,6 +2,7 @@
     "required_global_attributes": [
         "Conventions",
         "CORDEX_domain_id",
+        "CORDEX_domain",
         "activity_id",
         "creation_date",
         "data_specs_version",

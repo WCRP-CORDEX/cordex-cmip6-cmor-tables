@@ -44,8 +44,6 @@
 
     "#note_CV":               " **** The following will be obtained from the CV and do not need to be defined here",
 
-    "institution":            "",
-
     "#note_CMIP6":            " **** The following are set correctly for CMIP6 and should not normally need editing",
 
     "_controlled_vocabulary_file": "CORDEX_CV.json",
@@ -60,5 +58,5 @@
 
     "#output_path_template":   "Template for output path directory using tables keys or global attributes, these should follow the relevant data reference syntax",
     "output_path_template":    "<mip_era><activity_id><CORDEX_domain><institution_id><source_id><driving_institution_id><driving_source_id><experiment_id><_member_id><table><variable_id><grid_label><version>",
-    "output_file_template":    "<variable_id><table><CORDEX_domain><source_id><driving_source_id><experiment_id><_member_id><grid_label>"
+    "output_file_template":    "<variable_id><table><CORDEX_domain><source_id><driving_source_id><experiment_id><_member_id><grid_label><_version>"
  }
