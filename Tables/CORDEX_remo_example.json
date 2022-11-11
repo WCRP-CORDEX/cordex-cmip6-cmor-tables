@@ -53,7 +53,7 @@
     "_FORMULA_VAR_FILE":        "CORDEX_formula_terms.json",
 
 
-    "CORDEX_domain" : "EUR-11",
+    "CORDEX_domain_id" : "EUR-11",
 
     "tracking_prefix":        "hdl:21.14100",
     "_history_template":       "%s ;rewrote data to be consistent with <activity_id> for variable <variable_id> found in table <table_id>.",
