@@ -1,16 +1,16 @@
 {
-    "CORDEX_domain_id":{
+    "domain_id":{
         "EUR-11": {
-          "CORDEX_domain_id": "EUR-11",
-          "CORDEX_domain": "Europe"
+          "domain_id": "EUR-11",
+          "domain": "Europe"
         },
         "EUR-22": {
-          "CORDEX_domain_id": "EUR-22",
-          "CORDEX_domain": "Europe"
+          "domain_id": "EUR-22",
+          "domain": "Europe"
         },
         "EUR-44": {
-          "CORDEX_domain_id": "EUR-44",
-          "CORDEX_domain": "Europe"
+          "domain_id": "EUR-44",
+          "domain": "Europe"
         }
     }
 }
