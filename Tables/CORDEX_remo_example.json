@@ -59,5 +59,5 @@
 
     "#output_path_template":   "Template for output path directory using tables keys or global attributes, these should follow the relevant data reference syntax",
     "output_path_template":    "<mip_era><activity_id><domain_id><institution_id><source_id><driving_source_id><driving_experiment_id><driving_variant_label><table_id><variable_id><source_configuration_id><version>",
-    "output_file_template":    "<variable_id><CORDEX_domain_id><driving_source_id><driving_experiment_id><driving_variant_label><institution_id><source_id><source_configuration_id><table_id>"
+    "output_file_template":    "<variable_id><domain_id><driving_source_id><driving_experiment_id><driving_variant_label><institution_id><source_id><source_configuration_id><table_id>"
  }
