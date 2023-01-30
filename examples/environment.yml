@@ -6,7 +6,7 @@ dependencies:
   - cmor>=3.7.0
   - cartopy
   - matplotlib-base
-  - numpy
+  - numpy<1.24 # fixed until next cmor release
   - pooch
   - regionmask
   - setuptools
