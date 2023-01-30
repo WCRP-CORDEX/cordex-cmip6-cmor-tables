@@ -54,7 +54,7 @@ jobs:
         run: python -m pytest ci/tests.py::test_cfchecker
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Test results for ${{ runner.os }}-${{ matrix.python-version }}
-          path: test-results/${{ runner.os }}-${{ matrix.python-version }}.xml
+          path: ./CORDEX
