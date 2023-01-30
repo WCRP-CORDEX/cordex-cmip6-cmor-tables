@@ -4,6 +4,7 @@ channels:
   - nodefaults
 dependencies:
   - xarray
+  - numpy<1.24 # fixed until next cmor release
   - netCDF4
   - pytest
   - py-cordex
