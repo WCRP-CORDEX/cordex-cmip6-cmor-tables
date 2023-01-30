@@ -58,3 +58,4 @@ jobs:
         with:
           name: Test results for ${{ runner.os }}-${{ matrix.python-version }}
           path: ./CORDEX
+          retention-days: 15
