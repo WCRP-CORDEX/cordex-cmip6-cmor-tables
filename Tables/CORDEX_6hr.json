@@ -1,6 +1,6 @@
 {
     "Header": {
-        "data_specs_version": "0.0.1",
+        "data_specs_version": "00.00.01",
         "cmor_version": "3.5",
         "table_id": "Table 6hr",
         "realm": "atmos",

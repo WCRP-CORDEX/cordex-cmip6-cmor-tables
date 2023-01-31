@@ -4,7 +4,7 @@ import os
 import pandas as pd
 from common import data_request, table_dir, table_prefix
 
-__version__ = "0.0.1"
+__version__ = "00.00.01"
 
 
 # columns in cmor tables according to CMIP6
