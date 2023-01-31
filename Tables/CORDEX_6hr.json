@@ -1,14 +1,14 @@
 {
     "Header": {
-        "data_specs_version": "00.00.00",
+        "data_specs_version": "0.0.1",
         "cmor_version": "3.5",
         "table_id": "Table 6hr",
         "realm": "atmos",
-        "table_date": "06 July 2022",
+        "table_date": "31 January 2023",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
-        "approx_interval": "0.250000",
+        "approx_interval": "0.25",
         "generic_levels": "",
         "mip_era": "CMIP6",
         "Conventions": "CF-1.7 CMIP-6.2"
@@ -104,7 +104,7 @@
             "ok_min_mean_abs": "",
             "ok_max_mean_abs": ""
         },
-        "mrfsol": {
+        "mrsfl": {
             "frequency": "6hrPt",
             "modeling_realm": "atmos",
             "standard_name": "frozen_water_content_of_soil_layer",
@@ -112,9 +112,9 @@
             "cell_methods": "area: mean time: point",
             "cell_measures": "area: areacella",
             "long_name": "Frozen Water Content of Soil Layer",
-            "comment": "The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP)",
+            "comment": "The mass of frosen water in each soil layer (3D variable). Reported as missing for grid cells with no land. (not in CMIP) [mrfsol -> mrsfl, 2022.09.22, https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/issues/2 ]",
             "dimensions": "longitude latitude time1",
-            "out_name": "mrfsol",
+            "out_name": "mrsfl",
             "type": "real",
             "positive": "",
             "valid_min": "",

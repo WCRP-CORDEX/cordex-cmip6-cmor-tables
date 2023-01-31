@@ -2,10 +2,10 @@ import json
 import os
 
 import pandas as pd
+from common import data_request, table_dir, table_prefix
 
 __version__ = "0.0.1"
 
-data_request = "https://raw.githubusercontent.com/WCRP-CORDEX/cordex-cmip6-data-request/main/tables/cordex-cmip6-data-request-extended.csv"
 
 # columns in cmor tables according to CMIP6
 columns = [
@@ -28,9 +28,18 @@ columns = [
 ]
 
 
-def create_table_header(name):
+def create_table_header(name, frequency):
     from datetime import date
 
+    intervals = {
+        "fx": "",
+        "1hr": 0.041667,
+        "3hr": 0.125,
+        "6hr": 0.25,
+        "day": 1.0,
+        "mon": 30.0,
+    }
+    print(frequency)
     today = date.today()
     header = {
         "data_specs_version": __version__,
@@ -41,7 +50,7 @@ def create_table_header(name):
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
-        "approx_interval": "",
+        "approx_interval": f"{intervals[frequency]}",
         "generic_levels": "",
         "mip_era": "CMIP6",
         "Conventions": "CF-1.7 CMIP-6.2",
@@ -53,7 +62,7 @@ def create_cmor_table(name, df):
     df = df.copy()
     df["index"] = df.out_name
     return dict(
-        Header=create_table_header(name),
+        Header=create_table_header(name, name),
         variable_entry=df.set_index("index")[columns].to_dict(orient="index"),
     )
 
@@ -82,7 +91,7 @@ def table_to_json(table, dir=None):
     if not os.path.isdir(dir):
         os.makedirs(dir)
     table_id = table["Header"]["table_id"].split()[1]
-    filename = os.path.join(dir, f"CORDEX-CMIP6_{table_id}.json")
+    filename = os.path.join(dir, f"{table_prefix}_{table_id}.json")
     print(f"writing: {filename}")
     with open(filename, "w") as fp:
         json.dump(table, fp, indent=4)
@@ -90,7 +99,7 @@ def table_to_json(table, dir=None):
 
 def run(df):
     for table in create_cmor_tables(df).values():
-        table_to_json(table)
+        table_to_json(table, dir=table_dir)
 
 
 if __name__ == "__main__":

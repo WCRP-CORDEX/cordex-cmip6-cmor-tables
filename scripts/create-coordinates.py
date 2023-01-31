@@ -2,11 +2,11 @@ import json
 import re
 from os import path as op
 
-path = op.join(op.dirname(__file__), "../Tables")
+from common import table_dir, table_prefix
 
 tables = ["1hr", "6hr", "day", "mon"]
 
-files = [op.join(path, f"CORDEX-CMIP6_{t}.json") for t in tables]
+files = [op.join(table_dir, f"{table_prefix}_{t}.json") for t in tables]
 
 height = {
     "standard_name": "height",
@@ -215,10 +215,8 @@ def unique_dims_from_tables(tables):
     return unique_dims(dims)
 
 
-def table_to_json(table, dir=None):
-    if dir is None:
-        dir = "./"
-    filename = op.join(dir, "CORDEX_coordinate.json")
+def table_to_json(table):
+    filename = op.join(table_dir, "CORDEX_coordinate.json")
     print(f"writing: {filename}")
     with open(filename, "w") as fp:
         json.dump(table, fp, indent=4)
