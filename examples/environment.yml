@@ -13,6 +13,7 @@ dependencies:
   - xarray
   - cf_xarray
   - cftime
+  - flox
   - netCDF4
   - xesmf
   - cfchecker
