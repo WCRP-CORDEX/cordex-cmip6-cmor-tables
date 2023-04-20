@@ -1,63 +1,57 @@
 {
-    "#note_source_type":      "explanation of what source_type is goes here",
-    "source_type":            "ARCM",
+    "#note_source_type":           "explanation of what source_type is goes here",
+    "source_type":                 "ARCM",
 
-    "#note_experiment_id":    "CMIP6 valid experiment_ids are found in CORDEX-CMIP6_CV.json",
-    "experiment_id":          "evaluation",
-    "activity_id":            "CORDEX",
+    "#note_experiment_id":         "CMIP6 valid experiment_ids are found in CORDEX-CMIP6_CV.json",
+    "experiment_id":               "evaluation",
+    "activity_id":                 "RCM",
+    "project_id":                  "CORDEX",
 
-    "realization_index":      "1",
-    "initialization_index":   "1",
-    "physics_index":          "1",
-    "forcing_index":          "1",
+    "#note_run_variant":           "Text stored in attribute variant_info (recommended, not required description of run variant)",
+    "run_variant":                 "1st realization",
 
-    "#note_run_variant":      "Text stored in attribute variant_info (recommended, not required description of run variant)",
-    "run_variant":            "1st realization",
+    "driving_experiment_id":       "evaluation",
+    "driving_institution_id":      "ECMWF",
+    "driving_source_id":           "ECMWF-ERA5",
+    "driving_variant_label" :      "r1i1p1f1",
+    "driving_experiment":          "evaluation with ERA5",
 
-    "driving_experiment_id" : "evaluation",
-    "driving_institution_id" : "ECMWF",
-    "driving_source_id" : "ECMWF-ERA5",
-    "driving_variant_label" : "r1i1p1f1",
+    "#note_institution_id":        "institution_id should be registered at https://github.com/WCRP-CORDEX/cordex-cv/issues/new ",
+    "institution_id":              "GERICS",
 
-    "#note_institution_id":   "institution_id must be registered at https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new ",
-    "institution_id":         "GERICS",
+    "#note_source_id":             "source_id (model name) must be registered at https://github.com/WCRP-CORDEX/cordex-cv/issues/new ",
+    "source_id":                   "REMO2020",
+    "version_realization":         "v1",
 
-    "#note_source_id":        "source_id (model name) must be registered at https://github.com/WCRP-CMIP/CMIP6_CVs/issues/new ",
-    "source_id":              "REMO2020",
-    "source_configuration_id":"v1",
+    "calendar":                    "proleptic_gregorian",
 
-    "calendar":               "proleptic_gregorian",
+    "grid":                        "native atmosphere regular grid (3x4 latxlon)",
+    "grid_label":                  "gn",
+    "native_resolution":           "0.11 degree",
 
-    "grid":                   "native atmosphere regular grid (3x4 latxlon)",
-    "grid_label":             "gn",
-    "nominal_resolution":     "0.11 degree",
+    "#output":                     "Root directory for output (can be either a relative or full path)",
+    "outpath":                     "CORDEX",
 
-    "#output":                "Root directory for output (can be either a relative or full path)",
-    "outpath":                "CORDEX",
+    "#note_optional":              " **** The following descriptors are optional and may be set to an empty string ",
 
-    "#note_optional":         " **** The following descriptors are optional and may be set to an empty string ",
+    "contact ":                    "gerics-cordex@hereon.de",
+    "further_info_url":            "https://furtherinfo.es-doc.org/.*",
+    "comment":                     "",
+    "references":                  "https://www.remo-rcm.de",
 
-    "contact ":               "gerics-cordex2@hereon.de",
-    "further_info_url":       "https://furtherinfo.es-doc.org/.*",
-    "history":                "Output from archivcl_A1.nce/giccm_03_std_2xCO2_2256.",
-    "comment":                "",
-    "references":             "https://www.remo-rcm.de",
-
-    "#note_CV":               " **** The following will be obtained from the CV and do not need to be defined here",
-
-    "#note_CMIP6":            " **** The following are set correctly for CMIP6 and should not normally need editing",
+    "#note_CMIP6":                 " **** The following are set correctly for CMIP6 and should not normally need editing",
 
     "_controlled_vocabulary_file": "CORDEX_CV.json",
-    "_AXIS_ENTRY_FILE":         "CORDEX_coordinate.json",
-    "_FORMULA_VAR_FILE":        "CORDEX_formula_terms.json",
+    "_AXIS_ENTRY_FILE":            "CORDEX_coordinate.json",
+    "_FORMULA_VAR_FILE":           "CORDEX_formula_terms.json",
 
 
-    "domain_id" : "EUR-11",
+    "domain_id" :                  "EUR-11",
 
-    "tracking_prefix":        "hdl:21.14100",
-    "_history_template":       "%s ;rewrote data to be consistent with <activity_id> for variable <variable_id> found in table <table_id>.",
+    "tracking_prefix":             "hdl:21.14100",
+    "_history_template":           "%s ;rewrote data to be consistent with <project_id> for variable <variable_id> found in table <table_id>.",
 
     "#output_path_template":   "Template for output path directory using tables keys or global attributes, these should follow the relevant data reference syntax",
-    "output_path_template":    "<mip_era><activity_id><domain_id><institution_id><driving_source_id><driving_experiment_id><driving_variant_label><source_id><source_configuration_id><frequency><variable_id><version>",
-    "output_file_template":    "<variable_id><domain_id><driving_source_id><driving_experiment_id><driving_variant_label><institution_id><source_id><source_configuration_id><frequency>"
+    "output_path_template":    "<project_id><mip_era><activity_id><domain_id><institution_id><driving_source_id><driving_experiment_id><driving_variant_label><source_id><version_realization><frequency><variable_id><version>",
+    "output_file_template":    "<variable_id><domain_id><driving_source_id><driving_experiment_id><driving_variant_label><institution_id><source_id><version_realization><frequency>"
  }
