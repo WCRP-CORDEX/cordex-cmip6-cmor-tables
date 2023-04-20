@@ -56,7 +56,8 @@
             "Europe"
         ],
         "institution_id":{
-            "GERICS":"Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany"
+            "GERICS":"Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany",
+            "UCAN":"Instituto de Fisica de Cantabria (IFCA), CSIC-Universidad de Cantabria, 39005 Santander, Spain"
         },
         "driving_source_id":{
             "4AOP-v1-5":{
@@ -1027,6 +1028,22 @@
                 "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
                 "source_id":"REMO2020",
                 "source":"REMO2020 (2022): \naerosol: MACv2\natmos: dynamic\natmosChem: none\nland: none\nlandIce: none\nocean: prescribed\nlake: FLake\nocnBgchem: none\nseaIce: none"
+            },
+            "WRF442Q":{
+                "activity_participation":[
+                    "CORDEX"
+                ],
+                "cohort":[
+                    "Registered"
+                ],
+                "institution_id":[
+                    "AUTH",
+                    "BCCR",
+                    "UCAN"
+                ],
+                "license":"Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
+                "source_id":"WRF442Q",
+                "source":"WRF-v4.4.2-Q (2022): \naerosol: prescribed\natmos: dynamic\natmosChem: none\nland: NOAH-MP\nlandIce: none\nocean: prescribed\nlake: none\nocnBgchem: none\nseaIce: none"
             }
         },
         "source_type":{
