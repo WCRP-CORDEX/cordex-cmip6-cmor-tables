@@ -25,8 +25,6 @@
 
     "calendar":                    "proleptic_gregorian",
 
-    "grid":                        "native atmosphere regular grid (3x4 latxlon)",
-    "grid_label":                  "gn",
     "native_resolution":           "0.11 degree",
 
     "#output":                     "Root directory for output (can be either a relative or full path)",
