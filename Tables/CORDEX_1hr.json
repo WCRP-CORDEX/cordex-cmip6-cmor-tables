@@ -752,7 +752,7 @@
             "ok_min_mean_abs": "",
             "ok_max_mean_abs": ""
         },
-        "CAPE": {
+        "cape": {
             "frequency": "1hrPt",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_convective_available_potential_energy_wrt_surface",
@@ -762,7 +762,7 @@
             "long_name": "Convective Available Potential Energy",
             "comment": "",
             "dimensions": "longitude latitude time1",
-            "out_name": "CAPE",
+            "out_name": "cape",
             "type": "real",
             "positive": "",
             "valid_min": "",
@@ -770,7 +770,7 @@
             "ok_min_mean_abs": "",
             "ok_max_mean_abs": ""
         },
-        "LI": {
+        "li": {
             "frequency": "1hrPt",
             "modeling_realm": "atmos",
             "standard_name": "temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface",
@@ -780,7 +780,7 @@
             "long_name": "Lifted Index",
             "comment": "",
             "dimensions": "longitude latitude time1",
-            "out_name": "LI",
+            "out_name": "li",
             "type": "real",
             "positive": "",
             "valid_min": "",
@@ -788,7 +788,7 @@
             "ok_min_mean_abs": "",
             "ok_max_mean_abs": ""
         },
-        "CIN": {
+        "cin": {
             "frequency": "1hrPt",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_convective_inhibition_wrt_surface",
@@ -798,7 +798,7 @@
             "long_name": "Convective Inhibition",
             "comment": "",
             "dimensions": "longitude latitude time1",
-            "out_name": "CIN",
+            "out_name": "cin",
             "type": "real",
             "positive": "",
             "valid_min": "",
