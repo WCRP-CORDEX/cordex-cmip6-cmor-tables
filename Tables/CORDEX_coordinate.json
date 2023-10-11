@@ -666,29 +666,6 @@
             "z_factors": "",
             "bounds_values": "",
             "generic_level_name": ""
-        },
-        "time1": {
-            "standard_name": "time",
-            "units": "days since ?",
-            "axis": "T",
-            "long_name": "time",
-            "climatology": "",
-            "formula": "",
-            "must_have_bounds": "no",
-            "out_name": "time",
-            "positive": "",
-            "requested": "",
-            "requested_bounds": "",
-            "stored_direction": "increasing",
-            "tolerance": "",
-            "type": "double",
-            "valid_max": "",
-            "valid_min": "",
-            "value": "",
-            "z_bounds_factors": "",
-            "z_factors": "",
-            "bounds_values": "",
-            "generic_level_name": ""
         }
     }
 }

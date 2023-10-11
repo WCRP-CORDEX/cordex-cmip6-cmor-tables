@@ -4,7 +4,7 @@
         "cmor_version": "3.5",
         "table_id": "Table 1hr",
         "realm": "atmos",
-        "table_date": "15 May 2023",
+        "table_date": "11 October 2023",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -15,7 +15,7 @@
     },
     "variable_entry": {
         "tas": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "air_temperature",
             "units": "K",
@@ -23,7 +23,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Near-Surface Air Temperature",
             "comment": "",
-            "dimensions": "longitude latitude time1 height2m",
+            "dimensions": "longitude latitude time height2m",
             "out_name": "tas",
             "type": "real",
             "positive": "",
@@ -69,7 +69,7 @@
             "ok_max_mean_abs": ""
         },
         "huss": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "specific_humidity",
             "units": "1",
@@ -77,7 +77,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Near-Surface Specific Humidity",
             "comment": "",
-            "dimensions": "longitude latitude time1 height2m",
+            "dimensions": "longitude latitude time height2m",
             "out_name": "huss",
             "type": "real",
             "positive": "",
@@ -87,7 +87,7 @@
             "ok_max_mean_abs": ""
         },
         "hurs": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "relative_humidity",
             "units": "%",
@@ -95,7 +95,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Near-Surface Relative Humidity",
             "comment": "",
-            "dimensions": "longitude latitude time1 height2m",
+            "dimensions": "longitude latitude time height2m",
             "out_name": "hurs",
             "type": "real",
             "positive": "",
@@ -105,7 +105,7 @@
             "ok_max_mean_abs": ""
         },
         "ps": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "surface_air_pressure",
             "units": "Pa",
@@ -113,7 +113,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Surface Air Pressure",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "ps",
             "type": "real",
             "positive": "",
@@ -123,7 +123,7 @@
             "ok_max_mean_abs": ""
         },
         "psl": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "air_pressure_at_mean_sea_level",
             "units": "Pa",
@@ -131,7 +131,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Sea Level Pressure",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "psl",
             "type": "real",
             "positive": "",
@@ -141,7 +141,7 @@
             "ok_max_mean_abs": ""
         },
         "sfcWind": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "wind_speed",
             "units": "m s-1",
@@ -149,7 +149,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Near-Surface Wind Speed",
             "comment": "",
-            "dimensions": "longitude latitude time1 height10m",
+            "dimensions": "longitude latitude time height10m",
             "out_name": "sfcWind",
             "type": "real",
             "positive": "",
@@ -159,7 +159,7 @@
             "ok_max_mean_abs": ""
         },
         "uas": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
@@ -167,7 +167,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Eastward Near-Surface Wind",
             "comment": "",
-            "dimensions": "longitude latitude time1 height10m",
+            "dimensions": "longitude latitude time height10m",
             "out_name": "uas",
             "type": "real",
             "positive": "",
@@ -177,7 +177,7 @@
             "ok_max_mean_abs": ""
         },
         "vas": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
@@ -185,7 +185,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Northward Near-Surface Wind",
             "comment": "",
-            "dimensions": "longitude latitude time1 height10m",
+            "dimensions": "longitude latitude time height10m",
             "out_name": "vas",
             "type": "real",
             "positive": "",
@@ -249,7 +249,7 @@
             "ok_max_mean_abs": ""
         },
         "ts": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "surface_temperature",
             "units": "K",
@@ -257,7 +257,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Surface Temperature",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "ts",
             "type": "real",
             "positive": "",
@@ -483,7 +483,7 @@
             "ok_max_mean_abs": ""
         },
         "mrfsos": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "frozen_water_content_of_soil_layer",
             "units": "kg m-2",
@@ -491,7 +491,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Frozen Water Content in Upper Portion of Soil Column",
             "comment": "The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP)",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "mrfsos",
             "type": "real",
             "positive": "",
@@ -501,7 +501,7 @@
             "ok_max_mean_abs": ""
         },
         "mrsos": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "mass_content_of_water_in_soil_layer",
             "units": "kg m-2",
@@ -509,7 +509,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Moisture in Upper Portion of Soil Column",
             "comment": "The mass of water in all phases in the upper 10cm of the soil layer. Reported as missing for grid cells with no land.",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "mrsos",
             "type": "real",
             "positive": "",
@@ -519,7 +519,7 @@
             "ok_max_mean_abs": ""
         },
         "zmla": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_boundary_layer_thickness",
             "units": "m",
@@ -527,7 +527,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Height of Boundary Layer",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "zmla",
             "type": "real",
             "positive": "",
@@ -537,7 +537,7 @@
             "ok_max_mean_abs": ""
         },
         "prw": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_mass_content_of_water_vapor",
             "units": "kg m-2",
@@ -545,7 +545,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Water Vapor Path",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "prw",
             "type": "real",
             "positive": "",
@@ -555,7 +555,7 @@
             "ok_max_mean_abs": ""
         },
         "clwvi": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_mass_content_of_cloud_condensed_water",
             "units": "kg m-2",
@@ -563,7 +563,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Condensed Water Path",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "clwvi",
             "type": "real",
             "positive": "",
@@ -573,7 +573,7 @@
             "ok_max_mean_abs": ""
         },
         "clivi": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_mass_content_of_cloud_ice",
             "units": "kg m-2",
@@ -581,7 +581,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Ice Water Path",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "clivi",
             "type": "real",
             "positive": "",
@@ -591,7 +591,7 @@
             "ok_max_mean_abs": ""
         },
         "ua50m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
@@ -599,7 +599,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Eastward Wind at 50m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height50m",
+            "dimensions": "longitude latitude time height50m",
             "out_name": "ua50m",
             "type": "real",
             "positive": "",
@@ -609,7 +609,7 @@
             "ok_max_mean_abs": ""
         },
         "ua100m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
@@ -617,7 +617,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Eastward Wind at 100m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height100m",
+            "dimensions": "longitude latitude time height100m",
             "out_name": "ua100m",
             "type": "real",
             "positive": "",
@@ -627,7 +627,7 @@
             "ok_max_mean_abs": ""
         },
         "ua150m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
@@ -635,7 +635,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Eastward Wind at 150m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height150m",
+            "dimensions": "longitude latitude time height150m",
             "out_name": "ua150m",
             "type": "real",
             "positive": "",
@@ -645,7 +645,7 @@
             "ok_max_mean_abs": ""
         },
         "va50m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
@@ -653,7 +653,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Northward Wind at 50m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height50m",
+            "dimensions": "longitude latitude time height50m",
             "out_name": "va50m",
             "type": "real",
             "positive": "",
@@ -663,7 +663,7 @@
             "ok_max_mean_abs": ""
         },
         "va100m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
@@ -671,7 +671,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Northward Wind at 100m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height100m",
+            "dimensions": "longitude latitude time height100m",
             "out_name": "va100m",
             "type": "real",
             "positive": "",
@@ -681,7 +681,7 @@
             "ok_max_mean_abs": ""
         },
         "va150m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
@@ -689,7 +689,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Northward Wind at 150m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height150m",
+            "dimensions": "longitude latitude time height150m",
             "out_name": "va150m",
             "type": "real",
             "positive": "",
@@ -699,7 +699,7 @@
             "ok_max_mean_abs": ""
         },
         "ta50m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "air_temperature",
             "units": "K",
@@ -707,7 +707,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Air Temperature at 50m",
             "comment": " requested for urban modeling",
-            "dimensions": "longitude latitude time1 height50m",
+            "dimensions": "longitude latitude time height50m",
             "out_name": "ta50m",
             "type": "real",
             "positive": "",
@@ -717,7 +717,7 @@
             "ok_max_mean_abs": ""
         },
         "hus50m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "specific_humidity",
             "units": "1",
@@ -725,7 +725,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Specific Humidity at 50m",
             "comment": " requested for urban modeling",
-            "dimensions": "longitude latitude time1 height50m",
+            "dimensions": "longitude latitude time height50m",
             "out_name": "hus50m",
             "type": "real",
             "positive": "",
@@ -753,7 +753,7 @@
             "ok_max_mean_abs": ""
         },
         "cape": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_convective_available_potential_energy_wrt_surface",
             "units": "J kg-1",
@@ -761,7 +761,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Convective Available Potential Energy",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "cape",
             "type": "real",
             "positive": "",
@@ -771,7 +771,7 @@
             "ok_max_mean_abs": ""
         },
         "li": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface",
             "units": "K",
@@ -779,7 +779,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Lifted Index",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "li",
             "type": "real",
             "positive": "",
@@ -789,7 +789,7 @@
             "ok_max_mean_abs": ""
         },
         "cin": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "atmosphere_convective_inhibition_wrt_surface",
             "units": "J kg-1",
@@ -797,7 +797,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Convective Inhibition",
             "comment": "",
-            "dimensions": "longitude latitude time1",
+            "dimensions": "longitude latitude time",
             "out_name": "cin",
             "type": "real",
             "positive": "",
@@ -807,7 +807,7 @@
             "ok_max_mean_abs": ""
         },
         "ua200m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
@@ -815,7 +815,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Eastward Wind at 200m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height200m",
+            "dimensions": "longitude latitude time height200m",
             "out_name": "ua200m",
             "type": "real",
             "positive": "",
@@ -825,7 +825,7 @@
             "ok_max_mean_abs": ""
         },
         "ua250m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
@@ -833,7 +833,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Eastward Wind at 250m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height250m",
+            "dimensions": "longitude latitude time height250m",
             "out_name": "ua250m",
             "type": "real",
             "positive": "",
@@ -843,7 +843,7 @@
             "ok_max_mean_abs": ""
         },
         "ua300m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
@@ -851,7 +851,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Eastward Wind at 250m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height300m",
+            "dimensions": "longitude latitude time height300m",
             "out_name": "ua300m",
             "type": "real",
             "positive": "",
@@ -861,7 +861,7 @@
             "ok_max_mean_abs": ""
         },
         "va200m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
@@ -869,7 +869,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Northward Wind at 200m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height200m",
+            "dimensions": "longitude latitude time height200m",
             "out_name": "va200m",
             "type": "real",
             "positive": "",
@@ -879,7 +879,7 @@
             "ok_max_mean_abs": ""
         },
         "va250m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
@@ -887,7 +887,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Northward Wind at 250m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height250m",
+            "dimensions": "longitude latitude time height250m",
             "out_name": "va250m",
             "type": "real",
             "positive": "",
@@ -897,7 +897,7 @@
             "ok_max_mean_abs": ""
         },
         "va300m": {
-            "frequency": "1hrPt",
+            "frequency": "1hr",
             "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
@@ -905,7 +905,7 @@
             "cell_measures": "area: areacella",
             "long_name": "Northward Wind at 350m",
             "comment": "",
-            "dimensions": "longitude latitude time1 height300m",
+            "dimensions": "longitude latitude time height300m",
             "out_name": "va300m",
             "type": "real",
             "positive": "",
