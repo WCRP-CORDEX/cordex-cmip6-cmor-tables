@@ -577,10 +577,122 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/fx/orog/v20231011/orog_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_fx.nc&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump<span class="w"> </span>-h<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netcdf orog_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_fx {
+dimensions:
+	rlat = 412 ;
+	rlon = 424 ;
+	bnds = 2 ;
+	vertices = 4 ;
+variables:
+	double rlat(rlat) ;
+		rlat:units = &quot;degrees&quot; ;
+		rlat:axis = &quot;Y&quot; ;
+		rlat:long_name = &quot;latitude in rotated pole grid&quot; ;
+		rlat:standard_name = &quot;grid_latitude&quot; ;
+	double rlon(rlon) ;
+		rlon:units = &quot;degrees&quot; ;
+		rlon:axis = &quot;X&quot; ;
+		rlon:long_name = &quot;longitude in rotated pole grid&quot; ;
+		rlon:standard_name = &quot;grid_longitude&quot; ;
+	int rotated_latitude_longitude ;
+		rotated_latitude_longitude:grid_mapping_name = &quot;rotated_latitude_longitude&quot; ;
+		rotated_latitude_longitude:grid_north_pole_latitude = 39.25 ;
+		rotated_latitude_longitude:grid_north_pole_longitude = -162. ;
+		rotated_latitude_longitude:north_pole_grid_longitude = 0. ;
+	double latitude(rlat, rlon) ;
+		latitude:standard_name = &quot;latitude&quot; ;
+		latitude:long_name = &quot;latitude&quot; ;
+		latitude:units = &quot;degrees_north&quot; ;
+		latitude:missing_value = 1.e+20 ;
+		latitude:_FillValue = 1.e+20 ;
+		latitude:bounds = &quot;vertices_latitude&quot; ;
+	double longitude(rlat, rlon) ;
+		longitude:standard_name = &quot;longitude&quot; ;
+		longitude:long_name = &quot;longitude&quot; ;
+		longitude:units = &quot;degrees_east&quot; ;
+		longitude:missing_value = 1.e+20 ;
+		longitude:_FillValue = 1.e+20 ;
+		longitude:bounds = &quot;vertices_longitude&quot; ;
+	double vertices_latitude(rlat, rlon, vertices) ;
+		vertices_latitude:units = &quot;degrees_north&quot; ;
+		vertices_latitude:missing_value = 1.e+20 ;
+		vertices_latitude:_FillValue = 1.e+20 ;
+	double vertices_longitude(rlat, rlon, vertices) ;
+		vertices_longitude:units = &quot;degrees_east&quot; ;
+		vertices_longitude:missing_value = 1.e+20 ;
+		vertices_longitude:_FillValue = 1.e+20 ;
+	float orog(rlat, rlon) ;
+		orog:standard_name = &quot;surface_altitude&quot; ;
+		orog:long_name = &quot;Surface Altitude&quot; ;
+		orog:units = &quot;m&quot; ;
+		orog:cell_methods = &quot;area: mean&quot; ;
+		orog:cell_measures = &quot;area: areacella&quot; ;
+		orog:missing_value = 1.e+20f ;
+		orog:_FillValue = 1.e+20f ;
+		orog:grid_mapping = &quot;rotated_latitude_longitude&quot; ;
+		orog:coordinates = &quot;latitude longitude&quot; ;
+
+// global attributes:
+		:Conventions = &quot;CF-1.7 CMIP-6.2&quot; ;
+		:activity_id = &quot;RCM&quot; ;
+		:contact = &quot;gerics-cordex@hereon.de&quot; ;
+		:creation_date = &quot;2023-10-11T08:52:23Z&quot; ;
+		:data_specs_version = &quot;00.00.02&quot; ;
+		:domain = &quot;Europe&quot; ;
+		:domain_id = &quot;EUR-11&quot; ;
+		:driving_experiment = &quot;evaluation with ERA5&quot; ;
+		:driving_experiment_id = &quot;evaluation&quot; ;
+		:driving_institution_id = &quot;ECMWF&quot; ;
+		:driving_source_id = &quot;ECMWF-ERA5&quot; ;
+		:driving_variant_label = &quot;r1i1p1f1&quot; ;
+		:experiment_id = &quot;evaluation&quot; ;
+		:external_variables = &quot;areacella&quot; ;
+		:frequency = &quot;fx&quot; ;
+		:further_info_url = &quot;https://furtherinfo.es-doc.org/.*&quot; ;
+		:history = &quot;2023-10-11T08:52:23Z ;rewrote data to be consistent with CORDEX for variable orog found in table fx.&quot; ;
+		:institution = &quot;Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany&quot; ;
+		:institution_id = &quot;GERICS&quot; ;
+		:mip_era = &quot;CMIP6&quot; ;
+		:native_resolution = &quot;0.11 degree&quot; ;
+		:product = &quot;model-output&quot; ;
+		:project_id = &quot;CORDEX&quot; ;
+		:realm = &quot;atmos&quot; ;
+		:references = &quot;https://www.remo-rcm.de&quot; ;
+		:run_variant = &quot;1st realization&quot; ;
+		:source = &quot;REMO2020 (2022): \n&quot;,
+			&quot;aerosol: MACv2\n&quot;,
+			&quot;atmos: dynamic\n&quot;,
+			&quot;atmosChem: none\n&quot;,
+			&quot;land: none\n&quot;,
+			&quot;landIce: none\n&quot;,
+			&quot;ocean: prescribed\n&quot;,
+			&quot;lake: FLake\n&quot;,
+			&quot;ocnBgchem: none\n&quot;,
+			&quot;seaIce: none&quot; ;
+		:source_id = &quot;REMO2020&quot; ;
+		:source_type = &quot;ARCM&quot; ;
+		:table_id = &quot;fx&quot; ;
+		:table_info = &quot;Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb&quot; ;
+		:title = &quot;REMO2020 output prepared for CMIP6&quot; ;
+		:tracking_id = &quot;hdl:21.14100/c552e70c-e690-4be3-9696-9a1df1c6e7dd&quot; ;
+		:variable_id = &quot;orog&quot; ;
+		:version_realization = &quot;v1&quot; ;
+		:license = &quot;Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).&quot; ;
+		:cmor_version = &quot;3.7.2&quot; ;
+}
 </pre></div>
 </div>
 </div>
@@ -593,6 +705,416 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:                     (rlat: 412, rlon: 424, vertices: 4)
+Coordinates:
+  * rlat                        (rlat) float64 -23.38 -23.27 ... 21.73 21.84
+  * rlon                        (rlon) float64 -28.38 -28.27 ... 18.05 18.16
+    latitude                    (rlat, rlon) float64 ...
+    longitude                   (rlat, rlon) float64 ...
+Dimensions without coordinates: vertices
+Data variables:
+    rotated_latitude_longitude  int32 ...
+    vertices_latitude           (rlat, rlon, vertices) float64 ...
+    vertices_longitude          (rlat, rlon, vertices) float64 ...
+    orog                        (rlat, rlon) float32 ...
+Attributes: (12/37)
+    Conventions:             CF-1.7 CMIP-6.2
+    activity_id:             RCM
+    contact:                 gerics-cordex@hereon.de
+    creation_date:           2023-10-11T08:52:23Z
+    data_specs_version:      00.00.02
+    domain:                  Europe
+    ...                      ...
+    title:                   REMO2020 output prepared for CMIP6
+    tracking_id:             hdl:21.14100/c552e70c-e690-4be3-9696-9a1df1c6e7dd
+    variable_id:             orog
+    version_realization:     v1
+    license:                 Creative Commons Attribution 4.0 International L...
+    cmor_version:            3.7.2</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-1fbf2b06-43c5-4a82-b04a-f624f86e052e' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-1fbf2b06-43c5-4a82-b04a-f624f86e052e' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>rlat</span>: 412</li><li><span class='xr-has-index'>rlon</span>: 424</li><li><span>vertices</span>: 4</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-db38e742-5aa0-4e07-b79a-577d42c8c2ed' class='xr-section-summary-in' type='checkbox'  checked><label for='section-db38e742-5aa0-4e07-b79a-577d42c8c2ed' class='xr-section-summary' >Coordinates: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-23.38 -23.27 ... 21.73 21.84</div><input id='attrs-c34f3fa6-e9dd-46db-9e93-b669d70fcfca' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c34f3fa6-e9dd-46db-9e93-b669d70fcfca' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-00067852-6ebf-4218-a401-cc551147f675' class='xr-var-data-in' type='checkbox'><label for='data-00067852-6ebf-4218-a401-cc551147f675' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_latitude</dd></dl></div><div class='xr-var-data'><pre>array([-23.375, -23.265, -23.155, ...,  21.615,  21.725,  21.835])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-28.38 -28.27 ... 18.05 18.16</div><input id='attrs-1d959765-aae4-4977-90e4-6ee9a53a86f0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1d959765-aae4-4977-90e4-6ee9a53a86f0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1e07cf96-be81-4d2c-9a91-11b54adfd096' class='xr-var-data-in' type='checkbox'><label for='data-1e07cf96-be81-4d2c-9a91-11b54adfd096' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_longitude</dd></dl></div><div class='xr-var-data'><pre>array([-28.375, -28.265, -28.155, ...,  17.935,  18.045,  18.155])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-230d10b8-5034-4381-8e4b-971665d6dd65' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-230d10b8-5034-4381-8e4b-971665d6dd65' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bddfe63e-f9df-4329-b6c5-fd50f54e4e36' class='xr-var-data-in' type='checkbox'><label for='data-bddfe63e-f9df-4329-b6c5-fd50f54e4e36' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>bounds :</span></dt><dd>vertices_latitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e8a4d6a5-2d36-4437-8a78-6edf45eee23c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e8a4d6a5-2d36-4437-8a78-6edf45eee23c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-29a8cf33-e2f0-49af-991f-9151550a2289' class='xr-var-data-in' type='checkbox'><label for='data-29a8cf33-e2f0-49af-991f-9151550a2289' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>bounds :</span></dt><dd>vertices_longitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a8aec446-0c7d-49cd-9080-148a36b88d38' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a8aec446-0c7d-49cd-9080-148a36b88d38' class='xr-section-summary' >Data variables: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>rotated_latitude_longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a502558f-c35f-44cf-a069-94b2c9dcf3e8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a502558f-c35f-44cf-a069-94b2c9dcf3e8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-46335082-45c6-4a73-86cd-e42855253339' class='xr-var-data-in' type='checkbox'><label for='data-46335082-45c6-4a73-86cd-e42855253339' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>grid_mapping_name :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>grid_north_pole_latitude :</span></dt><dd>39.25</dd><dt><span>grid_north_pole_longitude :</span></dt><dd>-162.0</dd><dt><span>north_pole_grid_longitude :</span></dt><dd>0.0</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=int32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_latitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a7879e21-874d-429a-bae9-55b0f10c671c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a7879e21-874d-429a-bae9-55b0f10c671c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-333bbe71-c4b4-4b2b-9825-0ace2893fb65' class='xr-var-data-in' type='checkbox'><label for='data-333bbe71-c4b4-4b2b-9825-0ace2893fb65' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_longitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-041e013c-8153-4897-89fc-f4a96d96aa0f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-041e013c-8153-4897-89fc-f4a96d96aa0f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6f819623-957c-4080-a526-dfdd068da1d5' class='xr-var-data-in' type='checkbox'><label for='data-6f819623-957c-4080-a526-dfdd068da1d5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>orog</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-826f23b6-2406-4ad0-bcea-385150fc3601' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-826f23b6-2406-4ad0-bcea-385150fc3601' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fec588e5-f415-4bad-9c7f-3e3866af70b1' class='xr-var-data-in' type='checkbox'><label for='data-fec588e5-f415-4bad-9c7f-3e3866af70b1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>surface_altitude</dd><dt><span>long_name :</span></dt><dd>Surface Altitude</dd><dt><span>units :</span></dt><dd>m</dd><dt><span>cell_methods :</span></dt><dd>area: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d96ee00d-5799-4bda-9dc2-11300f2e60d2' class='xr-section-summary-in' type='checkbox'  ><label for='section-d96ee00d-5799-4bda-9dc2-11300f2e60d2' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>rlat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-dd3d0ca9-c03f-4069-8c9b-33b6559a176b' class='xr-index-data-in' type='checkbox'/><label for='index-dd3d0ca9-c03f-4069-8c9b-33b6559a176b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([-23.375, -23.265, -23.155, -23.045, -22.935, -22.825, -22.715,
+              -22.605, -22.495, -22.385,
+              ...
+               20.845,  20.955,  21.065,  21.175,  21.285,  21.395,  21.505,
+               21.615,  21.725,  21.835],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlat&#x27;, length=412))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>rlon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-e654e43b-e62b-4152-bbb1-a3497cd3ea4c' class='xr-index-data-in' type='checkbox'/><label for='index-e654e43b-e62b-4152-bbb1-a3497cd3ea4c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([-28.375, -28.265, -28.155, -28.045, -27.935, -27.825, -27.715,
+              -27.605, -27.495, -27.385,
+              ...
+               17.165,  17.275,  17.385,  17.495,  17.605,  17.715,  17.825,
+               17.935,  18.045,  18.155],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlon&#x27;, length=424))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f92791f9-f260-4373-97c3-e5c1d564585b' class='xr-section-summary-in' type='checkbox'  ><label for='section-f92791f9-f260-4373-97c3-e5c1d564585b' class='xr-section-summary' >Attributes: <span>(37)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>RCM</dd><dt><span>contact :</span></dt><dd>gerics-cordex@hereon.de</dd><dt><span>creation_date :</span></dt><dd>2023-10-11T08:52:23Z</dd><dt><span>data_specs_version :</span></dt><dd>00.00.02</dd><dt><span>domain :</span></dt><dd>Europe</dd><dt><span>domain_id :</span></dt><dd>EUR-11</dd><dt><span>driving_experiment :</span></dt><dd>evaluation with ERA5</dd><dt><span>driving_experiment_id :</span></dt><dd>evaluation</dd><dt><span>driving_institution_id :</span></dt><dd>ECMWF</dd><dt><span>driving_source_id :</span></dt><dd>ECMWF-ERA5</dd><dt><span>driving_variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>experiment_id :</span></dt><dd>evaluation</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>frequency :</span></dt><dd>fx</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/.*</dd><dt><span>history :</span></dt><dd>2023-10-11T08:52:23Z ;rewrote data to be consistent with CORDEX for variable orog found in table fx.</dd><dt><span>institution :</span></dt><dd>Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany</dd><dt><span>institution_id :</span></dt><dd>GERICS</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>native_resolution :</span></dt><dd>0.11 degree</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>project_id :</span></dt><dd>CORDEX</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>references :</span></dt><dd>https://www.remo-rcm.de</dd><dt><span>run_variant :</span></dt><dd>1st realization</dd><dt><span>source :</span></dt><dd>REMO2020 (2022): 
+aerosol: MACv2
+atmos: dynamic
+atmosChem: none
+land: none
+landIce: none
+ocean: prescribed
+lake: FLake
+ocnBgchem: none
+seaIce: none</dd><dt><span>source_id :</span></dt><dd>REMO2020</dd><dt><span>source_type :</span></dt><dd>ARCM</dd><dt><span>table_id :</span></dt><dd>fx</dd><dt><span>table_info :</span></dt><dd>Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb</dd><dt><span>title :</span></dt><dd>REMO2020 output prepared for CMIP6</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/c552e70c-e690-4be3-9696-9a1df1c6e7dd</dd><dt><span>variable_id :</span></dt><dd>orog</dd><dt><span>version_realization :</span></dt><dd>v1</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).</dd><dt><span>cmor_version :</span></dt><dd>3.7.2</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -600,10 +1122,29 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7ff42412d160&gt;
+</pre></div>
+</div>
+<img alt="_images/903bf17dff174616b5cbe5451a03c7e2a36f527b337924627e271b6e3134d6b7.png" src="_images/903bf17dff174616b5cbe5451a03c7e2a36f527b337924627e271b6e3134d6b7.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cdo<span class="w"> </span>verifygrid<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">cdo    verifygrid: </span><span class=" -Color -Color-Blue">Grid consists of 174688 (424x412) cells (type: curvilinear), of which</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">cdo    verifygrid: </span><span class=" -Color -Color-Blue">   174688 cells have 4 vertices</span>
+<span class=" -Color -Color-Green">cdo    verifygrid: </span> longitude : -44.59386 to 64.96438 degrees
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Green">cdo    verifygrid: </span>  latitude : 21.98783 to 72.585 degrees
+<span class=" -Color -Color-Green">cdo    verifygrid: </span>Processed 1 variable [0.17s 86MB]
 </pre></div>
 </div>
 </div>
@@ -614,10 +1155,96 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHECKING NetCDF FILE: CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/fx/orog/v20231011/orog_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_fx.nc
+=====================
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using CF Checker Version 4.1.0
+Checking against CF Version CF-1.8
+Using Standard Name Table Version 82 (2023-07-06T13:17:07Z)
+Using Area Type Table Version 11 (06 July 2023)
+Using Standardized Region Name Table Version 4 (18 December 2018)
+
+WARN: (2.6.1): Inconsistency - This netCDF file appears to contain CF-1.7 data, but you&#39;ve requested a validity check against CF-1.8
+WARN: (7.1): Boundary var vertices_latitude should not have attribute units
+WARN: (7.1): Boundary var vertices_longitude should not have attribute units
+
+------------------
+Checking variable: rlat
+------------------
+
+------------------
+Checking variable: rlon
+------------------
+
+------------------
+Checking variable: rotated_latitude_longitude
+------------------
+
+------------------
+Checking variable: latitude
+------------------
+
+------------------
+Checking variable: longitude
+------------------
+
+------------------
+Checking variable: vertices_latitude
+------------------
+WARN: (7.1): Boundary Variable vertices_latitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_latitude should not have missing_value attribute
+
+------------------
+Checking variable: vertices_longitude
+------------------
+WARN: (7.1): Boundary Variable vertices_longitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_longitude should not have missing_value attribute
+
+------------------
+Checking variable: orog
+------------------
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERRORS detected: 0
+WARNINGS given: 7
+INFORMATION messages: 0
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>compliance-checker<span class="w"> </span>--test<span class="o">=</span>cf:1.7<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running Compliance Checker on the datasets from: [&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/fx/orog/v20231011/orog_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_fx.nc&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--------------------------------------------------------------------------------
+                         IOOS Compliance Checker Report                         
+                                 Version 5.1.0                                  
+                     Report generated 2023-10-11T08:52:42Z                      
+                                     cf:1.7                                     
+http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+orog_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_fx.nc has 2 potential issues
+
+
+                                    Warnings                                    
+--------------------------------------------------------------------------------
+§2.5 Variables
+
+
+§7.1 Cell Boundaries
+* The Boundary variables &#39;vertices_latitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
+* The Boundary variables &#39;vertices_longitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
+WARNING: The following exceptions occurred during the cf:1.7 checker (possibly indicate compliance checker issues):
+cf:1.7.check_cell_boundaries_interval: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
 </pre></div>
 </div>
 </div>
@@ -632,6 +1259,26 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://github.com/euro-cordex/py-cordex-data/raw/main/remo_EUR-11_TEMP2_mon.nc&#39; to file &#39;/home/runner/.cache/py-cordex_tutorial_data/6d6ccde2e368653ce62a71c80e75f890-remo_EUR-11_TEMP2_mon.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a585a11475492241a7a52963bbdf323af185163166e52924f1a04b4ff91b3ae6
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:502: UserWarning: adding time bounds
+  warn(&quot;adding time bounds&quot;)
+/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:309: UserWarning: time units are set to default: days since 1950-01-01T00:00:00
+  warn(&quot;time units are set to default: {}&quot;.format(u))
+/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/utils.py:336: UserWarning: writing temporary table to /tmp/tmpkz8yjsa0
+  warn(f&quot;writing temporary table to {filename}&quot;)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/mon/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_mon_200001-200012.nc&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -640,10 +1287,483 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:                     (time: 12, bnds: 2, rlat: 412, rlon: 424,
+                                 vertices: 4)
+Coordinates:
+  * time                        (time) datetime64[ns] 2000-01-16T12:00:00 ......
+  * rlat                        (rlat) float64 -23.38 -23.27 ... 21.72 21.83
+  * rlon                        (rlon) float64 -28.38 -28.27 ... 18.04 18.15
+    latitude                    (rlat, rlon) float64 ...
+    longitude                   (rlat, rlon) float64 ...
+    height                      float64 ...
+Dimensions without coordinates: bnds, vertices
+Data variables:
+    time_bnds                   (time, bnds) datetime64[ns] ...
+    rotated_latitude_longitude  int32 ...
+    vertices_latitude           (rlat, rlon, vertices) float64 ...
+    vertices_longitude          (rlat, rlon, vertices) float64 ...
+    tas                         (time, rlat, rlon) float32 ...
+Attributes: (12/37)
+    Conventions:             CF-1.7 CMIP-6.2
+    activity_id:             RCM
+    contact:                 gerics-cordex@hereon.de
+    creation_date:           2023-10-11T08:52:43Z
+    data_specs_version:      00.00.02
+    domain:                  Europe
+    ...                      ...
+    title:                   REMO2020 output prepared for CMIP6
+    tracking_id:             hdl:21.14100/85cfdbdb-fcd5-4c2b-b0e1-b8386e092689
+    variable_id:             tas
+    version_realization:     v1
+    license:                 Creative Commons Attribution 4.0 International L...
+    cmor_version:            3.7.2</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-9b8c8b76-3b80-4ae3-8d2b-9747aefe0921' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-9b8c8b76-3b80-4ae3-8d2b-9747aefe0921' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 12</li><li><span>bnds</span>: 2</li><li><span class='xr-has-index'>rlat</span>: 412</li><li><span class='xr-has-index'>rlon</span>: 424</li><li><span>vertices</span>: 4</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-0eb08ba1-e413-418c-b477-6b4f63caeb1c' class='xr-section-summary-in' type='checkbox'  checked><label for='section-0eb08ba1-e413-418c-b477-6b4f63caeb1c' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2000-01-16T12:00:00 ... 2000-12-...</div><input id='attrs-901cc840-4903-44ba-92a4-ea00ae2a370a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-901cc840-4903-44ba-92a4-ea00ae2a370a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cee8538a-00f0-4a8a-b0bf-7bf1417d06a6' class='xr-var-data-in' type='checkbox'><label for='data-cee8538a-00f0-4a8a-b0bf-7bf1417d06a6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2000-01-16T12:00:00.000000000&#x27;, &#x27;2000-02-15T12:00:00.000000000&#x27;,
+       &#x27;2000-03-16T12:00:00.000000000&#x27;, &#x27;2000-04-16T00:00:00.000000000&#x27;,
+       &#x27;2000-05-16T12:00:00.000000000&#x27;, &#x27;2000-06-16T00:00:00.000000000&#x27;,
+       &#x27;2000-07-16T12:00:00.000000000&#x27;, &#x27;2000-08-16T12:00:00.000000000&#x27;,
+       &#x27;2000-09-16T00:00:00.000000000&#x27;, &#x27;2000-10-16T12:00:00.000000000&#x27;,
+       &#x27;2000-11-16T00:00:00.000000000&#x27;, &#x27;2000-12-16T12:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-23.38 -23.27 ... 21.72 21.83</div><input id='attrs-9d6eccf0-6b92-4dfb-ac97-00137d7f9521' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9d6eccf0-6b92-4dfb-ac97-00137d7f9521' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-11d41839-6655-4171-93df-6fac370444f0' class='xr-var-data-in' type='checkbox'><label for='data-11d41839-6655-4171-93df-6fac370444f0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_latitude</dd></dl></div><div class='xr-var-data'><pre>array([-23.375, -23.265, -23.155, ...,  21.615,  21.725,  21.835])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-28.38 -28.27 ... 18.04 18.15</div><input id='attrs-8fee4930-9f76-49b0-94e7-79cb259ef42a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8fee4930-9f76-49b0-94e7-79cb259ef42a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0249db81-c4b9-4881-869e-b5ae5b7c6a06' class='xr-var-data-in' type='checkbox'><label for='data-0249db81-c4b9-4881-869e-b5ae5b7c6a06' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_longitude</dd></dl></div><div class='xr-var-data'><pre>array([-28.375, -28.265, -28.155, ...,  17.935,  18.045,  18.155])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c63e6922-1ec6-4164-b47c-53441b85a764' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c63e6922-1ec6-4164-b47c-53441b85a764' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fb7b8ae2-55bc-45c1-b682-b681ce2fc6f0' class='xr-var-data-in' type='checkbox'><label for='data-fb7b8ae2-55bc-45c1-b682-b681ce2fc6f0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>bounds :</span></dt><dd>vertices_latitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f0e23303-b97b-456d-8528-1f0328801fba' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f0e23303-b97b-456d-8528-1f0328801fba' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c0415833-502a-494d-8e55-e3362fa91945' class='xr-var-data-in' type='checkbox'><label for='data-c0415833-502a-494d-8e55-e3362fa91945' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>bounds :</span></dt><dd>vertices_longitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1960a4ce-f17e-481a-94eb-cf5ba60513f6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1960a4ce-f17e-481a-94eb-cf5ba60513f6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d35a0641-eeb4-4c71-9f00-9405696d9f6c' class='xr-var-data-in' type='checkbox'><label for='data-d35a0641-eeb4-4c71-9f00-9405696d9f6c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>axis :</span></dt><dd>Z</dd><dt><span>positive :</span></dt><dd>up</dd><dt><span>long_name :</span></dt><dd>height</dd><dt><span>standard_name :</span></dt><dd>height</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7f30150a-3a1c-4c67-9fbe-d6df16ac8b5b' class='xr-section-summary-in' type='checkbox'  checked><label for='section-7f30150a-3a1c-4c67-9fbe-d6df16ac8b5b' class='xr-section-summary' >Data variables: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, bnds)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6a3d0e73-b6e6-4e41-b1d0-a4b30205b634' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-6a3d0e73-b6e6-4e41-b1d0-a4b30205b634' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ddc85927-3cb0-4ad3-8a36-12e314d5fba4' class='xr-var-data-in' type='checkbox'><label for='data-ddc85927-3cb0-4ad3-8a36-12e314d5fba4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[24 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>rotated_latitude_longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a0cada02-6263-4f94-9387-3924770698a5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a0cada02-6263-4f94-9387-3924770698a5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4f845768-c920-4463-9ce5-1cc4f5b38143' class='xr-var-data-in' type='checkbox'><label for='data-4f845768-c920-4463-9ce5-1cc4f5b38143' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>grid_mapping_name :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>grid_north_pole_latitude :</span></dt><dd>39.25</dd><dt><span>grid_north_pole_longitude :</span></dt><dd>-162.0</dd><dt><span>north_pole_grid_longitude :</span></dt><dd>0.0</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=int32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_latitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-86c21018-3bf7-44d5-9aae-7ccbe857ec19' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-86c21018-3bf7-44d5-9aae-7ccbe857ec19' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-723cb66b-432a-4cc8-b1f0-1e9ec14a8942' class='xr-var-data-in' type='checkbox'><label for='data-723cb66b-432a-4cc8-b1f0-1e9ec14a8942' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_longitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-47d24237-50f1-4a00-b782-d1f85acd6b0b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-47d24237-50f1-4a00-b782-d1f85acd6b0b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-518e7d17-9b19-4524-9e79-4863e6aa911b' class='xr-var-data-in' type='checkbox'><label for='data-518e7d17-9b19-4524-9e79-4863e6aa911b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(time, rlat, rlon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-84d01e91-dd1a-4bd2-88f6-16a0134fc3b4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-84d01e91-dd1a-4bd2-88f6-16a0134fc3b4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-86ac43c2-0970-4381-ae53-93790cbc0fd2' class='xr-var-data-in' type='checkbox'><label for='data-86ac43c2-0970-4381-ae53-93790cbc0fd2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>history :</span></dt><dd>2023-10-11T08:52:43Z altered by CMOR: Treated scalar dimension: &#x27;height&#x27;.</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd></dl></div><div class='xr-var-data'><pre>[2096256 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7a7e9c40-ae91-4c3c-8380-7eb51c3da9e8' class='xr-section-summary-in' type='checkbox'  ><label for='section-7a7e9c40-ae91-4c3c-8380-7eb51c3da9e8' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-5a74f068-2f1d-45ab-873c-295ef69eb86d' class='xr-index-data-in' type='checkbox'/><label for='index-5a74f068-2f1d-45ab-873c-295ef69eb86d' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2000-01-16 12:00:00&#x27;, &#x27;2000-02-15 12:00:00&#x27;,
+               &#x27;2000-03-16 12:00:00&#x27;, &#x27;2000-04-16 00:00:00&#x27;,
+               &#x27;2000-05-16 12:00:00&#x27;, &#x27;2000-06-16 00:00:00&#x27;,
+               &#x27;2000-07-16 12:00:00&#x27;, &#x27;2000-08-16 12:00:00&#x27;,
+               &#x27;2000-09-16 00:00:00&#x27;, &#x27;2000-10-16 12:00:00&#x27;,
+               &#x27;2000-11-16 00:00:00&#x27;, &#x27;2000-12-16 12:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>rlat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-943ae774-8e04-48ca-a85f-b056fc112073' class='xr-index-data-in' type='checkbox'/><label for='index-943ae774-8e04-48ca-a85f-b056fc112073' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([            -23.375,             -23.265,             -23.155,
+                          -23.045, -22.935000000000002,             -22.825,
+                          -22.715,             -22.605,             -22.495,
+                          -22.385,
+              ...
+               20.845000000000002,  20.955000000000002,              21.065,
+                           21.175,              21.285,              21.395,
+                           21.505,              21.615,  21.724999999999998,
+               21.834999999999997],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlat&#x27;, length=412))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>rlon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b9115987-b4b5-44d3-998a-028182a5aa70' class='xr-index-data-in' type='checkbox'/><label for='index-b9115987-b4b5-44d3-998a-028182a5aa70' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([            -28.375,             -28.265,             -28.155,
+                          -28.045, -27.935000000000002,             -27.825,
+                          -27.715,             -27.605,             -27.495,
+                          -27.385,
+              ...
+               17.165000000000003,  17.275000000000002,              17.385,
+                           17.495,              17.605,              17.715,
+                           17.825,              17.935,  18.044999999999998,
+               18.154999999999998],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlon&#x27;, length=424))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7ad1a186-20fc-42e1-99c2-8a63f9359cc7' class='xr-section-summary-in' type='checkbox'  ><label for='section-7ad1a186-20fc-42e1-99c2-8a63f9359cc7' class='xr-section-summary' >Attributes: <span>(37)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>RCM</dd><dt><span>contact :</span></dt><dd>gerics-cordex@hereon.de</dd><dt><span>creation_date :</span></dt><dd>2023-10-11T08:52:43Z</dd><dt><span>data_specs_version :</span></dt><dd>00.00.02</dd><dt><span>domain :</span></dt><dd>Europe</dd><dt><span>domain_id :</span></dt><dd>EUR-11</dd><dt><span>driving_experiment :</span></dt><dd>evaluation with ERA5</dd><dt><span>driving_experiment_id :</span></dt><dd>evaluation</dd><dt><span>driving_institution_id :</span></dt><dd>ECMWF</dd><dt><span>driving_source_id :</span></dt><dd>ECMWF-ERA5</dd><dt><span>driving_variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>experiment_id :</span></dt><dd>evaluation</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>frequency :</span></dt><dd>mon</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/.*</dd><dt><span>history :</span></dt><dd>2023-10-11T08:52:43Z ;rewrote data to be consistent with CORDEX for variable tas found in table mon.</dd><dt><span>institution :</span></dt><dd>Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany</dd><dt><span>institution_id :</span></dt><dd>GERICS</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>native_resolution :</span></dt><dd>0.11 degree</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>project_id :</span></dt><dd>CORDEX</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>references :</span></dt><dd>https://www.remo-rcm.de</dd><dt><span>run_variant :</span></dt><dd>1st realization</dd><dt><span>source :</span></dt><dd>REMO2020 (2022): 
+aerosol: MACv2
+atmos: dynamic
+atmosChem: none
+land: none
+landIce: none
+ocean: prescribed
+lake: FLake
+ocnBgchem: none
+seaIce: none</dd><dt><span>source_id :</span></dt><dd>REMO2020</dd><dt><span>source_type :</span></dt><dd>ARCM</dd><dt><span>table_id :</span></dt><dd>mon</dd><dt><span>table_info :</span></dt><dd>Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb</dd><dt><span>title :</span></dt><dd>REMO2020 output prepared for CMIP6</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/85cfdbdb-fcd5-4c2b-b0e1-b8386e092689</dd><dt><span>variable_id :</span></dt><dd>tas</dd><dt><span>version_realization :</span></dt><dd>v1</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).</dd><dt><span>cmor_version :</span></dt><dd>3.7.2</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">cf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coordinates:
+             CF Axes: * X: [&#39;rlon&#39;]
+                      * Y: [&#39;rlat&#39;]
+                        Z: [&#39;height&#39;]
+                      * T: [&#39;time&#39;]
+
+      CF Coordinates:   longitude: [&#39;longitude&#39;]
+                        latitude: [&#39;latitude&#39;]
+                        vertical: [&#39;height&#39;]
+                      * time: [&#39;time&#39;]
+
+       Cell Measures:   area, volume: n/a
+
+      Standard Names: * grid_latitude: [&#39;rlat&#39;]
+                      * grid_longitude: [&#39;rlon&#39;]
+                        height: [&#39;height&#39;]
+                        latitude: [&#39;latitude&#39;]
+                        longitude: [&#39;longitude&#39;]
+                      * time: [&#39;time&#39;]
+
+              Bounds:   n/a
+
+       Grid Mappings:   n/a
+
+Data Variables:
+       Cell Measures:   area, volume: n/a
+
+      Standard Names:   air_temperature: [&#39;tas&#39;]
+
+              Bounds:   T: [&#39;time_bnds&#39;]
+                        latitude: [&#39;vertices_latitude&#39;]
+                        longitude: [&#39;vertices_longitude&#39;]
+                        time: [&#39;time_bnds&#39;]
+
+       Grid Mappings:   rotated_latitude_longitude: [&#39;rotated_latitude_longitude&#39;]
 </pre></div>
 </div>
 </div>
@@ -654,10 +1774,139 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.plot.facetgrid.FacetGrid at 0x7ff41ffb8e80&gt;
+</pre></div>
+</div>
+<img alt="_images/e595a664a687dd0203038020b0156142443f977086f78979d817c84c0d72df29.png" src="_images/e595a664a687dd0203038020b0156142443f977086f78979d817c84c0d72df29.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump<span class="w"> </span>-h<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netcdf tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_mon_200001-200012 {
+dimensions:
+	time = UNLIMITED ; // (12 currently)
+	rlat = 412 ;
+	rlon = 424 ;
+	bnds = 2 ;
+	vertices = 4 ;
+variables:
+	double time(time) ;
+		time:bounds = &quot;time_bnds&quot; ;
+		time:units = &quot;days since 1950-01-01T00:00:00&quot; ;
+		time:calendar = &quot;proleptic_gregorian&quot; ;
+		time:axis = &quot;T&quot; ;
+		time:long_name = &quot;time&quot; ;
+		time:standard_name = &quot;time&quot; ;
+	double time_bnds(time, bnds) ;
+	double rlat(rlat) ;
+		rlat:units = &quot;degrees&quot; ;
+		rlat:axis = &quot;Y&quot; ;
+		rlat:long_name = &quot;latitude in rotated pole grid&quot; ;
+		rlat:standard_name = &quot;grid_latitude&quot; ;
+	double rlon(rlon) ;
+		rlon:units = &quot;degrees&quot; ;
+		rlon:axis = &quot;X&quot; ;
+		rlon:long_name = &quot;longitude in rotated pole grid&quot; ;
+		rlon:standard_name = &quot;grid_longitude&quot; ;
+	int rotated_latitude_longitude ;
+		rotated_latitude_longitude:grid_mapping_name = &quot;rotated_latitude_longitude&quot; ;
+		rotated_latitude_longitude:grid_north_pole_latitude = 39.25 ;
+		rotated_latitude_longitude:grid_north_pole_longitude = -162. ;
+		rotated_latitude_longitude:north_pole_grid_longitude = 0. ;
+	double latitude(rlat, rlon) ;
+		latitude:standard_name = &quot;latitude&quot; ;
+		latitude:long_name = &quot;latitude&quot; ;
+		latitude:units = &quot;degrees_north&quot; ;
+		latitude:missing_value = 1.e+20 ;
+		latitude:_FillValue = 1.e+20 ;
+		latitude:bounds = &quot;vertices_latitude&quot; ;
+	double longitude(rlat, rlon) ;
+		longitude:standard_name = &quot;longitude&quot; ;
+		longitude:long_name = &quot;longitude&quot; ;
+		longitude:units = &quot;degrees_east&quot; ;
+		longitude:missing_value = 1.e+20 ;
+		longitude:_FillValue = 1.e+20 ;
+		longitude:bounds = &quot;vertices_longitude&quot; ;
+	double vertices_latitude(rlat, rlon, vertices) ;
+		vertices_latitude:units = &quot;degrees_north&quot; ;
+		vertices_latitude:missing_value = 1.e+20 ;
+		vertices_latitude:_FillValue = 1.e+20 ;
+	double vertices_longitude(rlat, rlon, vertices) ;
+		vertices_longitude:units = &quot;degrees_east&quot; ;
+		vertices_longitude:missing_value = 1.e+20 ;
+		vertices_longitude:_FillValue = 1.e+20 ;
+	double height ;
+		height:units = &quot;m&quot; ;
+		height:axis = &quot;Z&quot; ;
+		height:positive = &quot;up&quot; ;
+		height:long_name = &quot;height&quot; ;
+		height:standard_name = &quot;height&quot; ;
+	float tas(time, rlat, rlon) ;
+		tas:standard_name = &quot;air_temperature&quot; ;
+		tas:long_name = &quot;Near-Surface Air Temperature&quot; ;
+		tas:units = &quot;K&quot; ;
+		tas:cell_methods = &quot;area: mean time: mean&quot; ;
+		tas:cell_measures = &quot;area: areacella&quot; ;
+		tas:history = &quot;2023-10-11T08:52:43Z altered by CMOR: Treated scalar dimension: \&#39;height\&#39;.&quot; ;
+		tas:coordinates = &quot;height latitude longitude&quot; ;
+		tas:missing_value = 1.e+20f ;
+		tas:_FillValue = 1.e+20f ;
+		tas:grid_mapping = &quot;rotated_latitude_longitude&quot; ;
+
+// global attributes:
+		:Conventions = &quot;CF-1.7 CMIP-6.2&quot; ;
+		:activity_id = &quot;RCM&quot; ;
+		:contact = &quot;gerics-cordex@hereon.de&quot; ;
+		:creation_date = &quot;2023-10-11T08:52:43Z&quot; ;
+		:data_specs_version = &quot;00.00.02&quot; ;
+		:domain = &quot;Europe&quot; ;
+		:domain_id = &quot;EUR-11&quot; ;
+		:driving_experiment = &quot;evaluation with ERA5&quot; ;
+		:driving_experiment_id = &quot;evaluation&quot; ;
+		:driving_institution_id = &quot;ECMWF&quot; ;
+		:driving_source_id = &quot;ECMWF-ERA5&quot; ;
+		:driving_variant_label = &quot;r1i1p1f1&quot; ;
+		:experiment_id = &quot;evaluation&quot; ;
+		:external_variables = &quot;areacella&quot; ;
+		:frequency = &quot;mon&quot; ;
+		:further_info_url = &quot;https://furtherinfo.es-doc.org/.*&quot; ;
+		:history = &quot;2023-10-11T08:52:43Z ;rewrote data to be consistent with CORDEX for variable tas found in table mon.&quot; ;
+		:institution = &quot;Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany&quot; ;
+		:institution_id = &quot;GERICS&quot; ;
+		:mip_era = &quot;CMIP6&quot; ;
+		:native_resolution = &quot;0.11 degree&quot; ;
+		:product = &quot;model-output&quot; ;
+		:project_id = &quot;CORDEX&quot; ;
+		:realm = &quot;atmos&quot; ;
+		:references = &quot;https://www.remo-rcm.de&quot; ;
+		:run_variant = &quot;1st realization&quot; ;
+		:source = &quot;REMO2020 (2022): \n&quot;,
+			&quot;aerosol: MACv2\n&quot;,
+			&quot;atmos: dynamic\n&quot;,
+			&quot;atmosChem: none\n&quot;,
+			&quot;land: none\n&quot;,
+			&quot;landIce: none\n&quot;,
+			&quot;ocean: prescribed\n&quot;,
+			&quot;lake: FLake\n&quot;,
+			&quot;ocnBgchem: none\n&quot;,
+			&quot;seaIce: none&quot; ;
+		:source_id = &quot;REMO2020&quot; ;
+		:source_type = &quot;ARCM&quot; ;
+		:table_id = &quot;mon&quot; ;
+		:table_info = &quot;Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb&quot; ;
+		:title = &quot;REMO2020 output prepared for CMIP6&quot; ;
+		:tracking_id = &quot;hdl:21.14100/85cfdbdb-fcd5-4c2b-b0e1-b8386e092689&quot; ;
+		:variable_id = &quot;tas&quot; ;
+		:version_realization = &quot;v1&quot; ;
+		:license = &quot;Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).&quot; ;
+		:cmor_version = &quot;3.7.2&quot; ;
+}
 </pre></div>
 </div>
 </div>
@@ -668,10 +1917,120 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHECKING NetCDF FILE: CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/mon/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_mon_200001-200012.nc
+=====================
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using CF Checker Version 4.1.0
+Checking against CF Version CF-1.8
+Using Standard Name Table Version 82 (2023-07-06T13:17:07Z)
+Using Area Type Table Version 11 (06 July 2023)
+Using Standardized Region Name Table Version 4 (18 December 2018)
+
+WARN: (2.6.1): Inconsistency - This netCDF file appears to contain CF-1.7 data, but you&#39;ve requested a validity check against CF-1.8
+WARN: (7.1): Boundary var vertices_latitude should not have attribute units
+WARN: (7.1): Boundary var vertices_longitude should not have attribute units
+
+------------------
+Checking variable: time
+------------------
+
+------------------
+Checking variable: time_bnds
+------------------
+
+------------------
+Checking variable: rlat
+------------------
+
+------------------
+Checking variable: rlon
+------------------
+
+------------------
+Checking variable: rotated_latitude_longitude
+------------------
+
+------------------
+Checking variable: latitude
+------------------
+
+------------------
+Checking variable: longitude
+------------------
+
+------------------
+Checking variable: vertices_latitude
+------------------
+WARN: (7.1): Boundary Variable vertices_latitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_latitude should not have missing_value attribute
+
+------------------
+Checking variable: vertices_longitude
+------------------
+WARN: (7.1): Boundary Variable vertices_longitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_longitude should not have missing_value attribute
+
+------------------
+Checking variable: height
+------------------
+
+------------------
+Checking variable: tas
+------------------
+INFO: attribute history is being used in a non-standard way
+
+ERRORS detected: 0
+WARNINGS given: 7
+INFORMATION messages: 1
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>compliance-checker<span class="w"> </span>--test<span class="o">=</span>cf:1.7<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running Compliance Checker on the datasets from: [&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/mon/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_mon_200001-200012.nc&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[§7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--------------------------------------------------------------------------------
+                         IOOS Compliance Checker Report                         
+                                 Version 5.1.0                                  
+                     Report generated 2023-10-11T08:52:55Z                      
+                                     cf:1.7                                     
+http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_mon_200001-200012.nc has 2 potential issues
+
+
+                                    Warnings                                    
+--------------------------------------------------------------------------------
+§2.5 Variables
+
+
+§7.1 Cell Boundaries
+* The Boundary variables &#39;vertices_latitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
+* The Boundary variables &#39;vertices_longitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
 </pre></div>
 </div>
 </div>
@@ -686,6 +2045,24 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://github.com/euro-cordex/py-cordex-data/raw/main/remo_EUR-11_TEMP2_1hr.nc&#39; to file &#39;/home/runner/.cache/py-cordex_tutorial_data/df1ad3551d1e9e1f102d1a1536d5212c-remo_EUR-11_TEMP2_1hr.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 0ddd4c71be010a5656ed624aa6bfd3c3fa6238d8c61c9f39b1494c4188f060a8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:309: UserWarning: time units are set to default: days since 1950-01-01T00:00:00
+  warn(&quot;time units are set to default: {}&quot;.format(u))
+/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/utils.py:336: UserWarning: writing temporary table to /tmp/tmpwyboabhu
+  warn(f&quot;writing temporary table to {filename}&quot;)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/1hr/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_1hr_200001010000-200001030000.nc&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -694,10 +2071,600 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:                     (time: 49, rlat: 412, rlon: 424, vertices: 4)
+Coordinates:
+  * time                        (time) datetime64[ns] 2000-01-01 ... 2000-01-03
+  * rlat                        (rlat) float64 -23.38 -23.27 ... 21.72 21.83
+  * rlon                        (rlon) float64 -28.38 -28.27 ... 18.04 18.15
+    latitude                    (rlat, rlon) float64 ...
+    longitude                   (rlat, rlon) float64 ...
+    height                      float64 ...
+Dimensions without coordinates: vertices
+Data variables:
+    rotated_latitude_longitude  int32 ...
+    vertices_latitude           (rlat, rlon, vertices) float64 ...
+    vertices_longitude          (rlat, rlon, vertices) float64 ...
+    tas                         (time, rlat, rlon) float32 ...
+Attributes: (12/37)
+    Conventions:             CF-1.7 CMIP-6.2
+    activity_id:             RCM
+    contact:                 gerics-cordex@hereon.de
+    creation_date:           2023-10-11T08:52:59Z
+    data_specs_version:      00.00.02
+    domain:                  Europe
+    ...                      ...
+    title:                   REMO2020 output prepared for CMIP6
+    tracking_id:             hdl:21.14100/c2109121-ff87-41cf-96a2-26a633aa18a3
+    variable_id:             tas
+    version_realization:     v1
+    license:                 Creative Commons Attribution 4.0 International L...
+    cmor_version:            3.7.2</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-b536bffb-e6d1-4706-a1b2-dfbb9ad94efc' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-b536bffb-e6d1-4706-a1b2-dfbb9ad94efc' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 49</li><li><span class='xr-has-index'>rlat</span>: 412</li><li><span class='xr-has-index'>rlon</span>: 424</li><li><span>vertices</span>: 4</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-357cb878-f5dd-4f11-b86c-31b95f981c3a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-357cb878-f5dd-4f11-b86c-31b95f981c3a' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2000-01-01 ... 2000-01-03</div><input id='attrs-3d65dce8-2921-4cad-a00b-fe5294852c9f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3d65dce8-2921-4cad-a00b-fe5294852c9f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-47bf9425-c61f-4490-8a49-d1b7dc687e52' class='xr-var-data-in' type='checkbox'><label for='data-47bf9425-c61f-4490-8a49-d1b7dc687e52' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>T</dd><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2000-01-01T00:00:00.000000000&#x27;, &#x27;2000-01-01T01:00:00.000000000&#x27;,
+       &#x27;2000-01-01T02:00:00.000000000&#x27;, &#x27;2000-01-01T03:00:00.000000000&#x27;,
+       &#x27;2000-01-01T04:00:00.000000000&#x27;, &#x27;2000-01-01T05:00:00.000000000&#x27;,
+       &#x27;2000-01-01T06:00:00.000000000&#x27;, &#x27;2000-01-01T07:00:00.000000000&#x27;,
+       &#x27;2000-01-01T08:00:00.000000000&#x27;, &#x27;2000-01-01T09:00:00.000000000&#x27;,
+       &#x27;2000-01-01T10:00:00.000000000&#x27;, &#x27;2000-01-01T11:00:00.000000000&#x27;,
+       &#x27;2000-01-01T12:00:00.000000000&#x27;, &#x27;2000-01-01T13:00:00.000000000&#x27;,
+       &#x27;2000-01-01T14:00:00.000000000&#x27;, &#x27;2000-01-01T15:00:00.000000000&#x27;,
+       &#x27;2000-01-01T16:00:00.000000000&#x27;, &#x27;2000-01-01T17:00:00.000000000&#x27;,
+       &#x27;2000-01-01T18:00:00.000000000&#x27;, &#x27;2000-01-01T19:00:00.000000000&#x27;,
+       &#x27;2000-01-01T20:00:00.000000000&#x27;, &#x27;2000-01-01T21:00:00.000000000&#x27;,
+       &#x27;2000-01-01T22:00:00.000000000&#x27;, &#x27;2000-01-01T23:00:00.000000000&#x27;,
+       &#x27;2000-01-02T00:00:00.000000000&#x27;, &#x27;2000-01-02T01:00:00.000000000&#x27;,
+       &#x27;2000-01-02T02:00:00.000000000&#x27;, &#x27;2000-01-02T03:00:00.000000000&#x27;,
+       &#x27;2000-01-02T04:00:00.000000000&#x27;, &#x27;2000-01-02T05:00:00.000000000&#x27;,
+       &#x27;2000-01-02T06:00:00.000000000&#x27;, &#x27;2000-01-02T07:00:00.000000000&#x27;,
+       &#x27;2000-01-02T08:00:00.000000000&#x27;, &#x27;2000-01-02T09:00:00.000000000&#x27;,
+       &#x27;2000-01-02T10:00:00.000000000&#x27;, &#x27;2000-01-02T11:00:00.000000000&#x27;,
+       &#x27;2000-01-02T12:00:00.000000000&#x27;, &#x27;2000-01-02T13:00:00.000000000&#x27;,
+       &#x27;2000-01-02T14:00:00.000000000&#x27;, &#x27;2000-01-02T15:00:00.000000000&#x27;,
+       &#x27;2000-01-02T16:00:00.000000000&#x27;, &#x27;2000-01-02T17:00:00.000000000&#x27;,
+       &#x27;2000-01-02T18:00:00.000000000&#x27;, &#x27;2000-01-02T19:00:00.000000000&#x27;,
+       &#x27;2000-01-02T20:00:00.000000000&#x27;, &#x27;2000-01-02T21:00:00.000000000&#x27;,
+       &#x27;2000-01-02T22:00:00.000000000&#x27;, &#x27;2000-01-02T23:00:00.000000000&#x27;,
+       &#x27;2000-01-03T00:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-23.38 -23.27 ... 21.72 21.83</div><input id='attrs-c97a64db-f206-4823-9970-bd1d7603179f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c97a64db-f206-4823-9970-bd1d7603179f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dec635a8-24d3-4878-b453-caf9f293bc52' class='xr-var-data-in' type='checkbox'><label for='data-dec635a8-24d3-4878-b453-caf9f293bc52' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_latitude</dd></dl></div><div class='xr-var-data'><pre>array([-23.375, -23.265, -23.155, ...,  21.615,  21.725,  21.835])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-28.38 -28.27 ... 18.04 18.15</div><input id='attrs-0d6b3ae5-dc0c-4de3-a79f-b79623d74365' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0d6b3ae5-dc0c-4de3-a79f-b79623d74365' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f97b14a7-8e1a-40af-9558-d09d12eb3af3' class='xr-var-data-in' type='checkbox'><label for='data-f97b14a7-8e1a-40af-9558-d09d12eb3af3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_longitude</dd></dl></div><div class='xr-var-data'><pre>array([-28.375, -28.265, -28.155, ...,  17.935,  18.045,  18.155])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e5f8371b-4584-4754-81a7-f64e7245d7c2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e5f8371b-4584-4754-81a7-f64e7245d7c2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-207954a9-74f6-40e9-904a-8ff664c20840' class='xr-var-data-in' type='checkbox'><label for='data-207954a9-74f6-40e9-904a-8ff664c20840' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>bounds :</span></dt><dd>vertices_latitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5703ff15-b6f0-4ebe-bd7b-208c468d028e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5703ff15-b6f0-4ebe-bd7b-208c468d028e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b6ce2c37-a416-4138-bdcd-a5f192c84f10' class='xr-var-data-in' type='checkbox'><label for='data-b6ce2c37-a416-4138-bdcd-a5f192c84f10' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>bounds :</span></dt><dd>vertices_longitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-0c2d99ff-8700-4c03-9408-b2ee674216b3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0c2d99ff-8700-4c03-9408-b2ee674216b3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f0be36e-055b-43f1-a775-95ecbe94f07b' class='xr-var-data-in' type='checkbox'><label for='data-9f0be36e-055b-43f1-a775-95ecbe94f07b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>axis :</span></dt><dd>Z</dd><dt><span>positive :</span></dt><dd>up</dd><dt><span>long_name :</span></dt><dd>height</dd><dt><span>standard_name :</span></dt><dd>height</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-41ae4a2c-4c04-4953-b570-3d2eabc04277' class='xr-section-summary-in' type='checkbox'  checked><label for='section-41ae4a2c-4c04-4953-b570-3d2eabc04277' class='xr-section-summary' >Data variables: <span>(4)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>rotated_latitude_longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-feb2316f-1d16-4883-ae1a-16a923a7a436' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-feb2316f-1d16-4883-ae1a-16a923a7a436' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3a0c3513-6f78-455a-be22-b89ab7c5a5cf' class='xr-var-data-in' type='checkbox'><label for='data-3a0c3513-6f78-455a-be22-b89ab7c5a5cf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>grid_mapping_name :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>grid_north_pole_latitude :</span></dt><dd>39.25</dd><dt><span>grid_north_pole_longitude :</span></dt><dd>-162.0</dd><dt><span>north_pole_grid_longitude :</span></dt><dd>0.0</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=int32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_latitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8cd949b9-dd8e-49f8-8171-a5f2f0258584' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8cd949b9-dd8e-49f8-8171-a5f2f0258584' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b25e127a-ded3-4d11-862b-6143d9f8341d' class='xr-var-data-in' type='checkbox'><label for='data-b25e127a-ded3-4d11-862b-6143d9f8341d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_longitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-19d113db-8e74-4d43-b07c-2f3567e28710' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-19d113db-8e74-4d43-b07c-2f3567e28710' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-22a02d46-e154-4c48-ac82-42354ee14307' class='xr-var-data-in' type='checkbox'><label for='data-22a02d46-e154-4c48-ac82-42354ee14307' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(time, rlat, rlon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e68ab6d1-ae03-440c-b68e-29d7de32128b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e68ab6d1-ae03-440c-b68e-29d7de32128b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3c5cffb3-5c92-4f80-9e46-a704fbfb4a24' class='xr-var-data-in' type='checkbox'><label for='data-3c5cffb3-5c92-4f80-9e46-a704fbfb4a24' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: point</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>history :</span></dt><dd>2023-10-11T08:52:59Z altered by CMOR: Treated scalar dimension: &#x27;height&#x27;.</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd></dl></div><div class='xr-var-data'><pre>[8559712 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-22f5c565-77b1-407c-bcc9-a1e381834d2b' class='xr-section-summary-in' type='checkbox'  ><label for='section-22f5c565-77b1-407c-bcc9-a1e381834d2b' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-26621c27-936d-452b-8994-2de312bfd27c' class='xr-index-data-in' type='checkbox'/><label for='index-26621c27-936d-452b-8994-2de312bfd27c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2000-01-01 00:00:00&#x27;, &#x27;2000-01-01 01:00:00&#x27;,
+               &#x27;2000-01-01 02:00:00&#x27;, &#x27;2000-01-01 03:00:00&#x27;,
+               &#x27;2000-01-01 04:00:00&#x27;, &#x27;2000-01-01 05:00:00&#x27;,
+               &#x27;2000-01-01 06:00:00&#x27;, &#x27;2000-01-01 07:00:00&#x27;,
+               &#x27;2000-01-01 08:00:00&#x27;, &#x27;2000-01-01 09:00:00&#x27;,
+               &#x27;2000-01-01 10:00:00&#x27;, &#x27;2000-01-01 11:00:00&#x27;,
+               &#x27;2000-01-01 12:00:00&#x27;, &#x27;2000-01-01 13:00:00&#x27;,
+               &#x27;2000-01-01 14:00:00&#x27;, &#x27;2000-01-01 15:00:00&#x27;,
+               &#x27;2000-01-01 16:00:00&#x27;, &#x27;2000-01-01 17:00:00&#x27;,
+               &#x27;2000-01-01 18:00:00&#x27;, &#x27;2000-01-01 19:00:00&#x27;,
+               &#x27;2000-01-01 20:00:00&#x27;, &#x27;2000-01-01 21:00:00&#x27;,
+               &#x27;2000-01-01 22:00:00&#x27;, &#x27;2000-01-01 23:00:00&#x27;,
+               &#x27;2000-01-02 00:00:00&#x27;, &#x27;2000-01-02 01:00:00&#x27;,
+               &#x27;2000-01-02 02:00:00&#x27;, &#x27;2000-01-02 03:00:00&#x27;,
+               &#x27;2000-01-02 04:00:00&#x27;, &#x27;2000-01-02 05:00:00&#x27;,
+               &#x27;2000-01-02 06:00:00&#x27;, &#x27;2000-01-02 07:00:00&#x27;,
+               &#x27;2000-01-02 08:00:00&#x27;, &#x27;2000-01-02 09:00:00&#x27;,
+               &#x27;2000-01-02 10:00:00&#x27;, &#x27;2000-01-02 11:00:00&#x27;,
+               &#x27;2000-01-02 12:00:00&#x27;, &#x27;2000-01-02 13:00:00&#x27;,
+               &#x27;2000-01-02 14:00:00&#x27;, &#x27;2000-01-02 15:00:00&#x27;,
+               &#x27;2000-01-02 16:00:00&#x27;, &#x27;2000-01-02 17:00:00&#x27;,
+               &#x27;2000-01-02 18:00:00&#x27;, &#x27;2000-01-02 19:00:00&#x27;,
+               &#x27;2000-01-02 20:00:00&#x27;, &#x27;2000-01-02 21:00:00&#x27;,
+               &#x27;2000-01-02 22:00:00&#x27;, &#x27;2000-01-02 23:00:00&#x27;,
+               &#x27;2000-01-03 00:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>rlat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-808ef7af-ec88-45a4-815b-8a24482ae9c8' class='xr-index-data-in' type='checkbox'/><label for='index-808ef7af-ec88-45a4-815b-8a24482ae9c8' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([            -23.375,             -23.265,             -23.155,
+                          -23.045, -22.935000000000002,             -22.825,
+                          -22.715,             -22.605,             -22.495,
+                          -22.385,
+              ...
+               20.845000000000002,  20.955000000000002,              21.065,
+                           21.175,              21.285,              21.395,
+                           21.505,              21.615,  21.724999999999998,
+               21.834999999999997],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlat&#x27;, length=412))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>rlon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-dc3aa336-0887-4b20-829c-72e2182c876d' class='xr-index-data-in' type='checkbox'/><label for='index-dc3aa336-0887-4b20-829c-72e2182c876d' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([            -28.375,             -28.265,             -28.155,
+                          -28.045, -27.935000000000002,             -27.825,
+                          -27.715,             -27.605,             -27.495,
+                          -27.385,
+              ...
+               17.165000000000003,  17.275000000000002,              17.385,
+                           17.495,              17.605,              17.715,
+                           17.825,              17.935,  18.044999999999998,
+               18.154999999999998],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlon&#x27;, length=424))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3cf5cd88-ac2a-4760-a3b7-a88de508b31f' class='xr-section-summary-in' type='checkbox'  ><label for='section-3cf5cd88-ac2a-4760-a3b7-a88de508b31f' class='xr-section-summary' >Attributes: <span>(37)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>RCM</dd><dt><span>contact :</span></dt><dd>gerics-cordex@hereon.de</dd><dt><span>creation_date :</span></dt><dd>2023-10-11T08:52:59Z</dd><dt><span>data_specs_version :</span></dt><dd>00.00.02</dd><dt><span>domain :</span></dt><dd>Europe</dd><dt><span>domain_id :</span></dt><dd>EUR-11</dd><dt><span>driving_experiment :</span></dt><dd>evaluation with ERA5</dd><dt><span>driving_experiment_id :</span></dt><dd>evaluation</dd><dt><span>driving_institution_id :</span></dt><dd>ECMWF</dd><dt><span>driving_source_id :</span></dt><dd>ECMWF-ERA5</dd><dt><span>driving_variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>experiment_id :</span></dt><dd>evaluation</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>frequency :</span></dt><dd>1hr</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/.*</dd><dt><span>history :</span></dt><dd>2023-10-11T08:52:59Z ;rewrote data to be consistent with CORDEX for variable tas found in table 1hr.</dd><dt><span>institution :</span></dt><dd>Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany</dd><dt><span>institution_id :</span></dt><dd>GERICS</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>native_resolution :</span></dt><dd>0.11 degree</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>project_id :</span></dt><dd>CORDEX</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>references :</span></dt><dd>https://www.remo-rcm.de</dd><dt><span>run_variant :</span></dt><dd>1st realization</dd><dt><span>source :</span></dt><dd>REMO2020 (2022): 
+aerosol: MACv2
+atmos: dynamic
+atmosChem: none
+land: none
+landIce: none
+ocean: prescribed
+lake: FLake
+ocnBgchem: none
+seaIce: none</dd><dt><span>source_id :</span></dt><dd>REMO2020</dd><dt><span>source_type :</span></dt><dd>ARCM</dd><dt><span>table_id :</span></dt><dd>1hr</dd><dt><span>table_info :</span></dt><dd>Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb</dd><dt><span>title :</span></dt><dd>REMO2020 output prepared for CMIP6</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/c2109121-ff87-41cf-96a2-26a633aa18a3</dd><dt><span>variable_id :</span></dt><dd>tas</dd><dt><span>version_realization :</span></dt><dd>v1</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).</dd><dt><span>cmor_version :</span></dt><dd>3.7.2</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump<span class="w"> </span>-h<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netcdf tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_1hr_200001010000-200001030000 {
+dimensions:
+	time = UNLIMITED ; // (49 currently)
+	rlat = 412 ;
+	rlon = 424 ;
+	bnds = 2 ;
+	vertices = 4 ;
+variables:
+	double time(time) ;
+		time:units = &quot;days since 1950-01-01T00:00:00&quot; ;
+		time:calendar = &quot;proleptic_gregorian&quot; ;
+		time:axis = &quot;T&quot; ;
+		time:long_name = &quot;time&quot; ;
+		time:standard_name = &quot;time&quot; ;
+	double rlat(rlat) ;
+		rlat:units = &quot;degrees&quot; ;
+		rlat:axis = &quot;Y&quot; ;
+		rlat:long_name = &quot;latitude in rotated pole grid&quot; ;
+		rlat:standard_name = &quot;grid_latitude&quot; ;
+	double rlon(rlon) ;
+		rlon:units = &quot;degrees&quot; ;
+		rlon:axis = &quot;X&quot; ;
+		rlon:long_name = &quot;longitude in rotated pole grid&quot; ;
+		rlon:standard_name = &quot;grid_longitude&quot; ;
+	int rotated_latitude_longitude ;
+		rotated_latitude_longitude:grid_mapping_name = &quot;rotated_latitude_longitude&quot; ;
+		rotated_latitude_longitude:grid_north_pole_latitude = 39.25 ;
+		rotated_latitude_longitude:grid_north_pole_longitude = -162. ;
+		rotated_latitude_longitude:north_pole_grid_longitude = 0. ;
+	double latitude(rlat, rlon) ;
+		latitude:standard_name = &quot;latitude&quot; ;
+		latitude:long_name = &quot;latitude&quot; ;
+		latitude:units = &quot;degrees_north&quot; ;
+		latitude:missing_value = 1.e+20 ;
+		latitude:_FillValue = 1.e+20 ;
+		latitude:bounds = &quot;vertices_latitude&quot; ;
+	double longitude(rlat, rlon) ;
+		longitude:standard_name = &quot;longitude&quot; ;
+		longitude:long_name = &quot;longitude&quot; ;
+		longitude:units = &quot;degrees_east&quot; ;
+		longitude:missing_value = 1.e+20 ;
+		longitude:_FillValue = 1.e+20 ;
+		longitude:bounds = &quot;vertices_longitude&quot; ;
+	double vertices_latitude(rlat, rlon, vertices) ;
+		vertices_latitude:units = &quot;degrees_north&quot; ;
+		vertices_latitude:missing_value = 1.e+20 ;
+		vertices_latitude:_FillValue = 1.e+20 ;
+	double vertices_longitude(rlat, rlon, vertices) ;
+		vertices_longitude:units = &quot;degrees_east&quot; ;
+		vertices_longitude:missing_value = 1.e+20 ;
+		vertices_longitude:_FillValue = 1.e+20 ;
+	double height ;
+		height:units = &quot;m&quot; ;
+		height:axis = &quot;Z&quot; ;
+		height:positive = &quot;up&quot; ;
+		height:long_name = &quot;height&quot; ;
+		height:standard_name = &quot;height&quot; ;
+	float tas(time, rlat, rlon) ;
+		tas:standard_name = &quot;air_temperature&quot; ;
+		tas:long_name = &quot;Near-Surface Air Temperature&quot; ;
+		tas:units = &quot;K&quot; ;
+		tas:cell_methods = &quot;area: mean time: point&quot; ;
+		tas:cell_measures = &quot;area: areacella&quot; ;
+		tas:history = &quot;2023-10-11T08:52:59Z altered by CMOR: Treated scalar dimension: \&#39;height\&#39;.&quot; ;
+		tas:coordinates = &quot;height latitude longitude&quot; ;
+		tas:missing_value = 1.e+20f ;
+		tas:_FillValue = 1.e+20f ;
+		tas:grid_mapping = &quot;rotated_latitude_longitude&quot; ;
+
+// global attributes:
+		:Conventions = &quot;CF-1.7 CMIP-6.2&quot; ;
+		:activity_id = &quot;RCM&quot; ;
+		:contact = &quot;gerics-cordex@hereon.de&quot; ;
+		:creation_date = &quot;2023-10-11T08:52:59Z&quot; ;
+		:data_specs_version = &quot;00.00.02&quot; ;
+		:domain = &quot;Europe&quot; ;
+		:domain_id = &quot;EUR-11&quot; ;
+		:driving_experiment = &quot;evaluation with ERA5&quot; ;
+		:driving_experiment_id = &quot;evaluation&quot; ;
+		:driving_institution_id = &quot;ECMWF&quot; ;
+		:driving_source_id = &quot;ECMWF-ERA5&quot; ;
+		:driving_variant_label = &quot;r1i1p1f1&quot; ;
+		:experiment_id = &quot;evaluation&quot; ;
+		:external_variables = &quot;areacella&quot; ;
+		:frequency = &quot;1hr&quot; ;
+		:further_info_url = &quot;https://furtherinfo.es-doc.org/.*&quot; ;
+		:history = &quot;2023-10-11T08:52:59Z ;rewrote data to be consistent with CORDEX for variable tas found in table 1hr.&quot; ;
+		:institution = &quot;Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany&quot; ;
+		:institution_id = &quot;GERICS&quot; ;
+		:mip_era = &quot;CMIP6&quot; ;
+		:native_resolution = &quot;0.11 degree&quot; ;
+		:product = &quot;model-output&quot; ;
+		:project_id = &quot;CORDEX&quot; ;
+		:realm = &quot;atmos&quot; ;
+		:references = &quot;https://www.remo-rcm.de&quot; ;
+		:run_variant = &quot;1st realization&quot; ;
+		:source = &quot;REMO2020 (2022): \n&quot;,
+			&quot;aerosol: MACv2\n&quot;,
+			&quot;atmos: dynamic\n&quot;,
+			&quot;atmosChem: none\n&quot;,
+			&quot;land: none\n&quot;,
+			&quot;landIce: none\n&quot;,
+			&quot;ocean: prescribed\n&quot;,
+			&quot;lake: FLake\n&quot;,
+			&quot;ocnBgchem: none\n&quot;,
+			&quot;seaIce: none&quot; ;
+		:source_id = &quot;REMO2020&quot; ;
+		:source_type = &quot;ARCM&quot; ;
+		:table_id = &quot;1hr&quot; ;
+		:table_info = &quot;Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb&quot; ;
+		:title = &quot;REMO2020 output prepared for CMIP6&quot; ;
+		:tracking_id = &quot;hdl:21.14100/c2109121-ff87-41cf-96a2-26a633aa18a3&quot; ;
+		:variable_id = &quot;tas&quot; ;
+		:version_realization = &quot;v1&quot; ;
+		:license = &quot;Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).&quot; ;
+		:cmor_version = &quot;3.7.2&quot; ;
+}
 </pre></div>
 </div>
 </div>
@@ -708,10 +2675,105 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHECKING NetCDF FILE: CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/1hr/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_1hr_200001010000-200001030000.nc
+=====================
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using CF Checker Version 4.1.0
+Checking against CF Version CF-1.8
+Using Standard Name Table Version 82 (2023-07-06T13:17:07Z)
+Using Area Type Table Version 11 (06 July 2023)
+Using Standardized Region Name Table Version 4 (18 December 2018)
+
+WARN: (2.6.1): Inconsistency - This netCDF file appears to contain CF-1.7 data, but you&#39;ve requested a validity check against CF-1.8
+WARN: (7.1): Boundary var vertices_latitude should not have attribute units
+WARN: (7.1): Boundary var vertices_longitude should not have attribute units
+
+------------------
+Checking variable: time
+------------------
+
+------------------
+Checking variable: rlat
+------------------
+
+------------------
+Checking variable: rlon
+------------------
+
+------------------
+Checking variable: rotated_latitude_longitude
+------------------
+
+------------------
+Checking variable: latitude
+------------------
+
+------------------
+Checking variable: longitude
+------------------
+
+------------------
+Checking variable: vertices_latitude
+------------------
+WARN: (7.1): Boundary Variable vertices_latitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_latitude should not have missing_value attribute
+
+------------------
+Checking variable: vertices_longitude
+------------------
+WARN: (7.1): Boundary Variable vertices_longitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_longitude should not have missing_value attribute
+
+------------------
+Checking variable: height
+------------------
+
+------------------
+Checking variable: tas
+------------------
+INFO: attribute history is being used in a non-standard way
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ERRORS detected: 0
+WARNINGS given: 7
+INFORMATION messages: 1
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>compliance-checker<span class="w"> </span>--test<span class="o">=</span>cf:1.7<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running Compliance Checker on the datasets from: [&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/1hr/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_1hr_200001010000-200001030000.nc&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--------------------------------------------------------------------------------
+                         IOOS Compliance Checker Report                         
+                                 Version 5.1.0                                  
+                     Report generated 2023-10-11T08:53:03Z                      
+                                     cf:1.7                                     
+http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_1hr_200001010000-200001030000.nc has 2 potential issues
+
+
+                                    Warnings                                    
+--------------------------------------------------------------------------------
+§2.5 Variables
+
+
+§7.1 Cell Boundaries
+* The Boundary variables &#39;vertices_latitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
+* The Boundary variables &#39;vertices_longitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
+WARNING: The following exceptions occurred during the cf:1.7 checker (possibly indicate compliance checker issues):
+cf:1.7.check_cell_boundaries_interval: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
 </pre></div>
 </div>
 </div>
@@ -726,6 +2788,23 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:396: UserWarning: resampling input data from H to D
+  warn(&quot;resampling input data from {} to {}&quot;.format(input_freq, pd_freq))
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:502: UserWarning: adding time bounds
+  warn(&quot;adding time bounds&quot;)
+/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:309: UserWarning: time units are set to default: days since 1950-01-01T00:00:00
+  warn(&quot;time units are set to default: {}&quot;.format(u))
+/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/utils.py:336: UserWarning: writing temporary table to /tmp/tmpof14db6l
+  warn(f&quot;writing temporary table to {filename}&quot;)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/day/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_day_20000101-20000103.nc&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -734,6 +2813,431 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:                     (time: 3, bnds: 2, rlat: 412, rlon: 424,
+                                 vertices: 4)
+Coordinates:
+  * time                        (time) datetime64[ns] 2000-01-01T12:00:00 ......
+  * rlat                        (rlat) float64 -23.38 -23.27 ... 21.72 21.83
+  * rlon                        (rlon) float64 -28.38 -28.27 ... 18.04 18.15
+    latitude                    (rlat, rlon) float64 ...
+    longitude                   (rlat, rlon) float64 ...
+    height                      float64 ...
+Dimensions without coordinates: bnds, vertices
+Data variables:
+    time_bnds                   (time, bnds) datetime64[ns] ...
+    rotated_latitude_longitude  int32 ...
+    vertices_latitude           (rlat, rlon, vertices) float64 ...
+    vertices_longitude          (rlat, rlon, vertices) float64 ...
+    tas                         (time, rlat, rlon) float32 ...
+Attributes: (12/37)
+    Conventions:             CF-1.7 CMIP-6.2
+    activity_id:             RCM
+    contact:                 gerics-cordex@hereon.de
+    creation_date:           2023-10-11T08:53:04Z
+    data_specs_version:      00.00.02
+    domain:                  Europe
+    ...                      ...
+    title:                   REMO2020 output prepared for CMIP6
+    tracking_id:             hdl:21.14100/1ab71e8a-16a2-43b8-b687-8d33b81986f5
+    variable_id:             tas
+    version_realization:     v1
+    license:                 Creative Commons Attribution 4.0 International L...
+    cmor_version:            3.7.2</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-fa7e47c6-a449-4dc3-afc9-687c2a146870' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-fa7e47c6-a449-4dc3-afc9-687c2a146870' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 3</li><li><span>bnds</span>: 2</li><li><span class='xr-has-index'>rlat</span>: 412</li><li><span class='xr-has-index'>rlon</span>: 424</li><li><span>vertices</span>: 4</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-8546b7fe-995a-4921-95ca-a5fdf0764190' class='xr-section-summary-in' type='checkbox'  checked><label for='section-8546b7fe-995a-4921-95ca-a5fdf0764190' class='xr-section-summary' >Coordinates: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2000-01-01T12:00:00 ... 2000-01-...</div><input id='attrs-d0586556-2538-4e20-895d-375e180db7be' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d0586556-2538-4e20-895d-375e180db7be' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9e064c29-2dab-4574-aff8-226ba0670a6b' class='xr-var-data-in' type='checkbox'><label for='data-9e064c29-2dab-4574-aff8-226ba0670a6b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>bounds :</span></dt><dd>time_bnds</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2000-01-01T12:00:00.000000000&#x27;, &#x27;2000-01-02T12:00:00.000000000&#x27;,
+       &#x27;2000-01-03T12:00:00.000000000&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlat</span></div><div class='xr-var-dims'>(rlat)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-23.38 -23.27 ... 21.72 21.83</div><input id='attrs-50e780a5-5a15-4871-984f-3207c1ad29c4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-50e780a5-5a15-4871-984f-3207c1ad29c4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b8919ade-0487-4ee3-97e4-ba0aa1954395' class='xr-var-data-in' type='checkbox'><label for='data-b8919ade-0487-4ee3-97e4-ba0aa1954395' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>long_name :</span></dt><dd>latitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_latitude</dd></dl></div><div class='xr-var-data'><pre>array([-23.375, -23.265, -23.155, ...,  21.615,  21.725,  21.835])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>rlon</span></div><div class='xr-var-dims'>(rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-28.38 -28.27 ... 18.04 18.15</div><input id='attrs-031f69c5-799c-41c8-8266-368fa4c75ce4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-031f69c5-799c-41c8-8266-368fa4c75ce4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fad29bc1-835a-40f1-a2c3-fdc86d0e52ca' class='xr-var-data-in' type='checkbox'><label for='data-fad29bc1-835a-40f1-a2c3-fdc86d0e52ca' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>longitude in rotated pole grid</dd><dt><span>standard_name :</span></dt><dd>grid_longitude</dd></dl></div><div class='xr-var-data'><pre>array([-28.375, -28.265, -28.155, ...,  17.935,  18.045,  18.155])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-90b2323f-3397-41b6-b7bc-04696e3a620e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-90b2323f-3397-41b6-b7bc-04696e3a620e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6bd3abea-e7a9-4064-ae3f-1c8153cd53e1' class='xr-var-data-in' type='checkbox'><label for='data-6bd3abea-e7a9-4064-ae3f-1c8153cd53e1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>bounds :</span></dt><dd>vertices_latitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(rlat, rlon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ee0f1d19-5159-4b2b-a54a-8d9f82c89811' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ee0f1d19-5159-4b2b-a54a-8d9f82c89811' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5b2ba8b7-0577-4007-925a-0ceb0dbb457d' class='xr-var-data-in' type='checkbox'><label for='data-5b2ba8b7-0577-4007-925a-0ceb0dbb457d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>bounds :</span></dt><dd>vertices_longitude</dd></dl></div><div class='xr-var-data'><pre>[174688 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>height</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1a162012-590f-4cb4-9439-f4b744fd2884' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1a162012-590f-4cb4-9439-f4b744fd2884' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-085d75f9-3e44-4656-a835-7b629fe73148' class='xr-var-data-in' type='checkbox'><label for='data-085d75f9-3e44-4656-a835-7b629fe73148' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>m</dd><dt><span>axis :</span></dt><dd>Z</dd><dt><span>positive :</span></dt><dd>up</dd><dt><span>long_name :</span></dt><dd>height</dd><dt><span>standard_name :</span></dt><dd>height</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=float64]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4e146060-a89e-483b-af34-461b53d310ad' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4e146060-a89e-483b-af34-461b53d310ad' class='xr-section-summary' >Data variables: <span>(5)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>time_bnds</span></div><div class='xr-var-dims'>(time, bnds)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-3ed6a469-dca7-4d1c-bfff-fc1553f43752' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-3ed6a469-dca7-4d1c-bfff-fc1553f43752' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8793d301-f53a-4c7b-826b-58668d18860b' class='xr-var-data-in' type='checkbox'><label for='data-8793d301-f53a-4c7b-826b-58668d18860b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>[6 values with dtype=datetime64[ns]]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>rotated_latitude_longitude</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>int32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-17b9f83c-960d-4e8f-8271-9ca75de860b5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-17b9f83c-960d-4e8f-8271-9ca75de860b5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-23bf1692-c172-4ca9-8d65-e3dd68565157' class='xr-var-data-in' type='checkbox'><label for='data-23bf1692-c172-4ca9-8d65-e3dd68565157' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>grid_mapping_name :</span></dt><dd>rotated_latitude_longitude</dd><dt><span>grid_north_pole_latitude :</span></dt><dd>39.25</dd><dt><span>grid_north_pole_longitude :</span></dt><dd>-162.0</dd><dt><span>north_pole_grid_longitude :</span></dt><dd>0.0</dd></dl></div><div class='xr-var-data'><pre>[1 values with dtype=int32]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_latitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c7e7efc6-33c2-4c5d-9495-a7f47f961870' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c7e7efc6-33c2-4c5d-9495-a7f47f961870' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e13dca18-9b40-4856-a237-e9dcbfd73c24' class='xr-var-data-in' type='checkbox'><label for='data-e13dca18-9b40-4856-a237-e9dcbfd73c24' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>vertices_longitude</span></div><div class='xr-var-dims'>(rlat, rlon, vertices)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1d350a1d-4dcb-4da5-abb1-7fc47281d927' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1d350a1d-4dcb-4da5-abb1-7fc47281d927' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e57fbd63-e4f8-487d-ac78-b850e39ab7f7' class='xr-var-data-in' type='checkbox'><label for='data-e57fbd63-e4f8-487d-ac78-b850e39ab7f7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class='xr-var-data'><pre>[698752 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>tas</span></div><div class='xr-var-dims'>(time, rlat, rlon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-132dc5d8-6d40-498f-8cb0-6685d0f2e09d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-132dc5d8-6d40-498f-8cb0-6685d0f2e09d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-268c3727-571c-4d2b-9468-9dc492f3a218' class='xr-var-data-in' type='checkbox'><label for='data-268c3727-571c-4d2b-9468-9dc492f3a218' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd><dt><span>long_name :</span></dt><dd>Near-Surface Air Temperature</dd><dt><span>units :</span></dt><dd>K</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd><dt><span>cell_measures :</span></dt><dd>area: areacella</dd><dt><span>history :</span></dt><dd>2023-10-11T08:53:04Z altered by CMOR: Treated scalar dimension: &#x27;height&#x27;.</dd><dt><span>grid_mapping :</span></dt><dd>rotated_latitude_longitude</dd></dl></div><div class='xr-var-data'><pre>[524064 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4864350f-3a5f-42bb-a46f-1ea7ae29cf9b' class='xr-section-summary-in' type='checkbox'  ><label for='section-4864350f-3a5f-42bb-a46f-1ea7ae29cf9b' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-2b69626c-6295-4490-a512-0239aedd11f9' class='xr-index-data-in' type='checkbox'/><label for='index-2b69626c-6295-4490-a512-0239aedd11f9' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2000-01-01 12:00:00&#x27;, &#x27;2000-01-02 12:00:00&#x27;,
+               &#x27;2000-01-03 12:00:00&#x27;],
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>rlat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-2204c8b3-2313-4b54-bea1-024e72bc6588' class='xr-index-data-in' type='checkbox'/><label for='index-2204c8b3-2313-4b54-bea1-024e72bc6588' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([            -23.375,             -23.265,             -23.155,
+                          -23.045, -22.935000000000002,             -22.825,
+                          -22.715,             -22.605,             -22.495,
+                          -22.385,
+              ...
+               20.845000000000002,  20.955000000000002,              21.065,
+                           21.175,              21.285,              21.395,
+                           21.505,              21.615,  21.724999999999998,
+               21.834999999999997],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlat&#x27;, length=412))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>rlon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-bcea3cee-b7f4-4697-b60d-521b1c02b481' class='xr-index-data-in' type='checkbox'/><label for='index-bcea3cee-b7f4-4697-b60d-521b1c02b481' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Float64Index([            -28.375,             -28.265,             -28.155,
+                          -28.045, -27.935000000000002,             -27.825,
+                          -27.715,             -27.605,             -27.495,
+                          -27.385,
+              ...
+               17.165000000000003,  17.275000000000002,              17.385,
+                           17.495,              17.605,              17.715,
+                           17.825,              17.935,  18.044999999999998,
+               18.154999999999998],
+             dtype=&#x27;float64&#x27;, name=&#x27;rlon&#x27;, length=424))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7a8d54b2-8488-4a2d-b3f3-bb174fe1d2f6' class='xr-section-summary-in' type='checkbox'  ><label for='section-7a8d54b2-8488-4a2d-b3f3-bb174fe1d2f6' class='xr-section-summary' >Attributes: <span>(37)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.7 CMIP-6.2</dd><dt><span>activity_id :</span></dt><dd>RCM</dd><dt><span>contact :</span></dt><dd>gerics-cordex@hereon.de</dd><dt><span>creation_date :</span></dt><dd>2023-10-11T08:53:04Z</dd><dt><span>data_specs_version :</span></dt><dd>00.00.02</dd><dt><span>domain :</span></dt><dd>Europe</dd><dt><span>domain_id :</span></dt><dd>EUR-11</dd><dt><span>driving_experiment :</span></dt><dd>evaluation with ERA5</dd><dt><span>driving_experiment_id :</span></dt><dd>evaluation</dd><dt><span>driving_institution_id :</span></dt><dd>ECMWF</dd><dt><span>driving_source_id :</span></dt><dd>ECMWF-ERA5</dd><dt><span>driving_variant_label :</span></dt><dd>r1i1p1f1</dd><dt><span>experiment_id :</span></dt><dd>evaluation</dd><dt><span>external_variables :</span></dt><dd>areacella</dd><dt><span>frequency :</span></dt><dd>day</dd><dt><span>further_info_url :</span></dt><dd>https://furtherinfo.es-doc.org/.*</dd><dt><span>history :</span></dt><dd>2023-10-11T08:53:04Z ;rewrote data to be consistent with CORDEX for variable tas found in table day.</dd><dt><span>institution :</span></dt><dd>Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany</dd><dt><span>institution_id :</span></dt><dd>GERICS</dd><dt><span>mip_era :</span></dt><dd>CMIP6</dd><dt><span>native_resolution :</span></dt><dd>0.11 degree</dd><dt><span>product :</span></dt><dd>model-output</dd><dt><span>project_id :</span></dt><dd>CORDEX</dd><dt><span>realm :</span></dt><dd>atmos</dd><dt><span>references :</span></dt><dd>https://www.remo-rcm.de</dd><dt><span>run_variant :</span></dt><dd>1st realization</dd><dt><span>source :</span></dt><dd>REMO2020 (2022): 
+aerosol: MACv2
+atmos: dynamic
+atmosChem: none
+land: none
+landIce: none
+ocean: prescribed
+lake: FLake
+ocnBgchem: none
+seaIce: none</dd><dt><span>source_id :</span></dt><dd>REMO2020</dd><dt><span>source_type :</span></dt><dd>ARCM</dd><dt><span>table_id :</span></dt><dd>day</dd><dt><span>table_info :</span></dt><dd>Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb</dd><dt><span>title :</span></dt><dd>REMO2020 output prepared for CMIP6</dd><dt><span>tracking_id :</span></dt><dd>hdl:21.14100/1ab71e8a-16a2-43b8-b687-8d33b81986f5</dd><dt><span>variable_id :</span></dt><dd>tas</dd><dt><span>version_realization :</span></dt><dd>v1</dd><dt><span>license :</span></dt><dd>Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).</dd><dt><span>cmor_version :</span></dt><dd>3.7.2</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -741,10 +3245,139 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.plot.facetgrid.FacetGrid at 0x7ff3bee691c0&gt;
+</pre></div>
+</div>
+<img alt="_images/a01d4522587848676504660ae18c376dfe96d7af64215481fc35365cb97722c1.png" src="_images/a01d4522587848676504660ae18c376dfe96d7af64215481fc35365cb97722c1.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ncdump<span class="w"> </span>-h<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netcdf tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_day_20000101-20000103 {
+dimensions:
+	time = UNLIMITED ; // (3 currently)
+	rlat = 412 ;
+	rlon = 424 ;
+	bnds = 2 ;
+	vertices = 4 ;
+variables:
+	double time(time) ;
+		time:bounds = &quot;time_bnds&quot; ;
+		time:units = &quot;days since 1950-01-01T00:00:00&quot; ;
+		time:calendar = &quot;proleptic_gregorian&quot; ;
+		time:axis = &quot;T&quot; ;
+		time:long_name = &quot;time&quot; ;
+		time:standard_name = &quot;time&quot; ;
+	double time_bnds(time, bnds) ;
+	double rlat(rlat) ;
+		rlat:units = &quot;degrees&quot; ;
+		rlat:axis = &quot;Y&quot; ;
+		rlat:long_name = &quot;latitude in rotated pole grid&quot; ;
+		rlat:standard_name = &quot;grid_latitude&quot; ;
+	double rlon(rlon) ;
+		rlon:units = &quot;degrees&quot; ;
+		rlon:axis = &quot;X&quot; ;
+		rlon:long_name = &quot;longitude in rotated pole grid&quot; ;
+		rlon:standard_name = &quot;grid_longitude&quot; ;
+	int rotated_latitude_longitude ;
+		rotated_latitude_longitude:grid_mapping_name = &quot;rotated_latitude_longitude&quot; ;
+		rotated_latitude_longitude:grid_north_pole_latitude = 39.25 ;
+		rotated_latitude_longitude:grid_north_pole_longitude = -162. ;
+		rotated_latitude_longitude:north_pole_grid_longitude = 0. ;
+	double latitude(rlat, rlon) ;
+		latitude:standard_name = &quot;latitude&quot; ;
+		latitude:long_name = &quot;latitude&quot; ;
+		latitude:units = &quot;degrees_north&quot; ;
+		latitude:missing_value = 1.e+20 ;
+		latitude:_FillValue = 1.e+20 ;
+		latitude:bounds = &quot;vertices_latitude&quot; ;
+	double longitude(rlat, rlon) ;
+		longitude:standard_name = &quot;longitude&quot; ;
+		longitude:long_name = &quot;longitude&quot; ;
+		longitude:units = &quot;degrees_east&quot; ;
+		longitude:missing_value = 1.e+20 ;
+		longitude:_FillValue = 1.e+20 ;
+		longitude:bounds = &quot;vertices_longitude&quot; ;
+	double vertices_latitude(rlat, rlon, vertices) ;
+		vertices_latitude:units = &quot;degrees_north&quot; ;
+		vertices_latitude:missing_value = 1.e+20 ;
+		vertices_latitude:_FillValue = 1.e+20 ;
+	double vertices_longitude(rlat, rlon, vertices) ;
+		vertices_longitude:units = &quot;degrees_east&quot; ;
+		vertices_longitude:missing_value = 1.e+20 ;
+		vertices_longitude:_FillValue = 1.e+20 ;
+	double height ;
+		height:units = &quot;m&quot; ;
+		height:axis = &quot;Z&quot; ;
+		height:positive = &quot;up&quot; ;
+		height:long_name = &quot;height&quot; ;
+		height:standard_name = &quot;height&quot; ;
+	float tas(time, rlat, rlon) ;
+		tas:standard_name = &quot;air_temperature&quot; ;
+		tas:long_name = &quot;Near-Surface Air Temperature&quot; ;
+		tas:units = &quot;K&quot; ;
+		tas:cell_methods = &quot;area: mean time: mean&quot; ;
+		tas:cell_measures = &quot;area: areacella&quot; ;
+		tas:history = &quot;2023-10-11T08:53:04Z altered by CMOR: Treated scalar dimension: \&#39;height\&#39;.&quot; ;
+		tas:coordinates = &quot;height latitude longitude&quot; ;
+		tas:missing_value = 1.e+20f ;
+		tas:_FillValue = 1.e+20f ;
+		tas:grid_mapping = &quot;rotated_latitude_longitude&quot; ;
+
+// global attributes:
+		:Conventions = &quot;CF-1.7 CMIP-6.2&quot; ;
+		:activity_id = &quot;RCM&quot; ;
+		:contact = &quot;gerics-cordex@hereon.de&quot; ;
+		:creation_date = &quot;2023-10-11T08:53:04Z&quot; ;
+		:data_specs_version = &quot;00.00.02&quot; ;
+		:domain = &quot;Europe&quot; ;
+		:domain_id = &quot;EUR-11&quot; ;
+		:driving_experiment = &quot;evaluation with ERA5&quot; ;
+		:driving_experiment_id = &quot;evaluation&quot; ;
+		:driving_institution_id = &quot;ECMWF&quot; ;
+		:driving_source_id = &quot;ECMWF-ERA5&quot; ;
+		:driving_variant_label = &quot;r1i1p1f1&quot; ;
+		:experiment_id = &quot;evaluation&quot; ;
+		:external_variables = &quot;areacella&quot; ;
+		:frequency = &quot;day&quot; ;
+		:further_info_url = &quot;https://furtherinfo.es-doc.org/.*&quot; ;
+		:history = &quot;2023-10-11T08:53:04Z ;rewrote data to be consistent with CORDEX for variable tas found in table day.&quot; ;
+		:institution = &quot;Climate Service Center Germany, Helmholtz Centre hereon GmbH, Fischertwiete 1, 20095 Hamburg, Germany&quot; ;
+		:institution_id = &quot;GERICS&quot; ;
+		:mip_era = &quot;CMIP6&quot; ;
+		:native_resolution = &quot;0.11 degree&quot; ;
+		:product = &quot;model-output&quot; ;
+		:project_id = &quot;CORDEX&quot; ;
+		:realm = &quot;atmos&quot; ;
+		:references = &quot;https://www.remo-rcm.de&quot; ;
+		:run_variant = &quot;1st realization&quot; ;
+		:source = &quot;REMO2020 (2022): \n&quot;,
+			&quot;aerosol: MACv2\n&quot;,
+			&quot;atmos: dynamic\n&quot;,
+			&quot;atmosChem: none\n&quot;,
+			&quot;land: none\n&quot;,
+			&quot;landIce: none\n&quot;,
+			&quot;ocean: prescribed\n&quot;,
+			&quot;lake: FLake\n&quot;,
+			&quot;ocnBgchem: none\n&quot;,
+			&quot;seaIce: none&quot; ;
+		:source_id = &quot;REMO2020&quot; ;
+		:source_type = &quot;ARCM&quot; ;
+		:table_id = &quot;day&quot; ;
+		:table_info = &quot;Creation Date:(11 October 2023) MD5:528848e590eab723c662a78f55ab54bb&quot; ;
+		:title = &quot;REMO2020 output prepared for CMIP6&quot; ;
+		:tracking_id = &quot;hdl:21.14100/1ab71e8a-16a2-43b8-b687-8d33b81986f5&quot; ;
+		:variable_id = &quot;tas&quot; ;
+		:version_realization = &quot;v1&quot; ;
+		:license = &quot;Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).&quot; ;
+		:cmor_version = &quot;3.7.2&quot; ;
+}
 </pre></div>
 </div>
 </div>
@@ -755,10 +3388,111 @@ CORDEX_coordinate.json	CORDEX_grids.json
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CHECKING NetCDF FILE: CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/day/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_day_20000101-20000103.nc
+=====================
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using CF Checker Version 4.1.0
+Checking against CF Version CF-1.8
+Using Standard Name Table Version 82 (2023-07-06T13:17:07Z)
+Using Area Type Table Version 11 (06 July 2023)
+Using Standardized Region Name Table Version 4 (18 December 2018)
+
+WARN: (2.6.1): Inconsistency - This netCDF file appears to contain CF-1.7 data, but you&#39;ve requested a validity check against CF-1.8
+WARN: (7.1): Boundary var vertices_latitude should not have attribute units
+WARN: (7.1): Boundary var vertices_longitude should not have attribute units
+
+------------------
+Checking variable: time
+------------------
+
+------------------
+Checking variable: time_bnds
+------------------
+
+------------------
+Checking variable: rlat
+------------------
+
+------------------
+Checking variable: rlon
+------------------
+
+------------------
+Checking variable: rotated_latitude_longitude
+------------------
+
+------------------
+Checking variable: latitude
+------------------
+
+------------------
+Checking variable: longitude
+------------------
+
+------------------
+Checking variable: vertices_latitude
+------------------
+WARN: (7.1): Boundary Variable vertices_latitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_latitude should not have missing_value attribute
+
+------------------
+Checking variable: vertices_longitude
+------------------
+WARN: (7.1): Boundary Variable vertices_longitude should not have _FillValue attribute
+WARN: (7.1): Boundary Variable vertices_longitude should not have missing_value attribute
+
+------------------
+Checking variable: height
+------------------
+
+------------------
+Checking variable: tas
+------------------
+INFO: attribute history is being used in a non-standard way
+
+ERRORS detected: 0
+WARNINGS given: 7
+INFORMATION messages: 1
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>compliance-checker<span class="w"> </span>--test<span class="o">=</span>cf:1.7<span class="w"> </span><span class="nv">$f</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running Compliance Checker on the datasets from: [&#39;CORDEX/CORDEX/CMIP6/RCM/EUR-11/GERICS/ECMWF-ERA5/evaluation/r1i1p1f1/REMO2020/v1/day/tas/v20231011/tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_day_20000101-20000103.nc&#39;]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[§7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+[§7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True, §7.1 Cell Boundaries (*2): True]
+
+
+--------------------------------------------------------------------------------
+                         IOOS Compliance Checker Report                         
+                                 Version 5.1.0                                  
+                     Report generated 2023-10-11T08:53:08Z                      
+                                     cf:1.7                                     
+http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+tas_EUR-11_ECMWF-ERA5_evaluation_r1i1p1f1_GERICS_REMO2020_v1_day_20000101-20000103.nc has 2 potential issues
+
+
+                                    Warnings                                    
+--------------------------------------------------------------------------------
+§2.5 Variables
+
+
+§7.1 Cell Boundaries
+* The Boundary variables &#39;vertices_latitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
+* The Boundary variables &#39;vertices_longitude&#39; should not have the attributes: &#39;[&#39;units&#39;, &#39;missing_value&#39;, &#39;_FillValue&#39;]&#39;
 </pre></div>
 </div>
 </div>
