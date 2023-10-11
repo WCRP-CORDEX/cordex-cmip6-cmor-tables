@@ -1,0 +1,127 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+f = test_cmorizer_fx()
+------------------
+
+----- stderr -----
+Downloading file 'rotated-latitude-longitude.csv' from 'https://raw.githubusercontent.com/WCRP-CORDEX/domain-tables/main/rotated-latitude-longitude.csv' to '/home/runner/.py-cordex'.
+----- stderr -----
+/home/runner/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/utils.py:336: UserWarning: writing temporary table to /tmp/tmp87swov0l
+  warn(f"writing temporary table to {filename}")
+
+[2;34;47mC Traceback:
+In function: cmor_outpath_exist
+! called from: cmor_dataset_json
+! [0m
+
+[1;34;47m!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! Warning: You defined your output directory to be: 'CORDEX', but this
+! directory does not exist. CMOR will create it!
+!
+!!!!!!!!!!!!!!!!!!!!!!!!![0m
+
+
+[2;31;47mC Traceback:
+! In function: cmor_set_var_def_att
+! called from: cmor_set_formula_entry
+! called from: cmor_load_table_internal
+! [0m
+
+[1;31;47m!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! Error: Reading table grids: axis name: 'time1' for variable: 'ps1' is not defined in table. Table defines dimensions: 'longitude latitude time1' for this variable
+!
+!!!!!!!!!!!!!!!!!!!!!!!!![0m
+
+
+[2;31;47mC Traceback:
+! In function: cmor_set_var_def_att
+! called from: cmor_set_formula_entry
+! called from: cmor_load_table_internal
+! [0m
+
+[1;31;47m!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! Error: Reading table grids: axis name: 'time1' for variable: 'ps2d' is not defined in table. Table defines dimensions: 'latitude time1' for this variable
+!
+!!!!!!!!!!!!!!!!!!!!!!!!![0m
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mCMORError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[5], line 1[0m
+[0;32m----> 1[0m f [38;5;241m=[39m [43mtest_cmorizer_fx[49m[43m([49m[43m)[49m
+
+Cell [0;32mIn[4], line 14[0m, in [0;36mtest_cmorizer_fx[0;34m()[0m
+[1;32m     12[0m [38;5;28;01mdef[39;00m [38;5;21mtest_cmorizer_fx[39m():
+[1;32m     13[0m     ds [38;5;241m=[39m cx[38;5;241m.[39mcordex_domain([38;5;124m"[39m[38;5;124mEUR-11[39m[38;5;124m"[39m, dummy[38;5;241m=[39m[38;5;124m"[39m[38;5;124mtopo[39m[38;5;124m"[39m)
+[0;32m---> 14[0m     filename [38;5;241m=[39m [43mcmor[49m[38;5;241;43m.[39;49m[43mcmorize_variable[49m[43m([49m
+[1;32m     15[0m [43m        [49m[43mds[49m[43m,[49m
+[1;32m     16[0m [43m        [49m[38;5;124;43m"[39;49m[38;5;124;43morog[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[1;32m     17[0m [43m        [49m[43mmapping_table[49m[38;5;241;43m=[39;49m[43m{[49m[38;5;124;43m"[39;49m[38;5;124;43morog[39;49m[38;5;124;43m"[39;49m[43m:[49m[43m [49m[43m{[49m[38;5;124;43m"[39;49m[38;5;124;43mvarname[39;49m[38;5;124;43m"[39;49m[43m:[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mtopo[39;49m[38;5;124;43m"[39;49m[43m}[49m[43m}[49m[43m,[49m
+[1;32m     18[0m [43m        [49m[43mcmor_table[49m[38;5;241;43m=[39;49m[43mos[49m[38;5;241;43m.[39;49m[43mpath[49m[38;5;241;43m.[39;49m[43mjoin[49m[43m([49m[43mtable_dir[49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mCORDEX_fx.json[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m,[49m
+[1;32m     19[0m [43m        [49m[43mdataset_table[49m[38;5;241;43m=[39;49m[43mos[49m[38;5;241;43m.[39;49m[43mpath[49m[38;5;241;43m.[39;49m[43mjoin[49m[43m([49m[43mtable_dir[49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mCORDEX_remo_example.json[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m,[49m
+[1;32m     20[0m [43m        [49m[43mgrids_table[49m[38;5;241;43m=[39;49m[43mos[49m[38;5;241;43m.[39;49m[43mpath[49m[38;5;241;43m.[39;49m[43mjoin[49m[43m([49m[43mtable_dir[49m[43m,[49m[43m [49m[38;5;124;43m"[39;49m[38;5;124;43mCORDEX_grids.json[39;49m[38;5;124;43m"[39;49m[43m)[49m[43m,[49m
+[1;32m     21[0m [43m        [49m[43mCORDEX_domain[49m[38;5;241;43m=[39;49m[38;5;124;43m"[39;49m[38;5;124;43mEUR-11[39;49m[38;5;124;43m"[39;49m[43m,[49m
+[1;32m     22[0m [43m        [49m[43mtime_units[49m[38;5;241;43m=[39;49m[38;5;28;43;01mNone[39;49;00m[43m,[49m
+[1;32m     23[0m [43m        [49m[43mallow_units_convert[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
+[1;32m     24[0m [43m    [49m[43m)[49m
+[1;32m     25[0m     [38;5;28;01mreturn[39;00m filename
+
+File [0;32m~/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:639[0m, in [0;36mcmorize_variable[0;34m(ds, out_name, cmor_table, dataset_table, mapping_table, grids_table, inpath, replace_coords, allow_units_convert, allow_resample, input_freq, CORDEX_domain, time_units, rewrite_time_axis, outpath, **kwargs)[0m
+[1;32m    622[0m     dataset_table[[38;5;124m"[39m[38;5;124moutpath[39m[38;5;124m"[39m] [38;5;241m=[39m outpath
+[1;32m    624[0m ds_prep [38;5;241m=[39m prepare_variable(
+[1;32m    625[0m     ds,
+[1;32m    626[0m     out_name,
+[0;32m   (...)[0m
+[1;32m    636[0m     [38;5;241m*[39m[38;5;241m*[39mkwargs,
+[1;32m    637[0m )
+[0;32m--> 639[0m [38;5;28;01mreturn[39;00m [43mcmorize_cmor[49m[43m([49m
+[1;32m    640[0m [43m    [49m[43mds_prep[49m[43m,[49m[43m [49m[43mout_name[49m[43m,[49m[43m [49m[43mcmor_table[49m[43m,[49m[43m [49m[43mdataset_table[49m[43m,[49m[43m [49m[43mgrids_table[49m[43m,[49m[43m [49m[43minpath[49m
+[1;32m    641[0m [43m[49m[43m)[49m
+
+File [0;32m~/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:426[0m, in [0;36mcmorize_cmor[0;34m(ds, out_name, cmor_table, dataset_table, grids_table, inpath)[0m
+[1;32m    422[0m     [38;5;28;01mraise[39;00m [38;5;167;01mException[39;00m([38;5;124m"[39m[38;5;132;01m{}[39;00m[38;5;124m not found in [39m[38;5;132;01m{}[39;00m[38;5;124m"[39m[38;5;241m.[39mformat(out_name, cmor_table))
+[1;32m    424[0m time_cell_method [38;5;241m=[39m _strip_time_cell_method(cfvarinfo)
+[0;32m--> 426[0m table_ids [38;5;241m=[39m [43m_setup[49m[43m([49m
+[1;32m    427[0m [43m    [49m[43mdataset_table_json[49m[43m,[49m[43m [49m[43mcmor_table_json[49m[43m,[49m[43m [49m[43mgrids_table[49m[38;5;241;43m=[39;49m[43mgrids_table[49m[43m,[49m[43m [49m[43minpath[49m[38;5;241;43m=[39;49m[43minpath[49m
+[1;32m    428[0m [43m[49m[43m)[49m
+[1;32m    430[0m cmorTime, cmorGrid [38;5;241m=[39m _define_grid(ds, table_ids, time_cell_method[38;5;241m=[39mtime_cell_method)
+[1;32m    432[0m [38;5;28;01mreturn[39;00m _cmor_write(ds[out_name], table_ids[[38;5;124m"[39m[38;5;124mmip[39m[38;5;124m"[39m], cmorTime, cmorGrid)
+
+File [0;32m~/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cordex/cmor/cmor.py:125[0m, in [0;36m_setup[0;34m(dataset_table, mip_table, grids_table, inpath)[0m
+[1;32m    117[0m cmor[38;5;241m.[39msetup(
+[1;32m    118[0m     inpath,
+[1;32m    119[0m     set_verbosity[38;5;241m=[39mcmor[38;5;241m.[39mCMOR_NORMAL,
+[0;32m   (...)[0m
+[1;32m    122[0m     logfile[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[1;32m    123[0m )
+[1;32m    124[0m cmor[38;5;241m.[39mdataset_json(dataset_table)
+[0;32m--> 125[0m grid_id [38;5;241m=[39m [43mcmor[49m[38;5;241;43m.[39;49m[43mload_table[49m[43m([49m[43mgrids_table[49m[43m)[49m
+[1;32m    126[0m table_id [38;5;241m=[39m cmor[38;5;241m.[39mload_table(mip_table)
+[1;32m    127[0m cmor[38;5;241m.[39mset_table(table_id)
+
+File [0;32m~/micromamba-root/envs/cordex-examples/lib/python3.8/site-packages/cmor/pywrapper.py:911[0m, in [0;36mload_table[0;34m(table)[0m
+[1;32m    908[0m         [38;5;28;01mraise[39;00m [38;5;167;01mException[39;00m([38;5;124m"[39m[38;5;124mError, must pass a string[39m[38;5;124m"[39m)
+[1;32m    909[0m [38;5;66;03m# if not os.path.exists(table):[39;00m
+[1;32m    910[0m [38;5;66;03m##         raise Exception, "Error, the table you specified (%s) does not exists" % table[39;00m
+[0;32m--> 911[0m     [38;5;28;01mreturn[39;00m [43m_cmor[49m[38;5;241;43m.[39;49m[43mload_table[49m[43m([49m[43mtable[49m[43m)[49m
+
+[0;31mCMORError[0m: Problem with 'cmor.load_table'. Please check the logfile (if defined).
+
