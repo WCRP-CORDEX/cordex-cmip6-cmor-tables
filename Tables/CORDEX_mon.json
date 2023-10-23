@@ -1,7 +1,5 @@
 {
     "Header": {
-        "data_specs_version": "00.00.02",
-        "cmor_version": "3.5",
         "table_id": "Table mon",
         "realm": "atmos",
         "table_date": "11 October 2023",
