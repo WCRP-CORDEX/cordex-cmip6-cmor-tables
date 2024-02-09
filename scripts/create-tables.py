@@ -13,8 +13,8 @@ def main(table, output, prefix, coords=False):
         table_to_json(t, table_prefix="CORDEX-CMIP6", dir=output)
 
     if coords is True:
-        table = create_coordinate_table()
-        table_to_json(coords, "CORDEX-CMIP6", table_id="coordinate")
+        t = create_coordinate_table(df)
+        table_to_json(t, "CORDEX-CMIP6", table_id="coordinate", dir=output)
 
 
 if __name__ == "__main__":
