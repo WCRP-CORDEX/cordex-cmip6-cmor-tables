@@ -11,7 +11,9 @@ from cordex import cmor as cxcmor
 
 table_dir = "./Tables"
 
-cxcmor.set_options(table_prefix="CORDEX")
+table_prefix = "CORDEX-CMIP6"
+
+cxcmor.set_options(table_prefix=table_prefix)
 
 
 def copy_tables(table_dir):
@@ -48,9 +50,9 @@ def fx_file():
         ds,
         "orog",
         mapping_table={"orog": {"varname": "topo"}},
-        cmor_table=os.path.join(table_dir, "CORDEX_fx.json"),
-        dataset_table=os.path.join(table_dir, "CORDEX_remo_example.json"),
-        grids_table=os.path.join(table_dir, "CORDEX_grids.json"),
+        cmor_table=os.path.join(table_dir, f"{table_prefix}_fx.json"),
+        dataset_table=os.path.join(table_dir, f"{table_prefix}_remo_example.json"),
+        grids_table=os.path.join(table_dir, f"{table_prefix}_grids.json"),
         CORDEX_domain="EUR-11",
         time_units=None,
         allow_units_convert=True,
@@ -64,9 +66,9 @@ def mon_file():
         ds,
         "tas",
         mapping_table={"tas": {"varname": "TEMP2"}},
-        cmor_table=os.path.join(table_dir, "CORDEX_mon.json"),
-        dataset_table=os.path.join(table_dir, "CORDEX_remo_example.json"),
-        grids_table=os.path.join(table_dir, "CORDEX_grids.json"),
+        cmor_table=os.path.join(table_dir, f"{table_prefix}_mon.json"),
+        dataset_table=os.path.join(table_dir, f"{table_prefix}_remo_example.json"),
+        grids_table=os.path.join(table_dir, f"{table_prefix}_grids.json"),
         CORDEX_domain="EUR-11",
         time_units=None,
         allow_units_convert=True,
