@@ -1,4 +1,4 @@
-:warning: Under development, see open issues [here](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/issues) and [here](https://github.com/WCRP-CORDEX/cordex-cmip6-data-request/issues)
+:warning: Under development, see open issues [here](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/issues) and [here](https://github.com/WCRP-CORDEX/data-request-table/issues)
 
 # cordex-cmip6-cmor-tables
 
