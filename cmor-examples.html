@@ -431,10 +431,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CORDEX_1hr.json		CORDEX_day.json		   CORDEX_mon.json
-CORDEX_6hr.json		CORDEX_formula_terms.json  CORDEX_remo_example.json
-CORDEX_CV.json		CORDEX_fx.json
-CORDEX_coordinate.json	CORDEX_grids.json
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CORDEX-CMIP6_1hr.json	      CORDEX-CMIP6_formula_terms.json
+CORDEX-CMIP6_6hr.json	      CORDEX-CMIP6_fx.json
+CORDEX-CMIP6_CV.json	      CORDEX-CMIP6_grids.json
+CORDEX-CMIP6_coordinate.json  CORDEX-CMIP6_mon.json
+CORDEX-CMIP6_day.json	      CORDEX-CMIP6_remo_example.json
 </pre></div>
 </div>
 </div>
@@ -450,7 +451,7 @@ CORDEX_coordinate.json	CORDEX_grids.json
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">JSON</span>
 
 <span class="c1"># Opening JSON file</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../Tables/CORDEX_CV.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../Tables/CORDEX-CMIP6_CV.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
     <span class="n">CV</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)[</span><span class="s2">&quot;CV&quot;</span><span class="p">]</span>
 
 <span class="c1"># JSON(CV[&#39;required_global_attributes&#39;])</span>
@@ -509,7 +510,7 @@ CORDEX_coordinate.json	CORDEX_grids.json
 
 <span class="n">table_dir</span> <span class="o">=</span> <span class="s2">&quot;../Tables&quot;</span>
 
-<span class="n">cmor</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">table_prefix</span><span class="o">=</span><span class="s2">&quot;CORDEX&quot;</span><span class="p">)</span>
+<span class="n">cmor</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">table_prefix</span><span class="o">=</span><span class="s2">&quot;CORDEX-CMIP6&quot;</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">test_cmorizer_fx</span><span class="p">():</span>
@@ -518,9 +519,9 @@ CORDEX_coordinate.json	CORDEX_grids.json
         <span class="n">ds</span><span class="p">,</span>
         <span class="s2">&quot;orog&quot;</span><span class="p">,</span>
         <span class="n">mapping_table</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;orog&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;varname&quot;</span><span class="p">:</span> <span class="s2">&quot;topo&quot;</span><span class="p">}},</span>
-        <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_fx.json&quot;</span><span class="p">),</span>
-        <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_remo_example.json&quot;</span><span class="p">),</span>
-        <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_grids.json&quot;</span><span class="p">),</span>
+        <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_fx.json&quot;</span><span class="p">),</span>
+        <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_remo_example.json&quot;</span><span class="p">),</span>
+        <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_grids.json&quot;</span><span class="p">),</span>
         <span class="n">CORDEX_domain</span><span class="o">=</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">,</span>
         <span class="n">time_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">allow_units_convert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -534,9 +535,9 @@ CORDEX_coordinate.json	CORDEX_grids.json
         <span class="n">ds</span><span class="p">,</span>
         <span class="s2">&quot;tas&quot;</span><span class="p">,</span>
         <span class="n">mapping_table</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;tas&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;varname&quot;</span><span class="p">:</span> <span class="s2">&quot;TEMP2&quot;</span><span class="p">}},</span>
-        <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_mon.json&quot;</span><span class="p">),</span>
-        <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_remo_example.json&quot;</span><span class="p">),</span>
-        <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_grids.json&quot;</span><span class="p">),</span>
+        <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_mon.json&quot;</span><span class="p">),</span>
+        <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_remo_example.json&quot;</span><span class="p">),</span>
+        <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_grids.json&quot;</span><span class="p">),</span>
         <span class="n">CORDEX_domain</span><span class="o">=</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">,</span>
         <span class="n">time_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">allow_units_convert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -550,9 +551,9 @@ CORDEX_coordinate.json	CORDEX_grids.json
         <span class="n">ds</span><span class="p">,</span>
         <span class="s2">&quot;tas&quot;</span><span class="p">,</span>
         <span class="n">mapping_table</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;tas&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;varname&quot;</span><span class="p">:</span> <span class="s2">&quot;TEMP2&quot;</span><span class="p">}},</span>
-        <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;CORDEX_</span><span class="si">{</span><span class="n">table</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">),</span>
-        <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_remo_example.json&quot;</span><span class="p">),</span>
-        <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX_grids.json&quot;</span><span class="p">),</span>
+        <span class="n">cmor_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;CORDEX-CMIP6_</span><span class="si">{</span><span class="n">table</span><span class="si">}</span><span class="s2">.json&quot;</span><span class="p">),</span>
+        <span class="n">dataset_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_remo_example.json&quot;</span><span class="p">),</span>
+        <span class="n">grids_table</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">table_dir</span><span class="p">,</span> <span class="s2">&quot;CORDEX-CMIP6_grids.json&quot;</span><span class="p">),</span>
         <span class="n">CORDEX_domain</span><span class="o">=</span><span class="s2">&quot;EUR-11&quot;</span><span class="p">,</span>
         <span class="n">time_units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">allow_units_convert</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
