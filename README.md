@@ -7,6 +7,16 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/WCRP-CORDEX/cordex-cmip6-cmor-tables/main.svg)](https://results.pre-commit.ci/latest/github/WCRP-CORDEX/cordex-cmip6-cmor-tables/main)
 [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/WCRP-CORDEX/binder-sandbox/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252FWCRP-CORDEX%252Fcordex-cmip6-cmor-tables%26urlpath%3Dlab%252Ftree%252Fcordex-cmip6-cmor-tables%252Fexamples%252Fcmor-examples.ipynb%26branch%3Dmain)
 
-
-
 JSON Tables for CMOR3 to create CORDEX-CMIP6 datasets.
+
+## Table update
+
+These tables are created from the [CORDEX-CMIP6 data request table](https://github.com/WCRP-CORDEX/data-request-table) using:
+
+```bash
+pip install git+https://github.com/WCRP-CORDEX/data-request-tools.git
+```
+and
+```bash
+python scripts/create-tables.py https://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/main/CORDEX-CMIP6/data-request.csv
+```
