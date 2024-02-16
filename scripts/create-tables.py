@@ -10,11 +10,11 @@ def main(table, output, prefix, coords=False):
     print(cmor_tables.keys())
 
     for t in cmor_tables.values():
-        table_to_json(t, table_prefix="CORDEX-CMIP6", dir=output)
+        table_to_json(t, table_prefix=prefix, dir=output)
 
     if coords is True:
         t = create_coordinate_table(df)
-        table_to_json(t, "CORDEX-CMIP6", table_id="coordinate", dir=output)
+        table_to_json(t, prefix, table_id="coordinate", dir=output)
 
 
 if __name__ == "__main__":
