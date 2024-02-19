@@ -119,7 +119,7 @@
             "units": "degrees_north",
             "long_name": "latitude",
             "dimensions": "longitude latitude",
-            "out_name": "latitude",
+            "out_name": "lat",
             "valid_min": "-90.0",
             "valid_max": "90.0",
             "type": "double"
@@ -129,7 +129,7 @@
             "units": "degrees_east",
             "long_name": "longitude",
             "dimensions": "longitude latitude",
-            "out_name": "longitude",
+            "out_name": "lon",
             "valid_min": "-180.0",
             "valid_max": "180.0",
             "type": "double"
@@ -139,7 +139,7 @@
             "units": "degrees_north",
             "long_name": "",
             "dimensions": "vertices longitude latitude",
-            "out_name": "vertices_latitude",
+            "out_name": "vertices_lat",
             "valid_min": "-90.0",
             "valid_max": "90.0",
             "type": "double"
@@ -149,7 +149,7 @@
             "units": "degrees_east",
             "long_name": "",
             "dimensions": "vertices longitude latitude",
-            "out_name": "vertices_longitude",
+            "out_name": "vertices_lon",
             "valid_min": "-180.0",
             "valid_max": "180.0",
             "type": "double"
