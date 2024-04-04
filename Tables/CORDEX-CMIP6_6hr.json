@@ -8,7 +8,7 @@
         "product": "model-output",
         "approx_interval": "0.25",
         "mip_era": "CMIP6",
-        "Conventions": "CF-1.7"
+        "Conventions": "CF-1.10"
     },
     "variable_entry": {
         "tsl": {
