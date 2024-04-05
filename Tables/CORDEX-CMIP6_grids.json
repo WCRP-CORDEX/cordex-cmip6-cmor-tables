@@ -118,8 +118,8 @@
             "long_name": "latitude",
             "dimensions": "longitude latitude",
             "out_name": "lat",
-            "valid_min": "-90.0",
-            "valid_max": "90.0",
+            "valid_min": "",
+            "valid_max": "",
             "type": "double"
         },
         "longitude": {
@@ -128,8 +128,8 @@
             "long_name": "longitude",
             "dimensions": "longitude latitude",
             "out_name": "lon",
-            "valid_min": "-180.0",
-            "valid_max": "180.0",
+            "valid_min": "",
+            "valid_max": "",
             "type": "double"
         },
         "vertices_latitude": {
@@ -138,8 +138,8 @@
             "long_name": "",
             "dimensions": "vertices longitude latitude",
             "out_name": "vertices_lat",
-            "valid_min": "-90.0",
-            "valid_max": "90.0",
+            "valid_min": "",
+            "valid_max": "",
             "type": "double"
         },
         "vertices_longitude": {
@@ -148,8 +148,8 @@
             "long_name": "",
             "dimensions": "vertices longitude latitude",
             "out_name": "vertices_lon",
-            "valid_min": "-180.0",
-            "valid_max": "180.0",
+            "valid_min": "",
+            "valid_max": "",
             "type": "double"
         }
     }
