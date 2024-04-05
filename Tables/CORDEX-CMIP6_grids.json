@@ -129,7 +129,7 @@
             "dimensions": "longitude latitude",
             "out_name": "lon",
             "valid_min": "-180.0",
-            "valid_max": "180.0",
+            "valid_max": "360.0",
             "type": "double"
         },
         "vertices_latitude": {
@@ -149,7 +149,7 @@
             "dimensions": "vertices longitude latitude",
             "out_name": "vertices_lon",
             "valid_min": "-180.0",
-            "valid_max": "180.0",
+            "valid_max": "360.0",
             "type": "double"
         }
     }
