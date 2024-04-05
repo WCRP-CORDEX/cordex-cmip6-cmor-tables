@@ -14,7 +14,6 @@
     "driving_institution_id":      "ECMWF",
     "driving_source_id":           "ECMWF-ERA5",
     "driving_variant_label" :      "r1i1p1f1",
-    "driving_experiment":          "evaluation with ERA5",
 
     "#note_institution_id":        "institution_id should be registered at https://github.com/WCRP-CORDEX/cordex-cv/issues/new ",
     "institution_id":              "GERICS",
