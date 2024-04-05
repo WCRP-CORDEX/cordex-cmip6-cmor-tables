@@ -12,7 +12,6 @@
     "variable_entry": {
         "orog": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "surface_altitude",
             "units": "m",
             "cell_methods": "area: mean",
@@ -30,7 +29,6 @@
         },
         "sftlf": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "land_area_fraction",
             "units": "%",
             "cell_methods": "area: mean",
@@ -48,7 +46,6 @@
         },
         "sftgif": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "land_ice_area_fraction",
             "units": "%",
             "cell_methods": "area: mean",
@@ -66,7 +63,6 @@
         },
         "mrsofc": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "soil_moisture_content_at_field_capacity",
             "units": "kg m-2",
             "cell_methods": "area: mean where land",
@@ -84,7 +80,6 @@
         },
         "rootd": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "root_depth",
             "units": "m",
             "cell_methods": "area: mean",
@@ -102,7 +97,6 @@
         },
         "sftlaf": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "area_fraction",
             "units": "%",
             "cell_methods": "area: mean where fresh_free_water",
@@ -120,7 +114,6 @@
         },
         "sfturf": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "area_fraction",
             "units": "%",
             "cell_methods": "area: mean where urban",
@@ -138,7 +131,6 @@
         },
         "dtb": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "bedrock_depth_below_ground_level",
             "units": "m",
             "cell_methods": "area: mean",
@@ -156,7 +148,6 @@
         },
         "areacella": {
             "frequency": "fx",
-            "modeling_realm": "atmos",
             "standard_name": "cell_area",
             "units": "m2",
             "cell_methods": "area: sum",

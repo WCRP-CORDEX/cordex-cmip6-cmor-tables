@@ -12,7 +12,6 @@
     "variable_entry": {
         "tas": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "air_temperature",
             "units": "K",
             "cell_methods": "area: mean time: point",
@@ -30,7 +29,6 @@
         },
         "pr": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "precipitation_flux",
             "units": "kg m-2 s-1",
             "cell_methods": "area: time: mean",
@@ -48,7 +46,6 @@
         },
         "evspsbl": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "water_evapotranspiration_flux",
             "units": "kg m-2 s-1",
             "cell_methods": "area: time: mean",
@@ -66,7 +63,6 @@
         },
         "huss": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "specific_humidity",
             "units": "1",
             "cell_methods": "area: mean time: point",
@@ -84,7 +80,6 @@
         },
         "hurs": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "relative_humidity",
             "units": "%",
             "cell_methods": "area: mean time: point",
@@ -102,7 +97,6 @@
         },
         "ps": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_air_pressure",
             "units": "Pa",
             "cell_methods": "area: mean time: point",
@@ -120,7 +114,6 @@
         },
         "psl": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "air_pressure_at_mean_sea_level",
             "units": "Pa",
             "cell_methods": "area: mean time: point",
@@ -138,7 +131,6 @@
         },
         "sfcWind": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "wind_speed",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -156,7 +148,6 @@
         },
         "uas": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -174,7 +165,6 @@
         },
         "vas": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -192,7 +182,6 @@
         },
         "clt": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "cloud_area_fraction",
             "units": "%",
             "cell_methods": "area: time: mean",
@@ -210,7 +199,6 @@
         },
         "rsds": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_downwelling_shortwave_flux_in_air",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -228,7 +216,6 @@
         },
         "rlds": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_downwelling_longwave_flux_in_air",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -246,7 +233,6 @@
         },
         "ts": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_temperature",
             "units": "K",
             "cell_methods": "area: mean time: point",
@@ -264,7 +250,6 @@
         },
         "prc": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "convective_precipitation_flux",
             "units": "kg m-2 s-1",
             "cell_methods": "area: time: mean",
@@ -282,7 +267,6 @@
         },
         "prsn": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "snowfall_flux",
             "units": "kg m-2 s-1",
             "cell_methods": "area: time: mean",
@@ -300,7 +284,6 @@
         },
         "tauu": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_downward_eastward_stress",
             "units": "Pa",
             "cell_methods": "area: time: mean",
@@ -318,7 +301,6 @@
         },
         "tauv": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_downward_northward_stress",
             "units": "Pa",
             "cell_methods": "area: time: mean",
@@ -336,7 +318,6 @@
         },
         "rsdsdir": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_direct_downwelling_shortwave_flux_in_air",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -354,7 +335,6 @@
         },
         "rsus": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_upwelling_shortwave_flux_in_air",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -372,7 +352,6 @@
         },
         "rlus": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_upwelling_longwave_flux_in_air",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -390,7 +369,6 @@
         },
         "rlut": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "toa_outgoing_longwave_flux",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -408,7 +386,6 @@
         },
         "rsdt": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "toa_incoming_shortwave_flux",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -426,7 +403,6 @@
         },
         "rsut": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "toa_outgoing_shortwave_flux",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -444,7 +420,6 @@
         },
         "hfls": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_upward_latent_heat_flux",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -462,7 +437,6 @@
         },
         "hfss": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "surface_upward_sensible_heat_flux",
             "units": "W m-2",
             "cell_methods": "area: time: mean",
@@ -480,7 +454,6 @@
         },
         "mrfsos": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "frozen_water_content_of_soil_layer",
             "units": "kg m-2",
             "cell_methods": "area: mean time: point",
@@ -498,7 +471,6 @@
         },
         "mrsos": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "mass_content_of_water_in_soil_layer",
             "units": "kg m-2",
             "cell_methods": "area: mean where land time: point",
@@ -516,7 +488,6 @@
         },
         "zmla": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "atmosphere_boundary_layer_thickness",
             "units": "m",
             "cell_methods": "area: mean time: point",
@@ -534,7 +505,6 @@
         },
         "prw": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "atmosphere_mass_content_of_water_vapor",
             "units": "kg m-2",
             "cell_methods": "area: mean time: point",
@@ -552,7 +522,6 @@
         },
         "clwvi": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "atmosphere_mass_content_of_cloud_condensed_water",
             "units": "kg m-2",
             "cell_methods": "area: mean time: point",
@@ -570,7 +539,6 @@
         },
         "clivi": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "atmosphere_mass_content_of_cloud_ice",
             "units": "kg m-2",
             "cell_methods": "area: mean time: point",
@@ -588,7 +556,6 @@
         },
         "ua50m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -606,7 +573,6 @@
         },
         "ua100m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -624,7 +590,6 @@
         },
         "ua150m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -642,7 +607,6 @@
         },
         "va50m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -660,7 +624,6 @@
         },
         "va100m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -678,7 +641,6 @@
         },
         "va150m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -696,7 +658,6 @@
         },
         "ta50m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "air_temperature",
             "units": "K",
             "cell_methods": "area: mean time: point",
@@ -714,7 +675,6 @@
         },
         "hus50m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "specific_humidity",
             "units": "1",
             "cell_methods": "area: mean time: point",
@@ -732,7 +692,6 @@
         },
         "evspsblpot": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "water_potential_evaporation_flux",
             "units": "kg m-2 s-1",
             "cell_methods": "area: mean where land time: mean",
@@ -750,7 +709,6 @@
         },
         "cape": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "atmosphere_convective_available_potential_energy_wrt_surface",
             "units": "J kg-1",
             "cell_methods": "area: mean time: point",
@@ -768,7 +726,6 @@
         },
         "li": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "temperature_difference_between_ambient_air_and_air_lifted_adiabatically_from_the_surface",
             "units": "K",
             "cell_methods": "area: mean time: point",
@@ -786,7 +743,6 @@
         },
         "cin": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "atmosphere_convective_inhibition_wrt_surface",
             "units": "J kg-1",
             "cell_methods": "area: mean time: point",
@@ -804,7 +760,6 @@
         },
         "ua200m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -822,7 +777,6 @@
         },
         "ua250m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -840,7 +794,6 @@
         },
         "ua300m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "eastward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -858,7 +811,6 @@
         },
         "va200m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -876,7 +828,6 @@
         },
         "va250m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
@@ -894,7 +845,6 @@
         },
         "va300m": {
             "frequency": "1hr",
-            "modeling_realm": "atmos",
             "standard_name": "northward_wind",
             "units": "m s-1",
             "cell_methods": "area: mean time: point",
