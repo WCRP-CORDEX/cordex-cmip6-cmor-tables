@@ -1273,13 +1273,34 @@
             "filename_template": "<variable_id>_<domain_id>_<driving_source_id>_<driving_experiment_id>_<driving_variant_label>_<institution_id>_<source_id>_<version_realization>_<frequency>[_<time_range>].nc"
         },
         "driving_experiment_id": {
-            "evaluation": "reanalysis simulation of the recent past",
-            "historical": "all-forcing simulation of the recent past",
-            "ssp119": "low-end scenario reaching 1.9 W m-2, based on SSP1",
-            "ssp126": "update of RCP2.6 based on SSP1",
-            "ssp245": "update of RCP4.5 based on SSP2",
-            "ssp370": "gap-filling scenario reaching 7.0 based on SSP3",
-            "ssp585": "update of RCP8.5 based on SSP5"
+            "evaluation": {
+                "driving_experiment_id": "evaluation",
+                "driving_experiment": "reanalysis simulation of the recent past"
+            },
+            "historical": {
+                "driving_experiment_id": "historical",
+                "driving_experiment": "all-forcing simulation of the recent past"
+            },
+            "ssp119": {
+                "driving_experiment_id": "ssp119",
+                "driving_experiment": "low-end scenario reaching 1.9 W m-2, based on SSP1"
+            },
+            "ssp126": {
+                "driving_experiment_id": "ssp126",
+                "driving_experiment": "update of RCP2.6 based on SSP1"
+            },
+            "ssp245": {
+                "driving_experiment_id": "ssp245",
+                "driving_experiment": "update of RCP4.5 based on SSP2"
+            },
+            "ssp370": {
+                "driving_experiment_id": "ssp370",
+                "driving_experiment": "gap-filling scenario reaching 7.0 based on SSP3"
+            },
+            "ssp585": {
+                "driving_experiment_id": "ssp585",
+                "driving_experiment": "update of RCP8.5 based on SSP5"
+            }
         },
         "mip_era": [
             "CMIP6"
