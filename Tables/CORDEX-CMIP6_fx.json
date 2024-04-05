@@ -1,13 +1,16 @@
 {
     "Header": {
+        "cmor_version": "3.5",
         "table_id": "Table fx",
-        "table_date": "04 April 2024",
+        "realm": "atmos",
+        "table_date": "05 April 2024",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
         "approx_interval": "",
+        "generic_levels": "",
         "mip_era": "CMIP6",
-        "Conventions": "CF-1.8"
+        "Conventions": "CF-1.7 CMIP-6.2"
     },
     "variable_entry": {
         "orog": {
