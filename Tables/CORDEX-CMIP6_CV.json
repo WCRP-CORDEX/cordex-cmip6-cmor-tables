@@ -34,6 +34,10 @@
             "CORDEX": "Coordinated Regional Climate Downscaling Experiment"
         },
         "domain_id": {
+            "EUR-11": {
+                "domain": "Europe",
+                "domain_id": "EUR-12"
+            },
             "SAM-50": {
                 "domain": "South America",
                 "domain_id": "SAM-50"
