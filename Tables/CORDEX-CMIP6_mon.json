@@ -7,7 +7,7 @@
         "product": "model-output",
         "approx_interval": "30.0",
         "mip_era": "CMIP6",
-        "Conventions": "CF-1.8"
+        "Conventions": "CF-1.11"
     },
     "variable_entry": {
         "tas": {
