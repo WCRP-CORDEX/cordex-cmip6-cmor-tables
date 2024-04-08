@@ -81,4 +81,17 @@ def test_cfchecker(file):
     print("checking file", file)
     checker = CFChecker()
     res = checker.checker(file)
+
+    def drop_261(errors):
+        for e in errors:
+            if "2.6.1" in e:
+                errors.remove(e)
+            break
+        return errors
+
+    # ignore due to https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/issues/72#issuecomment-2037114300
+    drop_261(res["global"]["ERROR"])
+
     assert not res["global"]["ERROR"]
+    for k, v in res["variables"].items():
+        assert not v["ERROR"]

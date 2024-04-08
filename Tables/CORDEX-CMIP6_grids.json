@@ -4,7 +4,7 @@
         "table_date": "18 November 2020",
         "missing_value": "1e20",
         "product": "output",
-        "Conventions": "CF-1.8"
+        "Conventions": "CF-1.11"
     },
     "mapping_entry": {
         "sample_user_mapping": {
