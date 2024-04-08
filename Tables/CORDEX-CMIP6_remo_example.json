@@ -43,7 +43,7 @@
     "_FORMULA_VAR_FILE":           "CORDEX-CMIP6_formula_terms.json",
 
 
-    "domain_id" :                  "EUR-11",
+    "domain_id" :                  "EUR-12",
 
     "tracking_prefix":             "hdl:21.14103",
     "_history_template":           "%s ;rewrote data to be consistent with <project_id> for variable <variable_id> found in table <table_id>.",

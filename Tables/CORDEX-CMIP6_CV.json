@@ -6,6 +6,7 @@
             "contact",
             "creation_date",
             "domain_id",
+            "domain",
             "driving_experiment_id",
             "driving_experiment",
             "driving_institution_id",
@@ -35,10 +36,6 @@
             "CORDEX": "Coordinated Regional Climate Downscaling Experiment"
         },
         "domain_id": {
-            "EUR-11": {
-                "domain": "Europe",
-                "domain_id": "EUR-12"
-            },
             "SAM-50": {
                 "domain": "South America",
                 "domain_id": "SAM-50"
