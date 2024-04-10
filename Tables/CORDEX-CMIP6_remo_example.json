@@ -4,7 +4,7 @@
 
     "#note_experiment_id":         "CMIP6 valid experiment_ids are found in CORDEX-CMIP6_CV.json",
     "experiment_id":               "evaluation",
-    "activity_id":                 "RCM",
+    "activity_id":                 "DD",
     "project_id":                  "CORDEX",
 
     "#note_run_variant":           "Text stored in attribute variant_info (recommended, not required description of run variant)",
