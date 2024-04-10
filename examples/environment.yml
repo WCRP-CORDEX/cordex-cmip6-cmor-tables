@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - cmor>=3.7.0
+  - cmor>=3.8.0
   - cartopy
   - matplotlib-base
   - numpy<1.24 # fixed until next cmor release

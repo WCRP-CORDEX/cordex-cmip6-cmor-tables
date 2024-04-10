@@ -32,7 +32,7 @@
     "#note_optional":              " **** The following descriptors are optional and may be set to an empty string ",
 
     "contact ":                    "gerics-cordex@hereon.de",
-    "further_info_url":            "https://furtherinfo.es-doc.org/.*",
+
     "comment":                     "",
     "references":                  "https://www.remo-rcm.de",
 
