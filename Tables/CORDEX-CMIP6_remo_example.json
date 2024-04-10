@@ -1,7 +1,4 @@
 {
-    "#note_source_type":           "explanation of what source_type is goes here",
-    "source_type":                 "ARCM",
-
     "#note_experiment_id":         "CMIP6 valid experiment_ids are found in CORDEX-CMIP6_CV.json",
     "experiment_id":               "evaluation",
     "activity_id":                 "DD",
