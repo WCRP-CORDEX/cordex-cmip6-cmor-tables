@@ -1220,7 +1220,7 @@
                     "GERICS"
                 ],
                 "label": "REMO2020",
-                "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "REMO2020",
                 "source_type": "ARCM",
                 "source": "REMO regional model (2022)"
@@ -1236,7 +1236,7 @@
                     "BCCR-UCAN"
                 ],
                 "label": "WRF v4.5.1-Q",
-                "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0; https://creativecommons.org/licenses/by/4.0/).",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "WRF451Q",
                 "source_type": "ARCM",
                 "source": "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q (2022)"
