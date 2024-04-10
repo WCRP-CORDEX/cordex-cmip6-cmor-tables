@@ -24,7 +24,7 @@
 
     "calendar":                    "proleptic_gregorian",
 
-    "native_resolution":           "0.11 degree",
+    "grid":                        "Rotated-pole latitude-longitude with 0.11 degree grid spacing",
 
     "#output":                     "Root directory for output (can be either a relative or full path)",
     "outpath":                     "CORDEX",
