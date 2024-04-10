@@ -1,5 +1,3 @@
-:warning: Under development, see open issues [here](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/issues) and [here](https://github.com/WCRP-CORDEX/data-request-table/issues)
-
 # cordex-cmip6-cmor-tables
 
 [![cfchecks](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/actions/workflows/cfchecks.yaml/badge.svg)](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/actions/workflows/cfchecks.yaml)
@@ -20,3 +18,7 @@ and
 ```bash
 python scripts/create-tables.py https://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/main/CORDEX-CMIP6/data-request.csv
 ```
+
+## Feedback
+
+If you have any issues regarding the cmor tables, please open an issue. If you have an issue regarding the data request, e.g., variable metadata, please check [here](https://github.com/WCRP-CORDEX/data-request-table/issues). For issues regarding the controlled vocabulary, please check [here](https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues).
