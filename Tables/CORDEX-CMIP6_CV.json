@@ -1,30 +1,31 @@
 {
     "CV": {
         "required_global_attributes": [
-            "Conventions",
             "activity_id",
             "contact",
+            "Conventions",
             "creation_date",
-            "domain_id",
             "domain",
-            "driving_experiment_id",
+            "domain_id",
             "driving_experiment",
+            "driving_experiment_id",
             "driving_institution_id",
             "driving_source_id",
             "driving_variant_label",
             "frequency",
+            "grid",
             "institution",
             "institution_id",
+            "license",
             "mip_era",
             "product",
             "project_id",
             "source",
             "source_id",
             "source_type",
-            "version_realization",
             "tracking_id",
             "variable_id",
-            "license"
+            "version_realization"
         ],
         "activity_id": {
             "DD": "Dynamical downscaling",
@@ -142,14 +143,6 @@
                 "domain": "Middle East and North Africa",
                 "domain_id": "MNA-12"
             },
-            "GAR-3": {
-                "domain": "Greater Alpine Region",
-                "domain_id": "GAR-3"
-            },
-            "CEU-3": {
-                "domain": "Central Europe",
-                "domain_id": "CEU-3"
-            },
             "SAM-25": {
                 "domain": "South America",
                 "domain_id": "SAM-25"
@@ -243,11 +236,11 @@
                 "domain_id": "MNA-50i"
             },
             "MNA-25i": {
-                "domain": "Middle East and North Africa  high res.",
+                "domain": "Middle East and North Africa",
                 "domain_id": "MNA-25i"
             },
             "EUR-12i": {
-                "domain": "Europe high res.",
+                "domain": "Europe",
                 "domain_id": "EUR-12i"
             },
             "SEA-25i": {
@@ -1295,6 +1288,9 @@
         ],
         "product": [
             "model-output"
+        ],
+        "license": [
+            "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use"
         ],
         "tracking_id": [
             "hdl:21.14103/.*"
