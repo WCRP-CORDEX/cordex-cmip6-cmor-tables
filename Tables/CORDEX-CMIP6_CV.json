@@ -1232,23 +1232,6 @@
                 "source_id": "WRF451Q",
                 "source_type": "ARCM",
                 "source": "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q (2022)"
-            },
-            "TEST-MODEL": {
-                "activity_participation": [
-                    "DD"
-                ],
-                "cohort": [
-                    "Registered"
-                ],
-                "institution_id": [
-                    "INSTITUTE",
-                    "GERICS"
-                ],
-                "label": "TEST-MODEL2",
-                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "TEST-MODEL",
-                "source_type": "ARCM",
-                "source": "My super cool RCM (2024)"
             }
         },
         "source_type": {
