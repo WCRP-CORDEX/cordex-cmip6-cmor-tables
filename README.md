@@ -19,6 +19,13 @@ and
 python scripts/create-tables.py https://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/main/CORDEX-CMIP6/data-request.csv
 ```
 
+## Current Issues
+
+Note that there might be some issues if your are using the [cmor library](https://github.com/PCMDI/cmor) with these tables, for example:
+
+* In your input dataset json file, make sure the `_cmip6_option` is removed so that more flexible CV's are possible. See also [this discussion](https://github.com/PCMDI/cmor/discussions/679#discussioncomment-3842958). You can also check the [example input file](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/blob/main/Tables/CORDEX-CMIP6_remo_example.json).
+* Make sure to use `cmor>=3.8.0` since `CORDEX-CMIP6` does not require the `further_info_url`, see also https://github.com/PCMDI/cmor/pull/727.
+
 ## Feedback
 
 If you have any issues regarding the cmor tables, please open an issue. If you have an issue regarding the data request, e.g., variable metadata, please check [here](https://github.com/WCRP-CORDEX/data-request-table/issues). For issues regarding the controlled vocabulary, please check [here](https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues).
