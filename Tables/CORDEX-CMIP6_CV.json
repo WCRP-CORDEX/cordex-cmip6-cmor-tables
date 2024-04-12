@@ -250,8 +250,7 @@
         },
         "institution_id": {
             "GERICS": "Climate Service Center Germany, Helmholtz Centre hereon GmbH, Hamburg, Germany",
-            "BCCR-UCAN": "BCCR [Bjerknes Center for Climate Research (BCCR), NORCE Norwegian Research Center, Bergen, Norway]; UCAN [Instituto de Fisica de Cantabria (IFCA), CSIC-Universidad de Cantabria, Santander, Spain]",
-            "INSTITUTE": "Test institution"
+            "BCCR-UCAN": "BCCR [Bjerknes Center for Climate Research (BCCR), NORCE Norwegian Research Center, Bergen, Norway]; UCAN [Instituto de Fisica de Cantabria (IFCA), CSIC-Universidad de Cantabria, Santander, Spain]"
         },
         "driving_source_id": {
             "4AOP-v1-5": {
@@ -1233,24 +1232,6 @@
                 "source_id": "WRF451Q",
                 "source_type": "ARCM",
                 "source": "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q (2022)"
-            },
-            "SUPER-RCM2000": {
-                "activity_participation": [
-                    "DD",
-                    "ESD"
-                ],
-                "cohort": [
-                    "Registered"
-                ],
-                "institution_id": [
-                    "GERICS",
-                    "INSTITUTION"
-                ],
-                "label": "SUPER-RCM",
-                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "SUPER-RCM2000",
-                "source_type": "ARCM",
-                "source": "Super RCM can do both DD and ESD (2024)"
             }
         },
         "source_type": {
