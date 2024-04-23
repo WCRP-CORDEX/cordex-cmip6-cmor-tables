@@ -1235,6 +1235,22 @@
                 "source_id": "WRF451Q",
                 "source_type": "ARCM",
                 "source": "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q (2022)"
+            },
+            "CNRM-ALADIN64E1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CNRM-MF"
+                ],
+                "label": "CNRM-ALADIN64E1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CNRM-ALADIN64E1",
+                "source_type": "ARCM",
+                "source": "CNRM-ALADIN regional climate model, version 6.4 E1 (2023)"
             }
         },
         "source_type": {
