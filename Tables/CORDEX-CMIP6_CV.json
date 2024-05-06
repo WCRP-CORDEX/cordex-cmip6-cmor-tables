@@ -1286,6 +1286,22 @@
                 "source_id": "CanRCM5",
                 "source_type": "ARCM",
                 "source": "Canadian Regional Climate Model version 5 (2024)"
+            },
+            "CRCM5-SN": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "OURANOS"
+                ],
+                "label": "CRCM5-SN",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CRCM5-SN",
+                "source_type": "ARCM",
+                "source": "Canadian Regional Climate Model version 5 (2015)"
             }
         },
         "source_type": {
