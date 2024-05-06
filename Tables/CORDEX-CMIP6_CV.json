@@ -1271,7 +1271,7 @@
                 "source_type": "ARCM",
                 "source": "Hadley Centre Regional Model using Global Atmosphere version 7-05 (2018)"
             },
-            "CanRCM5": {
+            "CanRCM5-SN": {
                 "activity_participation": [
                     "DD"
                 ],
@@ -1283,7 +1283,7 @@
                 ],
                 "label": "CanRCM5",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "CanRCM5",
+                "source_id": "CanRCM5-SN",
                 "source_type": "ARCM",
                 "source": "Canadian Regional Climate Model version 5 (2024)"
             },
