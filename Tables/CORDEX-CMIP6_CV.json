@@ -1281,7 +1281,7 @@
                 "institution_id": [
                     "CCCma"
                 ],
-                "label": "CanRCM5",
+                "label": "CanRCM5-SN",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CanRCM5-SN",
                 "source_type": "ARCM",
