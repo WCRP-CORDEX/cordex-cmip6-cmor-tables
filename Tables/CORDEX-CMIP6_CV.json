@@ -256,7 +256,8 @@
             "MOHC": "Met Office Hadley Centre, Exeter, UK",
             "CNRM-MF": "CNRM [Centre National de Recherches Meteorologiques, Toulouse, France]; MF [Meteo France, Toulouse, France]",
             "BOM": "Bureau of Meteorology, Melbourne, Australia",
-            "CCCma": "Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada, Victoria (British Columbia), Canada"
+            "CCCma": "Canadian Centre for Climate Modelling and Analysis, Environment and Climate Change Canada, Victoria (British Columbia), Canada",
+            "HCLIMcom-SMHI": "HARMONIE Climate Modelling Community (HCLIMcom) partner: Swedish Meteorological and Hydrological Institute (SMHI), Norrkoping, Sweden"
         },
         "driving_source_id": {
             "4AOP-v1-5": {
