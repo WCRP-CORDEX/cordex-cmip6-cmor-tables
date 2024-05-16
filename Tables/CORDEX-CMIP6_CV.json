@@ -1258,6 +1258,24 @@
                 "source_type": "ARCM",
                 "source": "Canadian Regional Climate Model version 5 (2024)"
             },
+            "HCLIM43-ALADIN": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "HCLIMcom-DMI",
+                    "HCLIMcom-METNo",
+                    "HCLIMcom-SMHI"
+                ],
+                "label": "HCLIM43-ALADIN",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "HCLIM43-ALADIN",
+                "source_type": "ARCM",
+                "source": "HARMONIE Climate model cycle 43 with ALADIN physics (2022)"
+            },
             "HadREM3-GA7-05": {
                 "activity_participation": [
                     "DD"
