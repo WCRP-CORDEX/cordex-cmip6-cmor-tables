@@ -1226,6 +1226,22 @@
                 "source_type": "AGCM",
                 "source": "Conformal Cubic Atmospheric Model version 2105 (2022)"
             },
+            "CCAM-v2112": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "UQ-DEC"
+                ],
+                "label": "CCAM v2112",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCAM-v2112",
+                "source_type": "AGCM",
+                "source": "Conformal Cubic Atmospheric Model version 2112 (2022)"
+            },
             "CCAMoc-v2112": {
                 "activity_participation": [
                     "DD"
