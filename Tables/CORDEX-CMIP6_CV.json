@@ -1210,6 +1210,22 @@
             }
         },
         "source_id": {
+            "CCAM-v2105": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "UQ-DEC"
+                ],
+                "label": "CCAM v2105",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCAM-v2105",
+                "source_type": "AGCM",
+                "source": "Conformal Cubic Atmospheric Model version 2105 (2022)"
+            },
             "CNRM-ALADIN64E1": {
                 "activity_participation": [
                     "DD"
