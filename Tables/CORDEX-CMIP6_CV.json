@@ -1358,6 +1358,22 @@
                 "source_type": "ARCM",
                 "source": "REMO regional model (2022)"
             },
+            "RegCM5-0": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "ICTP"
+                ],
+                "label": "RegCM V5 MOLOCH",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "RegCM5-0",
+                "source_type": "ARCM",
+                "source": "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core (2023)"
+            },
             "WRF451Q": {
                 "activity_participation": [
                     "DD"
