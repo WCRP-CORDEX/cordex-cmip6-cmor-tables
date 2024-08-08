@@ -7,7 +7,7 @@ repos:
 #    - id: end-of-file-fixer
     - id: trailing-whitespace
   - repo: https://github.com/psf/black
-    rev: 24.4.2
+    rev: 24.8.0
     hooks:
     - id: black
   - repo: https://github.com/pycqa/isort
@@ -17,12 +17,12 @@ repos:
         name: isort (python)
         args: ["--profile", "black"]
   - repo: https://github.com/pycqa/flake8
-    rev: 7.1.0
+    rev: 7.1.1
     hooks:
       - id: flake8
         args: ['--ignore=E501,W503']
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.8.5
+    rev: 1.8.7
     hooks:
       - id: nbqa-black
       - id: nbqa-pyupgrade
