@@ -1347,6 +1347,22 @@
                 "source_type": "ARCM",
                 "source": "Hadley Centre Regional Model using Global Atmosphere version 7-05 (2018)"
             },
+            "RACMO23E": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "KNMI"
+                ],
+                "label": "RACMO23E",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "RACMO23E",
+                "source_type": "ARCM",
+                "source": "The KNMI Regional Climate Model RACMO, version 23E (2022)"
+            },
             "REMO2020": {
                 "activity_participation": [
                     "DD"
