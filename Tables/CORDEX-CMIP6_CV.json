@@ -1348,6 +1348,25 @@
                 "source_type": "ARCM",
                 "source": "Hadley Centre Regional Model using Global Atmosphere version 7-05 (2018)"
             },
+            "ICON-CLM-202407-1-1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-DWD",
+                    "CLMcom-KIT",
+                    "CLMcom-CMCC",
+                    "CLMcom-GERICS"
+                ],
+                "label": "ICON-CLM-202407-1-1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "ICON-CLM-202407-1-1",
+                "source_type": "ARCM",
+                "source": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1 (2024)"
+            },
             "RACMO23E": {
                 "activity_participation": [
                     "DD"
