@@ -1433,6 +1433,22 @@
                 "source_type": "ARCM",
                 "source": "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core (2023)"
             },
+            "TSMP1-140-E": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-FZJ"
+                ],
+                "label": "TSMP1 v1.4.0-E",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "TSMP1-140-E",
+                "source_type": "ARCM",
+                "source": "Terrestrial Systems Modeling Platform (TSMP1) version 1.4.0: COSMO 5.01 (atm), CLM 3.5.0 (land), ParFlow 3.13.0 (hydro), OASIS3-MCT (coupler) (2023)"
+            },
             "WRF451Q": {
                 "activity_participation": [
                     "DD"
