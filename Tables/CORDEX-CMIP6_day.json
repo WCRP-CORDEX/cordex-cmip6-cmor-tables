@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table day",
-        "table_date": "05 April 2024",
+        "table_date": "07 October 2024",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -3161,7 +3161,7 @@
             "units": "m s-1",
             "cell_methods": "area: time: mean",
             "cell_measures": "area: areacella",
-            "long_name": "Eastward Wind at 250m",
+            "long_name": "Eastward Wind at 300m",
             "comment": "",
             "dimensions": "longitude latitude time height300m",
             "out_name": "ua300m",
@@ -3212,7 +3212,7 @@
             "units": "m s-1",
             "cell_methods": "area: time: mean",
             "cell_measures": "area: areacella",
-            "long_name": "Northward Wind at 350m",
+            "long_name": "Northward Wind at 300m",
             "comment": "",
             "dimensions": "longitude latitude time height300m",
             "out_name": "va300m",
