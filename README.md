@@ -16,7 +16,7 @@ pip install git+https://github.com/WCRP-CORDEX/data-request-tools.git
 ```
 and
 ```bash
-python scripts/create-tables.py https://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/main/CORDEX-CMIP6/data-request.csv
+python scripts/create-tables.py https://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/refs/heads/main/cmor-table/datasets.csv
 ```
 
 ## Current Issues
