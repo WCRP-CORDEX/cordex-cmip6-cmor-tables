@@ -1236,6 +1236,22 @@
             }
         },
         "source_id": {
+            "BARPA-R1-NN": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "BOM"
+                ],
+                "label": "BARPA-R1-NN",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "BARPA-R1-NN",
+                "source_type": "ARCM",
+                "source": "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging (2022)"
+            },
             "CCAM-v2105": {
                 "activity_participation": [
                     "DD"
