@@ -1332,6 +1332,22 @@
                 "source_type": "ARCM",
                 "source": "Canadian Regional Climate Model version 5 (2024)"
             },
+            "GCOAST-AHOIB1-1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-Hereon"
+                ],
+                "label": "GCOAST-AHOIB1-1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "GCOAST-AHOIB1-1",
+                "source_type": "AORCM",
+                "source": "Regional coupled atmosphere-hydrological discharge-ocean-sea ice-biogeochemical model based on COSMO-CLM v6.0, HD v5.2, NEMO v3.6 and ECOSMO for the North and Baltic Sea (2024)"
+            },
             "HCLIM43-ALADIN": {
                 "activity_participation": [
                     "DD"
