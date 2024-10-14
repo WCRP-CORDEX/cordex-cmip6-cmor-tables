@@ -1465,6 +1465,22 @@
                 "source_type": "ARCM",
                 "source": "REMO regional model (2022)"
             },
+            "ROAM-NBS": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "DWD-BSH"
+                ],
+                "label": "ROAM-NBS",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "ROAM-NBS",
+                "source_type": "AORCM",
+                "source": "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea (2024)"
+            },
             "RegCM5-0": {
                 "activity_participation": [
                     "DD"
