@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table 6hr",
-        "table_date": "07 October 2024",
+        "table_date": "15 October 2024",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -1347,7 +1347,7 @@
             "dimensions": "longitude latitude time",
             "out_name": "rsutcs",
             "type": "real",
-            "positive": "",
+            "positive": "up",
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
@@ -1364,7 +1364,7 @@
             "dimensions": "longitude latitude time",
             "out_name": "rlutcs",
             "type": "real",
-            "positive": "",
+            "positive": "up",
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
