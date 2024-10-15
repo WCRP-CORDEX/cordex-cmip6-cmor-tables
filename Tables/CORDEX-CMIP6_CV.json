@@ -1237,6 +1237,22 @@
             }
         },
         "source_id": {
+            "ALARO1-SFX": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "RMIB-UGent"
+                ],
+                "label": "ALARO1-SFX",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "ALARO1-SFX",
+                "source_type": "ARCM",
+                "source": "ALARO1-SFX regional climate model, ALARO1 (ALadin-AROme) cycle 43T2 with SURFEX v8.0 (2024)"
+            },
             "BARPA-R1-NN": {
                 "activity_participation": [
                     "DD"
