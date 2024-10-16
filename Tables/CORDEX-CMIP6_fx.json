@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table fx",
-        "table_date": "15 October 2024",
+        "table_date": "16 October 2024",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
