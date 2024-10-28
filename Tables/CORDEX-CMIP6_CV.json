@@ -1467,6 +1467,22 @@
                 "source_type": "ARCM",
                 "source": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1 (2024)"
             },
+            "MetUM": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "BAS"
+                ],
+                "label": "MetUMv13p0",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "MetUM",
+                "source_type": "ARCM",
+                "source": "UK Met Office Unified Model version 13.0 (2022)"
+            },
             "RACMO23E": {
                 "activity_participation": [
                     "DD"
