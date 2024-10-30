@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table mon",
-        "table_date": "16 October 2024",
+        "table_date": "30 October 2024",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -309,23 +309,6 @@
             "comment": "",
             "dimensions": "longitude latitude time",
             "out_name": "prc",
-            "type": "real",
-            "positive": "",
-            "valid_min": "",
-            "valid_max": "",
-            "ok_min_mean_abs": "",
-            "ok_max_mean_abs": ""
-        },
-        "prhmax": {
-            "frequency": "mon",
-            "standard_name": "precipitation_flux",
-            "units": "kg m-2 s-1",
-            "cell_methods": "area: mean time: mean within hours time: maximum over hours",
-            "cell_measures": "area: areacella",
-            "long_name": "Daily Maximum Hourly Precipitation Rate",
-            "comment": "Defined as maximum of the precipitation rate averaged over the whole hour.",
-            "dimensions": "longitude latitude time",
-            "out_name": "prhmax",
             "type": "real",
             "positive": "",
             "valid_min": "",
