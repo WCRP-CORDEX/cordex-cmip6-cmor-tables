@@ -1334,6 +1334,22 @@
                 "source_type": "ARCM",
                 "source": "CNRM-ALADIN regional climate model, version 6.4 E1 (2023)"
             },
+            "CNRM-ALADIN64P1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "IRD-MF"
+                ],
+                "label": "CNRM-ALADIN64P1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CNRM-ALADIN64P1",
+                "source_type": "ARCM",
+                "source": "CNRM-ALADIN regional climate model, version 6.4 P1 (2023)"
+            },
             "CRCM5-SN": {
                 "activity_participation": [
                     "DD"
