@@ -22,7 +22,7 @@ repos:
       - id: flake8
         args: ['--ignore=E501,W503']
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.8.7
+    rev: 1.9.1
     hooks:
       - id: nbqa-black
       - id: nbqa-pyupgrade
