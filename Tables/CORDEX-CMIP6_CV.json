@@ -1319,6 +1319,22 @@
                 "source_type": "AOGCM",
                 "source": "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112 (2022)"
             },
+            "CCLM6-0-1-URB": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-CMCC"
+                ],
+                "label": "CCLM6-0-1-URB",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCLM6-0-1-URB",
+                "source_type": "ARCM",
+                "source": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization (2021)"
+            },
             "CCLM6-0-1-URB-ESG": {
                 "activity_participation": [
                     "DD"
