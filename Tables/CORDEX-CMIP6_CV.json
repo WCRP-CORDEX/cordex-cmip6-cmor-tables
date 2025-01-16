@@ -1414,7 +1414,7 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CanRCM5-SN",
                 "source_type": "ARCM",
-                "source": "Canadian Regional Climate Model version 5 (2024)"
+                "source": "Canadian Regional Climate Model version 5, with spectral nudging (2024)"
             },
             "GCOAST-AHOI1-1": {
                 "activity_participation": [
