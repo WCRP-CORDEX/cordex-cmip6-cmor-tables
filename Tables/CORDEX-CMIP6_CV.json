@@ -1400,6 +1400,22 @@
                 "source_type": "ARCM",
                 "source": "Canadian Regional Climate Model version 5 (2015)"
             },
+            "CanRCM5": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CCCma"
+                ],
+                "label": "CanRCM5",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CanRCM5",
+                "source_type": "ARCM",
+                "source": "Canadian Regional Climate Model version 5 (2025)"
+            },
             "CanRCM5-SN": {
                 "activity_participation": [
                     "DD"
