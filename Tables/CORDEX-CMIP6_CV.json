@@ -1320,6 +1320,27 @@
                 "source_type": "AOGCM",
                 "source": "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112 (2022)"
             },
+            "CCLM6-0-1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-CMCC",
+                    "CLMcom-FZJ",
+                    "CLMcom-Hereon",
+                    "CLMcom-IMWM",
+                    "CLMcom-KIT",
+                    "CLMcom-LIST"
+                ],
+                "label": "CCLM6-0-1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCLM6-0-1",
+                "source_type": "ARCM",
+                "source": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 (2021)"
+            },
             "CCLM6-0-1-URB": {
                 "activity_participation": [
                     "DD"
