@@ -1375,6 +1375,22 @@
                 "source_type": "ARCM",
                 "source": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization and ECOCLIMAP-Second Generation land cover (2021)"
             },
+            "CNRM-ALADIN64C1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CNRM"
+                ],
+                "label": "CNRM-ALADIN64C1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CNRM-ALADIN64C1",
+                "source_type": "ARCM",
+                "source": "CNRM-ALADIN regional climate model, version 6.4, physics tuning specific for the CAM domain (C1) (2025)"
+            },
             "CNRM-ALADIN64E1": {
                 "activity_participation": [
                     "DD"
