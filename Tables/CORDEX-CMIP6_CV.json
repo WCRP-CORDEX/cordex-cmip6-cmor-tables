@@ -1407,6 +1407,22 @@
                 "source_type": "ARCM",
                 "source": "CNRM-ALADIN regional climate model, version 6.4 P1 (2023)"
             },
+            "CNRM-RCSM6": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CNRM"
+                ],
+                "label": "CNRM-RCSM version 6",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CNRM-RCSM6",
+                "source_type": "AORCM",
+                "source": "Version 6 of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM) (2019)"
+            },
             "CNRM-RCSM6B": {
                 "activity_participation": [
                     "DD"
