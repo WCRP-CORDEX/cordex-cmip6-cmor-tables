@@ -1605,6 +1605,22 @@
                 "source_type": "ARCM",
                 "source": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1 (2024)"
             },
+            "MedX-CM": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "NKUA"
+                ],
+                "label": "MedX-CM",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "MedX-CM",
+                "source_type": "AORCM",
+                "source": "The NKUA regional Coupled Model for the eXtended Mediterranean region (2025)"
+            },
             "MetUM": {
                 "activity_participation": [
                     "DD"
