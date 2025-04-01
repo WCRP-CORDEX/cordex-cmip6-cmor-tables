@@ -2,7 +2,7 @@
     "#note_experiment_id":         "CMIP6 valid experiment_ids are found in CORDEX-CMIP6_CV.json",
     "experiment_id":               "evaluation",
     "activity_id":                 "DD",
-    "project_id":                  "CORDEX",
+    "project_id":                  "CORDEX-CMIP6",
 
     "#note_run_variant":           "Text stored in attribute variant_info (recommended, not required description of run variant)",
     "run_variant":                 "1st realization",
@@ -46,6 +46,6 @@
     "_history_template":           "%s ;rewrote data to be consistent with <project_id> for variable <variable_id> found in table <table_id>.",
 
     "#output_path_template":   "Template for output path directory using tables keys or global attributes, these should follow the relevant data reference syntax",
-    "output_path_template":    "<project_id><mip_era><activity_id><domain_id><institution_id><driving_source_id><driving_experiment_id><driving_variant_label><source_id><version_realization><frequency><variable_id><version>",
+    "output_path_template":    "<project_id><activity_id><domain_id><institution_id><driving_source_id><driving_experiment_id><driving_variant_label><source_id><version_realization><frequency><variable_id><version>",
     "output_file_template":    "<variable_id><domain_id><driving_source_id><driving_experiment_id><driving_variant_label><institution_id><source_id><version_realization><frequency>"
  }
