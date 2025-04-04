@@ -32,7 +32,7 @@
             "ESD": "Empirical-statistical downscaling"
         },
         "project_id": {
-            "CORDEX": "Coordinated Regional Climate Downscaling Experiment"
+            "CORDEX-CMIP6": "CMIP6-driven Coordinated Regional Climate Downscaling Experiment"
         },
         "domain_id": {
             "SAM-50": {
@@ -1594,10 +1594,12 @@
                     "Registered"
                 ],
                 "institution_id": [
-                    "CLMcom-DWD",
-                    "CLMcom-KIT",
+                    "CLMcom-BTU",
                     "CLMcom-CMCC",
-                    "CLMcom-GERICS"
+                    "CLMcom-DWD",
+                    "CLMcom-GERICS",
+                    "CLMcom-Hereon",
+                    "CLMcom-KIT"
                 ],
                 "label": "ICON-CLM-202407-1-1",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
@@ -1766,7 +1768,7 @@
             "yr": "annual mean samples"
         },
         "DRS": {
-            "directory_path_template": "<project_id>/<mip_era>/<activity_id>/<domain_id>/<institution_id>/<driving_source_id>/<driving_experiment_id>/<driving_variant_label>/<source_id>/<version_realization>/<frequency>/<variable_id>/<version>",
+            "directory_path_template": "<project_id>/<activity_id>/<domain_id>/<institution_id>/<driving_source_id>/<driving_experiment_id>/<driving_variant_label>/<source_id>/<version_realization>/<frequency>/<variable_id>/<version>",
             "filename_template": "<variable_id>_<domain_id>_<driving_source_id>_<driving_experiment_id>_<driving_variant_label>_<institution_id>_<source_id>_<version_realization>_<frequency>[_<time_range>].nc"
         },
         "driving_experiment_id": {
