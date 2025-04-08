@@ -16,8 +16,8 @@
     "institution_id":              "GERICS",
 
     "#note_source_id":             "source_id (model name) must be registered at https://github.com/WCRP-CORDEX/cordex-cv/issues/new ",
-    "source_id":                   "REMO2020",
-    "version_realization":         "v1",
+    "source_id":                   "REMO2020-2-2",
+    "version_realization":         "v1-r1",
 
     "calendar":                    "proleptic_gregorian",
 
