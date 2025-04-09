@@ -1689,6 +1689,22 @@
                 "source_type": "ARCM",
                 "source": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing and Fresh-water Lake model (FLake) (2023)"
             },
+            "REMO2020-2-2-iMove": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "GERICS"
+                ],
+                "label": "REMO2020 v2.2 iMove",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "REMO2020-2-2-iMove",
+                "source_type": "ARCM",
+                "source": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMove, static) (2023)"
+            },
             "ROAM-NBS": {
                 "activity_participation": [
                     "DD"
