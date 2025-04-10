@@ -1737,6 +1737,22 @@
                 "source_type": "ARCM",
                 "source": "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core (2023)"
             },
+            "RegCM-ES1-1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "ICTP"
+                ],
+                "label": "RegCM5-0+MITgcm69d+CHyM",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "RegCM-ES1-1",
+                "source_type": "AORCM",
+                "source": "The Regional Earth System Model RegCM-ES: Evaluation of the Mediterranean Climate and Marine Biogeochemistry (2020)"
+            },
             "TSMP1-140-E": {
                 "activity_participation": [
                     "DD"
