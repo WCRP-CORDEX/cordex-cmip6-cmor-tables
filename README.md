@@ -19,6 +19,15 @@ and
 python scripts/create-tables.py https://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/refs/heads/main/cmor-table/datasets.csv
 ```
 
+## Registering Institutions, Models, or requesting changes to CVs:
+
+For registering your institution or model, please submit an issue in the [CV repository](https://github.com/WCRP-CORDEX/cordex-cmip6-cv) using these forms:
+
+* [New institution_id](https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues/new?assignees=&labels=Register+institution-id&projects=&template=institution_id.yaml&title=institution_id+registration+of+...)
+* [New source_id (i.e. model)](https://github.com/WCRP-CORDEX/cordex-cmip6-cv/issues/new?assignees=&labels=Register+source-id&projects=&template=source_id.yaml&title=source_id+registration+of+...)
+
+These forms will automatically create a pull request, where further details can be discussed.
+
 ## Current Issues
 
 Note that there might be some issues if your are using the [cmor library](https://github.com/PCMDI/cmor) with these tables, for example:
