@@ -1721,6 +1721,22 @@
                 "source_type": "AORCM",
                 "source": "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea (2024)"
             },
+            "RegCM-ES1-1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "ICTP"
+                ],
+                "label": "RegCM-ES v1.1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "RegCM-ES1-1",
+                "source_type": "AORCM",
+                "source": "The Regional Earth System Model RegCM-ES version 1.1 based on RegCM v5.0, MITgcm v6.9d and CHyM (2025)"
+            },
             "RegCM5-0": {
                 "activity_participation": [
                     "DD"
