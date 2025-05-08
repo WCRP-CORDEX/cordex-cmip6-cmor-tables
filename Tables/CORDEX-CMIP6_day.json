@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table day",
-        "table_date": "19 March 2025",
+        "table_date": "08 May 2025",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -765,7 +765,7 @@
             "cell_methods": "area: time: mean",
             "cell_measures": "area: areacella",
             "long_name": "Sea-Ice Area Percentage (Atmospheric Grid)",
-            "comment": "daily and monthly means",
+            "comment": "Percentage of grid cell covered by sea ice",
             "dimensions": "longitude latitude time",
             "out_name": "siconca",
             "type": "real",
@@ -3605,7 +3605,7 @@
             "cell_measures": "area: areacello",
             "long_name": "Sea-Ice Area Percentage (Ocean Grid)",
             "comment": "Percentage of grid cell covered by sea ice",
-            "dimensions": "longitude latitude time typesi",
+            "dimensions": "longitude latitude time",
             "out_name": "siconc",
             "type": "real",
             "positive": "",

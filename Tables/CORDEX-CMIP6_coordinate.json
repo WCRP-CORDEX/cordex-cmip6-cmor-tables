@@ -758,29 +758,6 @@
             "z_factors": "",
             "bounds_values": "",
             "generic_level_name": ""
-        },
-        "typesi": {
-            "standard_name": "area_type",
-            "units": "",
-            "axis": "",
-            "long_name": "Sea Ice area type",
-            "climatology": "",
-            "formula": "",
-            "must_have_bounds": "no",
-            "out_name": "type",
-            "positive": "",
-            "requested": "",
-            "requested_bounds": "",
-            "stored_direction": "",
-            "tolerance": "",
-            "type": "character",
-            "valid_max": "",
-            "valid_min": "",
-            "value": "sea_ice",
-            "z_bounds_factors": "",
-            "z_factors": "",
-            "bounds_values": "",
-            "generic_level_name": ""
         }
     }
 }
