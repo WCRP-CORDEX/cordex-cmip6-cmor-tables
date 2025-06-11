@@ -1866,7 +1866,10 @@
                     "Registered"
                 ],
                 "institution_id": [
-                    "BCCR-UCAN"
+                    "AUTH",
+                    "BCCR-UCAN",
+                    "CESAM-UA",
+                    "IDL-FCUL"
                 ],
                 "label": "WRF v4.5.1-Q",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
