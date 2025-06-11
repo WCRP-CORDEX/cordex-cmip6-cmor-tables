@@ -1511,6 +1511,22 @@
                 "source_type": "ARCM",
                 "source": "Canadian Regional Climate Model version 5, with spectral nudging (2024)"
             },
+            "ENEA-REG2": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "ENEA"
+                ],
+                "label": "ENEA-REG v2.0",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "ENEA-REG2",
+                "source_type": "AORCM",
+                "source": "The ENEA-REG regional Earth System Model version 2.0 based on WRF v4.2.2, MITgcm z67, and HD v1.0.2 (2021)"
+            },
             "ENEA-REG3": {
                 "activity_participation": [
                     "DD"
