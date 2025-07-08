@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table mon",
-        "table_date": "27 May 2025",
+        "table_date": "08 July 2025",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -609,10 +609,10 @@
             "frequency": "mon",
             "standard_name": "frozen_water_content_of_soil_layer",
             "units": "kg m-2",
-            "cell_methods": "area: time: mean",
+            "cell_methods": "area: mean where land time: mean",
             "cell_measures": "area: areacella",
             "long_name": "Frozen Water Content in Upper Portion of Soil Column",
-            "comment": "The mass of frosen water  in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP)",
+            "comment": "The mass of frosen water in the upper 10cm of the soil layer. Reported as missing for grid cells with no land. (not in CMIP)",
             "dimensions": "longitude latitude time",
             "out_name": "mrfsos",
             "type": "real",
