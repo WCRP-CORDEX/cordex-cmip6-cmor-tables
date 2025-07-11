@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table fx",
-        "table_date": "08 July 2025",
+        "table_date": "11 July 2025",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -99,11 +99,11 @@
             "frequency": "fx",
             "standard_name": "area_fraction",
             "units": "%",
-            "cell_methods": "area: mean where fresh_free_water",
+            "cell_methods": "area: mean",
             "cell_measures": "area: areacella",
             "long_name": "Percentage of the Grid Cell Occupied by Lake",
             "comment": "not in CMIP or in CF",
-            "dimensions": "longitude latitude",
+            "dimensions": "longitude latitude typelake",
             "out_name": "sftlaf",
             "type": "real",
             "positive": "",
