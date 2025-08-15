@@ -1894,6 +1894,22 @@
                 "source_type": "ARCM",
                 "source": "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q (2022)"
             },
+            "WRF461S-SN": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "NCAR"
+                ],
+                "label": "WRF v4.6.1-S",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "WRF461S-SN",
+                "source_type": "ARCM",
+                "source": "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration S (2024)"
+            },
             "WRF461T-SN": {
                 "activity_participation": [
                     "DD"
