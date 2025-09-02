@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table fx",
-        "table_date": "11 July 2025",
+        "table_date": "02 September 2025",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -151,7 +151,7 @@
             "standard_name": "cell_area",
             "units": "m2",
             "cell_methods": "area: sum",
-            "cell_measures": "area: areacella",
+            "cell_measures": "",
             "long_name": "Atmosphere Grid-Cell Area",
             "comment": "",
             "dimensions": "longitude latitude",
