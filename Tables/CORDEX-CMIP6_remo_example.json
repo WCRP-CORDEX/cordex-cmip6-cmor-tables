@@ -17,6 +17,7 @@
 
     "#note_source_id":             "source_id (model name) must be registered at https://github.com/WCRP-CORDEX/cordex-cv/issues/new ",
     "source_id":                   "REMO2020-2-2",
+    "source":                      "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing and Fresh-water Lake model (FLake) (2023)",
     "version_realization":         "v1-r1",
 
     "calendar":                    "proleptic_gregorian",
