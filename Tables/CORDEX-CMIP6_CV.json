@@ -1267,7 +1267,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "ALARO1-SFX",
                 "source_type": "ARCM",
-                "source": "ALARO1-SFX regional climate model, ALARO1 (ALadin-AROme) cycle 43T2 with SURFEX v8.0 (2024)"
+                "source": [
+                    "ALARO1-SFX regional climate model, ALARO1 (ALadin-AROme) cycle 43T2 with SURFEX v8.0 (2024)",
+                    "ALARO1-SFX regional climate model, ALARO1 (ALadin-AROme) cycle 43T2 with SURFEX v8.0"
+                ]
             },
             "BARPA-R1-NN": {
                 "activity_participation": [
@@ -1283,7 +1286,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "BARPA-R1-NN",
                 "source_type": "ARCM",
-                "source": "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging (2022)"
+                "source": [
+                    "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging (2022)",
+                    "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging"
+                ]
             },
             "CCAM-v2105": {
                 "activity_participation": [
@@ -1299,7 +1305,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CCAM-v2105",
                 "source_type": "AGCM",
-                "source": "Conformal Cubic Atmospheric Model version 2105 (2022)"
+                "source": [
+                    "Conformal Cubic Atmospheric Model version 2105 (2022)",
+                    "Conformal Cubic Atmospheric Model version 2105"
+                ]
             },
             "CCAM-v2112": {
                 "activity_participation": [
@@ -1315,7 +1324,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CCAM-v2112",
                 "source_type": "AGCM",
-                "source": "Conformal Cubic Atmospheric Model version 2112 (2022)"
+                "source": [
+                    "Conformal Cubic Atmospheric Model version 2112 (2022)",
+                    "Conformal Cubic Atmospheric Model version 2112"
+                ]
             },
             "CCAMoc-v2112": {
                 "activity_participation": [
@@ -1331,7 +1343,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CCAMoc-v2112",
                 "source_type": "AOGCM",
-                "source": "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112 (2022)"
+                "source": [
+                    "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112 (2022)",
+                    "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112"
+                ]
             },
             "CCLM6-0-1": {
                 "activity_participation": [
@@ -1352,7 +1367,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CCLM6-0-1",
                 "source_type": "ARCM",
-                "source": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 (2021)"
+                "source": [
+                    "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 (2021)",
+                    "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1"
+                ]
             },
             "CCLM6-0-1-URB": {
                 "activity_participation": [
@@ -1368,7 +1386,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CCLM6-0-1-URB",
                 "source_type": "ARCM",
-                "source": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization (2021)"
+                "source": [
+                    "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization (2021)",
+                    "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization"
+                ]
             },
             "CCLM6-0-1-URB-ESG": {
                 "activity_participation": [
@@ -1384,7 +1405,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CCLM6-0-1-URB-ESG",
                 "source_type": "ARCM",
-                "source": "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization and ECOCLIMAP-Second Generation land cover (2021)"
+                "source": [
+                    "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization and ECOCLIMAP-Second Generation land cover (2021)",
+                    "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization and ECOCLIMAP-Second Generation land cover"
+                ]
             },
             "CNRM-ALADIN64C1": {
                 "activity_participation": [
@@ -1400,7 +1424,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CNRM-ALADIN64C1",
                 "source_type": "ARCM",
-                "source": "CNRM-ALADIN regional climate model, version 6.4, physics tuning specific for the CAM domain (C1) (2025)"
+                "source": [
+                    "CNRM-ALADIN regional climate model, version 6.4, physics tuning specific for the CAM domain (C1) (2025)",
+                    "CNRM-ALADIN regional climate model, version 6.4, physics tuning specific for the CAM domain (C1)"
+                ]
             },
             "CNRM-ALADIN64E1": {
                 "activity_participation": [
@@ -1416,7 +1443,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CNRM-ALADIN64E1",
                 "source_type": "ARCM",
-                "source": "CNRM-ALADIN regional climate model, version 6.4 E1 (2023)"
+                "source": [
+                    "CNRM-ALADIN regional climate model, version 6.4 E1 (2023)",
+                    "CNRM-ALADIN regional climate model, version 6.4 E1"
+                ]
             },
             "CNRM-ALADIN64M1-SN": {
                 "activity_participation": [
@@ -1432,7 +1462,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CNRM-ALADIN64M1-SN",
                 "source_type": "ARCM",
-                "source": "CNRM-ALADIN regional climate model, version 6.4 M1 (Med-CORDEX domain) with spectral nudging (2023)"
+                "source": [
+                    "CNRM-ALADIN regional climate model, version 6.4 M1 (Med-CORDEX domain) with spectral nudging (2023)",
+                    "CNRM-ALADIN regional climate model, version 6.4 M1 (Med-CORDEX domain) with spectral nudging"
+                ]
             },
             "CNRM-ALADIN64P1": {
                 "activity_participation": [
@@ -1448,7 +1481,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CNRM-ALADIN64P1",
                 "source_type": "ARCM",
-                "source": "CNRM-ALADIN regional climate model, version 6.4 P1 (2023)"
+                "source": [
+                    "CNRM-ALADIN regional climate model, version 6.4 P1 (2023)",
+                    "CNRM-ALADIN regional climate model, version 6.4 P1"
+                ]
             },
             "CNRM-RCSM6-SN": {
                 "activity_participation": [
@@ -1464,7 +1500,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CNRM-RCSM6-SN",
                 "source_type": "AORCM",
-                "source": "Version 6 of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM) (2019)"
+                "source": [
+                    "Version 6 of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM) (2019)",
+                    "Version 6 of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM)"
+                ]
             },
             "CNRM-RCSM6B-SN": {
                 "activity_participation": [
@@ -1480,7 +1519,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CNRM-RCSM6B-SN",
                 "source_type": "AORCM",
-                "source": "Version 6B of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM) (2024)"
+                "source": [
+                    "Version 6B of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM) (2024)",
+                    "Version 6B of the fully-coupled Regional Climate System Model (RCSM) of the Centre National de Recherches Meteorologiques (CNRM)"
+                ]
             },
             "CRCM5-SN": {
                 "activity_participation": [
@@ -1496,7 +1538,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CRCM5-SN",
                 "source_type": "ARCM",
-                "source": "Canadian Regional Climate Model version 5 (2015)"
+                "source": [
+                    "Canadian Regional Climate Model version 5 (2015)",
+                    "Canadian Regional Climate Model version 5"
+                ]
             },
             "CanRCM5": {
                 "activity_participation": [
@@ -1512,7 +1557,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CanRCM5",
                 "source_type": "ARCM",
-                "source": "Canadian Regional Climate Model version 5 (2025)"
+                "source": [
+                    "Canadian Regional Climate Model version 5 (2025)",
+                    "Canadian Regional Climate Model version 5"
+                ]
             },
             "CanRCM5-SN": {
                 "activity_participation": [
@@ -1528,7 +1576,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "CanRCM5-SN",
                 "source_type": "ARCM",
-                "source": "Canadian Regional Climate Model version 5, with spectral nudging (2024)"
+                "source": [
+                    "Canadian Regional Climate Model version 5, with spectral nudging (2024)",
+                    "Canadian Regional Climate Model version 5, with spectral nudging"
+                ]
             },
             "ENEA-REG2": {
                 "activity_participation": [
@@ -1544,7 +1595,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "ENEA-REG2",
                 "source_type": "AORCM",
-                "source": "The ENEA-REG regional Earth System Model version 2.0 based on WRF v4.2.2, MITgcm z67, and HD v1.0.2 (2021)"
+                "source": [
+                    "The ENEA-REG regional Earth System Model version 2.0 based on WRF v4.2.2, MITgcm z67, and HD v1.0.2 (2021)",
+                    "The ENEA-REG regional Earth System Model version 2.0 based on WRF v4.2.2, MITgcm z67, and HD v1.0.2"
+                ]
             },
             "ENEA-REG3": {
                 "activity_participation": [
@@ -1560,7 +1614,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "ENEA-REG3",
                 "source_type": "AORCM",
-                "source": "The ENEA-REG regional Earth System Model version 3.0 based on WRF v4.2.2, MITgcm z67, and CaMa-Flood v4.10 (2021)"
+                "source": [
+                    "The ENEA-REG regional Earth System Model version 3.0 based on WRF v4.2.2, MITgcm z67, and CaMa-Flood v4.10 (2021)",
+                    "The ENEA-REG regional Earth System Model version 3.0 based on WRF v4.2.2, MITgcm z67, and CaMa-Flood v4.10"
+                ]
             },
             "GCOAST-AHOI1-1": {
                 "activity_participation": [
@@ -1576,7 +1633,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "GCOAST-AHOI1-1",
                 "source_type": "AORCM",
-                "source": "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on COSMO-CLM v6.0, HD v5.2 and NEMO v3.6 for the North and Baltic Sea (2024)"
+                "source": [
+                    "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on COSMO-CLM v6.0, HD v5.2 and NEMO v3.6 for the North and Baltic Sea (2024)",
+                    "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on COSMO-CLM v6.0, HD v5.2 and NEMO v3.6 for the North and Baltic Sea"
+                ]
             },
             "GCOAST-AHOI2-1": {
                 "activity_participation": [
@@ -1592,7 +1652,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "GCOAST-AHOI2-1",
                 "source_type": "AORCM",
-                "source": "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on icon-2024.07, HD v5.2 and NEMO v3.6 for the North and Baltic Sea (2024)"
+                "source": [
+                    "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on icon-2024.07, HD v5.2 and NEMO v3.6 for the North and Baltic Sea (2024)",
+                    "Regional coupled atmosphere-hydrological discharge-ocean-sea ice model based on icon-2024.07, HD v5.2 and NEMO v3.6 for the North and Baltic Sea"
+                ]
             },
             "GCOAST-AHOIB1-1": {
                 "activity_participation": [
@@ -1608,7 +1671,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "GCOAST-AHOIB1-1",
                 "source_type": "AORCM",
-                "source": "Regional coupled atmosphere-hydrological discharge-ocean-sea ice-biogeochemical model based on COSMO-CLM v6.0, HD v5.2, NEMO v3.6 and ECOSMO for the North and Baltic Sea (2024)"
+                "source": [
+                    "Regional coupled atmosphere-hydrological discharge-ocean-sea ice-biogeochemical model based on COSMO-CLM v6.0, HD v5.2, NEMO v3.6 and ECOSMO for the North and Baltic Sea (2024)",
+                    "Regional coupled atmosphere-hydrological discharge-ocean-sea ice-biogeochemical model based on COSMO-CLM v6.0, HD v5.2, NEMO v3.6 and ECOSMO for the North and Baltic Sea"
+                ]
             },
             "HCLIM43-ALADIN": {
                 "activity_participation": [
@@ -1626,7 +1692,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "HCLIM43-ALADIN",
                 "source_type": "ARCM",
-                "source": "HARMONIE Climate model cycle 43 with ALADIN physics (2022)"
+                "source": [
+                    "HARMONIE Climate model cycle 43 with ALADIN physics (2022)",
+                    "HARMONIE Climate model cycle 43 with ALADIN physics"
+                ]
             },
             "HadREM3-GA7-05": {
                 "activity_participation": [
@@ -1642,7 +1711,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "HadREM3-GA7-05",
                 "source_type": "ARCM",
-                "source": "Hadley Centre Regional Model using Global Atmosphere version 7-05 (2018)"
+                "source": [
+                    "Hadley Centre Regional Model using Global Atmosphere version 7-05 (2018)",
+                    "Hadley Centre Regional Model using Global Atmosphere version 7-05"
+                ]
             },
             "ICON-CLM-2-6-6-1-1": {
                 "activity_participation": [
@@ -1658,7 +1730,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "ICON-CLM-2-6-6-1-1",
                 "source_type": "ARCM",
-                "source": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 2-6-6-1-1 (2023)"
+                "source": [
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 2-6-6-1-1 (2023)",
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 2-6-6-1-1"
+                ]
             },
             "ICON-CLM-202401-1-1": {
                 "activity_participation": [
@@ -1674,7 +1749,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "ICON-CLM-202401-1-1",
                 "source_type": "ARCM",
-                "source": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202401-1-1 (2024)"
+                "source": [
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202401-1-1 (2024)",
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202401-1-1"
+                ]
             },
             "ICON-CLM-202407-1-1": {
                 "activity_participation": [
@@ -1697,7 +1775,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "ICON-CLM-202407-1-1",
                 "source_type": "ARCM",
-                "source": "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1 (2024)"
+                "source": [
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1 (2024)",
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1"
+                ]
             },
             "MedX-CM": {
                 "activity_participation": [
@@ -1713,7 +1794,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "MedX-CM",
                 "source_type": "AORCM",
-                "source": "The NKUA regional Coupled Model for the eXtended Mediterranean region (2025)"
+                "source": [
+                    "The NKUA regional Coupled Model for the eXtended Mediterranean region (2025)",
+                    "The NKUA regional Coupled Model for the eXtended Mediterranean region"
+                ]
             },
             "MetUM": {
                 "activity_participation": [
@@ -1729,7 +1813,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "MetUM",
                 "source_type": "ARCM",
-                "source": "UK Met Office Unified Model version 13.0 (2022)"
+                "source": [
+                    "UK Met Office Unified Model version 13.0 (2022)",
+                    "UK Met Office Unified Model version 13.0"
+                ]
             },
             "RACMO23E": {
                 "activity_participation": [
@@ -1745,7 +1832,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "RACMO23E",
                 "source_type": "ARCM",
-                "source": "The KNMI Regional Climate Model RACMO, version 23E (2022)"
+                "source": [
+                    "The KNMI Regional Climate Model RACMO, version 23E (2022)",
+                    "The KNMI Regional Climate Model RACMO, version 23E"
+                ]
             },
             "RACMO24P": {
                 "activity_participation": [
@@ -1761,7 +1851,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "RACMO24P",
                 "source_type": "ARCM",
-                "source": "The KNMI and UU/IMAU Regional Climate Model RACMO, version 24P, based on IFS cy47r1 physics and with detailed parameterizations of glaciated surfaces (2024)"
+                "source": [
+                    "The KNMI and UU/IMAU Regional Climate Model RACMO, version 24P, based on IFS cy47r1 physics and with detailed parameterizations of glaciated surfaces (2024)",
+                    "The KNMI and UU/IMAU Regional Climate Model RACMO, version 24P, based on IFS cy47r1 physics and with detailed parameterizations of glaciated surfaces"
+                ]
             },
             "REMO2020-2-2": {
                 "activity_participation": [
@@ -1777,7 +1870,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "REMO2020-2-2",
                 "source_type": "ARCM",
-                "source": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing and Fresh-water Lake model (FLake) (2023)"
+                "source": [
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing and Fresh-water Lake model (FLake) (2023)",
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing and Fresh-water Lake model (FLake)"
+                ]
             },
             "REMO2020-2-2-MR2": {
                 "activity_participation": [
@@ -1793,7 +1889,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "REMO2020-2-2-MR2",
                 "source_type": "ARCM",
-                "source": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MERRA-2 aerosol climatology and Fresh-water Lake model (FLake) (2023)"
+                "source": [
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MERRA-2 aerosol climatology and Fresh-water Lake model (FLake) (2023)",
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MERRA-2 aerosol climatology and Fresh-water Lake model (FLake)"
+                ]
             },
             "REMO2020-2-2-iMOVE": {
                 "activity_participation": [
@@ -1809,7 +1908,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "REMO2020-2-2-iMOVE",
                 "source_type": "ARCM",
-                "source": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE, static) (2023)"
+                "source": [
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE, static) (2023)",
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE, static)"
+                ]
             },
             "REMO2020-2-2-iMOVE-LUC": {
                 "activity_participation": [
@@ -1825,7 +1927,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "REMO2020-2-2-iMOVE-LUC",
                 "source_type": "ARCM",
-                "source": "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE) with land use change (LUC) from the LUCAS LUC dataset (2023)"
+                "source": [
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE) with land use change (LUC) from the LUCAS LUC dataset (2023)",
+                    "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE) with land use change (LUC) from the LUCAS LUC dataset"
+                ]
             },
             "ROAM-NBS": {
                 "activity_participation": [
@@ -1841,7 +1946,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "ROAM-NBS",
                 "source_type": "AORCM",
-                "source": "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea (2024)"
+                "source": [
+                    "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea (2024)",
+                    "Regional coupled ocean-atmosphere model based on icon-2024.07 and NEMO4.2.0 for the North and Baltic Sea"
+                ]
             },
             "RegCM-ES1-1": {
                 "activity_participation": [
@@ -1857,7 +1965,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "RegCM-ES1-1",
                 "source_type": "AORCM",
-                "source": "The Regional Earth System Model RegCM-ES version 1.1 based on RegCM v5.0, MITgcm v6.9d and CHyM (2025)"
+                "source": [
+                    "The Regional Earth System Model RegCM-ES version 1.1 based on RegCM v5.0, MITgcm v6.9d and CHyM (2025)",
+                    "The Regional Earth System Model RegCM-ES version 1.1 based on RegCM v5.0, MITgcm v6.9d and CHyM"
+                ]
             },
             "RegCM5-0": {
                 "activity_participation": [
@@ -1873,7 +1984,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "RegCM5-0",
                 "source_type": "ARCM",
-                "source": "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core (2023)"
+                "source": [
+                    "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core (2023)",
+                    "The ICTP RegCM version 5 using non hydrostatic MOLOCH dynamical core"
+                ]
             },
             "TSMP1-140-E": {
                 "activity_participation": [
@@ -1889,7 +2003,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "TSMP1-140-E",
                 "source_type": "ARCM",
-                "source": "Terrestrial Systems Modeling Platform (TSMP1) version 1.4.0: COSMO 5.01 (atm), CLM 3.5.0 (land), ParFlow 3.13.0 (hydro), OASIS3-MCT (coupler) (2023)"
+                "source": [
+                    "Terrestrial Systems Modeling Platform (TSMP1) version 1.4.0: COSMO 5.01 (atm), CLM 3.5.0 (land), ParFlow 3.13.0 (hydro), OASIS3-MCT (coupler) (2023)",
+                    "Terrestrial Systems Modeling Platform (TSMP1) version 1.4.0: COSMO 5.01 (atm), CLM 3.5.0 (land), ParFlow 3.13.0 (hydro), OASIS3-MCT (coupler)"
+                ]
             },
             "WRF451Q": {
                 "activity_participation": [
@@ -1908,7 +2025,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "WRF451Q",
                 "source_type": "ARCM",
-                "source": "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q (2022)"
+                "source": [
+                    "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q (2022)",
+                    "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q"
+                ]
             },
             "WRF461S-SN": {
                 "activity_participation": [
@@ -1924,7 +2044,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "WRF461S-SN",
                 "source_type": "ARCM",
-                "source": "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration S (2024)"
+                "source": [
+                    "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration S (2024)",
+                    "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration S"
+                ]
             },
             "WRF461T-SN": {
                 "activity_participation": [
@@ -1940,7 +2063,10 @@
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
                 "source_id": "WRF461T-SN",
                 "source_type": "ARCM",
-                "source": "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration T (2024)"
+                "source": [
+                    "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration T (2024)",
+                    "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration T"
+                ]
             }
         },
         "source_type": {
