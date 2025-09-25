@@ -35,14 +35,14 @@ Downloading file 'rotated-latitude-longitude.csv' from 'https://raw.githubuserco
 /home/runner/micromamba/envs/cordex-examples/lib/python3.9/site-packages/cdo/cdo.py:10: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
   from pkg_resources import parse_version
 ----- stderr -----
-/tmp/ipykernel_3658/3805428128.py:14: DeprecationWarning: 'CORDEX_domain' keyword is deprecated, please use the 'domain_id' keyword instead
+/tmp/ipykernel_3672/3805428128.py:14: DeprecationWarning: 'CORDEX_domain' keyword is deprecated, please use the 'domain_id' keyword instead
   filename = cmor.cmorize_variable(
 /home/runner/micromamba/envs/cordex-examples/lib/python3.9/site-packages/cf_xarray/accessor.py:701: FutureWarning: The return type of `Dataset.dims` will be changed to return a set of dimension names in future, in order to be more consistent with `DataArray.dims`. To access a mapping from dimension names to lengths, please use `Dataset.sizes`.
   unused_keys = set(attribute.keys()) - set(inverted)
 /home/runner/micromamba/envs/cordex-examples/lib/python3.9/site-packages/cf_xarray/accessor.py:702: FutureWarning: The return type of `Dataset.dims` will be changed to return a set of dimension names in future, in order to be more consistent with `DataArray.dims`. To access a mapping from dimension names to lengths, please use `Dataset.sizes`.
   for key, value in attribute.items():
 ----- stderr -----
-/home/runner/micromamba/envs/cordex-examples/lib/python3.9/site-packages/cordex/cmor/utils.py:334: UserWarning: writing temporary table to /tmp/tmp31pxa32c
+/home/runner/micromamba/envs/cordex-examples/lib/python3.9/site-packages/cordex/cmor/utils.py:334: UserWarning: writing temporary table to /tmp/tmp54pj9zki
   warn(f"writing temporary table to {filename}")
 
 [2;34;47mC Traceback:
