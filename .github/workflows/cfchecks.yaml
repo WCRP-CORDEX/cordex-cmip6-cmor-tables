@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   test:
-    name: py${{ matrix.python-version }}
+    name: py${{ matrix.python-version }}-cmor${{ matrix.cmor-version }}
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -28,6 +28,7 @@ jobs:
         os: ["ubuntu-latest"]
         # python versions
         python-version: ["3.10", "3.11", "3.12", "3.13"]
+        cmor-version: ["3.9", "3.10", "3.11", "3.12"]
     steps:
       - uses: actions/checkout@v5
         with:
@@ -40,10 +41,11 @@ jobs:
         uses: mamba-org/setup-micromamba@v2
         with:
           cache-downloads: true
-          cache-downloads-key: "${{runner.os}}-${{runner.arch}}-py${{matrix.python-version}}"
+          cache-downloads-key: "${{runner.os}}-${{runner.arch}}-py${{matrix.python-version}}-cmor${{matrix.cmor-version}}"
           environment-file: ci/environment.yml
           create-args: >-
             python=${{ matrix.python-version }}
+            cmor=${{ matrix.cmor-version }}
       - name: Version info
         run: |
           conda info -a
@@ -55,6 +57,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Test results for ${{ runner.os }}-${{ matrix.python-version }}
+          name: Test results for ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.cmor-version }}
           path: ./CORDEX
           retention-days: 15
