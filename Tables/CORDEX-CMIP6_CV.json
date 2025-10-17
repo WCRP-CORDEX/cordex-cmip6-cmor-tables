@@ -1781,6 +1781,25 @@
                     "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-1"
                 ]
             },
+            "ICON-CLM-202407-1-2": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-DWD"
+                ],
+                "label": "ICON-CLM-202407-1-2",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "ICON-CLM-202407-1-2",
+                "source_type": "ARCM",
+                "source": [
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-2 (2025)",
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-2"
+                ]
+            },
             "MedX-CM": {
                 "activity_participation": [
                     "DD"
