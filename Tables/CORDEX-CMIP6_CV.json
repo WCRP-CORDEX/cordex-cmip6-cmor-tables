@@ -1349,6 +1349,25 @@
                     "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112"
                 ]
             },
+            "CCLM5-0-9-NEMOMED12-3-6": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-GUF"
+                ],
+                "label": "CCLM5-0-9-NEMOMED12-3-6",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCLM5-0-9-NEMOMED12-3-6",
+                "source_type": "AORCM",
+                "source": [
+                    "COSMO-CLM v5 coupled via OASIS with NEMO-MED v3.6 (river discharge with TRIP) on an extended EURO-CORDEX domain. (2021)",
+                    "COSMO-CLM v5 coupled via OASIS with NEMO-MED v3.6 (river discharge with TRIP) on an extended EURO-CORDEX domain."
+                ]
+            },
             "CCLM6-0-1": {
                 "activity_participation": [
                     "DD"
