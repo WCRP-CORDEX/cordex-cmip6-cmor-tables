@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table mon",
-        "table_date": "19 September 2025",
+        "table_date": "12 December 2025",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -3216,6 +3216,23 @@
             "comment": "",
             "dimensions": "longitude latitude time height300m",
             "out_name": "va300m",
+            "type": "real",
+            "positive": "",
+            "valid_min": "",
+            "valid_max": "",
+            "ok_min_mean_abs": "",
+            "ok_max_mean_abs": ""
+        },
+        "sfturf": {
+            "frequency": "mon",
+            "standard_name": "area_fraction",
+            "units": "%",
+            "cell_methods": "area: time: mean",
+            "cell_measures": "area: areacella",
+            "long_name": "Percentage of the Grid Cell Occupied by Urban Area",
+            "comment": "not in CMIP or in CF",
+            "dimensions": "longitude latitude time typeurban",
+            "out_name": "sfturf",
             "type": "real",
             "positive": "",
             "valid_min": "",
