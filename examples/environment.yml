@@ -27,5 +27,6 @@ dependencies:
   - requests
   - aiohttp
   - pint
-  - pip:
-    - git+https://github.com/euro-cordex/py-cordex.git # always use master for now
+  - py-cordex
+  #- pip:
+  #  - git+https://github.com/euro-cordex/py-cordex.git # always use master for now
