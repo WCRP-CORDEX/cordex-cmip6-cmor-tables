@@ -20,7 +20,7 @@ dependencies:
   - compliance-checker
   - cdo
   - python-cdo
-  - jupyter-book
+  - jupyter-book<2
   - intake-esm
   - ghp-import
   - fsspec
