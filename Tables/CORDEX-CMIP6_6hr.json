@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table 6hr",
-        "table_date": "12 December 2025",
+        "table_date": "13 January 2026",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",

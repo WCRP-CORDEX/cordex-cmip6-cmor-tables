@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table 1hr",
-        "table_date": "12 December 2025",
+        "table_date": "13 January 2026",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -868,7 +868,7 @@
             "cell_measures": "area: areacello",
             "long_name": "Sea Surface Height Above Geoid",
             "comment": "This is the dynamic sea level, so should have zero global area mean. It should not include inverse barometer depressions from sea ice.",
-            "dimensions": "longitude latitude time",
+            "dimensions": "longitude latitude time1",
             "out_name": "zos",
             "type": "",
             "positive": "",
