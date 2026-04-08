@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table 6hr",
-        "table_date": "16 February 2026",
+        "table_date": "08 April 2026",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -170,7 +170,7 @@
             "cell_methods": "area: mean time: point",
             "cell_measures": "area: areacella",
             "long_name": "Snow Area Percentage",
-            "comment": "",
+            "comment": "Percentage of each grid cell that is occupied by snow that rests on land portion of cell.",
             "dimensions": "longitude latitude time1",
             "out_name": "snc",
             "type": "real",
