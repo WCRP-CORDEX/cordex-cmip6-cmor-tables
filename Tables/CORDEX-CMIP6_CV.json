@@ -1960,7 +1960,7 @@
                     "The KNMI Regional Climate Model RACMO, version 23E"
                 ]
             },
-            "RACMO24P": {
+            "RACMO24p-NN": {
                 "activity_participation": [
                     "DD"
                 ],
@@ -1970,9 +1970,9 @@
                 "institution_id": [
                     "UU-IMAU"
                 ],
-                "label": "RACMO24P",
+                "label": "RACMO24p-NN",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "RACMO24P",
+                "source_id": "RACMO24p-NN",
                 "source_type": "ARCM",
                 "source": [
                     "The KNMI and UU/IMAU Regional Climate Model RACMO, version 24P, based on IFS cy47r1 physics and with detailed parameterizations of glaciated surfaces (2024)",
