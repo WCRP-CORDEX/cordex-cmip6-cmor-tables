@@ -1,9 +1,9 @@
 import os
 import shutil
 
+import cfchecker.cfchecks
 import cordex as cx
 import pytest
-import cfchecker.cfchecks
 from cfchecker.cfchecks import CFChecker
 from cordex import cmor as cxcmor
 
