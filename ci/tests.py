@@ -1,18 +1,11 @@
 import os
 import shutil
 
-import cfchecker.cfchecks
 import cordex as cx
 import pytest
-from cfchecker.cfchecks import CFChecker
 from cordex import cmor as cxcmor
 
 # import subprocess
-
-# see https://github.com/cedadev/cf-checker/issues/122
-cfchecker.cfchecks.STANDARDNAME = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/cf-standard-names/current/src/cf-standard-name-table.xml"
-cfchecker.cfchecks.AREATYPES = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/area-type-table/current/src/area-type-table.xml"
-cfchecker.cfchecks.REGIONNAMES = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/standardized-region-list/standardized-region-list.xml"
 
 table_dir = "./Tables"
 
@@ -83,8 +76,15 @@ def mon_file():
 
 @pytest.mark.parametrize("file", [fx_file(), mon_file()])
 def test_cfchecker(file):
+    from cfchecker.cfchecks import CFChecker
+
     print("checking file", file)
     checker = CFChecker()
+    # see https://github.com/cedadev/cf-checker/issues/122
+    checker.standardNames = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/cf-standard-names/current/src/cf-standard-name-table.xml"
+    checker.areaTypes = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/area-type-table/current/src/area-type-table.xml"
+    checker.regionNames = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/standardized-region-list/standardized-region-list.xml"
+
     res = checker.checker(file)
 
     def drop_261(errors):
