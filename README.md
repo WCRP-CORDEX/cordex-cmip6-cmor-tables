@@ -16,7 +16,7 @@ pip install git+https://github.com/WCRP-CORDEX/data-request-tools.git
 ```
 and
 ```bash
-python scripts/create-tables.py https://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/refs/heads/main/cmor-table/datasets.csv
+create-cmor-tables ttps://raw.githubusercontent.com/WCRP-CORDEX/data-request-table/refs/heads/main/cmor-table/datasets.csv --coords --output Tables
 ```
 
 ## Registering Institutions, Models, or requesting changes to CVs:
