@@ -10,9 +10,9 @@ from cordex import cmor as cxcmor
 # import subprocess
 
 # see https://github.com/cedadev/cf-checker/issues/122
-checker.cfchecks.STANDARDNAME = "https://cf-convention.github.io/Data/cf-standard-names/current/src/cf-standard-name-table.xml"
-checker.cfchecks.AREATYPES = "http://cf-convention.github.io/Data/area-type-table/current/src/area-type-table.xml"
-checker.cfchecks.REGIONNAMES = "http://cf-convention.github.io/Data/standardized-region-list/standardized-region-list.xml"
+cfchecker.cfchecks.STANDARDNAME = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/cf-standard-names/current/src/cf-standard-name-table.xml"
+cfchecker.cfchecks.AREATYPES = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/area-type-table/current/src/area-type-table.xml"
+cfchecker.cfchecks.REGIONNAMES = "https://raw.githubusercontent.com/cf-convention/cf-convention.github.io/refs/heads/main/Data/standardized-region-list/standardized-region-list.xml"
 
 table_dir = "./Tables"
 
