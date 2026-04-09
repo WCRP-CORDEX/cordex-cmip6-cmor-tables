@@ -80,6 +80,10 @@ def mon_file():
 def test_cfchecker(file):
     print("checking file", file)
     checker = CFChecker()
+    # see https://github.com/cedadev/cf-checker/issues/122
+    cfchecker.cfchecks.STANDARDNAME = "https://cf-convention.github.io/Data/cf-standard-names/current/src/cf-standard-name-table.xml"
+    cfchecker.cfchecks.AREATYPES = 'http://cf-convention.github.io/Data/area-type-table/current/src/area-type-table.xml'
+    cfchecker.cfchecks.REGIONNAMES = 'http://cf-convention.github.io/Data/standardized-region-list/standardized-region-list.xml'
     res = checker.checker(file)
 
     def drop_261(errors):
