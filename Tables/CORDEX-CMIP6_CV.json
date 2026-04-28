@@ -1301,7 +1301,7 @@
                     "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging"
                 ]
             },
-            "CCAM-2307conv17-SN": {
+            "CCAM-v2307conv17-SN": {
                 "activity_participation": [
                     "DD"
                 ],
@@ -1311,16 +1311,16 @@
                 "institution_id": [
                     "UNSW-CCRC"
                 ],
-                "label": "CCAM-2307conv17-SN",
+                "label": "CCAM-v2307conv17-SN",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "CCAM-2307conv17-SN",
+                "source_id": "CCAM-v2307conv17-SN",
                 "source_type": "AGCM",
                 "source": [
                     "Conformal Cubic Atmospheric Model version 2307 configuration 2017, with spectral nudging (2023)",
                     "Conformal Cubic Atmospheric Model version 2307 configuration 2017, with spectral nudging"
                 ]
             },
-            "CCAM-2307conv21-SN": {
+            "CCAM-v2307conv21-SN": {
                 "activity_participation": [
                     "DD"
                 ],
@@ -1330,16 +1330,16 @@
                 "institution_id": [
                     "UNSW-CCRC"
                 ],
-                "label": "CCAM-2307conv21-SN",
+                "label": "CCAM-v2307conv21-SN",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "CCAM-2307conv21-SN",
+                "source_id": "CCAM-v2307conv21-SN",
                 "source_type": "AGCM",
                 "source": [
                     "Conformal Cubic Atmospheric Model version 2307 configuration 2021, with spectral nudging (2023)",
                     "Conformal Cubic Atmospheric Model version 2307 configuration 2021, with spectral nudging"
                 ]
             },
-            "CCAM-2507-SN": {
+            "CCAM-v2507-SN": {
                 "activity_participation": [
                     "DD"
                 ],
@@ -1349,9 +1349,9 @@
                 "institution_id": [
                     "UNSW-CCRC"
                 ],
-                "label": "CCAM-2507-SN",
+                "label": "CCAM-v2507-SN",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "CCAM-2507-SN",
+                "source_id": "CCAM-v2507-SN",
                 "source_type": "AGCM",
                 "source": [
                     "Conformal Cubic Atmospheric Model version 2507 with spectral nudging (2025)",
