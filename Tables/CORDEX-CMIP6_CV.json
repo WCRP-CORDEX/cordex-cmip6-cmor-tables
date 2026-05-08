@@ -1301,6 +1301,44 @@
                     "Bureau of Meteorology Atmospheric Regional Projections for Australia (BARPA) Regional Climate Model version 1 with Newtonian nudging"
                 ]
             },
+            "CCAM-v2105": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "UQ-DEC"
+                ],
+                "label": "CCAM v2105",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCAM-v2105",
+                "source_type": "AGCM",
+                "source": [
+                    "Conformal Cubic Atmospheric Model version 2105 (2022)",
+                    "Conformal Cubic Atmospheric Model version 2105"
+                ]
+            },
+            "CCAM-v2112": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "UQ-DEC"
+                ],
+                "label": "CCAM v2112",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCAM-v2112",
+                "source_type": "AGCM",
+                "source": [
+                    "Conformal Cubic Atmospheric Model version 2112 (2022)",
+                    "Conformal Cubic Atmospheric Model version 2112"
+                ]
+            },
             "CCAM-v2307conv17-SN": {
                 "activity_participation": [
                     "DD"
@@ -1356,44 +1394,6 @@
                 "source": [
                     "Conformal Cubic Atmospheric Model version 2507 with spectral nudging (2025)",
                     "Conformal Cubic Atmospheric Model version 2507 with spectral nudging"
-                ]
-            },
-            "CCAM-v2105": {
-                "activity_participation": [
-                    "DD"
-                ],
-                "cohort": [
-                    "Registered"
-                ],
-                "institution_id": [
-                    "UQ-DEC"
-                ],
-                "label": "CCAM v2105",
-                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "CCAM-v2105",
-                "source_type": "AGCM",
-                "source": [
-                    "Conformal Cubic Atmospheric Model version 2105 (2022)",
-                    "Conformal Cubic Atmospheric Model version 2105"
-                ]
-            },
-            "CCAM-v2112": {
-                "activity_participation": [
-                    "DD"
-                ],
-                "cohort": [
-                    "Registered"
-                ],
-                "institution_id": [
-                    "UQ-DEC"
-                ],
-                "label": "CCAM v2112",
-                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
-                "source_id": "CCAM-v2112",
-                "source_type": "AGCM",
-                "source": [
-                    "Conformal Cubic Atmospheric Model version 2112 (2022)",
-                    "Conformal Cubic Atmospheric Model version 2112"
                 ]
             },
             "CCAMoc-v2112": {
@@ -1904,6 +1904,28 @@
                 "source": [
                     "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-3 (2025)",
                     "ICON model in Climate Limited-area Mode (ICON-CLM), Version 202407-1-3"
+                ]
+            },
+            "ICON-CLM-202410-2-1-x2yn2": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CLMcom-DWD",
+                    "CLMcom-Hereon",
+                    "CLMcom-KIT",
+                    "CLMcom-BTU"
+                ],
+                "label": "ICON-CLM-202410-2-1-x2yn2",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "ICON-CLM-202410-2-1-x2yn2",
+                "source_type": "ARCM",
+                "source": [
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version  202410-2-1, convection-permitting setup with two-step nesting (x2yn2),  intermediate ICON-CLM-202407-1-1 simulation at 12 km spatial grid  spacing using convection parameterization (2025)",
+                    "ICON model in Climate Limited-area Mode (ICON-CLM), Version  202410-2-1, convection-permitting setup with two-step nesting (x2yn2),  intermediate ICON-CLM-202407-1-1 simulation at 12 km spatial grid  spacing using convection parameterization"
                 ]
             },
             "MedX-CM": {
