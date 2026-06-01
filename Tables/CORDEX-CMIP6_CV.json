@@ -1417,6 +1417,25 @@
                     "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2112"
                 ]
             },
+            "CCAMoc-v2203-SN": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CSIRO"
+                ],
+                "label": "CCAMoc v2203 SN",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CCAMoc-v2203-SN",
+                "source_type": "AOGCM",
+                "source": [
+                    "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2203 with spectral nudging (2022)",
+                    "Conformal Cubic Atmospheric Model, ocean-coupled configuration, version 2203 with spectral nudging"
+                ]
+            },
             "CCLM5-0-9-NEMOMED12-3-6": {
                 "activity_participation": [
                     "DD"
