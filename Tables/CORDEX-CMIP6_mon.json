@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table mon",
-        "table_date": "28 May 2026",
+        "table_date": "19 June 2026",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -3064,6 +3064,23 @@
             "dimensions": "longitude latitude time",
             "out_name": "rhop",
             "type": "",
+            "positive": "",
+            "valid_min": "",
+            "valid_max": "",
+            "ok_min_mean_abs": "",
+            "ok_max_mean_abs": ""
+        },
+        "rivo": {
+            "frequency": "mon",
+            "standard_name": "outgoing_water_volume_transport_along_river_channel",
+            "units": "m3 s-1",
+            "cell_methods": "area: mean where land time: mean",
+            "cell_measures": "area: areacellr",
+            "long_name": "River Discharge",
+            "comment": "Outflow of River Water from Cell",
+            "dimensions": "longitude latitude time",
+            "out_name": "rivo",
+            "type": "real",
             "positive": "",
             "valid_min": "",
             "valid_max": "",

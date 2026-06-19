@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table fx",
-        "table_date": "28 May 2026",
+        "table_date": "19 June 2026",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -37,6 +37,23 @@
             "comment": "Cell areas for any grid used to report ocean variables and variables which are requested as used on the model ocean grid (e.g. hfsso, which is a downward heat flux from the atmosphere interpolated onto the ocean grid). These cell areas should be defined to enable exact calculation of global integrals (e.g., of vertical fluxes of energy at the surface and top of the atmosphere).",
             "dimensions": "longitude latitude ",
             "out_name": "areacello",
+            "type": "real",
+            "positive": "",
+            "valid_min": "",
+            "valid_max": "",
+            "ok_min_mean_abs": "",
+            "ok_max_mean_abs": ""
+        },
+        "areacellr": {
+            "frequency": "fx",
+            "standard_name": "cell_area",
+            "units": "m2",
+            "cell_methods": "area: sum",
+            "cell_measures": "",
+            "long_name": "Grid-Cell Area for River Model Variables",
+            "comment": "For river routing model, if grid differs from the atmospheric grid.",
+            "dimensions": "longitude latitude",
+            "out_name": "areacellr",
             "type": "real",
             "positive": "",
             "valid_min": "",
