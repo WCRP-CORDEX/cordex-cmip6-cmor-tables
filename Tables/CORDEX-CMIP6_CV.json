@@ -2257,6 +2257,31 @@
                     "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration T (2024)",
                     "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration T"
                 ]
+            },
+            "WRF461U": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CYI",
+                    "IDL-FCUL",
+                    "IFCA",
+                    "IUM-FDU",
+                    "SENAMHI-PER",
+                    "ULL",
+                    "UNIST"
+                ],
+                "label": "WRF v4.6.1-U",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "WRF461U",
+                "source_type": "ARCM",
+                "source": [
+                    "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration U (2024)",
+                    "Weather Research and Forecasting model version 4.6.1, CORDEX WRF Community configuration U"
+                ]
             }
         },
         "source_type": {
