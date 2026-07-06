@@ -2220,6 +2220,25 @@
                     "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q"
                 ]
             },
+            "WRF451V": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "SENAMHI-PER"
+                ],
+                "label": "WRF v4.5.1-V",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "WRF451V",
+                "source_type": "ARCM",
+                "source": [
+                    "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration V (2023)",
+                    "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration V"
+                ]
+            },
             "WRF461S-SN": {
                 "activity_participation": [
                     "DD"
