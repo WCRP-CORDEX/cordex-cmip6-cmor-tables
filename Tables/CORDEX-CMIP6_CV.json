@@ -2043,6 +2043,7 @@
                 ],
                 "institution_id": [
                     "CLMcom-DWD",
+                    "CLMcom-GERICS",
                     "CLMcom-Hereon",
                     "CLMcom-KIT",
                     "CLMcom-BTU"
@@ -2390,6 +2391,7 @@
                     "Registered"
                 ],
                 "institution_id": [
+                    "CESGA",
                     "CYI",
                     "IDL-FCUL",
                     "IFCA",
