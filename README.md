@@ -32,6 +32,7 @@ These forms will automatically create a pull request, where further details can 
 
 Note that there might be some issues if your are using the [cmor library](https://github.com/PCMDI/cmor) with these tables, for example:
 
+* It is now recommended to use `cmor>=3.14` to have a better default chunking setup that makes the [recommended application `cmip7-repack`](https://github.com/WCRP-CORDEX/archive-specifications/issues/38) much faster.
 * UPDATE: resolved since [3.11.0](https://github.com/PCMDI/cmor/issues/774) ~~The [archive specifications](https://zenodo.org/records/10961069) recommed to use `crs` as the name of the grid mapping variable. However, using cmor, it doensn't seem to be possible to properly adapt the grid mapping's variable name (https://github.com/WCRP-CORDEX/archive-specifications/issues/17)~~.
 * In your input dataset json file, make sure the `_cmip6_option` is removed so that more flexible CV's are possible. See also [this discussion](https://github.com/PCMDI/cmor/discussions/679#discussioncomment-3842958). You can also check the [example input file](https://github.com/WCRP-CORDEX/cordex-cmip6-cmor-tables/blob/main/Tables/CORDEX-CMIP6_remo_example.json).
 * Make sure to use `cmor>=3.8.0` since `CORDEX-CMIP6` does not require the `further_info_url`, see also https://github.com/PCMDI/cmor/pull/727. Otherwise, a default `further_info_url` will be added by cmor that is created from related attributes but will probably point to an invalid URL.
