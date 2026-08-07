@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table mon",
-        "table_date": "30 July 2026",
+        "table_date": "07 August 2026",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -4748,10 +4748,10 @@
             "out_name": "tos",
             "type": "real",
             "positive": "",
-            "valid_min": "257.4 s",
-            "valid_max": "325.2 s",
-            "ok_min_mean_abs": "272.0 s",
-            "ok_max_mean_abs": "303.5 s"
+            "valid_min": "",
+            "valid_max": "",
+            "ok_min_mean_abs": "",
+            "ok_max_mean_abs": ""
         },
         "toz": {
             "frequency": "mon",
