@@ -1,7 +1,7 @@
 {
     "Header": {
         "table_id": "Table 1hr",
-        "table_date": "07 August 2026",
+        "table_date": "07 September 2026",
         "missing_value": "1e20",
         "int_missing_value": "-999",
         "product": "model-output",
@@ -311,6 +311,23 @@
             "out_name": "hfss",
             "type": "real",
             "positive": "up",
+            "valid_min": "",
+            "valid_max": "",
+            "ok_min_mean_abs": "",
+            "ok_max_mean_abs": ""
+        },
+        "hfso": {
+            "frequency": "1hr",
+            "standard_name": "downward_heat_flux_in_soil",
+            "units": "W m-2",
+            "cell_methods": "area: time: mean",
+            "cell_measures": "area: areacella",
+            "long_name": "Ground Heat Flux",
+            "comment": "",
+            "dimensions": "longitude latitude time",
+            "out_name": "hfso",
+            "type": "real",
+            "positive": "down",
             "valid_min": "",
             "valid_max": "",
             "ok_min_mean_abs": "",
