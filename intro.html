@@ -340,7 +340,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -356,6 +358,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-cmorization-mean">What does <em>cmorization</em> mean?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -370,8 +380,20 @@
 <p>This is a small collection of examples of how cmorized CORDEX-CMIP6 datasets could look like.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Current archive specifications for CORDEX-CMIP6 are not available yet.</p>
+<p>Current archive specifications for CORDEX-CMIP6 available under <a class="reference external" href="https://wcrp-cordex.github.io/archive-specifications">https://wcrp-cordex.github.io/archive-specifications</a></p>
 </div>
+<section id="what-does-cmorization-mean">
+<h2>What does <em>cmorization</em> mean?<a class="headerlink" href="#what-does-cmorization-mean" title="Link to this heading">#</a></h2>
+<p>The process of rewriting climate model output (cmor) to a common intercomparable data model is usually referred to as <em>cmorization</em>.
+The goal is to produce <a class="reference external" href="https://cfconventions.org/">CF-compliant</a> inter-comparable climate model output for use in
+model intercomparison projects (MIPs) like, e.g., <a class="reference external" href="https://wcrp-cmip.org/cmip-phase-6-cmip6">CMIP6</a>.
+Usually, the <a class="reference external" href="https://cmor.llnl.gov/">cmor</a> library is used which provides APIs for C, Fortran and python and
+is also linked to, e.g., the <a class="reference external" href="https://code.mpimet.mpg.de/projects/cdo/wiki/CDO_CMOR_Operator">cmor operator</a>
+of the climate data operator tool (CDO).</p>
+<p>Data and metadata conventions for a MIP are usually stored in the form of json tables that contain entries for each
+variable and its metadata. Metadata is attached in the form of NetCDF variable or global attributes. Additionally,
+data might have to be manipulated (e.g., unit conversion or conversion of precision)</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -421,6 +443,23 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-cmorization-mean">What does <em>cmorization</em> mean?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
