@@ -40,7 +40,7 @@
     "_AXIS_ENTRY_FILE":            "CORDEX-CMIP6_coordinate.json",
     "_FORMULA_VAR_FILE":           "CORDEX-CMIP6_formula_terms.json",
 
-    "title":                       "GERICS REMO2020-2-2 downscaling of ERA5 evaluation r1i1p1f1 for CORDEX-CMIP6 EUR-12",
+    "title":                       "GERICS REMO2020-2-2 downscaling of ERA5 evaluation for CORDEX-CMIP6 EUR-12",
 
     "domain_id" :                  "EUR-12",
 
