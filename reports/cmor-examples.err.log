@@ -26,7 +26,7 @@ f
 ------------------
 
 ----- stderr -----
-/tmp/ipykernel_3544/2886418336.py:87: DeprecationWarning: 'CORDEX_domain' keyword is deprecated, please use the 'domain_id' keyword instead
+/tmp/ipykernel_3535/2886418336.py:87: DeprecationWarning: 'CORDEX_domain' keyword is deprecated, please use the 'domain_id' keyword instead
   filename = cmor.cmorize_variable(
 /home/runner/micromamba/envs/cmor-examples/lib/python3.12/site-packages/cf_xarray/accessor.py:1035: FutureWarning: The return type of `Dataset.dims` will be changed to return a set of dimension names in future, in order to be more consistent with `DataArray.dims`. To access a mapping from dimension names to lengths, please use `Dataset.sizes`.
   unused_keys = set(attribute.keys()) - set(inverted)
