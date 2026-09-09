@@ -1,26 +1,20 @@
-name: cordex-examples
+name: cmor-examples
+channels:
+  - conda-forge
+  - nodefaults
 dependencies:
-  - python=3.9
-  - cmor=3.7.0
-  - cartopy=0.20
-  - matplotlib-base=3.6.1
-  - numpy=1.23.4
-  - pooch
-  - regionmask=0.9.0
-  - setuptools
-  - xarray=2022.10.0
-  - cf_xarray=0.7.4
-  - cftime=1.6.2
-  - netCDF4=1.6.1
-  - xesmf
-  - cfchecker=4.1.0
+  - cmor>=3.8.0
+  - cartopy
+  - matplotlib-base
+  - numpy
+  - xarray
+  - netCDF4
+  - cfchecker
   - compliance-checker
-  - cdo=2.0.5
+  - cdo
   - python-cdo
-  - intake-esm
-  - ghp-import
-  - fsspec=2022.10.0
-  - requests
-  - aiohttp=3.8.3
+  - pint
+  - py-cordex
   - pip:
-    - git+https://github.com/euro-cordex/py-cordex.git # always use master for now
+    - cc-plugin-wcrp
+  #  - git+https://github.com/euro-cordex/py-cordex.git # always use master for now
