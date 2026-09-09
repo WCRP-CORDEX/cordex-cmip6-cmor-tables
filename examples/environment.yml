@@ -1,4 +1,4 @@
-name: cordex-examples
+name: cmor-examples
 channels:
   - conda-forge
   - nodefaults
@@ -7,26 +7,15 @@ dependencies:
   - cartopy
   - matplotlib-base
   - numpy
-  - pooch
-  - regionmask
-  - setuptools
   - xarray
-  - cf_xarray
-  - cftime
-  - flox
   - netCDF4
-  - xesmf
   - cfchecker
   - compliance-checker
   - cdo
   - python-cdo
-  - jupyter-book<2
-  - intake-esm
-  - ghp-import
-  - fsspec
-  - requests
-  - aiohttp
   - pint
+  - jupyter-book<2
   - py-cordex
-  #- pip:
+  - pip:
+    - cc-plugin-wcrp
   #  - git+https://github.com/euro-cordex/py-cordex.git # always use master for now
