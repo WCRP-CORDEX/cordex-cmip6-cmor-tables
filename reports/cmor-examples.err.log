@@ -26,18 +26,16 @@ f
 ------------------
 
 ----- stderr -----
-/tmp/ipykernel_3535/2886418336.py:87: DeprecationWarning: 'CORDEX_domain' keyword is deprecated, please use the 'domain_id' keyword instead
+/tmp/ipykernel_3516/2886418336.py:87: DeprecationWarning: 'CORDEX_domain' keyword is deprecated, please use the 'domain_id' keyword instead
   filename = cmor.cmorize_variable(
 /home/runner/micromamba/envs/cmor-examples/lib/python3.12/site-packages/cf_xarray/accessor.py:1035: FutureWarning: The return type of `Dataset.dims` will be changed to return a set of dimension names in future, in order to be more consistent with `DataArray.dims`. To access a mapping from dimension names to lengths, please use `Dataset.sizes`.
   unused_keys = set(attribute.keys()) - set(inverted)
 /home/runner/micromamba/envs/cmor-examples/lib/python3.12/site-packages/cf_xarray/accessor.py:1036: FutureWarning: The return type of `Dataset.dims` will be changed to return a set of dimension names in future, in order to be more consistent with `DataArray.dims`. To access a mapping from dimension names to lengths, please use `Dataset.sizes`.
   for key, value in attribute.items():
-<frozen _collections_abc>:894: FutureWarning: The return type of `Dataset.dims` will be changed to return a set of dimension names in future, in order to be more consistent with `DataArray.dims`. To access a mapping from dimension names to lengths, please use `Dataset.sizes`.
 /home/runner/micromamba/envs/cmor-examples/lib/python3.12/site-packages/cf_xarray/accessor.py:1044: FutureWarning: The return type of `Dataset.dims` will be changed to return a set of dimension names in future, in order to be more consistent with `DataArray.dims`. To access a mapping from dimension names to lengths, please use `Dataset.sizes`.
   newmap.update({key: attribute[key] for key in unused_keys})
 /home/runner/micromamba/envs/cmor-examples/lib/python3.12/site-packages/cordex/cmor/cmor.py:517: UserWarning: resampling input data from H to D
   warn(f"resampling input data from {input_freq} to {pd_freq}")
-<string>:7: RuntimeWarning: The 'offset' keyword does not take effect when resampling with a 'freq' that is not Tick-like (h, m, s, ms, us)
 ------------------
 
 [31m---------------------------------------------------------------------------[39m
@@ -106,72 +104,71 @@ f
 [32m    100[39m [38;5;28;01melse[39;00m:
 [32m    101[39m     [38;5;28;01mraise[39;00m [38;5;167;01mException[39;00m([33mf[39m[33m"[39m[33munknown time_cell_method: [39m[38;5;132;01m{[39;00mtime_cell_method[38;5;132;01m}[39;00m[33m"[39m)
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/_aggregations.py:5906[39m, in [36mDatasetResampleAggregations.mean[39m[34m(self, dim, skipna, keep_attrs, **kwargs)[39m
-[32m   5896[39m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m._flox_reduce(
-[32m   5897[39m         func=[33m"[39m[33mmean[39m[33m"[39m,
-[32m   5898[39m         dim=dim,
-[32m   (...)[39m[32m   5903[39m         **kwargs,
-[32m   5904[39m     )
-[32m   5905[39m [38;5;28;01melse[39;00m:
-[32m-> [39m[32m5906[39m     out = [30;43mself[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
-[32m   5907[39m [30;43m        [39;49m[30;43mduck_array_ops[39;49m[30;43m.[39;49m[30;43mmean[39;49m[30;43m,[39;49m
-[32m   5908[39m [30;43m        [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m
-[32m   5909[39m [30;43m        [39;49m[30;43mskipna[39;49m[30;43m=[39;49m[30;43mskipna[39;49m[30;43m,[39;49m
-[32m   5910[39m [30;43m        [39;49m[30;43mnumeric_only[39;49m[30;43m=[39;49m[30;43;01mTrue[39;49;00m[30;43m,[39;49m
-[32m   5911[39m [30;43m        [39;49m[30;43mkeep_attrs[39;49m[30;43m=[39;49m[30;43mkeep_attrs[39;49m[30;43m,[39;49m
-[32m   5912[39m [30;43m        [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m,[39;49m
-[32m   5913[39m [30;43m    [39;49m[30;43m)[39;49m
-[32m   5914[39m     [38;5;28;01mreturn[39;00m out
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/_aggregations.py:5935[39m, in [36mDatasetResampleAggregations.mean[39m[34m(self, dim, skipna, keep_attrs, **kwargs)[39m
+[32m   5925[39m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m._flox_reduce(
+[32m   5926[39m         func=[33m"[39m[33mmean[39m[33m"[39m,
+[32m   5927[39m         dim=dim,
+[32m   (...)[39m[32m   5932[39m         **kwargs,
+[32m   5933[39m     )
+[32m   5934[39m [38;5;28;01melse[39;00m:
+[32m-> [39m[32m5935[39m     out = [30;43mself[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
+[32m   5936[39m [30;43m        [39;49m[30;43mduck_array_ops[39;49m[30;43m.[39;49m[30;43mmean[39;49m[30;43m,[39;49m
+[32m   5937[39m [30;43m        [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m
+[32m   5938[39m [30;43m        [39;49m[30;43mskipna[39;49m[30;43m=[39;49m[30;43mskipna[39;49m[30;43m,[39;49m
+[32m   5939[39m [30;43m        [39;49m[30;43mnumeric_only[39;49m[30;43m=[39;49m[30;43;01mTrue[39;49;00m[30;43m,[39;49m
+[32m   5940[39m [30;43m        [39;49m[30;43mkeep_attrs[39;49m[30;43m=[39;49m[30;43mkeep_attrs[39;49m[30;43m,[39;49m
+[32m   5941[39m [30;43m        [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m,[39;49m
+[32m   5942[39m [30;43m    [39;49m[30;43m)[39;49m
+[32m   5943[39m     [38;5;28;01mreturn[39;00m out
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/resample.py:502[39m, in [36mDatasetResample.reduce[39m[34m(self, func, dim, axis, keep_attrs, keepdims, shortcut, **kwargs)[39m
-[32m    467[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mreduce[39m(
-[32m    468[39m     [38;5;28mself[39m,
-[32m    469[39m     func: Callable[..., Any],
-[32m   (...)[39m[32m    476[39m     **kwargs: Any,
-[32m    477[39m ) -> Dataset:
-[32m    478[39m [38;5;250m    [39m[33;03m"""Reduce the items in this group by applying `func` along the[39;00m
-[32m    479[39m [33;03m    pre-defined resampling dimension.[39;00m
-[32m    480[39m 
-[32m   (...)[39m[32m    500[39m [33;03m        removed.[39;00m
-[32m    501[39m [33;03m    """[39;00m
-[32m--> [39m[32m502[39m     [38;5;28;01mreturn[39;00m [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
-[32m    503[39m [30;43m        [39;49m[30;43mfunc[39;49m[30;43m=[39;49m[30;43mfunc[39;49m[30;43m,[39;49m
-[32m    504[39m [30;43m        [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m
-[32m    505[39m [30;43m        [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m
-[32m    506[39m [30;43m        [39;49m[30;43mkeep_attrs[39;49m[30;43m=[39;49m[30;43mkeep_attrs[39;49m[30;43m,[39;49m
-[32m    507[39m [30;43m        [39;49m[30;43mkeepdims[39;49m[30;43m=[39;49m[30;43mkeepdims[39;49m[30;43m,[39;49m
-[32m    508[39m [30;43m        [39;49m[30;43mshortcut[39;49m[30;43m=[39;49m[30;43mshortcut[39;49m[30;43m,[39;49m
-[32m    509[39m [30;43m        [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m,[39;49m
-[32m    510[39m [30;43m    [39;49m[30;43m)[39;49m
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/resample.py:499[39m, in [36mDatasetResample.reduce[39m[34m(self, func, dim, axis, keep_attrs, shortcut, **kwargs)[39m
+[32m    465[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mreduce[39m(
+[32m    466[39m     [38;5;28mself[39m,
+[32m    467[39m     func: Callable[..., Any],
+[32m   (...)[39m[32m    473[39m     **kwargs: Any,
+[32m    474[39m ) -> Dataset:
+[32m    475[39m [38;5;250m    [39m[33;03m"""Reduce the items in this group by applying `func` along the[39;00m
+[32m    476[39m [33;03m    pre-defined resampling dimension.[39;00m
+[32m    477[39m 
+[32m   (...)[39m[32m    497[39m [33;03m        removed.[39;00m
+[32m    498[39m [33;03m    """[39;00m
+[32m--> [39m[32m499[39m     [38;5;28;01mreturn[39;00m [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
+[32m    500[39m [30;43m        [39;49m[30;43mfunc[39;49m[30;43m=[39;49m[30;43mfunc[39;49m[30;43m,[39;49m
+[32m    501[39m [30;43m        [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m
+[32m    502[39m [30;43m        [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m
+[32m    503[39m [30;43m        [39;49m[30;43mkeep_attrs[39;49m[30;43m=[39;49m[30;43mkeep_attrs[39;49m[30;43m,[39;49m
+[32m    504[39m [30;43m        [39;49m[30;43mshortcut[39;49m[30;43m=[39;49m[30;43mshortcut[39;49m[30;43m,[39;49m
+[32m    505[39m [30;43m        [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m,[39;49m
+[32m    506[39m [30;43m    [39;49m[30;43m)[39;49m
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/groupby.py:1938[39m, in [36mDatasetGroupByBase.reduce[39m[34m(self, func, dim, axis, keep_attrs, keepdims, shortcut, **kwargs)[39m
-[32m   1927[39m     [38;5;28;01mreturn[39;00m ds.reduce(
-[32m   1928[39m         func=func,
-[32m   1929[39m         dim=dim,
-[32m   (...)[39m[32m   1933[39m         **kwargs,
-[32m   1934[39m     )
-[32m   1936[39m check_reduce_dims(dim, [38;5;28mself[39m.dims)
-[32m-> [39m[32m1938[39m [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mmap[39;49m[30;43m([39;49m[30;43mreduce_dataset[39;49m[30;43m)[39;49m
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/groupby.py:1966[39m, in [36mDatasetGroupByBase.reduce[39m[34m(self, func, dim, axis, keep_attrs, shortcut, **kwargs)[39m
+[32m   1955[39m     [38;5;28;01mreturn[39;00m ds.reduce(
+[32m   1956[39m         func=func,
+[32m   1957[39m         dim=dim,
+[32m   (...)[39m[32m   1961[39m         **kwargs,
+[32m   1962[39m     )
+[32m   1964[39m check_reduce_dims(dim, [38;5;28mself[39m.dims)
+[32m-> [39m[32m1966[39m [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mmap[39;49m[30;43m([39;49m[30;43mreduce_dataset[39;49m[30;43m)[39;49m
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/resample.py:438[39m, in [36mDatasetResample.map[39m[34m(self, func, args, shortcut, **kwargs)[39m
-[32m    436[39m [38;5;66;03m# ignore shortcut if set (for now)[39;00m
-[32m    437[39m applied = (func(ds, *args, **kwargs) [38;5;28;01mfor[39;00m ds [38;5;129;01min[39;00m [38;5;28mself[39m._iter_grouped())
-[32m--> [39m[32m438[39m combined = [30;43mself[39;49m[30;43m.[39;49m[30;43m_combine[39;49m[30;43m([39;49m[30;43mapplied[39;49m[30;43m)[39;49m
-[32m    440[39m [38;5;66;03m# If the aggregation function didn't drop the original resampling[39;00m
-[32m    441[39m [38;5;66;03m# dimension, then we need to do so before we can rename the proxy[39;00m
-[32m    442[39m [38;5;66;03m# dimension we used.[39;00m
-[32m    443[39m [38;5;28;01mif[39;00m [38;5;28mself[39m._dim [38;5;129;01min[39;00m combined.coords:
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/resample.py:436[39m, in [36mDatasetResample.map[39m[34m(self, func, args, shortcut, **kwargs)[39m
+[32m    434[39m [38;5;66;03m# ignore shortcut if set (for now)[39;00m
+[32m    435[39m applied = (func(ds, *args, **kwargs) [38;5;28;01mfor[39;00m ds [38;5;129;01min[39;00m [38;5;28mself[39m._iter_grouped())
+[32m--> [39m[32m436[39m combined = [30;43mself[39;49m[30;43m.[39;49m[30;43m_combine[39;49m[30;43m([39;49m[30;43mapplied[39;49m[30;43m)[39;49m
+[32m    438[39m [38;5;66;03m# If the aggregation function didn't drop the original resampling[39;00m
+[32m    439[39m [38;5;66;03m# dimension, then we need to do so before we can rename the proxy[39;00m
+[32m    440[39m [38;5;66;03m# dimension we used.[39;00m
+[32m    441[39m [38;5;28;01mif[39;00m [38;5;28mself[39m._dim [38;5;129;01min[39;00m combined.coords:
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/groupby.py:1854[39m, in [36mDatasetGroupByBase._combine[39m[34m(self, applied)[39m
-[32m   1852[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_combine[39m([38;5;28mself[39m, applied):
-[32m   1853[39m [38;5;250m    [39m[33;03m"""Recombine the applied objects like the original."""[39;00m
-[32m-> [39m[32m1854[39m     applied_example, applied = [30;43mpeek_at[39;49m[30;43m([39;49m[30;43mapplied[39;49m[30;43m)[39;49m
-[32m   1855[39m     dim, positions = [38;5;28mself[39m._infer_concat_args(applied_example)
-[32m   1856[39m     combined = concat(
-[32m   1857[39m         applied,
-[32m   1858[39m         dim,
-[32m   (...)[39m[32m   1862[39m         join=[33m"[39m[33mouter[39m[33m"[39m,
-[32m   1863[39m     )
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/groupby.py:1873[39m, in [36mDatasetGroupByBase._combine[39m[34m(self, applied)[39m
+[32m   1871[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_combine[39m([38;5;28mself[39m, applied):
+[32m   1872[39m [38;5;250m    [39m[33;03m"""Recombine the applied objects like the original."""[39;00m
+[32m-> [39m[32m1873[39m     applied_example, applied = [30;43mpeek_at[39;49m[30;43m([39;49m[30;43mapplied[39;49m[30;43m)[39;49m
+[32m   1874[39m     dim, positions = [38;5;28mself[39m._infer_concat_args(applied_example)
+[32m   1875[39m     combined = concat(
+[32m   1876[39m         applied,
+[32m   1877[39m         dim,
+[32m   (...)[39m[32m   1881[39m         join=[33m"[39m[33mouter[39m[33m"[39m,
+[32m   1882[39m     )
 
 [36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/utils.py:287[39m, in [36mpeek_at[39m[34m(iterable)[39m
 [32m    283[39m [38;5;250m[39m[33;03m"""Returns the first value from iterable, as well as a new iterator with[39;00m
@@ -181,54 +178,54 @@ f
 [32m--> [39m[32m287[39m peek = [30;43mnext[39;49m[30;43m([39;49m[30;43mgen[39;49m[30;43m)[39;49m
 [32m    288[39m [38;5;28;01mreturn[39;00m peek, itertools.chain([peek], gen)
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/resample.py:437[39m, in [36m<genexpr>[39m[34m(.0)[39m
-[32m    407[39m [38;5;250m[39m[33;03m"""Apply a function over each Dataset in the groups generated for[39;00m
-[32m    408[39m [33;03mresampling and concatenate them together into a new Dataset.[39;00m
-[32m    409[39m 
-[32m   (...)[39m[32m    434[39m [33;03m    The result of splitting, applying and combining this dataset.[39;00m
-[32m    435[39m [33;03m"""[39;00m
-[32m    436[39m [38;5;66;03m# ignore shortcut if set (for now)[39;00m
-[32m--> [39m[32m437[39m applied = ([30;43mfunc[39;49m[30;43m([39;49m[30;43mds[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43margs[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m [38;5;28;01mfor[39;00m ds [38;5;129;01min[39;00m [38;5;28mself[39m._iter_grouped())
-[32m    438[39m combined = [38;5;28mself[39m._combine(applied)
-[32m    440[39m [38;5;66;03m# If the aggregation function didn't drop the original resampling[39;00m
-[32m    441[39m [38;5;66;03m# dimension, then we need to do so before we can rename the proxy[39;00m
-[32m    442[39m [38;5;66;03m# dimension we used.[39;00m
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/resample.py:435[39m, in [36m<genexpr>[39m[34m(.0)[39m
+[32m    405[39m [38;5;250m[39m[33;03m"""Apply a function over each Dataset in the groups generated for[39;00m
+[32m    406[39m [33;03mresampling and concatenate them together into a new Dataset.[39;00m
+[32m    407[39m 
+[32m   (...)[39m[32m    432[39m [33;03m    The result of splitting, applying and combining this dataset.[39;00m
+[32m    433[39m [33;03m"""[39;00m
+[32m    434[39m [38;5;66;03m# ignore shortcut if set (for now)[39;00m
+[32m--> [39m[32m435[39m applied = ([30;43mfunc[39;49m[30;43m([39;49m[30;43mds[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43margs[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m [38;5;28;01mfor[39;00m ds [38;5;129;01min[39;00m [38;5;28mself[39m._iter_grouped())
+[32m    436[39m combined = [38;5;28mself[39m._combine(applied)
+[32m    438[39m [38;5;66;03m# If the aggregation function didn't drop the original resampling[39;00m
+[32m    439[39m [38;5;66;03m# dimension, then we need to do so before we can rename the proxy[39;00m
+[32m    440[39m [38;5;66;03m# dimension we used.[39;00m
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/groupby.py:1927[39m, in [36mDatasetGroupByBase.reduce.<locals>.reduce_dataset[39m[34m(ds)[39m
-[32m   1926[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mreduce_dataset[39m(ds: Dataset) -> Dataset:
-[32m-> [39m[32m1927[39m     [38;5;28;01mreturn[39;00m [30;43mds[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
-[32m   1928[39m [30;43m        [39;49m[30;43mfunc[39;49m[30;43m=[39;49m[30;43mfunc[39;49m[30;43m,[39;49m
-[32m   1929[39m [30;43m        [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m
-[32m   1930[39m [30;43m        [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m
-[32m   1931[39m [30;43m        [39;49m[30;43mkeep_attrs[39;49m[30;43m=[39;49m[30;43mkeep_attrs[39;49m[30;43m,[39;49m
-[32m   1932[39m [30;43m        [39;49m[30;43mkeepdims[39;49m[30;43m=[39;49m[30;43mkeepdims[39;49m[30;43m,[39;49m
-[32m   1933[39m [30;43m        [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m,[39;49m
-[32m   1934[39m [30;43m    [39;49m[30;43m)[39;49m
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/groupby.py:1955[39m, in [36mDatasetGroupByBase.reduce.<locals>.reduce_dataset[39m[34m(ds)[39m
+[32m   1954[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mreduce_dataset[39m(ds: Dataset) -> Dataset:
+[32m-> [39m[32m1955[39m     [38;5;28;01mreturn[39;00m [30;43mds[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
+[32m   1956[39m [30;43m        [39;49m[30;43mfunc[39;49m[30;43m=[39;49m[30;43mfunc[39;49m[30;43m,[39;49m
+[32m   1957[39m [30;43m        [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m
+[32m   1958[39m [30;43m        [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m
+[32m   1959[39m [30;43m        [39;49m[30;43mkeep_attrs[39;49m[30;43m=[39;49m[30;43mkeep_attrs[39;49m[30;43m,[39;49m
+[32m   1960[39m [30;43m        [39;49m[30;43mkeepdims[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m   1961[39m [30;43m        [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m,[39;49m
+[32m   1962[39m [30;43m    [39;49m[30;43m)[39;49m
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/dataset.py:6972[39m, in [36mDataset.reduce[39m[34m(self, func, dim, keep_attrs, keepdims, numeric_only, **kwargs)[39m
-[32m   6968[39m                     [38;5;28;01mNone[39;00m
-[32m   6969[39m                     [38;5;28;01mif[39;00m len(reduce_dims) == var.ndim [38;5;28;01mand[39;00m var.ndim != [32m1[39m
-[32m   6970[39m                     [38;5;28;01melse[39;00m reduce_dims
-[32m   6971[39m                 )
-[32m-> [39m[32m6972[39m                 variables[name] = var.reduce(
-[32m   6973[39m                     func,
-[32m   6974[39m                     dim=reduce_maybe_single,
-[32m   6975[39m                     keep_attrs=keep_attrs,
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/dataset.py:6975[39m, in [36mDataset.reduce[39m[34m(self, func, dim, keep_attrs, keepdims, numeric_only, **kwargs)[39m
+[32m   6971[39m                     [38;5;28;01mNone[39;00m
+[32m   6972[39m                     [38;5;28;01mif[39;00m len(reduce_dims) == var.ndim [38;5;28;01mand[39;00m var.ndim != [32m1[39m
+[32m   6973[39m                     [38;5;28;01melse[39;00m reduce_dims
+[32m   6974[39m                 )
+[32m-> [39m[32m6975[39m                 variables[name] = var.reduce(
+[32m   6976[39m                     func,
+[32m   6977[39m                     dim=reduce_maybe_single,
+[32m   6978[39m                     keep_attrs=keep_attrs,
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/variable.py:1781[39m, in [36mVariable.reduce[39m[34m(self, func, dim, axis, keep_attrs, keepdims, **kwargs)[39m
-[32m   1774[39m keep_attrs_ = (
-[32m   1775[39m     _get_keep_attrs(default=[38;5;28;01mTrue[39;00m) [38;5;28;01mif[39;00m keep_attrs [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;28;01melse[39;00m keep_attrs
-[32m   1776[39m )
-[32m   1778[39m [38;5;66;03m# Note that the call order for Variable.mean is[39;00m
-[32m   1779[39m [38;5;66;03m#    Variable.mean -> NamedArray.mean -> Variable.reduce[39;00m
-[32m   1780[39m [38;5;66;03m#    -> NamedArray.reduce[39;00m
-[32m-> [39m[32m1781[39m result = [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
-[32m   1782[39m [30;43m    [39;49m[30;43mfunc[39;49m[30;43m=[39;49m[30;43mfunc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mkeepdims[39;49m[30;43m=[39;49m[30;43mkeepdims[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m
-[32m   1783[39m [30;43m[39;49m[30;43m)[39;49m
-[32m   1785[39m [38;5;66;03m# return Variable always to support IndexVariable[39;00m
-[32m   1786[39m [38;5;28;01mreturn[39;00m Variable(
-[32m   1787[39m     result.dims, result._data, attrs=result._attrs [38;5;28;01mif[39;00m keep_attrs_ [38;5;28;01melse[39;00m [38;5;28;01mNone[39;00m
-[32m   1788[39m )
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/variable.py:1792[39m, in [36mVariable.reduce[39m[34m(self, func, dim, axis, keep_attrs, keepdims, **kwargs)[39m
+[32m   1785[39m keep_attrs_ = (
+[32m   1786[39m     _get_keep_attrs(default=[38;5;28;01mTrue[39;00m) [38;5;28;01mif[39;00m keep_attrs [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;28;01melse[39;00m keep_attrs
+[32m   1787[39m )
+[32m   1789[39m [38;5;66;03m# Note that the call order for Variable.mean is[39;00m
+[32m   1790[39m [38;5;66;03m#    Variable.mean -> NamedArray.mean -> Variable.reduce[39;00m
+[32m   1791[39m [38;5;66;03m#    -> NamedArray.reduce[39;00m
+[32m-> [39m[32m1792[39m result = [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mreduce[39;49m[30;43m([39;49m
+[32m   1793[39m [30;43m    [39;49m[30;43mfunc[39;49m[30;43m=[39;49m[30;43mfunc[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mdim[39;49m[30;43m=[39;49m[30;43mdim[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mkeepdims[39;49m[30;43m=[39;49m[30;43mkeepdims[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m
+[32m   1794[39m [30;43m[39;49m[30;43m)[39;49m
+[32m   1796[39m [38;5;66;03m# return Variable always to support IndexVariable[39;00m
+[32m   1797[39m [38;5;28;01mreturn[39;00m Variable(
+[32m   1798[39m     result.dims, result._data, attrs=result._attrs [38;5;28;01mif[39;00m keep_attrs_ [38;5;28;01melse[39;00m [38;5;28;01mNone[39;00m
+[32m   1799[39m )
 
 [36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/namedarray/core.py:930[39m, in [36mNamedArray.reduce[39m[34m(self, func, dim, axis, keepdims, **kwargs)[39m
 [32m    928[39m         data = func([38;5;28mself[39m.data, axis=axis, **kwargs)
@@ -237,17 +234,17 @@ f
 [32m    932[39m [38;5;28;01mif[39;00m [38;5;28mgetattr[39m(data, [33m"[39m[33mshape[39m[33m"[39m, ()) == [38;5;28mself[39m.shape:
 [32m    933[39m     dims = [38;5;28mself[39m.dims
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/duck_array_ops.py:796[39m, in [36mmean[39m[34m(array, axis, skipna, **kwargs)[39m
-[32m    794[39m     [38;5;28;01mreturn[39;00m _to_pytimedelta(mean_timedeltas, unit=[33m"[39m[33mus[39m[33m"[39m) + offset
-[32m    795[39m [38;5;28;01melse[39;00m:
-[32m--> [39m[32m796[39m     [38;5;28;01mreturn[39;00m [30;43m_mean[39;49m[30;43m([39;49m[30;43marray[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mskipna[39;49m[30;43m=[39;49m[30;43mskipna[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/duck_array_ops.py:811[39m, in [36mmean[39m[34m(array, axis, skipna, **kwargs)[39m
+[32m    809[39m     [38;5;28;01mreturn[39;00m _to_pytimedelta(mean_timedeltas, unit=[33m"[39m[33mus[39m[33m"[39m) + offset
+[32m    810[39m [38;5;28;01melse[39;00m:
+[32m--> [39m[32m811[39m     [38;5;28;01mreturn[39;00m [30;43m_mean[39;49m[30;43m([39;49m[30;43marray[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mskipna[39;49m[30;43m=[39;49m[30;43mskipna[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
 
-[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/duck_array_ops.py:551[39m, in [36m_create_nan_agg_method.<locals>.f[39m[34m(values, axis, skipna, **kwargs)[39m
-[32m    549[39m     [38;5;28;01mwith[39;00m warnings.catch_warnings():
-[32m    550[39m         warnings.filterwarnings([33m"[39m[33mignore[39m[33m"[39m, [33m"[39m[33mAll-NaN slice encountered[39m[33m"[39m)
-[32m--> [39m[32m551[39m         [38;5;28;01mreturn[39;00m [30;43mfunc[39;49m[30;43m([39;49m[30;43mvalues[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
-[32m    552[39m [38;5;28;01mexcept[39;00m [38;5;167;01mAttributeError[39;00m:
-[32m    553[39m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m is_duck_dask_array(values):
+[36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/xarray/core/duck_array_ops.py:563[39m, in [36m_create_nan_agg_method.<locals>.f[39m[34m(values, axis, skipna, **kwargs)[39m
+[32m    561[39m     [38;5;28;01mwith[39;00m warnings.catch_warnings():
+[32m    562[39m         warnings.filterwarnings([33m"[39m[33mignore[39m[33m"[39m, [33m"[39m[33mAll-NaN slice encountered[39m[33m"[39m)
+[32m--> [39m[32m563[39m         [38;5;28;01mreturn[39;00m [30;43mfunc[39;49m[30;43m([39;49m[30;43mvalues[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43maxis[39;49m[30;43m=[39;49m[30;43maxis[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m    564[39m [38;5;28;01mexcept[39;00m [38;5;167;01mAttributeError[39;00m:
+[32m    565[39m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m is_duck_dask_array(values):
 
 [36mFile [39m[32m~/micromamba/envs/cmor-examples/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3862[39m, in [36mmean[39m[34m(a, axis, dtype, out, keepdims, where)[39m
 [32m   3859[39m     [38;5;28;01melse[39;00m:
