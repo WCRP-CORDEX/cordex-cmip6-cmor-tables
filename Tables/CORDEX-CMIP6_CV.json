@@ -2301,6 +2301,25 @@
                     "The Regional Earth System Model RegCM-ES version 1.1 based on RegCM v5.0, MITgcm v6.9d and CHyM"
                 ]
             },
+            "RegCM4-6-SN": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "UNIST"
+                ],
+                "label": "RegCM4-6-SN",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "RegCM4-6-SN",
+                "source_type": "ARCM",
+                "source": [
+                    "RegCM 4.6.1 with CLM4.5 and spectral nudging, UNIST configuration (2021)",
+                    "RegCM 4.6.1 with CLM4.5 and spectral nudging, UNIST configuration"
+                ]
+            },
             "RegCM5-0": {
                 "activity_participation": [
                     "DD"
