@@ -1640,6 +1640,25 @@
                     "COSMO model in climate mode (COSMO-CLM), Version 6.0 clm 1 with Urban Parametrization and ECOCLIMAP-Second Generation land cover"
                 ]
             },
+            "CMCC-MedESM1": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "CMCC-ESYDA"
+                ],
+                "label": "CMCC-MedESM version 1",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "CMCC-MedESM1",
+                "source_type": "AORCM",
+                "source": [
+                    "Version 1 of the regional Earth system model (MedESM1) of the Euro-Mediterranean Center on Climate Change (CMCC Foundation) (2027)",
+                    "Version 1 of the regional Earth system model (MedESM1) of the Euro-Mediterranean Center on Climate Change (CMCC Foundation)"
+                ]
+            },
             "CNRM-ALADIN64C1": {
                 "activity_participation": [
                     "DD"
