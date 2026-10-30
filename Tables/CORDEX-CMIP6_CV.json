@@ -2283,6 +2283,25 @@
                     "Regional Climate Model REMO, version 2.2, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake) and interactive Vegetation (iMOVE) with land use change (LUC) from the LUCAS LUC dataset"
                 ]
             },
+            "REMO2020-2-3-L27-iMOVE": {
+                "activity_participation": [
+                    "DD"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "GERICS"
+                ],
+                "label": "REMO2020 v2.3 L27 iMOVE",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "REMO2020-2-3-L27-iMOVE",
+                "source_type": "ARCM",
+                "source": [
+                    "Regional Climate Model REMO, version 2.3, 27 model levels, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake), Town Energy Model v3 (TEB) and interactive Vegetation (iMOVE, static) (2026)",
+                    "Regional Climate Model REMO, version 2.3, 27 model levels, hydrostatic configuration with MACv2 aerosol forcing, Fresh-water Lake model (FLake), Town Energy Model v3 (TEB) and interactive Vegetation (iMOVE, static)"
+                ]
+            },
             "ROAM-NBS": {
                 "activity_participation": [
                     "DD"
