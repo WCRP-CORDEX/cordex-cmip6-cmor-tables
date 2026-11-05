@@ -2039,7 +2039,9 @@
                     "Registered"
                 ],
                 "institution_id": [
-                    "CLMcom-DWD"
+                    "CLMcom-DWD",
+                    "CLMcom-FZJ",
+                    "CLMcom-WEGC"
                 ],
                 "label": "ICON-CLM-202407-1-2",
                 "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
