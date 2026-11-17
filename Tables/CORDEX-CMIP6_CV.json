@@ -2421,6 +2421,26 @@
                     "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration Q"
                 ]
             },
+            "WRF451R-CI4C": {
+                "activity_participation": [
+                    "FPS-URB-RCC",
+                    "CPRCM"
+                ],
+                "cohort": [
+                    "Registered"
+                ],
+                "institution_id": [
+                    "BCCR-UCAN"
+                ],
+                "label": "WRF v4.5.1-R CI4C",
+                "license": "https://cordex.org/data-access/cordex-cmip6-data/cordex-cmip6-terms-of-use",
+                "source_id": "WRF451R-CI4C",
+                "source_type": "ARCM",
+                "source": [
+                    "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration R, I4C configuration variant (2024)",
+                    "Weather Research and Forecasting model version 4.5.1, CORDEX WRF Community configuration R, I4C configuration variant"
+                ]
+            },
             "WRF451V": {
                 "activity_participation": [
                     "DD"
