@@ -28,7 +28,7 @@ jobs:
         os: ["ubuntu-latest"]
         # python versions
         python-version: ["3.11", "3.12", "3.14"]
-        cmor-version: ["3.9", "3.14", "3.16"]
+        cmor-version: ["3.12", "3.14", "3.16"]
     steps:
       - uses: actions/checkout@v7
         with:
