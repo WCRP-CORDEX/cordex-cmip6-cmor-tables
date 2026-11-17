@@ -48,8 +48,8 @@ jobs:
             cmor=${{ matrix.cmor-version }}
       - name: Version info
         run: |
-          conda info -a
-          conda list
+          micromamba info -a
+          micromamba list
       - name: Run tests
         timeout-minutes: 5
         run: python -m pytest -s ci/tests.py::test_cfchecker
